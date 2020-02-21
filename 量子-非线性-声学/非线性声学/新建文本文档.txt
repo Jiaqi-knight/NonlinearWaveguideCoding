@@ -1,0 +1,28 @@
+\begin{equation}
+\begin{aligned}
+\nabla \cdot (v_1\hat{\textbf{h}}_1)=\nabla(v_1h_2h_3)\cdot ({1\over {h_2h_3}}\hat{\textbf{h}}_1)
+\end{aligned}
+\end{equation}
+
+which means, the divergence calculation have to transform to gradient calculation, seperately.
+
+Thus, here we have
+\begin{equation}
+\begin{aligned}
+\textbf{U}^{a-b}\cdot \nabla \textbf{U}^b=(U^{a-b}\hat{e}_s+V^{a-b}\hat{e}_r+W^{a-b}\hat{e}_\theta) \cdot ({1\over {1-\kappa rcos\psi}}{\partial \over {\partial s}}\hat{e}_s+{\partial \over {\partial r}}\hat{e}_r+{1\over r}{\partial \over {\partial \theta}}\hat{e}_\theta)(U^{b}\hat{e}_s+V^{b}\hat{e}_r+W^{b}\hat{e}_\theta) \\
+=({1\over{(1-\kappa rcos\phi)r}}U^{a-b}{\partial r\cdot\over {\partial s}}+{1\over{(1-\kappa rcos\phi)r}}V^{a-b}{\partial (1-\kappa r cos\phi)\cdot \over {\partial s}}+{1\over{(1-\kappa rcos\phi)r}}W^{a-b}{\partial r(1-\kappa r cos\phi) \cdot\over {\partial s}})\\
+=(\hat{e}_s\hat{e}_s{U^{a-b}\over {1-\kappa rcos\psi}}{\partial \over {\partial s}}+\hat{e}_s\hat{e}_r U^{a-b}{\partial \over \partial r}+\hat{e}_s\hat{e}_\theta {U^{a-b}\over r}{\partial \over \partial \theta}+\\
+\hat{e}_r\hat{e}_s{V^{a-b}\over {1-\kappa rcos\psi}}{\partial \over {\partial s}}+\hat{e}_r\hat{e}_rV^{a-b}{\partial \over {\partial r}}+\hat{e}_r\hat{e}_\theta {V^{a-b}\over r}{\partial \over {\partial \theta}}+\\
+\hat{e}_\theta \hat{e}_s {W^{a-b}\over {1-\kappa rcos\psi}}{\partial \over \partial s}+\hat{e}_\theta \hat{e}_r{W^{a-b}}{\partial \over {\partial r}}+\hat{e}_\theta \hat{e}_\theta{W^{a-b}\over r}{\partial \over {\partial \theta}})\\
+(U^{b}\hat{e}_s+V^{b}\hat{e}_r+W^{b}\hat{e}_\theta) \\
+=(\sout{\hat{e}_s\hat{e}_s}\hat{e}_s {U^{a-b}\over {1-\kappa rcos\psi}}{\partial U^b \over {\partial s}}+\sout{\hat{e}_s}\hat{e}_r\sout{\hat{e}_s} U^{a-b}{\partial U^b \over \partial r}+\hat{e}_s\hat{e}_\theta \hat{e}_s {U^{a-b}\over r}{\partial U^b  \over \partial \theta}+\\
+\hat{e}_r \sout{\hat{e}_s \hat{e}_s}{V^{a-b}\over {1-\kappa rcos\psi}}{\partial U^b  \over {\partial s}}+\sout{\hat{e}_r\hat{e}_r}\hat{e}_sV^{a-b}{\partial  U^b\over {\partial r}}+\sout{\hat{e}_r\hat{e}_\theta  \hat{e}_s{V^{a-b}\over r}{\partial U^b  \over {\partial \theta}}}+\\
+\hat{e}_\theta \sout{\hat{e}_s \hat{e}_s}{W^{a-b}\over {1-\kappa rcos\psi}}{\partial U^b  \over \partial s}+\sout{\hat{e}_\theta \hat{e}_r \hat{e}_s{W^{a-b}}{\partial U^b  \over {\partial r}}}+\sout{\hat{e}_\theta \hat{e}_\theta }\hat{e}_s{W^{a-b}\over r}{\partial U^b \over {\partial \theta}})+\\
+(\sout{\hat{e}_s\hat{e}_s}\hat{e}_r {U^{a-b}\over {1-\kappa rcos\psi}}{\partial V^b \over {\partial s}}+\hat{e}_s\sout{\hat{e}_r \hat{e}_r} U^{a-b}{\partial V^b \over \partial r}+\sout{\hat{e}_s\hat{e}_\theta \hat{e}_r {U^{a-b}\over r}{\partial V^b  \over \partial \theta}}+\\
+\sout{\hat{e}_r} \hat{e}_s \sout{\hat{e}_r} {V^{a-b}\over {1-\kappa rcos\psi}}{\partial V^b  \over {\partial s}}+\sout{\hat{e}_r\hat{e}_r }\hat{e}_rV^{a-b}{\partial  V^b\over {\partial r}}+\sout{\hat{e}_r}\hat{e}_\theta  \sout{\hat{e}_r} {V^{a-b}\over r}{\partial V^b  \over {\partial \theta}}+\\
+\sout{\hat{e}_\theta \hat{e}_s \hat{e}_r{W^{a-b}\over {1-\kappa rcos\psi}}{\partial V^b  \over \partial s}} +\hat{e}_\theta \sout{\hat{e}_r \hat{e}_r}{W^{a-b}}{\partial V^b  \over {\partial r}}+\sout{\hat{e}_\theta \hat{e}_\theta} \hat{e}_r {W^{a-b}\over r}{\partial V^b \over {\partial \theta}})+\\
+(\sout{\hat{e}_s\hat{e}_s}\hat{e}_\theta {U^{a-b}\over {1-\kappa rcos\psi}}{\partial W^b \over {\partial s}}+\sout{\hat{e}_s\hat{e}_r \hat{e}_\theta U^{a-b}{\partial W^b \over \partial r}}+\hat{e}_s\sout{\hat{e}_\theta \hat{e}_\theta} {U^{a-b}\over r}{\partial W^b  \over \partial \theta}+\\
+\sout{\hat{e}_r \hat{e}_s \hat{e}_\theta {V^{a-b}\over {1-\kappa rcos\psi}}{\partial W^b  \over {\partial s}}}+\sout{\hat{e}_r\hat{e}_r} \hat{e}_\theta V^{a-b}{\partial  W^b\over {\partial r}}+\hat{e}_r \sout{\hat{e}_\theta  \hat{e}_\theta} {V^{a-b}\over r}{\partial W^b  \over {\partial \theta}}+\\
+\sout{\hat{e}_\theta} \hat{e}_s \sout{\hat{e}_\theta} {W^{a-b}\over {1-\kappa rcos\psi}}{\partial W^b  \over \partial s}+\sout{\hat{e}_\theta} \hat{e}_r \sout{\hat{e}_\theta} {W^{a-b}}{\partial W^b  \over {\partial r}}+\sout{\hat{e}_\theta} \hat{e}_\theta \hat{e}_\theta {W^{a-b}\over r}{\partial W^b \over {\partial \theta}})\\
+\end{aligned}
+\end{equation}
