@@ -246,6 +246,8 @@ ib\kappa P^{a-b}W^{b}
 \end{equation}
 
 Now, we are going to project on $\psi$, it may be a little complex, we will doing step by step.
+ 
+\subsection{Momentum $e^s$ term}
 
 First, deal with the $e^s$ term:
 \begin{equation}
@@ -254,8 +256,8 @@ First, deal with the $e^s$ term:
 =\sum_{b=-\infty}^{\infty}
 term\mathcal{D}1: -{U^{a-b}\over {1-\kappa r cos\phi}}  {{\partial U^b} \over {\partial s}}-V^{a-b}{{\partial U^b}\over{\partial r}}-{W^{a-b}\over r}{{\partial U^b}\over {\partial \theta}}\\
 + \sum_{b=-\infty}^{\infty}
-term\mathcal{X}1: {\kappa cos\phi \over{1-\kappa rcos\phi}}U^{a-b}V^b-{\kappa sin\phi \over{(1-\kappa r cos\phi)}}U^{a-b}W^b+
-ib\kappa^{a-b}U^{b}
+term\mathcal{X}1: {\kappa cos\phi \over{1-\kappa rcos\phi}}U^{a-b}V^b-{\kappa sin\phi \over{(1-\kappa r cos\phi)}}U^{a-b}W^b\\
++ib\kappa P^{a-b}U^{b}
 \end{aligned}
 \end{equation}
 
@@ -433,7 +435,7 @@ From 1.1 as example, we know that
 \begin{aligned}
 \int_0^{2\pi}\int_0^h   {{\partial }\over {\partial s}}[ {r U^{a-b}} U^b\psi_\alpha] dr d\theta \\
 ={{\partial }\over {\partial s}}\int_0^{2\pi}\int_0^h   [ {r U^{a-b}} U^b\psi_\alpha] dr d\theta 
--{dh(s)\over ds}[ {r U^{a-b}} U^b\psi_\alpha]_{r=h}\\
+-\int_0^{2\pi}{dh(s)\over ds}[ {r U^{a-b}} U^b\psi_\alpha]_{r=h}d\theta\\
 \end{aligned}
 \end{equation}
 
@@ -441,7 +443,7 @@ From 1.1 as example, we know that
 
 \begin{equation}
 \begin{aligned}
-\int_0^{2\pi} \int_0^h [{\partial P^a\over {\partial s}}] r\phi_\alpha dr d\theta\\
+\int_0^{2\pi} \int_0^h [{\partial P^a\over {\partial s}}] r\psi_\alpha dr d\theta\\
 =\int_0^{2\pi} \int_0^h [{\partial (P_\beta^a \psi_\beta) \over {\partial s}}] r\psi_\alpha dr d\theta\\
 =\int_0^{2\pi} \int_0^h [{\partial (P_\beta^a \psi_\beta) \over {\partial s}}r\psi_\alpha]  dr d\theta
 -\int_0^{2\pi} \int_0^h [{\partial (\psi_\alpha) \over {\partial s}}] r  \psi_\beta dr d\theta P_\beta^a\\
@@ -457,14 +459,14 @@ From 1.1 as example, we know that
 \end{aligned}
 \end{equation}
 
-%= {d\over {ds}}P_\alpha^a-\int_0^{2\pi} \int_0^h{\partial\psi_\beta \psi_\alpha\over \partial r}hh' dr d\theta P_\beta^a -\int_0^{2\pi} \int_0^h [{\partial (\psi_\alpha) \over {\partial s}}] r  \psi_\beta dr d\theta P_\beta^a
+$$= {d\over {ds}}P_\alpha^a-\int_0^{2\pi} \int_0^h{\partial\psi_\beta \psi_\alpha\over \partial r}hh' dr d\theta P_\beta^a -\int_0^{2\pi} \int_0^h [{\partial (\psi_\alpha) \over {\partial s}}] r  \psi_\beta dr d\theta P_\beta^a$$
 
 
 4.2 
 
 \begin{equation}
 \begin{aligned}
-\int_0^{2\pi} \int_0^h [-ia\kappa(1-\kappa rcos\phi) U^a] r\phi_\alpha dr d\theta\\
+\int_0^{2\pi} \int_0^h [-ia\kappa(1-\kappa rcos\phi) U^a] r\psi_\alpha dr d\theta\\
 =-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a
 \end{aligned}
 \end{equation}
@@ -489,7 +491,7 @@ eq(34):
 \kappa \Psi_{\alpha\beta\gamma}[rcos\phi]U_\beta^{a-b}V_\gamma^b-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi]U_\beta^{a-b}W_\gamma^b\\
 +eq(36): ib\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}U_\gamma^{b}\\
 =(abbreviation):\\
-\{ \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}U_\gamma^a
+ \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}U_\gamma^a
 + \Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)]V_\beta^{a-b}U_\gamma^a
 + \Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]W_\beta^{a-b}U_\gamma^a\\
 +i(a-b)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}U_\gamma^{b}\\
@@ -499,6 +501,197 @@ eq(34):
 + ib\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}U_\gamma^{b}\\
 \end{aligned}
 \end{equation}
+
+\underline{To be conclude, with the $e^s$ term:}
+\begin{equation}
+\begin{aligned}
+-ia\kappa U^a+{1\over {1-\kappa rcos\phi}}{\partial P^a\over {\partial s}}\\
+=\sum_{b=-\infty}^{\infty}
+term\mathcal{D}1: -{U^{a-b}\over {1-\kappa r cos\phi}}  {{\partial U^b} \over {\partial s}}-V^{a-b}{{\partial U^b}\over{\partial r}}-{W^{a-b}\over r}{{\partial U^b}\over {\partial \theta}}\\
++ \sum_{b=-\infty}^{\infty}
+term\mathcal{X}1: {\kappa cos\phi \over{1-\kappa rcos\phi}}U^{a-b}V^b-{\kappa sin\phi \over{(1-\kappa r cos\phi)}}U^{a-b}W^b\\
++\sum_{b=-\infty}^{\infty}
+term\mathcal{P}1:ib\kappa P^{a-b}U^{b}
+\end{aligned}
+\end{equation}
+
+We have:
+\begin{equation}
+\begin{aligned}
+-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a
++{d\over {ds}}P_\alpha^a
+-\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta P_\beta^a-\Psi_{\{\alpha\}\beta}[r] P_\beta^a\\
+=
+\underline{term \mathcal{D}1:}  \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}U_\gamma^a
++\Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)]V_\beta^{a-b}U_\gamma^a
++ \Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]W_\beta^{a-b}U_\gamma^a\\
++\underline{term\mathcal({D}1+\mathcal{P}1):}  i(a)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}U_\gamma^{b}\\
+-\underline{term \mathcal{D}1:} {{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r]U_\beta^{a-b}U_\gamma^{b}
+-\Psi_{\alpha\beta\gamma}[r]({{d U_\beta^{a-b} \over {d s}}U_\gamma^{b}}+{dU_\gamma^{b}\over ds}U_\beta^{a-b})\\
++\underline{term \mathcal{X}1:} \kappa \Psi_{\alpha\beta\gamma}[rcos\phi]U_\beta^{a-b}V_\gamma^b-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi]U_\beta^{a-b}W_\gamma^b\\
+\end{aligned}
+\end{equation}
+
+
+
+
+\subsection{Momentum $e^r$ term}
+
+Second, deal with the $e^r$ term:
+
+\begin{equation}
+\begin{aligned}
+-ia\kappa V^a+{\partial P^a\over {\partial r}}\\
+=
+\sum_{b=-\infty}^{\infty}
+term\mathcal{D}2: -{U^{a-b}\over {1-\kappa r cos\phi}}  {{\partial V^b} \over {\partial s}}-V^{a-b}{{\partial V^b}\over{\partial r}}-{W^{a-b}\over r}{{\partial V^b}\over {\partial \theta}}\\
++ \sum_{b=-\infty}^{\infty}
+term\mathcal{X}2: {W^{a-b}W^b\over{r}}-{\kappa cos\phi \over{(1-\kappa r cos\phi)}}U^{a-b}U^b\\
++term\mathcal{P}2:  \sum_{b=-\infty}^{\infty}
+ib\kappa P^{a-b}V^{b}\\
+\end{aligned}
+\end{equation}
+
+LHS-2:${\partial P^a \over \partial r }(1-\kappa r cos\phi)$
+\begin{equation}
+\begin{aligned}
+\int_0^{2\pi} \int_0^h [{\partial P^a \over \partial r}(1-\kappa r cos\phi)] r\psi_\alpha dr d\theta\\
+=\int_0^{2\pi} \int_0^h [{\partial \psi_\beta (1-\kappa r cos\phi) r\psi_\alpha \over \partial r}]dr d\theta P_\beta^a
+-\int_0^{2\pi} \int_0^h [{\partial \psi_\alpha (1-\kappa r cos\phi) r \over \partial r}]\psi_\beta dr d\theta P_\beta^a\\
+=\int_0^{2\pi} \int_0^h [{\partial \psi_\beta (1-\kappa r cos\phi) r\psi_\alpha \over \partial r}]dr d\theta P_\beta^a\\
+-\int_0^{2\pi} \int_0^h [{\partial \psi_\alpha \over \partial r}](1-\kappa r cos\phi) r \psi_\beta dr d\theta P_\beta^a
+-\int_0^{2\pi} \int_0^h [{\partial (1-\kappa r cos\phi)r   \over \partial r}] \psi_\alpha\psi_\beta dr d\theta P_\beta^a\\
+=\int_0^{2\pi}  [{\psi_\alpha \psi_\beta   r(1-\kappa r cos\phi)}]_0^h d\theta P_\beta^a\\
+-\int_0^{2\pi} \int_0^h [{\partial \psi_\alpha \over \partial r}](1-\kappa r cos\phi) r \psi_\beta dr d\theta P_\beta^a
+-\int_0^{2\pi} \int_0^h [1-2\kappa rcos\phi] \psi_\alpha\psi_\beta dr d\theta P_\beta^a\\
+=\int_0^{2\pi}  [{\psi_\alpha \psi_\beta   r(1-\kappa r cos\phi)}]_0^h d\theta P_\beta^a
+-\Psi_{[\alpha]\beta}[r(1-\kappa r cos\phi)]P_\beta^a-\Psi_{\alpha\beta}[1-2\kappa r cos\phi]P_\beta^a
+\end{aligned}
+\end{equation}
+
+The derivation of $term\mathcal{D}2$ is identical to A, we are not prove it again. $Term\mathcal{P}2$ also could be combine with the part separated term of  $term\mathcal{D}2$ with $V^b$.  $Term\mathcal{X}2$ is also easy to derive.
+
+
+Thus, we have the final equation:
+\begin{equation}
+\begin{aligned}
+-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]V_\beta^a\\
+\int_0^{2\pi}  [{\psi_\alpha \psi_\beta   r(1-\kappa r cos\phi)}]_0^h d\theta P_\beta^a
+-\Psi_{[\alpha]\beta}[r(1-\kappa r cos\phi)]P_\beta^a-\Psi_{\alpha\beta}[1-2\kappa r cos\phi]P_\beta^a\\
+=
+\underline{term \mathcal{D}2:}  \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}V_\gamma^a
++\Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)]V_\beta^{a-b}V_\gamma^a
++ \Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]W_\beta^{a-b}V_\gamma^a\\
++\underline{term\mathcal({D}2+\mathcal{P}2):}  i(a)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}V_\gamma^{b}\\
++\underline{term \mathcal{D}2:} -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r]U_\beta^{a-b}U_\gamma^{b}
+-\Psi_{\alpha\beta\gamma}[r]({{d U_\beta^{a-b} \over {d s}}V_\gamma^{b}}+{dV_\gamma^{b}\over ds}U_\beta^{a-b})\\
++\underline{term \mathcal{X}2:} \kappa \Psi_{\alpha\beta\gamma}[1-\kappa rcos\phi]W_\beta^{a-b}W_\gamma^b-\kappa \Psi_{\alpha\beta\gamma}[r cos\phi]U_\beta^{a-b}U_\gamma^b\\
+\end{aligned}
+\end{equation}
+
+
+
+\subsection{Momentum $e^\theta$ term}
+
+Third, deal with the $e^\theta$ term:
+
+\begin{equation}
+\begin{aligned}
+-ia\kappa W^a+{1\over r}{\partial P^a\over {\partial \theta}}\\
+=
+\sum_{b=-\infty}^{\infty}
+term\mathcal{D}3: -{U^{a-b}\over {1-\kappa r cos\phi}}  {{\partial W^b} \over {\partial s}}-V^{a-b}{{\partial W^b}\over{\partial r}}-{W^{a-b}\over r}{{\partial W^b}\over {\partial \theta}}\\
++ \sum_{b=-\infty}^{\infty}
+term\mathcal{X}3: {\kappa sin\phi \over{(1-\kappa r cos\phi)}}U^{a-b}U^b-{W^{a-b}V^b\over{r}}\\
++term\mathcal{P}3:  \sum_{b=-\infty}^{\infty}
+ib\kappa P^{a-b}W^{b}
+\end{aligned}
+\end{equation}
+
+LHS-2:${\partial P^a \over \partial \theta }{(1-\kappa r cos\phi)\over r}$
+\begin{equation}
+\begin{aligned}
+\int_0^{2\pi} \int_0^h [{\partial P^a \over \partial \theta }{(1-\kappa r cos\phi)\over r}] r\psi_\alpha dr d\theta\\
+=\int_0^{2\pi} \int_0^h [{\partial \psi_\beta (1-\kappa r cos\phi) \psi_\alpha \over \partial \theta}]dr d\theta P_\beta^a
+-\int_0^{2\pi} \int_0^h [{\partial \psi_\alpha (1-\kappa r cos\phi) \over \partial \theta}]\psi_\beta dr d\theta P_\beta^a\\
+=0
+-\int_0^{2\pi} \int_0^h [{\partial \psi_\alpha \over \partial \theta}](1-\kappa r cos\phi) \psi_\beta dr d\theta P_\beta^a
+-\int_0^{2\pi} \int_0^h [{\partial (1-\kappa r cos\phi)  \over \partial \theta}] \psi_\alpha\psi_\beta dr d\theta P_\beta^a\\
+=-\int_0^{2\pi} \int_0^h [{\partial \psi_\alpha \over \partial \theta}](1-\kappa r cos\phi) \psi_\beta dr d\theta P_\beta^a
++\kappa \int_0^{2\pi} \int_0^h [ r sin\phi] \psi_\alpha\psi_\beta dr d\theta P_\beta^a\\
+=
+-\Psi_{(\alpha)\beta}[(1-\kappa r cos\phi)]P_\beta^a-\kappa \Psi_{\alpha\beta}[r sin\phi]P_\beta^a
+\end{aligned}
+\end{equation}
+
+The derivation of $term\mathcal{D}3$ is identical to A, we are not prove it again. $Term\mathcal{P}3$ also could be combine with the part separated term of  $term\mathcal{D}3$ with $W^b$.  $Term\mathcal{X}3$ is also easy to derive.
+
+
+Thus, we have the final equation:
+
+\begin{equation}
+\begin{aligned}
+-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]W_\beta^a\\
+-\Psi_{(\alpha)\beta}[(1-\kappa r cos\phi)]P_\beta^a-\kappa \Psi_{\alpha\beta}[r sin\phi]P_\beta^a\\
+=
+\underline{term \mathcal{D}2:}  \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}W_\gamma^a
++\Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)]V_\beta^{a-b}W_\gamma^a
++ \Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]W_\beta^{a-b}W_\gamma^a\\
++\underline{term\mathcal({D}2+\mathcal{P}2):}  i(a)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}W_\gamma^{b}\\
++\underline{term \mathcal{D}2:} -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r]U_\beta^{a-b}V_\gamma^{b}
+-\Psi_{\alpha\beta\gamma}[r]({{d U_\beta^{a-b} \over {d s}}W_\gamma^{b}}+{dW_\gamma^{b}\over ds}U_\beta^{a-b})\\
++\underline{term \mathcal{X}2:} \kappa \Psi_{\alpha\beta\gamma}[rsin\phi]U_\beta^{a-b}U_\gamma^b- \Psi_{\alpha\beta\gamma}[1-\kappa r cos\phi]W_\beta^{a-b}V_\gamma^b\\
+\end{aligned}
+\end{equation}
+
+
+\section{Merge the four equations and eliminate the $V_\gamma^{b}$ and $W_\gamma^{b}$}
+
+Using the linear relationships:
+\begin{equation}
+\begin{aligned}
+ia\kappa V^a={\partial P^a \over \partial r}\\
+:=\int \int iak V_\beta^a\psi_\beta r \psi_\alpha dr d\theta=\int \int {\partial P_\beta^a\psi_\beta\over \partial r} r \psi_\alpha drd\theta\\
+=i a \kappa V_\beta^a \delta_{\alpha\beta}=\Psi_{\alpha[\beta]}[r]P_\beta^a=\int_0^{2\pi}[r\psi_\alpha\psi_\beta]_0^h d\theta P_\beta^a-\int\int \psi_\alpha\psi_\beta dr d\theta P_\beta^a- \int\int {\partial \psi_\alpha\over \partial r}\psi_\beta rdr d\theta  P_\beta^a
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+iakW^a={1\over r}{\partial P^a\over \partial \theta}\\
+:=\int \int iak W_\beta^a\psi_\beta r \psi_\alpha dr d\theta=\int \int {\partial P_\beta^a\psi_\beta\over \partial \theta}{1\over r} r \psi_\alpha drd\theta\\
+=i a \kappa W_\beta^a \delta_{\alpha\beta}=\Psi_{\alpha(\beta)}[r]P_\beta^a=0-\Psi_{(\alpha)\beta}[r]P_\beta^a
+\end{aligned}
+\end{equation}
+
+Thus, we can establish relationships between the tranverse modes and pressure modes (no summation over a)
+\begin{equation}
+\begin{aligned}
+V_\alpha^a ={1\over {i a \kappa}}[\int_0^{2\pi}[r\psi_\alpha\psi_\beta]_0^h d\theta P_\beta^a-\Psi_{\alpha\beta}- \Psi_{[\alpha]\beta}[r]]P_\beta^a=V_{\alpha\beta}^a P_\beta^a
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+W_\alpha^a =-{1\over {i a \kappa}}\Psi_{(\alpha)\beta}P_\beta^a=W_{\alpha\beta}^a P_\beta^a
+\end{aligned}
+\end{equation}
+
+We also require modal expressions for ${d\over ds}V_\alpha^a$ and ${d\over ds}W_\alpha^a$.
+
+We differentiate eq49 with respect to s:
+\begin{equation}
+\begin{aligned}
+ia\kappa V^a={\partial P^a \over \partial r}\\
+\end{aligned}
+\end{equation}
+ 
+
+
+
+
+
+
 
 
 
