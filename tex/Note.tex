@@ -1,4 +1,4 @@
-\documentclass{AIAA}
+\documentclass{Note}
 \usepackage{amsmath} %% for equation edit
 \usepackage{amsfonts} %% for equation edit
 \usepackage{ulem} %sout
@@ -646,6 +646,7 @@ Thus, we have the final equation:
 
 
 \section{Merge the four equations and eliminate the $V_\gamma^{b}$ and $W_\gamma^{b}$}
+\subsection{$V_\alpha^a $ \& $W_\alpha^a $}
 
 Using the linear relationships:
 \begin{equation}
@@ -677,16 +678,99 @@ W_\alpha^a =-{1\over {i a \kappa}}\Psi_{(\alpha)\beta}P_\beta^a=W_{\alpha\beta}^
 \end{aligned}
 \end{equation}
 
+\subsection{ ${d\over ds}V_\alpha^a$  \& ${d\over ds}W_\alpha^a$}
 We also require modal expressions for ${d\over ds}V_\alpha^a$ and ${d\over ds}W_\alpha^a$.
 
 We differentiate eq49 with respect to s:
 \begin{equation}
 \begin{aligned}
-ia\kappa V^a={\partial P^a \over \partial r}\\
+{\partial V^a \over \partial s}={1\over {ia\kappa }}{\partial^2 P^a \over \partial s\partial r}\\
+={\partial \over \partial r}((1-\kappa r cos\phi)U^a)
+\end{aligned}
+\end{equation}
+
+where we have used symmetry of mixed partials and the linear expression for $\partial P^a\over \partial s$ from eq 21.
+
+From 1.1 as example, we know that
+\begin{equation}
+\begin{aligned}
+\int_0^{2\pi}\int_0^h   {{\partial }\over {\partial s}}[ {r U^{a-b}} U^b\psi_\alpha] dr d\theta \\
+={{\partial }\over {\partial s}}\int_0^{2\pi}\int_0^h   [ {r U^{a-b}} U^b\psi_\alpha] dr d\theta 
+-\int_0^{2\pi}{dh(s)\over ds}[ {r U^{a-b}} U^b\psi_\alpha]_{r=h}d\theta\\
+\end{aligned}
+\end{equation}
+
+here, we gives a relationship between $U^a$ and $V^a$ at the boundary which to dliminate $V^a$ tems:
+\begin{equation}
+\begin{aligned}
+{h'U_\beta^{a}}={(1-\kappa h cos \phi)}V_\beta^{a}
+\end{aligned}
+\end{equation}
+
+Multiplying this expression by $r\phi_\alpha$ and integrating across section of the duct, we obtain:
+\begin{equation}
+\begin{aligned}
+\int_0^{2\pi}\int_0^h {\partial V^a \over \partial s} r \psi_\alpha dr d\theta=
+\int_0^{2\pi}\int_0^h {\partial \over \partial r}((1-\kappa r cos\phi)U^a) r \psi_\alpha dr d\theta\\
+LHS:
+=\int_0^{2\pi}\int_0^h {\partial [V_\beta^a \psi_\beta r  \psi_\alpha] \over \partial s}  dr d\theta-\int_0^{2\pi}\int_0^h {\partial r  \psi_\alpha  \over \partial s}   \psi_\beta dr d\theta V_\beta^a\\
+={\partial \over \partial s}\int_0^{2\pi}\int_0^h [V_\beta^a \psi_\beta r  \psi_\alpha ]  dr d\theta-\int_0^{2\pi}{dh(s)\over ds} [V_\beta^a \psi_\beta r  \psi_\alpha ]_0^h d\theta
+-\int_0^{2\pi}\int_0^h {\partial  \psi_\alpha  \over \partial s}   \psi_\beta r  dr d\theta V_\beta^a\\
+={\partial \over \partial s} V_\beta^a\delta_{\alpha\beta}-\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta -\Psi_{\{\alpha\}\beta}[r]V_\beta^a\\
+RHS:=\int_0^{2\pi}\int_0^h {\partial \over \partial r}((1-\kappa r cos\phi)U_\beta^a \psi_\beta r \psi_\alpha) dr d\theta-\int_0^{2\pi}\int_0^h {\partial (  r \psi_\alpha)\over \partial r}(1-\kappa r cos\phi)U_\beta^a  \psi_\beta  dr d\theta\\
+=\int_0^{2\pi}[ r (1-\kappa r cos\phi) \psi_\beta \psi_\alpha]_0^h d\theta U_\beta^a
+-\int_0^{2\pi}\int_0^h {\partial \psi_\alpha\over \partial r} r(1-\kappa r cos\phi) \psi_\beta  dr d\theta U_\beta^a 
+-\int_0^{2\pi}\int_0^h (1-\kappa r cos\phi)  \psi_\alpha \psi_\beta  dr d\theta U_\beta^a\\
+=\int_0^{2\pi}[ r (1-\kappa r cos\phi) \psi_\beta \psi_\alpha]_0^h d\theta U_\beta^a
+-\Psi_{[\alpha]\beta}[r(1-\kappa r cos\phi)]U_\beta^a
+-\Psi_{\alpha\beta}[(1-\kappa r cos\phi)]U_\beta^a\\
+\end{aligned}
+\end{equation}
+
+Thus, LHS=RHS, we have:
+
+\begin{equation}
+\begin{aligned}
+{d \over ds} V_\alpha^a=\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta +\Psi_{\{\alpha\}\beta}[r]V_\beta^a\\
++\int_0^{2\pi}[ r (1-\kappa r cos\phi) \psi_\beta \psi_\alpha]_0^h d\theta U_\beta^a
+-\Psi_{[\alpha]\beta}[r(1-\kappa r cos\phi)]U_\beta^a
+-\Psi_{\alpha\beta}[(1-\kappa r cos\phi)]U_\beta^a\\
+\end{aligned}
+\end{equation}
+
+Similarly for $W^a$, differentiating eq50 with respect to s and substituting the linear expression for $\partial P^a\over \partial s$ by eq21:
+\begin{equation}
+\begin{aligned}
+{\partial W^a \over \partial s}={1\over {ia\kappa }}{\partial^2 P^a \over \partial s\partial \theta}\\
+={1\over r}{\partial \over \partial \theta}((1-\kappa r cos\phi)U^a)
+\end{aligned}
+\end{equation}
+
+
+Multiplying this expression by $r\phi_\alpha$ and integrating across section of the duct, we obtain:
+\begin{equation}
+\begin{aligned}
+\int_0^{2\pi}\int_0^h {\partial W^a \over \partial s} r \psi_\alpha dr d\theta=
+\int_0^{2\pi}\int_0^h {1\over r}{\partial \over \partial \theta}((1-\kappa r cos\phi)U^a) r \psi_\alpha dr d\theta\\
+LHS:
+=\int_0^{2\pi}\int_0^h {\partial [W_\beta^a \psi_\beta r  \psi_\alpha] \over \partial s}  dr d\theta-\int_0^{2\pi}\int_0^h {\partial r  \psi_\alpha  \over \partial s}   \psi_\beta dr d\theta W_\beta^a\\
+={\partial \over \partial s}\int_0^{2\pi}\int_0^h [W_\beta^a \psi_\beta r  \psi_\alpha ]  dr d\theta
+-\int_0^{2\pi}{dh(s)\over ds} [W_\beta^a \psi_\beta r  \psi_\alpha ]_0^h d\theta
+-\int_0^{2\pi}\int_0^h {\partial  \psi_\alpha  \over \partial s}   \psi_\beta r  dr d\theta W_\beta^a\\
+={d \over d s} W_\alpha^a-\int_0^{2\pi}{dh(s)\over ds} [ \psi_\beta r  \psi_\alpha ]_0^h d\theta W_\beta^a-\Psi_{\{\alpha\}\beta}[r]W_\beta^a\\
+RHS:=\int_0^{2\pi}\int_0^h {\partial \over \partial \theta}((1-\kappa r cos\phi)U_\beta^a \psi_\beta  \psi_\alpha) dr d\theta-\int_0^{2\pi}\int_0^h {\partial ( \psi_\alpha)\over \partial \theta}(1-\kappa r cos\phi)U_\beta^a  \psi_\beta  dr d\theta\\
+=0(periodic)-\Psi_{(\alpha)\beta}[1-\kappa r cos\phi]U_\beta^a 
 \end{aligned}
 \end{equation}
  
+Thus, LHS=RHS, we have:
 
+\begin{equation}
+\begin{aligned}
+{d \over ds} V_\alpha^a=\int_0^{2\pi}{dh(s)\over ds} [ \psi_\beta r  \psi_\alpha ]_0^h d\theta W_\beta^a+\Psi_{\{\alpha\}\beta}[r]W_\beta^a
+-\Psi_{(\alpha)\beta}[1-\kappa r cos\phi]U_\beta^a 
+\end{aligned}
+\end{equation}
 
 
 
