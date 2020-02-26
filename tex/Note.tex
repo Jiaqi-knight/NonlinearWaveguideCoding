@@ -17,6 +17,218 @@
 
 \maketitle
 
+\section{Hard-walled cylinderical ducts as basis function}
+\subsection{Infinite straight duct mode}
+We began from the Helmholtz equation:
+
+
+\begin{equation}
+\begin{aligned}
+\nabla^2 \psi={1\over r}{\partial \over \partial  r}({ r{\partial \psi\over \partial  r}}) +{1\over  r^2}{\partial ^2 \psi \over \partial \theta^2}=-\alpha^2 \psi
+\end{aligned}
+\end{equation}
+
+Using separation of variables, Circular symmetry: modes have the from :
+$\psi=F(r)G(\theta)$,
+
+Then we have:
+
+
+\begin{equation}
+\begin{aligned}
+({\partial^2 F\over \partial r^2}+{1\over r}{\partial F\over \partial r})G+{F\over r^2}{\partial^2 G\over \partial \theta^2}=-\alpha^2 FG\\
+Then,\\
+{({\partial^2 F\over \partial r^2}+{1\over r}{\partial F\over \partial r})\over F}+{1\over r^2}{{\partial^2 G\over \partial \theta^2}\over G}=-\alpha^2 \\
+\end{aligned}
+\end{equation}
+
+We assume that:
+
+
+Due to periodicity, we require that $\Phi$ satisfy, 
+\begin{equation}
+\begin{aligned}
+{d^2 G\over d\theta^2}=-m^2 G\rightarrow \Phi(\theta)=e^{\pm i m \theta}
+\end{aligned}
+\end{equation}
+
+
+Thus, we  have
+\begin{equation}
+\begin{aligned}
+F''+{1\over r} F'+(\alpha^2-{m^2\over r^2})=0  \rightarrow F(r)=J_m(\alpha r)
+\end{aligned}
+\end{equation}
+
+Circular symmetry $\psi=F(r)G(\theta)$: modes explicitly given by:
+\begin{equation}
+\begin{aligned}
+\psi=J_m(\alpha_{m\mu} r)e^{\pm i m \theta}
+\end{aligned}
+\end{equation}
+
+Hard walls:
+\begin{equation}
+\begin{aligned}
+J_m'(\alpha R)=0 \rightarrow \alpha_{m\mu}={{j'_{m\mu}}\over R}
+\end{aligned}
+\end{equation}
+
+Soft walls without flow:
+\begin{equation}
+\begin{aligned}
+Z\alpha_{m\mu} J_m'(\alpha_{m\mu} R)=-iw\rho_0J_m(\alpha_{m\mu} R) \rightarrow \alpha_{m\mu}(Z)
+\end{aligned}
+\end{equation}
+
+Soft walls with flow:
+\begin{equation}
+\begin{aligned}
+Z\alpha_{m\mu} J_m'(\alpha_{m\mu} R)=(w-U_0\kappa_{m\mu})J_m(\alpha_{m\mu} R) \rightarrow \alpha_{m\mu}(Z)
+\end{aligned}
+\end{equation}
+
+A complete solution may be writtern as:
+\begin{equation}
+\begin{aligned}
+p(x,r,\theta)=\sum_{m=-\infty}^\infty \sum_{\mu=1}^\infty (A_{m\mu}e^{-i\kappa_{m\mu}x}+B_{m\mu}e^{i\kappa_{m\mu}x})U_{m\mu}(r)e^{im\theta}\\
+\end{aligned}
+\end{equation}
+
+In a hard-walled duct $U_{m\mu}e^{-im\theta}$ are orthogonal. Normalise such that:
+
+\begin{equation}
+\begin{aligned}
+\int_0^{2\pi}\int_0^R U_{m\mu}(r)e^{-im\theta}U_{nv}(r)e^{-in\theta}rdr=2\pi \delta_{\mu v}\delta_{mn}
+\end{aligned}
+\end{equation}
+
+Source expansion
+If $p(0,t,\theta)=p_0(r,\theta)$ is source in hard-walled duct, then for x>0
+\begin{equation}
+\begin{aligned}
+p_0(r,\theta)=\sum_{m=-\infty}^\infty \sum_{\mu=1}^\infty (A_{m\mu}e^{-i\kappa_{m\mu}0})U_{m\mu}(r)e^{-im\theta}\\
+p_0(r,\theta)\underline{U_{nv}(r)e^{-in\theta}r}=\sum_{m=-\infty}^\infty \sum_{\mu=1}^\infty (A_{m\mu}e^{-i\kappa_{m\mu}0})U_{m\mu}(r)e^{-im\theta}\underline{U_{nv}(r)e^{-in\theta}r}\\
+\underline{\int_0^{2\pi}\int_0^R} p_0(r,\theta)\underline{U_{nv}(r)e^{-in\theta}r}\underline{drd\theta}=\underline{\int_0^{2\pi}\int_0^R}\sum_{m=-\infty}^\infty \sum_{\mu=1}^\infty (A_{m\mu}e^{-i\kappa_{m\mu}0})U_{m\mu}(r)e^{-im\theta}\underline{U_{nv}(r)e^{-in\theta}r}\underline{drd\theta}\\
+\underline{\int_0^{2\pi}\int_0^R} p_0(r,\theta)\underline{U_{nv}(r)e^{-in\theta}r}\underline{drd\theta}=\sum_{m=-\infty}^\infty \sum_{\mu=1}^\infty A_{m\mu}\underline{\int_0^{2\pi}\int_0^R}U_{m\mu}(r)e^{-im\theta}\underline{U_{nv}(r)e^{-in\theta}r}\underline{drd\theta}\\
+A_{nv}={1\over 2\pi}\underline{\int_0^{2\pi}\int_0^R} p_0(r,\theta)\underline{U_{nv}(r)e^{-in\theta}r}\underline{drd\theta}
+\end{aligned}
+\end{equation}
+and $B_{nv}=0$. The same for $x<0$ with $A_{nv}$ and $B_{nv}$ interchanged.
+
+A finite number of modes (cut-on modes) survive at large distrances.
+Just 1 mode if kR<<1: only $A_{01}$ important.
+
+
+\subsection{General duct mode}
+The pressure and velocity can now be expressed as Fourier series. Upper indices shall be used to denote temporal decompositions:
+
+\begin{equation}
+\begin{aligned}
+\widehat{p}=\sum_{a=-\infty}^{\infty}P^a(\textbf{x})e^{-iawt}\\
+\widehat{u}=\sum_{a=-\infty}^{\infty}U^a(\textbf{x})e^{-iawt}\\
+\widehat{v}=\sum_{a=-\infty}^{\infty}V^a(\textbf{x})e^{-iawt}\\
+\widehat{w}=\sum_{a=-\infty}^{\infty}W^a(\textbf{x})e^{-iawt}\\
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+P^a=\sum_{\alpha=0}^{\infty}P_{\alpha_{m\mu}}^a(s)\psi_{\alpha_{m\mu}} (s,r,\theta)=\sum_{m=-\infty}^\infty \sum_{\mu=1}^\infty P_{\alpha_{m\mu}}^a(s)\psi_{\alpha_{m\mu}}(s,r,\theta)\\
+U^a=\sum_{\alpha=0}^{\infty}U_{\alpha_{m\mu}}^a(s)\psi_{\alpha_{m\mu}} (s,r,\theta)=\sum_{m=-\infty}^\infty \sum_{\mu=1}^\infty U_{\alpha_{m\mu}}^a(s)\psi_{\alpha_{m\mu}}(s,r,\theta)\\
+V^a=\sum_{\alpha=0}^{\infty}V_{\alpha_{m\mu}}^a(s)\psi_{\alpha_{m\mu}} (s,r,\theta)=\sum_{m=-\infty}^\infty \sum_{\mu=1}^\infty V_{\alpha_{m\mu}}^a(s)\psi_{\alpha_{m\mu}}(s,r,\theta)\\
+W^a=\sum_{\alpha=0}^{\infty}W_{\alpha_{m\mu}}^a(s)\psi_{\alpha_{m\mu}} (s,r,\theta)=\sum_{m=-\infty}^\infty \sum_{\mu=1}^\infty W_{\alpha_{m\mu}}^a(s)\psi_{\alpha_{m\mu}}(s,r,\theta)\\
+\end{aligned}
+\end{equation}
+
+
+A solution of $\psi$ may have the form the same as the hard walls modes:
+\begin{equation}
+\begin{aligned}
+\psi_{m\mu}(r)=C_{\alpha_{m\mu}}J_m({{j'}_{m\mu} r\over h})e^{im\theta}
+\end{aligned}
+\end{equation}
+
+where should be normalized according to:
+\begin{equation}
+\begin{aligned}
+\int_0^{2\pi}\int_0^h \psi_{\alpha_{m\mu}} \psi_{\beta_{nv}} r dr d\theta=\delta_{\mu v} \delta_{mn}
+\end{aligned}
+\end{equation}
+
+\subsection{Normalised Modes$\rightarrow C_{\alpha_{m\mu}}$}
+
+
+Relation involving intergrals:
+\begin{equation}
+\begin{aligned}
+\underline{2\int \alpha^2 x J_m(\alpha x)^2 dx=(\alpha^2x^2-m^2)J_m(\alpha x)^2+\alpha^2 x^2 J'_m(\alpha x)^2}\\
+\rightarrow 2\int_0^h \alpha^2 x J_m(\alpha x)^2 dx=[(\alpha^2x^2-m^2)J_m(\alpha x)^2+\alpha^2 x^2 J'_m(\alpha x)^2]|_0^h\\=[(\alpha^2x^2-m^2)J_m(\alpha x)^2+\alpha^2 x^2 J'_m(\alpha x)^2]|_h-[(\alpha^2x^2-m^2)J_m(\alpha x)^2+\alpha^2 x^2 J'_m(\alpha x)^2]|_0\\
+=[(\alpha^2h^2-m^2)J_m(\alpha h)^2+\alpha^2 h^2 J'_m(\alpha h)^2]-[(\alpha^2 0^2-m^2)J_m(\alpha 0)^2+\alpha^2 0^2 J'_m(\alpha 0)^2]\\
+=
+(\alpha^2h^2-m^2)J_m(\alpha h)^2+\alpha^2 h^2 J'_m(\alpha h)^2
+\end{aligned}
+\end{equation}
+
+With hard-walled boudary condition:
+\begin{equation}
+\begin{aligned}
+J_m'(\alpha h)=0 \rightarrow \alpha_{m\mu}={{j'_{m\mu}}\over h} (eigenvalues)
+\end{aligned}
+\end{equation}
+
+Then, we have:
+\begin{equation}
+\begin{aligned}
+\int_0^h  r J_m(\alpha r)^2 dr\\
+=\left\{\begin{matrix}
+{1\over 2\alpha_{m\mu}^2}(\alpha_{m\mu}^2h^2-m^2)J_m(\alpha_{m\mu} h)^2, m\neq 0\\
+{1\over 2}(h^2)J_0(\alpha_{m\mu} h)^2, m=0
+\end{matrix}\right.\\
+=\left\{\begin{matrix}
+({J_m(\alpha_{m\mu} h)\sqrt{(h^2-{m^2\over \alpha_{m\mu}^2} )}\over \sqrt{2}})^2, m\neq 0\\
+{1\over 2}(h^2)J_0(\alpha_{m\mu} h)^2, m=0
+\end{matrix}\right.\\
+=\left\{\begin{matrix}
+({{h^2\over 2}(1-{m^2\over {j'}_{m\mu}^2} )}J^2_m({j'}_{m\mu})), m\neq 0\\
+{1\over 2}h^2 J^2_0({j'}_{m\mu}), m=0
+\end{matrix}\right.\\
+\end{aligned}
+\end{equation}
+
+Thus, 
+\begin{equation}
+\begin{aligned}
+C_{\alpha_{m\mu}}
+=\left\{\begin{matrix}
+{1 \over \sqrt{{\pi\over 2}h^2 J^2_0({j'}_{m\mu})}}, m=0\\
+{1\over \sqrt{({{\pi h^2\over 2}(1-{m^2\over {j'}_{m\mu}^2} )}J^2_m({j'}_{m\mu}))}}, m\neq 0\\
+\end{matrix}\right.\\
+\end{aligned}
+\end{equation}
+
+
+\subsection{Slowly varying ducts}
+
+waiting for updating......
+
+\subsection{Orthogonal-eigenvector}
+ ref:https://www.mathworks.com/help/matlab/ref/eigs.html
+ 
+ Eigenvectors, returned as a matrix. The columns in V correspond to the eigenvalues along the diagonal of D. The form and normalization of V depends on the combination of input arguments:
+
+[V,D] = eigs(A) returns matrix V, whose columns are the eigenvectors of A such that A*V = V*D. The eigenvectors in V are normalized so that the 2-norm of each is 1.
+
+If A is symmetric, then the eigenvectors, V, are orthonormal.
+
+[V,D] = eigs(A,B) returns V as a matrix whose columns are the generalized eigenvectors that satisfy A*V = B*V*D. The 2-norm of each eigenvector is not necessarily 1.
+
+If B is symmetric positive definite, then the eigenvectors in V are normalized so that the B-norm of each is 1. If A is also symmetric, then the eigenvectors are B-orthonormal.
+
+We could further study this question!!
+
+if we can use the GramSchmidt mode as basis??
+
 \section{Mass equation}
 
 Mass consevation:
@@ -841,60 +1053,6 @@ Thus, LHS=RHS, we have:
 \end{aligned}
 \end{equation}
 
-\section{Basis function for the duct-Orthogonal Series}
-
-\begin{equation}
-\begin{aligned}
-P^a=\sum_{\alpha=0}^{\infty}P_{\alpha}^a(s)\psi_\alpha(s,r,\theta)\\
-U^a=\sum_{\alpha=0}^{\infty}U_{\alpha}^a(s)\psi_\alpha(s,r,\theta)\\
-V^a=\sum_{\alpha=0}^{\infty}V_{\alpha}^a(s)\psi_\alpha(s,r,\theta)\\
-W^a=\sum_{\alpha=0}^{\infty}W_{\alpha}^a(s)\psi_\alpha(s,r,\theta)\\
-\end{aligned}
-\end{equation}
-
-
-
-and can be normalized according to 
-\begin{equation}
-\begin{aligned}
-\int_0^{2\pi}\int_0^h\psi_\alpha\psi_\beta r dr d\theta=\delta_{\alpha\beta}
-\end{aligned}
-\end{equation}
-
-and satify the no penetration condtion on the duct wall
-\begin{equation}
-\begin{aligned}
-{\partial \psi_\alpha\over \partial r}|_{r=h}=0, \forall \theta
-\end{aligned}
-\end{equation}
-
-They are gievn by 
-\begin{equation}
-\begin{aligned}
-\psi_\alpha=C_\alpha J_p({{j_{pq}r}\over h})cos(p\phi -{\xi \pi \over 2})
-\end{aligned}
-\end{equation}
-
-with normalization factor given by 
-\begin{equation}
-\begin{aligned}
-C_\alpha=\left\{\begin{matrix}
-{1\over \sqrt{\pi h^2 J_0^2(j_{0q})}}\qquad p=0\\
-{1\over \sqrt{{\pi h^2\over 2} (1-{p^2\over j^2_{pq}})J_0^2(j_{0q})}}\qquad p>0\\
-\end{matrix}\right.\\
-\end{aligned}
-\end{equation}
-
-and eigenvalues
-\begin{equation}
-\begin{aligned}
-\lambda_\alpha={j_{pq}\over h}
-\end{aligned}
-\end{equation}
-
-Here, $J_p$ denotes the ordinary Bessel function of the first kind and $j_{pq}$ denotes the $q^{th}$ zero of the derivative of $J_p(r)$, noting that $j_{00}=0$ (corresponding to plane wave modes) and $j_{0q}>0 $ for $q>0$. The index $\alpha$ maps to the triplet of integers $(p,q,\xi)$ with $p\in [0,\infty)$, $q\in[0,\infty)$ and $\xi=0,1$. The basis functions can be well ordered by pairing modes differing only by the $\xi$ index(aside forom the $p=0$ modes which do not come in a pair) and ordering them by the size of their eigenvalues $\lambda_\alpha \leq \lambda_{\alpha+2}$.
-
-\subsection{Detail introduction of Basis functions}
 
 
 
@@ -906,133 +1064,8 @@ Here, $J_p$ denotes the ordinary Bessel function of the first kind and $j_{pq}$ 
 
 
 
-\subsection{Example of Helmoholtz's equation in a hollow cylinder}
-
-Consider Laplace's equation in a hollow cylinder of radius $h$ with endcaps at $z=0 $and $z=a$,
-
-\begin{equation}
-\begin{aligned}
-\nabla^2 V=0
-\end{aligned}
-\end{equation}
-
-with boundary conditions
-\begin{equation}
-\begin{aligned}
-V(a,\psi,z)=0, V(r,\psi, 0)=0,V(r,\psi, h)=f(r, \psi)
-\end{aligned}
-\end{equation}
-
-for a given potential function $f(r, \psi)$. In cylindrical coordinates,
-we know that:
-\begin{equation}
-\begin{aligned}
-\nabla^2 f=\nabla \cdot \nabla f\\
-={1\over {h_1 h_2 h_3}}[{{\partial(\nabla f)_1}h_2h_3]\over \partial w_1}+{{\partial(\nabla f)_2}h_1h_3]\over \partial w_2}+{{\partial(\nabla f)_3}h_1h_2]\over \partial w_3}]\\
-={1\over {h_1 h_2 h_3}}[{{\partial }\over \partial w_1}({h_2h_3\over h_1}{\partial f\over \partial w_1})+{{\partial }\over \partial w_2}({h_3h_1\over h_2}{\partial f\over \partial w_2})+{{\partial }\over \partial w_3}({h_1h_2\over h_3}{\partial f\over \partial w_3})]\\
-\end{aligned}
-\end{equation}
-
-In straight cylindical coordinates, http://mathworld.wolfram.com/CylindricalCoordinates.html
-\begin{equation}
-h_z=1,
-h_r=1,
-h_\psi=r
-\end{equation}
-
-we get:
-\begin{equation}
-\begin{aligned}
-\nabla^2 f\\
-={1\over {h_1 h_2 h_3}}[{{\partial }\over \partial w_1}({h_2h_3\over h_1}{\partial f\over \partial w_1})+{{\partial }\over \partial w_2}({h_3h_1\over h_2}{\partial f\over \partial w_2})+{{\partial }\over \partial w_3}({h_1h_2\over h_3}{\partial f\over \partial w_3})]\\
-={1\over r}{\partial \over \partial r}({r {\partial f\over \partial r}}) +{1\over r^2}{\partial ^2 f\over \partial \psi^2}+{\partial^2 f\over \partial z^2}
-\end{aligned}
-\end{equation}
- Laplace's equation becomes
-\begin{equation}
-\begin{aligned}
-{1\over r}{\partial \over \partial  r}({ r{\partial V\over \partial  r}}) +{1\over  r^2}{\partial ^2 V\over \partial \psi^2}+{\partial^2 V\over \partial z^2}=0
-\end{aligned}
-\end{equation}
-
-Using separation of variables, we assume a solution of the form
-$V(r, \psi, z)=P(r)\Phi(\psi)Z(z)$,
-
-Substituting this from into the PDE and dividing by V yields,
-\begin{equation}
-\begin{aligned}
-{1\over r P}{\partial \over \partial  r}({ r{\partial P\over \partial  r}}) +{1\over  r^2\Phi}{\partial ^2 \Phi\over \partial \psi^2}+{1\over Z}{\partial^2 V\over \partial z^2}=0
-\end{aligned}
-\end{equation}
-
-Due to periodicity, we require that $\Phi$ satisfy, 
-\begin{equation}
-\begin{aligned}
-{d^2 \Phi \over d\psi^2}=-m^2\Phi
-\end{aligned}
-\end{equation}
-where m is an integer, $\Phi(\psi)=e^{i m \psi}$.
-
-We also have
-\begin{equation}
-\begin{aligned}
-{d^2 Z \over dz^2}=-\lambda_\alpha^2\Phi
-\end{aligned}
-\end{equation}
-
-which has solution $e^{\lambda_\alpha z}$.
-Because of the boundary condition at z=0, we take linear combinations of solutions so that $Z(z)=1/2e^{\lambda_\alpha z}-1/2e^{-\lambda_\alpha z}=sinh(\lambda_\alpha z)$
-
-Then, we have
-
-\begin{equation}
-\begin{aligned}
-{d^2 P\over dr^2}+{1\over r}{dP\over dr}+(\lambda_\alpha^2-{m^2\over r^2 })P=0
-\end{aligned}
-\end{equation}
-
-This is also proved to be the $\textbf{Bessel equation}$ of the oder m, which has solutions $J_m(\lambda_\alpha r)$. 
-
-In order to satisfy the boundary condtion at $r=h$, We then have
-\begin{equation}
-\begin{aligned}
-V(r,\psi,z)=J_m({j_{mn}\over h}r)e^{im\psi}sinh({j_{mn}\over h}z)
-\end{aligned}
-\end{equation}
 
 
-and eigenvalues
-\begin{equation}
-\begin{aligned}
-\lambda_\alpha={j_{mn}\over h}
-\end{aligned}
-\end{equation}
-
-Here, $J_m$ denotes the ordinary Bessel function of the first kind and $j_{mn}$ denotes the $n^{th}$ zero of the derivative of $J_m(r)$, noting that $j_{00}=0$ (corresponding to plane wave modes) and $j_{0n}>0 $ for $n>0$. 
-
-To satisfy the boundary condition at $z=h$, we take a linear combination of solutions of this and seek the coefficients of the expansion:
-\begin{equation}
-\begin{aligned}
-f(r,\psi)=\sum_{m=-\infty}^{\infty}\sum_{n=1}^{\infty} c_{mn}J_m({j_{mn}\over h}r)e^{im\psi}sinh({j_{mn}\over h}a)
-\end{aligned}
-\end{equation}
-
-
-From the orthogonality relation for Bessel functions:
-\begin{equation}
-\begin{aligned}
-\int_0^h r J_m ({j_{mi}\over h}r)J_m ({j_{mj}\over h}r)dr={h^2\over 2}[J_{v+1}(j_{mj})]^2\delta_{ij}
-\end{aligned}
-\end{equation}
-
-and also, 
-\begin{equation}
-\begin{aligned}
-\int_0^{2\pi} e^{im\psi}e^{im'\psi}d\psi=2\pi \delta_{mm'}
-\end{aligned}
-\end{equation}
-
-We know that
 
 
 

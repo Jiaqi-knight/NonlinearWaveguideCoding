@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  25 FEB 2020 20:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  26 FEB 2020 18:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -347,17 +347,17 @@ e
 Class revtex4 Warning: Assuming \noaffiliation for  Email: jiaqi\_wang@sjtu.edu
 .cn .
 
-LaTeX Font Info:    Try loading font information for U+lasy on input line 23.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 25.
 (e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 23.
+LaTeX Font Info:    Try loading font information for U+msa on input line 25.
 
 (e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.
 fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 23.
+LaTeX Font Info:    Try loading font information for U+msb on input line 25.
 
 (e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.
 fd
@@ -366,52 +366,57 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 24.
+(amsmath)                 on input line 27.
 
 [1{e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-var/fonts/map/pdftex/updmap
-/pdftex.map}] [2]
-Overfull \hbox (62.89583pt too wide) detected at line 144
+/pdftex.map}]
+Overfull \hbox (6.58217pt too wide) detected at line 116
+[][]
+ []
+
+[2] [3] [4] [5] [6]
+Overfull \hbox (62.89583pt too wide) detected at line 356
 [][]
  []
 
 
-Overfull \hbox (26.40536pt too wide) detected at line 153
+Overfull \hbox (26.40536pt too wide) detected at line 365
 [][]
  []
 
-[3]
-Overfull \hbox (13.58304pt too wide) detected at line 218
+[7]
+Overfull \hbox (13.58304pt too wide) detected at line 430
 [][]
  []
 
-[4] [5]
+[8] [9]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- [6] [7]
-Overfull \hbox (1.76048pt too wide) detected at line 384
+ [10] [11]
+Overfull \hbox (1.76048pt too wide) detected at line 596
 [][]
  []
 
-[8] [9] [10] [11] [12] [13] [14]
-Overfull \hbox (52.44824pt too wide) detected at line 728
+[12] [13] [14] [15] [16] [17] [18]
+Overfull \hbox (52.44824pt too wide) detected at line 940
 [][]
  []
 
-[15]
-Overfull \hbox (26.40536pt too wide) detected at line 782
+[19]
+Overfull \hbox (26.40536pt too wide) detected at line 994
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 784--785
+Underfull \hbox (badness 10000) in paragraph at lines 996--997
 
  []
 
-[16] [17] [18] [19] [20] (./Note.aux) ) 
+[20] [21] (./Note.aux) ) 
 Here is how much of TeX's memory you used:
  4093 strings out of 492995
  54693 string characters out of 6136402
@@ -419,36 +424,37 @@ Here is how much of TeX's memory you used:
  7571 multiletter control sequences out of 15000+600000
  18834 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,16n,26p,595b,198s stack positions out of 5000i,500n,10000p,200000b,80000s
-{e:/Jiaqi-SJTU-offical/Package/texlive/2
-017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<e:/Jiaqi-SJTU-offical/
-Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/J
-iaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
-mextra/cmex7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><e:/Jiaqi-SJTU-offical/Pack
-age/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><e:/Jiaqi-
-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi9.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><e:/Jiaqi-SJTU-offical
-/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/Ji
-aqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-offical/Package/te
-xlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-o
-ffical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb
-><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-s
-uper/sfbx1728.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/
-type1/public/cm-super/sfrm1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/
-texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Pack
-age/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on Note.pdf (20 pages, 288555 bytes).
+ 39i,18n,26p,335b,206s stack positions out of 5000i,500n,10000p,200000b,80000s
+{e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/
+fonts/enc/dvips/cm-super/cm-super-t1.enc}<e:/Jiaqi-SJTU-offical/Package/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/Jiaqi-SJTU-offic
+al/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pf
+b><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><e:/Jiaqi-SJTU-offical/Pa
+ckage/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/Jiaq
+i-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi9.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr5.pfb><e:/Jiaqi-SJTU-offical/Package/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/Jiaqi-SJTU-offica
+l/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:
+/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><e:/Jiaqi-SJTU-offical/Package/
+texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU
+-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.p
+fb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm
+-super/sfbx1728.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/font
+s/type1/public/cm-super/sfrm1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/201
+7/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Pa
+ckage/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on Note.pdf (21 pages, 288541 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 154 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
