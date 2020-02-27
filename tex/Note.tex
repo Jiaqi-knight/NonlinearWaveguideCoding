@@ -213,7 +213,7 @@ C_{\alpha_{m\mu}}
 waiting for updating......
 
 \subsection{Orthogonal-eigenvector}
- ref:https://www.mathworks.com/help/matlab/ref/eigs.html
+ ref:https:\\www.mathworks.com/help/matlab/ref/eigs.html
  
  Eigenvectors, returned as a matrix. The columns in V correspond to the eigenvalues along the diagonal of D. The form and normalization of V depends on the combination of input arguments:
 
@@ -494,7 +494,7 @@ $\int \int  XX  r \psi_\alpha dr d\theta$,  we have:
 
 1. the first $\mathcal{D}1$ tems:
 
-We ref the wiki $“https://en.wikipedia.org/wiki/Leibniz\_integral\_rule”$  
+We ref the wiki $“https:\\en.wikipedia.org/wiki/Leibniz\_integral\_rule”$  
 
 General form: Differentiation under the integral sign:
 \begin{equation}
@@ -1051,17 +1051,133 @@ Thus, LHS=RHS, we have:
 \end{equation}
 
 
+\section{Tensors in matlab for numerical simulation}
+\subsection{Tensor times vectors: $\mathcal{A}\bar{\times}_n u$}
+
+Let $\mathcal{A}$ be a tensor of size $I_1\times I_2\times ...\times I_N$, u be a vector of size $I_n$.
+
+We have:
+\begin{equation}
+\begin{aligned}
+ttv(\mathcal{A},\{u\},[n])=(\mathcal{A}\bar{\times}_n u)(i_1,...,i_{n-1},i_{n+1},...,i_N)\\
+\sum_{i_n=1}^{I_n}\mathcal{A}(i_1,i_2,...,i_N)u(i_n)
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+ttv(A_{m\times n},\{u_{m\times 1}\},[1])=A_{m\times n}\bar{\times}_1 u_{m\times 1}=A_{m\times n}^T u_{m\times 1}\\
+ttv(A_{m\times n},\{v_{n\times 1}\},[2])=A_{m\times n}\bar{\times}_2 v_{n\times 1}=A_{m\times n}  v_{n\times 1}\\
+\end{aligned}
+\end{equation}
+
+Property:
+
+\begin{equation}
+\begin{aligned}
+ttv(\mathcal{A},\{u,v\},[m,n])=\mathcal{A}\bar{\times}_m u \bar{\times}_n v\\
+=ttv(ttv(\mathcal{A},\{u\},[m]),\{v\},[n-1])=(\mathcal{A}\bar{\times}_m u ) \bar{\times}_{n-1} v\\
+=ttv(ttv(\mathcal{A},\{v\},[v]),\{u\},[m])=(\mathcal{A}\bar{\times}_n v ) \bar{\times}_{m} u\\
+\end{aligned}
+\end{equation}
+
+Multiplication with a sequence of vectors
+\begin{equation}
+\begin{aligned}
+\beta=\mathcal{A}\bar{\times}_1 u^{(1)}\bar{\times}_2 u^{(2)}...\bar{\times}_N u^{(N)}=\mathcal{A}\bar{\times} {u}\\
+like:
+ttv(X, \{A,B,C,D\})
+= ttv(X, \{A,B,C,D\}, [1 2 3 4]) 
+= ttv(X, \{D,C,B,A\}, [4 3 2 1])
+\end{aligned}
+\end{equation}
+
+Multiplication with \textbf{all but one} of a sequence of vectors
+\begin{equation}
+\begin{aligned}
+b=\mathcal{A}\bar{\times}_1 u^{(1)}\bar{\times}_2 u^{(2)}...\bar{\times}_{n-1} u^{(2)}\bar{\times}_{n+1} u^{(2)}...\bar{\times}_N u^{(N)}=\mathcal{A}\bar{\times}_{-n} {u}\\
+like:
+X = tenrand([5,3,4,2]); \\
+A = rand(5,1); B = rand(3,1); C = rand(4,1); D = rand(2,1); \\
+Y = ttv(X, \{A,B,D\}, -3) = ttv(X, \{A,B,C,D\}, -3)
+\end{aligned}
+\end{equation}
+
+\subsection{Tensor times matrix (ttm): $\mathcal{A}{\times}_n u$}
+Let $\mathcal{A}$ be a tensor of size $I_1\times I_2\times ...\times I_N$, U be a matrix of size $J_n\times I_n$.
+
+We have:
+\begin{equation}
+\begin{aligned}
+ttm(\mathcal{A},\{U\},[n])=(\mathcal{A}{\times}_n U)(i_1,...,i_{n-1},j_{n},i_{n+1},...,i_N)\\
+\sum_{i_n=1}^{I_n}\mathcal{A}(i_1,i_2,...,i_N)U(j_n, i_n)\\
+like:X = tensor(rand(5,3,4,2));
+A = rand(4,5);\\
+Y = ttm(X, A, 1)= ttm(X, \{A,B,C,D\}, 1)= ttm(X, A', 1, 't')    
+\end{aligned}
+\end{equation}
+
+Matrix Interpretation
+\begin{equation}
+\begin{aligned}
+ttm(A_{m\times n},\{U_{m\times k}^T\},[1])=A\times _1 U^T=U^TA\\
+ttm(A_{m\times n},\{V_{m\times k}^T\},[2])=A\times _2 V^T=AV\\
+ttm(A,\{U,V\},[1,2])=UAV^T
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+Y = ttm(X, {A,B,C,D}, [1 2 3 4]); \%<-- 4-way mutliply.\\
+Y = ttm(X, {D,C,B,A}, [4 3 2 1]); \%<-- Same as above.\\
+Y = ttm(X, {A,B,C,D});            \%<-- Same as above.\\
+Y = ttm(X, {A',B',C',D'}, 't')    \%<-- Same as above.\\
+\\
+Y = ttm(X, {C,D}, [3 4]);    \%<-- X times C in mode-3 & D in mode-4\\
+Y = ttm(X, {A,B,C,D}, [3 4]) \%<-- Same as above.\\
+\\
+Y = ttm(X, {A,B,D}, [1 2 4]);  \%<-- 3-way multiply.\\
+Y = ttm(X, {A,B,C,D}, [1 2 4]); \%<-- Same as above.\\
+Y = ttm(X, {A,B,D}, -3);        \%<-- Same as above.\\
+Y = ttm(X, {A,B,C,D}, -3)       \%<-- Same as above.\\
+\end{aligned}
+\end{equation}
 
 
+Property
+\begin{equation}
+\begin{aligned}
+ttm(\mathcal{A},\{u,v\},[m,n])=\mathcal{A}{\times}_m u \bar{\times}_n v\\
+=ttm(ttm(\mathcal{A},\{u\},[m]),\{v\},[n])=(\mathcal{A}{\times}_m u ){\times}_{n} v\\
+=ttm(ttm(\mathcal{A},\{v\},[v]),\{u\},[m])=(\mathcal{A}{\times}_n v ) {\times}_{m} u\\
+\end{aligned}
+\end{equation}
 
 
+\subsection{Tensor times tensor (ttt): $<\mathcal{A},\mathcal{B}>$}
+Let $\mathcal{A}$ and $\mathcal{B}$ be a tensor of size $I_1\times I_2\times ...\times I_N$.
+\begin{equation}
+\begin{aligned}
+<\mathcal{A},\mathcal{B}>=\\
+\beta=\sum_{i_1=1}^{I_1}\sum_{i_1=1}^{I_2}...\sum_{i_1=1}^{I_N}\mathcal{A}(i_1,i_2,...,i_N)\mathcal{B}(i_1,i_2,...,i_N)
+\end{aligned}
+\end{equation}
 
-
-
-
-
-
-
+\begin{equation}
+\begin{aligned}
+X = tensor(rand(4,2,3)); Y = tensor(rand(3,4,2));\\
+Z = ttt(X,Y); \%<-- Outer product of X and Y.\\
+size(Z)\\
+\\
+Z = ttt(X,X,1:3) \%<-- Inner product of X with itself.\\
+\\
+Z = ttt(X,Y,[1 2 3],[2 3 1]) \%<-- Inner product of X & Y.\\
+\\
+Z = innerprod(X,permute(Y, [2 3 1])) \%<-- Same as above.\\
+\\
+Z = ttt(X,Y,[1 3],[2 1]) \%<-- Product of X & Y along specified dims.\\
+\end{aligned}
+\end{equation}
 
 
 
