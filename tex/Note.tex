@@ -797,7 +797,7 @@ Thus, we have the final equation:
 +\underline{term\mathcal({D}2+\mathcal{P}2):}  i(a)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}V_\gamma^{b}\\
 +\underline{term \mathcal{D}2:} -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r]U_\beta^{a-b}U_\gamma^{b}
 -\Psi_{\alpha\beta\gamma}[r]({{d U_\beta^{a-b} \over {d s}}V_\gamma^{b}}+{dV_\gamma^{b}\over ds}U_\beta^{a-b})\\
-+\underline{term \mathcal{X}2:} \kappa \Psi_{\alpha\beta\gamma}[1-\kappa rcos\phi]W_\beta^{a-b}W_\gamma^b-\kappa \Psi_{\alpha\beta\gamma}[r cos\phi]U_\beta^{a-b}U_\gamma^b\\
++\underline{term \mathcal{X}2:} \Psi_{\alpha\beta\gamma}[1-\kappa rcos\phi]W_\beta^{a-b}W_\gamma^b-\kappa \Psi_{\alpha\beta\gamma}[r cos\phi]U_\beta^{a-b}U_\gamma^b\\
 \end{aligned}
 \end{equation}
 
@@ -858,7 +858,46 @@ Thus, we have the final equation:
 
 
 \section{Merge the four equations and eliminate the $V_\gamma^{b}$ and $W_\gamma^{b}$}
-\subsection{$V_\alpha^a $ \& $W_\alpha^a $}
+\subsection{nonliear term}
+
+we have to re-derive the momentum equation with multiply $(1-\kappa r cos\phi)$:
+\begin{equation}
+\begin{aligned}
+-ia\kappa V^a+{\partial P^a\over {\partial r}}\\
+=
+\sum_{b=-\infty}^{\infty}
+term\mathcal{D}2: -{U^{a-b}\over {1-\kappa r cos\phi}}  {{\partial V^b} \over {\partial s}}-V^{a-b}{{\partial V^b}\over{\partial r}}-{W^{a-b}\over r}{{\partial V^b}\over {\partial \theta}}\\
++ \sum_{b=-\infty}^{\infty}
+term\mathcal{X}2: {W^{a-b}W^b\over{r}}-{\kappa cos\phi \over{(1-\kappa r cos\phi)}}U^{a-b}U^b\\
++term\mathcal{P}2:  \sum_{b=-\infty}^{\infty}
+ib\kappa P^{a-b}V^{b}\\
+\end{aligned}
+\end{equation}
+
+LHS-2:${\partial P^a \over \partial r }$
+\begin{equation}
+\begin{aligned}
+\int_0^{2\pi} \int_0^h [{\partial P^a \over \partial r}] r\psi_\alpha dr d\theta\\
+=\int_0^{2\pi}[r\psi_\alpha\psi_\beta]_0^h d\theta P_\beta^a-\int\int \psi_\alpha\psi_\beta dr d\theta P_\beta^a- \int\int {\partial \psi_\alpha\over \partial r}\psi_\beta rdr d\theta  P_\beta^a
+\end{aligned}
+\end{equation}
+Thus, we have the final equation:
+\begin{equation}
+\begin{aligned}
+-ia\kappa \Psi_{\alpha\beta}[r]V_\beta^a+\int_0^{2\pi}  [{\psi_\alpha \psi_\beta   r}]_0^h d\theta P_\beta^a
+-\Psi_{[\alpha]\beta}[r]P_\beta^aa-\Psi_{\alpha\beta}P_\beta^a\\
+=
+\underline{term \mathcal{D}2:}  \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}V_\gamma^a
++\Psi_{[\alpha]\beta\gamma} [r]V_\beta^{a-b}V_\gamma^a
++ \Psi_{(\alpha)\beta\gamma} W_\beta^{a-b}V_\gamma^a\\
++\underline{term\mathcal({D}2+\mathcal{P}2):}  i(a)\kappa \Psi_{\alpha\beta\gamma}[r]P_\beta^{a-b}V_\gamma^{b}\\
++\underline{term \mathcal{D}2:} -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r]U_\beta^{a-b}U_\gamma^{b}
+-\Psi_{\alpha\beta\gamma}[r]({{d U_\beta^{a-b} \over {d s}}V_\gamma^{b}}+{dV_\gamma^{b}\over ds}U_\beta^{a-b})error\\
++\underline{term \mathcal{X}2:} \kappa \Psi_{\alpha\beta\gamma}W_\beta^{a-b}W_\gamma^b\\
+\end{aligned}
+\end{equation}
+
+\subsection{$V_\alpha^a $ \& $W_\alpha^a  for RHS$}
 
 Using the linear relationships:
 \begin{equation}
@@ -880,17 +919,17 @@ iakW^a={1\over r}{\partial P^a\over \partial \theta}\\
 Thus, we can establish relationships between the tranverse modes and pressure modes (no summation over a)
 \begin{equation}
 \begin{aligned}
-V_\alpha^a ={1\over {i a \kappa}}[\int_0^{2\pi}[r\psi_\alpha\psi_\beta]_0^h d\theta P_\beta^a-\Psi_{\alpha\beta}- \Psi_{[\alpha]\beta}[r]]P_\beta^a=\textbf{V}_{\alpha\beta}^a P_\beta^a
+\uuline{V_\alpha^a ={1\over {i a \kappa}}[\int_0^{2\pi}[r\psi_\alpha\psi_\beta]_0^h d\theta -\Psi_{\alpha\beta}- \Psi_{[\alpha]\beta}[r]]P_\beta^a=\textbf{V}_{\alpha\beta}^a P_\beta^a}
 \end{aligned}
 \end{equation}
 
 \begin{equation}
 \begin{aligned}
-W_\alpha^a =-{1\over {i a \kappa}}\Psi_{(\alpha)\beta}P_\beta^a=\textbf{W}_{\alpha\beta}^a P_\beta^a
+\uuline{W_\alpha^a =-{1\over {i a \kappa}}\Psi_{(\alpha)\beta}P_\beta^a=\textbf{W}_{\alpha\beta}^a P_\beta^a}
 \end{aligned}
 \end{equation}
 
-\subsection{ ${d\over ds}V_\alpha^a$  \& ${d\over ds}W_\alpha^a$}
+\subsection{ ${d\over ds}V_\alpha^a$  \& ${d\over ds}W_\alpha^a for RHS$}
 We also require modal expressions for ${d\over ds}V_\alpha^a$ and ${d\over ds}W_\alpha^a$.
 
 We differentiate eq49 with respect to s:
@@ -943,10 +982,10 @@ Thus, LHS=RHS, we have:
 
 \begin{equation}
 \begin{aligned}
-{d \over ds} V_\alpha^a=\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta +\Psi_{\{\alpha\}\beta}[r]V_\beta^a\\
-+\int_0^{2\pi}[ r (1-\kappa r cos\phi) \psi_\beta \psi_\alpha]_0^h d\theta U_\beta^a
+\uuline{{d \over ds} V_\alpha^a=\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta +\Psi_{\{\alpha\}\beta}[r]V_\beta^a}\\
+\uuline{+\int_0^{2\pi}[ r (1-\kappa r cos\phi) \psi_\beta \psi_\alpha]_0^h d\theta U_\beta^a
 -\Psi_{[\alpha]\beta}[r(1-\kappa r cos\phi)]U_\beta^a
--\Psi_{\alpha\beta}[(1-\kappa r cos\phi)]U_\beta^a\\
+-\Psi_{\alpha\beta}[(1-\kappa r cos\phi)]U_\beta^a}\\
 \end{aligned}
 \end{equation}
 
@@ -979,8 +1018,8 @@ Thus, LHS=RHS, we have:
 
 \begin{equation}
 \begin{aligned}
-{d \over ds} V_\alpha^a=\int_0^{2\pi}{dh(s)\over ds} [ \psi_\beta r  \psi_\alpha ]_0^h d\theta W_\beta^a+\Psi_{\{\alpha\}\beta}[r]W_\beta^a
--\Psi_{(\alpha)\beta}[1-\kappa r cos\phi]U_\beta^a 
+\uuline{{d \over ds} V_\alpha^a=\int_0^{2\pi}{dh(s)\over ds} [ \psi_\beta r  \psi_\alpha ]_0^h d\theta W_\beta^a+\Psi_{\{\alpha\}\beta}[r]W_\beta^a
+-\Psi_{(\alpha)\beta}[1-\kappa r cos\phi]U_\beta^a }
 \end{aligned}
 \end{equation}
 
@@ -996,8 +1035,16 @@ Thus, LHS=RHS, we have:
 \textit{Transform:}\\
 \begin{equation}
 \begin{aligned}
-\Psi_{[\alpha]\beta}[ r(1-\kappa r cos(\phi))]\uuline{V_\beta^a}:=\Psi_{[\alpha]\delta}[ r(1-\kappa r cos(\phi))] \textbf{V}_{\delta\beta}^a P_\beta^a\\
-\Psi_{(\alpha)\beta}[ (1-\kappa r cos(\phi))]\uuline{W_\beta^a}:=\Psi_{(\alpha)\delta}[ (1-\kappa r cos(\phi))] \textbf{W}_{\delta\beta}^a P_\beta^a\\
+{d U_\alpha^a \over d s}:=\uuline{I}u_\alpha'^a\\
+-\Psi_{\{\alpha\}\beta}[r]U_\beta^a:=\uuline{-\Psi_{\{\alpha\}\beta}[r]}u_\beta^a\\
+-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))] P_\beta^a:=\uuline{-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))]} p_\beta^a\\
+-\Psi_{[\alpha]\beta}[ r(1-\kappa r cos(\phi))]\uuline{V_\beta^a}:=\uuline{-\Psi_{[\alpha]\delta}[ r(1-\kappa r cos(\phi))] \textbf{V}_{\delta\beta}^a} p_\beta^a\\
+-\Psi_{(\alpha)\beta}[ (1-\kappa r cos(\phi))]\uuline{W_\beta^a}:=\uuline{-\Psi_{(\alpha)\delta}[ (1-\kappa r cos(\phi))] \textbf{W}_{\delta\beta}^a} p_\beta^a\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa P_\beta^{a-b} P_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\alpha\beta\gamma}[ (1-\kappa r cos(\phi))]}p_\beta^{a-b}p_\gamma^{b}=(B_1[p,p])_\alpha^a\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa U_\beta^{a-b} U_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty} \uuline{ \Psi_{\alpha\beta\gamma}[ (1-\kappa r cos(\phi))]} u_\beta^{a-b}u_\gamma^{b}=(A_1[u,u])_\alpha^a\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa V_\beta^{a-b} V_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{\alpha\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{V}_{\delta\beta}^{a-b}\textbf{V}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa W_\beta^{a-b} W_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{\alpha\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{W}_{\delta\beta}^{a-b}\textbf{W}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ia\kappa  {B\over {2A}}P_\beta^{a-b}P_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ia\kappa{B\over 2A} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty} \uuline{ \Psi_{\alpha\beta\gamma}[ (1-\kappa r cos(\phi))]} p_\beta^{a-b}p_\gamma^{b}\\
 \end{aligned}
 \end{equation}
 
@@ -1005,24 +1052,39 @@ Thus, LHS=RHS, we have:
 
 \begin{equation}
 \begin{aligned}
--ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a
-+{d\over {ds}}P_\alpha^a
+{d\over {ds}}P_\alpha^a-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a
 -\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta P_\beta^a-\Psi_{\{\alpha\}\beta}[r] P_\beta^a\\
-=
+= \sum_{b=-\infty}^{+\infty}
 \underline{term \mathcal{D}1:}  \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}U_\gamma^a
 +\Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)]\uuline{V_\beta^{a-b}}U_\gamma^a
 + \Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]\uuline{W_\beta^{a-b}}U_\gamma^a\\
 +\underline{term\mathcal({D}1+\mathcal{P}1):}  i(a)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}U_\gamma^{b}\\
 +\underline{term \mathcal{D}1:} -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r])U_\beta^{a-b}U_\gamma^{b}
 -\Psi_{\alpha\beta\gamma}[r]({{d U_\beta^{a-b} \over {d s}}U_\gamma^{b}}+{dU_\gamma^{b}\over ds}U_\beta^{a-b})\\
-+\underline{term \mathcal{X}1:} \kappa \Psi_{\alpha\beta\gamma}[rcos\phi]U_\beta^{a-b}\uuline{V_\gamma^b}-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi]U_\beta^{a-b}\uuline{W_\gamma^b}\\
++\underline{term \mathcal{X}1:} \Psi_{\alpha\beta\gamma}[rcos\phi]U_\beta^{a-b}\uuline{V_\gamma^b}-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi]U_\beta^{a-b}\uuline{W_\gamma^b}\\
+\end{aligned}
+\end{equation}
+
+Transform:
+\begin{equation}
+\begin{aligned}
+{d\over {ds}}P_\alpha^a:=\uuline{I}{p'}_\alpha^a\\
+-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a:=\uuline{-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))]} u_\beta^a\\
+-\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta P_\beta^a-\Psi_{\{\alpha\}\beta}[r] P_\beta^a:=\uuline{-\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta} p_\beta^a-\uuline{\Psi_{\{\alpha\}\beta}[r] } p_\beta^a=-\uuline{\Psi_{\{\alpha\}\beta}[r] } p_\beta^a\\
+\Psi_{\{\alpha\}\beta\gamma} [r]\sum_{b=-\infty}^{+\infty}U_\beta^{a-b}U_\gamma^a:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\{\alpha\}\beta\gamma}[r]}u_\beta^{a-b}u_\gamma^{b}\\
+\Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)] \sum_{b=-\infty}^{+\infty}\uuline{V_\beta^{a-b}}U_\gamma^a:=\sum_{b=-\infty}^{+\infty}\sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{[\alpha]\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{V}_{\delta\beta}^{a-b}\textbf{I}_{\epsilon\gamma}^{b}}p_\beta^{a-b}u_\gamma^{b}\\
+\Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]\sum_{b=-\infty}^{+\infty}\uuline{W_\beta^{a-b}}U_\gamma^a:=\sum_{b=-\infty}^{+\infty}\sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{(\alpha)\delta\epsilon}[(1-\kappa r cos\phi)]\textbf{W}_{\delta\beta}^{a-b}\textbf{I}_{\epsilon\gamma}^{b}}p_\beta^{a-b}u_\gamma^{b}\\
+ia\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]\sum_{b=-\infty}^{+\infty}P_\beta^{a-b}U_\gamma^{b}:=ia\kappa \sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]}p_\beta^{a-b}u_\gamma^{b}\\
+-{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r])\sum_{b=-\infty}^{+\infty}U_\beta^{a-b}U_\gamma^{b}:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{-{\partial\over \partial s} (\Psi_{\alpha\beta\gamma}[r])}u_\beta^{a-b}u_\gamma^{b}\\
+-\Psi_{\alpha\beta\gamma}[r]\sum_{b=-\infty}^{+\infty}({{d U_\beta^{a-b} \over {d s}}U_\gamma^{b}}+{dU_\gamma^{b}\over ds}U_\beta^{a-b}):=\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][G,I]+\Psi_{\alpha\beta\gamma}[r][I,G])u_\beta^{a-b}u_\gamma^{b}\\
+\Psi_{\alpha\beta\gamma}[rcos\phi]U_\beta^{a-b}\uuline{V_\gamma^b}-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi]U_\beta^{a-b}\uuline{W_\gamma^b}:=\sum_{b=-\infty}^{+\infty} \Psi_{\alpha\beta\gamma}[rcos\phi][I,V]-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi][I,W]u_\gamma^{b}\\
 \end{aligned}
 \end{equation}
 
 \begin{equation}
 \begin{aligned}
 -ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]V_\beta^a\\
-\int_0^{2\pi}  [{\psi_\alpha \psi_\beta   r(1-\kappa r cos\phi)}]_0^h d\theta P_\beta^a
++\int_0^{2\pi}  [{\psi_\alpha \psi_\beta   r(1-\kappa r cos\phi)}]_0^h d\theta P_\beta^a
 -\Psi_{[\alpha]\beta}[r(1-\kappa r cos\phi)]P_\beta^a-\Psi_{\alpha\beta}[1-2\kappa r cos\phi]P_\beta^a\\
 =
 \underline{term \mathcal{D}2:}  \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}V_\gamma^a
@@ -1031,7 +1093,7 @@ Thus, LHS=RHS, we have:
 +\underline{term\mathcal({D}2+\mathcal{P}2):}  i(a)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}V_\gamma^{b}\\
 +\underline{term \mathcal{D}2:} -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r]U_\beta^{a-b}U_\gamma^{b}
 -\Psi_{\alpha\beta\gamma}[r]({{d U_\beta^{a-b} \over {d s}}V_\gamma^{b}}+{dV_\gamma^{b}\over ds}U_\beta^{a-b})\\
-+\underline{term \mathcal{X}2:} \kappa \Psi_{\alpha\beta\gamma}[1-\kappa rcos\phi]W_\beta^{a-b}W_\gamma^b-\kappa \Psi_{\alpha\beta\gamma}[r cos\phi]U_\beta^{a-b}U_\gamma^b\\
++\underline{term \mathcal{X}2:}  \Psi_{\alpha\beta\gamma}[1-\kappa rcos\phi]W_\beta^{a-b}W_\gamma^b-\kappa \Psi_{\alpha\beta\gamma}[r cos\phi]U_\beta^{a-b}U_\gamma^b\\
 \end{aligned}
 \end{equation}
 
@@ -1049,6 +1111,10 @@ Thus, LHS=RHS, we have:
 +\underline{term \mathcal{X}2:} \kappa \Psi_{\alpha\beta\gamma}[rsin\phi]U_\beta^{a-b}U_\gamma^b- \Psi_{\alpha\beta\gamma}[1-\kappa r cos\phi]W_\beta^{a-b}V_\gamma^b\\
 \end{aligned}
 \end{equation}
+
+
+
+
 
 
 \section{Tensors in matlab for numerical simulation}
