@@ -1,0 +1,194 @@
+\documentclass{Note}
+\usepackage{amsmath} %% for equation edit
+\usepackage{amsfonts} %% for equation edit
+\usepackage{ulem} %sout
+
+
+
+
+
+
+\begin{document}
+\title{Note:derivation of 3-31} 
+%%% first author
+\author{
+     Email: jiaqi\_wang@sjtu.edu.cn
+    } 
+
+\maketitle
+
+
+
+\subsection{Substitue pressure modes for transverse velocity modes}
+\subsubsection{mass equation}
+\begin{equation}
+\begin{aligned}
+{d U_\alpha^a \over d s}-\Psi_{\{\alpha\}\beta}[r]U_\beta^a-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))] P_\beta^a -\Psi_{[\alpha]\beta}[ r(1-\kappa r cos(\phi))]\uuline{V_\beta^a}-\Psi_{(\alpha)\beta}[ (1-\kappa r cos(\phi))]\uuline{W_\beta^a}\\
+=\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa P_\beta^{a-b} P_\gamma^{b}-ib\kappa U_\beta^{a-b} U_\gamma^{b}-ib\kappa \uuline{V_\beta^{a-b} V_\gamma^{b}}-ib\kappa \uuline{ W_\beta^{a-b} W_\gamma^{b}}-ia\kappa  {B\over {2A}}P_\beta^{a-b}P_\gamma^{b})\\
+\end{aligned}
+\end{equation}
+
+\textit{Transform:}\\
+\begin{equation}
+\begin{aligned}
+{d U_\alpha^a \over d s}:=\uuline{I}u_\alpha'^a\\
+-\Psi_{\{\alpha\}\beta}[r]U_\beta^a:=\uuline{-\Psi_{\{\alpha\}\beta}[r]}u_\beta^a\\
+-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))] P_\beta^a:=\uuline{-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))]} p_\beta^a\\
+-\Psi_{[\alpha]\beta}[ r(1-\kappa r cos(\phi))]\uuline{V_\beta^a}:=\uuline{-\Psi_{[\alpha]\delta}[ r(1-\kappa r cos(\phi))] \textbf{V}_{\delta\beta}^a} p_\beta^a\\
+-\Psi_{(\alpha)\beta}[ (1-\kappa r cos(\phi))]\uuline{W_\beta^a}:=\uuline{-\Psi_{(\alpha)\delta}[ (1-\kappa r cos(\phi))] \textbf{W}_{\delta\beta}^a} p_\beta^a\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa P_\beta^{a-b} P_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\alpha\beta\gamma}[ (1-\kappa r cos(\phi))]}p_\beta^{a-b}p_\gamma^{b}=(B_1[p,p])_\alpha^a\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa U_\beta^{a-b} U_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty} \uuline{ \Psi_{\alpha\beta\gamma}[ (1-\kappa r cos(\phi))]} u_\beta^{a-b}u_\gamma^{b}=(A_1[u,u])_\alpha^a\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa V_\beta^{a-b} V_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{\alpha\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{V}_{\delta\beta}^{a-b}\textbf{V}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa W_\beta^{a-b} W_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{\alpha\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{W}_{\delta\beta}^{a-b}\textbf{W}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ia\kappa  {B\over {2A}}P_\beta^{a-b}P_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ia\kappa{B\over 2A} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty} \uuline{ \Psi_{\alpha\beta\gamma}[ (1-\kappa r cos(\phi))]} p_\beta^{a-b}p_\gamma^{b}\\
+\end{aligned}
+\end{equation}
+
+
+
+\begin{equation}
+\begin{aligned}
+{d\over {ds}}P_\alpha^a-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a
+-\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta P_\beta^a-\Psi_{\{\alpha\}\beta}[r] P_\beta^a\\
+= \sum_{b=-\infty}^{+\infty}
+\underline{term \mathcal{D}1:}  \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}U_\gamma^a
++\Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)]\uuline{V_\beta^{a-b}}U_\gamma^a
++ \Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]\uuline{W_\beta^{a-b}}U_\gamma^a\\
++\underline{term\mathcal({D}1+\mathcal{P}1):}  i(a)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}U_\gamma^{b}\\
++\underline{term \mathcal{D}1:} -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r])U_\beta^{a-b}U_\gamma^{b}
+-\Psi_{\alpha\beta\gamma}[r]({{d U_\beta^{a-b} \over {d s}}U_\gamma^{b}}+{dU_\gamma^{b}\over ds}U_\beta^{a-b})\\
++\underline{term \mathcal{X}1:} \Psi_{\alpha\beta\gamma}[rcos\phi]U_\beta^{a-b}\uuline{V_\gamma^b}-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi]U_\beta^{a-b}\uuline{W_\gamma^b}\\
+\end{aligned}
+\end{equation}
+
+Transform:
+\begin{equation}
+\begin{aligned}
+{d\over {ds}}P_\alpha^a:=\uuline{I}{p'}_\alpha^a\\
+-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a:=\uuline{-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))]} u_\beta^a\\
+-\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta P_\beta^a-\Psi_{\{\alpha\}\beta}[r] P_\beta^a:=\uuline{-\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta} p_\beta^a-\uuline{\Psi_{\{\alpha\}\beta}[r] } p_\beta^a=-\uuline{\Psi_{\{\alpha\}\beta}[r] } p_\beta^a\\
+\Psi_{\{\alpha\}\beta\gamma} [r]\sum_{b=-\infty}^{+\infty}U_\beta^{a-b}U_\gamma^a:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\{\alpha\}\beta\gamma}[r]}u_\beta^{a-b}u_\gamma^{b}\\
+\Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)] \sum_{b=-\infty}^{+\infty}\uuline{V_\beta^{a-b}}U_\gamma^a:=\sum_{b=-\infty}^{+\infty}\sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{[\alpha]\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{V}_{\delta\beta}^{a-b}\textbf{I}_{\epsilon\gamma}^{b}}p_\beta^{a-b}u_\gamma^{b}\\
+\Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]\sum_{b=-\infty}^{+\infty}\uuline{W_\beta^{a-b}}U_\gamma^a:=\sum_{b=-\infty}^{+\infty}\sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{(\alpha)\delta\epsilon}[(1-\kappa r cos\phi)]\textbf{W}_{\delta\beta}^{a-b}\textbf{I}_{\epsilon\gamma}^{b}}p_\beta^{a-b}u_\gamma^{b}\\
+ia\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]\sum_{b=-\infty}^{+\infty}P_\beta^{a-b}U_\gamma^{b}:=ia\kappa \sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]}p_\beta^{a-b}u_\gamma^{b}\\
+-{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r])\sum_{b=-\infty}^{+\infty}U_\beta^{a-b}U_\gamma^{b}:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{-{\partial\over \partial s} (\Psi_{\alpha\beta\gamma}[r])}u_\beta^{a-b}u_\gamma^{b}\\
+-\Psi_{\alpha\beta\gamma}[r]\sum_{b=-\infty}^{+\infty}({{d U_\beta^{a-b} \over {d s}}U_\gamma^{b}}+{dU_\gamma^{b}\over ds}U_\beta^{a-b}):=\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][G,I]+\Psi_{\alpha\beta\gamma}[r][I,G])u_\beta^{a-b}u_\gamma^{b}\\
+\Psi_{\alpha\beta\gamma}[rcos\phi]U_\beta^{a-b}\uuline{V_\gamma^b}-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi]U_\beta^{a-b}\uuline{W_\gamma^b}:=\sum_{b=-\infty}^{+\infty} \Psi_{\alpha\beta\gamma}[rcos\phi][I,V]-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi][I,W]u_\gamma^{b}\\
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]V_\beta^a\\
++\int_0^{2\pi}  [{\psi_\alpha \psi_\beta   r(1-\kappa r cos\phi)}]_0^h d\theta P_\beta^a
+-\Psi_{[\alpha]\beta}[r(1-\kappa r cos\phi)]P_\beta^a-\Psi_{\alpha\beta}[1-2\kappa r cos\phi]P_\beta^a\\
+=
+\underline{term \mathcal{D}2:}  \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}V_\gamma^a
++\Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)]V_\beta^{a-b}V_\gamma^a
++ \Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]W_\beta^{a-b}V_\gamma^a\\
++\underline{term\mathcal({D}2+\mathcal{P}2):}  i(a)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}V_\gamma^{b}\\
++\underline{term \mathcal{D}2:} -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r]U_\beta^{a-b}U_\gamma^{b}
+-\Psi_{\alpha\beta\gamma}[r]({{d U_\beta^{a-b} \over {d s}}V_\gamma^{b}}+{dV_\gamma^{b}\over ds}U_\beta^{a-b})\\
++\underline{term \mathcal{X}2:}  \Psi_{\alpha\beta\gamma}[1-\kappa rcos\phi]W_\beta^{a-b}W_\gamma^b-\kappa \Psi_{\alpha\beta\gamma}[r cos\phi]U_\beta^{a-b}U_\gamma^b\\
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]W_\beta^a\\
+-\Psi_{(\alpha)\beta}[(1-\kappa r cos\phi)]P_\beta^a-\kappa \Psi_{\alpha\beta}[r sin\phi]P_\beta^a\\
+=
+\underline{term \mathcal{D}2:}  \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}W_\gamma^a
++\Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)]V_\beta^{a-b}W_\gamma^a
++ \Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]W_\beta^{a-b}W_\gamma^a\\
++\underline{term\mathcal({D}2+\mathcal{P}2):}  i(a)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}W_\gamma^{b}\\
++\underline{term \mathcal{D}2:} -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r]U_\beta^{a-b}V_\gamma^{b}
+-\Psi_{\alpha\beta\gamma}[r]({{d U_\beta^{a-b} \over {d s}}W_\gamma^{b}}+{dW_\gamma^{b}\over ds}U_\beta^{a-b})\\
++\underline{term \mathcal{X}2:} \kappa \Psi_{\alpha\beta\gamma}[rsin\phi]U_\beta^{a-b}U_\gamma^b- \Psi_{\alpha\beta\gamma}[1-\kappa r cos\phi]W_\beta^{a-b}V_\gamma^b\\
+\end{aligned}
+\end{equation}
+
+
+
+
+
+
+\section{Tensors in matlab for numerical simulation}
+\subsection{Tensor times vectors: $\mathcal{A}\bar{\times}_n u$}
+
+Let $\mathcal{A}$ be a tensor of size $I_1\times I_2\times ...\times I_N$, u be a vector of size $I_n$.
+
+We have:
+\begin{equation}
+\begin{aligned}
+ttv(\mathcal{A},\{u\},[n])=(\mathcal{A}\bar{\times}_n u)(i_1,...,i_{n-1},i_{n+1},...,i_N)\\
+\sum_{i_n=1}^{I_n}\mathcal{A}(i_1,i_2,...,i_N)u(i_n)
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+ttv(A_{m\times n},\{u_{m\times 1}\},[1])=A_{m\times n}\bar{\times}_1 u_{m\times 1}=A_{m\times n}^T u_{m\times 1}\\
+ttv(A_{m\times n},\{v_{n\times 1}\},[2])=A_{m\times n}\bar{\times}_2 v_{n\times 1}=A_{m\times n}  v_{n\times 1}\\
+\end{aligned}
+\end{equation}
+
+Property:
+
+\begin{equation}
+\begin{aligned}
+ttv(\mathcal{A},\{u,v\},[m,n])=\mathcal{A}\bar{\times}_m u \bar{\times}_n v\\
+=ttv(ttv(\mathcal{A},\{u\},[m]),\{v\},[n-1])=(\mathcal{A}\bar{\times}_m u ) \bar{\times}_{n-1} v\\
+=ttv(ttv(\mathcal{A},\{v\},[v]),\{u\},[m])=(\mathcal{A}\bar{\times}_n v ) \bar{\times}_{m} u\\
+\end{aligned}
+\end{equation}
+
+Multiplication with a sequence of vectors
+\begin{equation}
+\begin{aligned}
+\beta=\mathcal{A}\bar{\times}_1 u^{(1)}\bar{\times}_2 u^{(2)}...\bar{\times}_N u^{(N)}=\mathcal{A}\bar{\times} {u}\\
+like:
+ttv(X, \{A,B,C,D\})
+= ttv(X, \{A,B,C,D\}, [1 2 3 4]) 
+= ttv(X, \{D,C,B,A\}, [4 3 2 1])
+\end{aligned}
+\end{equation}
+
+Multiplication with \textbf{all but one} of a sequence of vectors
+\begin{equation}
+\begin{aligned}
+b=\mathcal{A}\bar{\times}_1 u^{(1)}\bar{\times}_2 u^{(2)}...\bar{\times}_{n-1} u^{(2)}\bar{\times}_{n+1} u^{(2)}...\bar{\times}_N u^{(N)}=\mathcal{A}\bar{\times}_{-n} {u}\\
+like:
+X = tenrand([5,3,4,2]); \\
+A = rand(5,1); B = rand(3,1); C = rand(4,1); D = rand(2,1); \\
+Y = ttv(X, \{A,B,D\}, -3) = ttv(X, \{A,B,C,D\}, -3)
+\end{aligned}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
