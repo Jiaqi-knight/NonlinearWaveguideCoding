@@ -967,10 +967,10 @@ LHS:
 =\int_0^{2\pi}\int_0^h {\partial [V_\beta^a \psi_\beta r  \psi_\alpha] \over \partial s}  dr d\theta-\int_0^{2\pi}\int_0^h {\partial r  \psi_\alpha  \over \partial s}   \psi_\beta dr d\theta V_\beta^a\\
 ={\partial \over \partial s}\int_0^{2\pi}\int_0^h [V_\beta^a \psi_\beta r  \psi_\alpha ]  dr d\theta-\int_0^{2\pi}{dh(s)\over ds} [V_\beta^a \psi_\beta r  \psi_\alpha ]_0^h d\theta
 -\int_0^{2\pi}\int_0^h {\partial  \psi_\alpha  \over \partial s}   \psi_\beta r  dr d\theta V_\beta^a\\
-={\partial \over \partial s} V_\beta^a\delta_{\alpha\beta}-\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta V_\beta^a -\Psi_{\{\alpha\}\beta}[r]V_\beta^a\\
+={\partial \over \partial s} V_\beta^a\delta_{\alpha\beta}-\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta U_\beta^a -\Psi_{\{\alpha\}\beta}[r]V_\beta^a\\
 ={\partial \over \partial s}\int_0^{2\pi}\int_0^h [V_\beta^a \psi_\beta r  \psi_\alpha ]  dr d\theta-\int_0^{2\pi}{dh(s)\over ds} [V_\beta^a \psi_\beta r  \psi_\alpha ]_0^h d\theta
 -\int_0^{2\pi}\int_0^h {\partial  \psi_\alpha  \over \partial s}   \psi_\beta r  dr d\theta V_\beta^a\\
-={d \over d s} V_\alpha^a-\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta V_\beta^a -\Psi_{\{\alpha\}\beta}[r]V_\beta^a\\
+={d \over d s} V_\alpha^a-\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta U_\beta^a -\Psi_{\{\alpha\}\beta}[r]V_\beta^a\\
 \\
 RHS:=\int_0^{2\pi}\int_0^h {\partial \over \partial r}((1-\kappa r cos\phi)U_\beta^a \psi_\beta r \psi_\alpha) dr d\theta-\int_0^{2\pi}\int_0^h {\partial (  r \psi_\alpha)\over \partial r}(1-\kappa r cos\phi)U_\beta^a  \psi_\beta  dr d\theta\\
 =\int_0^{2\pi}[ r (1-\kappa r cos\phi) \psi_\beta \psi_\alpha]_0^h d\theta U_\beta^a
@@ -986,7 +986,7 @@ Thus, LHS=RHS, we have:
 
 \begin{equation}
 \begin{aligned}
-\uuline{{d \over ds} V_\alpha^a=\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta +\Psi_{\{\alpha\}\beta}[r]V_\beta^a}\\
+\uuline{{d \over ds} V_\alpha^a=\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta U_\beta^a +\Psi_{\{\alpha\}\beta}[r]V_\beta^a}\\
 \uuline{+\int_0^{2\pi}[ r (1-\kappa r cos\phi) \psi_\beta \psi_\alpha]_0^h d\theta U_\beta^a
 -\Psi_{[\alpha]\beta}[r(1-\kappa r cos\phi)]U_\beta^a
 -\Psi_{\alpha\beta}[(1-\kappa r cos\phi)]U_\beta^a}\\

@@ -394,47 +394,41 @@ Overfull \hbox (2.78142pt too wide) detected at line 66
 
 [1{e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-var/fonts/map/pdftex/updmap
 /pdftex.map}]
-Overfull \hbox (52.52527pt too wide) detected at line 82
+Overfull \hbox (52.52527pt too wide) detected at line 84
 [][]
  []
 
-[2] [3] [4] (./derivation-3-31.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
- ) 
+[2] [3] [4] [5] (./derivation-3-31.aux) ) 
 Here is how much of TeX's memory you used:
  4274 strings out of 492995
  56595 string characters out of 6136402
- 144467 words of memory out of 5000000
+ 147467 words of memory out of 5000000
  7756 multiletter control sequences out of 15000+600000
  15626 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,18n,26p,443b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
-{e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/enc/dvips/cm-sup
-er/cm-super-t1.enc}<e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmex10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/Jiaqi-SJTU-offical/P
-ackage/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/Jia
-qi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/Jiaqi-SJTU-offical/Package/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-off
-ical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10
-.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/
-cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fo
-nts/type1/public/cm-super/sfbx1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2
-017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><e:/Jiaqi-SJTU-offical/
-Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><e:/Ji
-aqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sf
-ti0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/p
-ublic/cm-super/sfti1000.pfb>
-Output written on derivation-3-31.pdf (4 pages, 183159 bytes).
+ 39i,18n,26p,449b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
+{e:/Jiaqi-SJTU-offical/Package/texlive
+/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<e:/Jiaqi-SJTU-offica
+l/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:
+/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/Jiaqi-SJTU-offical/Package
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/Jiaqi-SJTU
+-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fon
+ts/type1/public/cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/20
+17/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><e:/Jiaqi-SJTU-offical/P
+ackage/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><e:/Jia
+qi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfr
+m1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pu
+blic/cm-super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-di
+st/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on derivation-3-31.pdf (5 pages, 183592 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

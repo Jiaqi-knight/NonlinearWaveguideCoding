@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  1 MAR 2020 13:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  1 MAR 2020 20:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -426,48 +426,44 @@ Overfull \hbox (2.78142pt too wide) detected at line 1070
 [][]
  []
 
-[22] [23] [24] [25] [26] [27] (./Note.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
- ) 
+[22] [23] [24] [25] [26] [27] (./Note.aux) ) 
 Here is how much of TeX's memory you used:
  4093 strings out of 492995
  54693 string characters out of 6136402
- 152386 words of memory out of 5000000
+ 152407 words of memory out of 5000000
  7571 multiletter control sequences out of 15000+600000
  18834 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,18n,26p,408b,206s stack positions out of 5000i,500n,10000p,200000b,80000s
-{e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/enc/dvips/cm-sup
-er/cm-super-t1.enc}<e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmex10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><e:/Jiaqi-SJTU-offic
-al/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e
-:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/Jiaqi-SJTU-offical/Package
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><e:/Jiaqi-SJT
-U-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><e:/Jiaqi-SJTU-offical/Pack
-age/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/Jiaqi
--SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy9.pfb><e:/Jiaqi-SJTU-offical/Package/texliv
-e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offic
-al/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><e:
-/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super
-/sfbx1728.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type
-1/public/cm-super/sfrm1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texm
-f-dist/fonts/type1/public/cm-super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Package/
-texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on Note.pdf (27 pages, 347930 bytes).
+{e:/Jiaqi-SJTU-offical/Package/texl
+ive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<e:/Jiaqi-SJTU-off
+ical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+<e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfo
+nts/cmextra/cmex7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><e:/Jiaqi-SJTU-offical
+/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><e:/J
+iaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi9.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/Jiaqi-SJTU-offical/Package/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><e:/Jiaqi-SJTU-of
+fical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr9.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><e:/Jiaqi-SJTU-offical/Packag
+e/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><e:/Jiaqi-SJ
+TU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9
+.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/
+cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fo
+nts/type1/public/cm-super/sfbx1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2
+017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><e:/Jiaqi-SJTU-offical/
+Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><e:/Ji
+aqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sf
+ti0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/p
+ublic/cm-super/sfti1000.pfb>
+Output written on Note.pdf (27 pages, 348003 bytes).
 PDF statistics:
  177 PDF objects out of 1000 (max. 8388607)
  125 compressed objects within 2 object streams
