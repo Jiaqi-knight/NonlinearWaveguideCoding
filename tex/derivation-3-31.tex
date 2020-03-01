@@ -34,15 +34,17 @@
 \begin{equation}
 \begin{aligned}
 {d U_\alpha^a \over d s}:=\uuline{I}u_\alpha'^a\\
--\Psi_{\{\alpha\}\beta}[r]U_\beta^a:=\uuline{-\Psi_{\{\alpha\}\beta}[r]}u_\beta^a\\
--ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))] P_\beta^a:=\uuline{-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))]} p_\beta^a\\
--\Psi_{[\alpha]\beta}[ r(1-\kappa r cos(\phi))]\uuline{V_\beta^a}:=\uuline{-\Psi_{[\alpha]\delta}[ r(1-\kappa r cos(\phi))] } V_\beta^a\\
--\Psi_{(\alpha)\beta}[ (1-\kappa r cos(\phi))]\uuline{W_\beta^a}:=\uuline{-\Psi_{(\alpha)\delta}[ (1-\kappa r cos(\phi))] } W_\beta^a\\
-\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa P_\beta^{a-b} P_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\alpha\beta\gamma}[ (1-\kappa r cos(\phi))]}p_\beta^{a-b}p_\gamma^{b}=(B_1[p,p])_\alpha^a\\
-\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa U_\beta^{a-b} U_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty} \uuline{ \Psi_{\alpha\beta\gamma}[ (1-\kappa r cos(\phi))]} u_\beta^{a-b}u_\gamma^{b}=(A_1[u,u])_\alpha^a\\
-\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa V_\beta^{a-b} V_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{\alpha\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{V}_{\delta\beta}^{a-b}\textbf{V}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\\
-\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa W_\beta^{a-b} W_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{\alpha\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{W}_{\delta\beta}^{a-b}\textbf{W}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\\
-\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ia\kappa  {B\over {2A}}P_\beta^{a-b}P_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ia\kappa{B\over 2A} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty} \uuline{ \Psi_{\alpha\beta\gamma}[ (1-\kappa r cos(\phi))]} p_\beta^{a-b}p_\gamma^{b}\\
+-\Psi_{\{\alpha\}\beta}[r]U_\beta^a:=\uuline{-\Psi_{\{\alpha\}\beta}[r]}u_\beta^a\rightarrow\mathcal{G}\\
+\left\{\begin{matrix}
+-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))] P_\beta^a:= \sum_{\beta=0}^{+\infty} \uuline{-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))]} p_\beta^a\rightarrow\mathcal{M}_1\\
+-\Psi_{[\alpha]\beta}[ r(1-\kappa r cos(\phi))]\uuline{V_\beta^a}:=\sum_{\beta=0}^{+\infty} \uuline{-\Psi_{[\alpha]\delta}[ r(1-\kappa r cos(\phi))]  \textbf{V}_{\delta\beta}^a} p_\beta^a \rightarrow\mathcal{M}_2\\
+-\Psi_{(\alpha)\beta}[ (1-\kappa r cos(\phi))]\uuline{W_\beta^a}:=\sum_{\beta=0}^{+\infty}  \uuline{-\Psi_{(\alpha)\delta}[ (1-\kappa r cos(\phi))] \textbf{W}_{\delta\beta}^a}p_\beta^a  \rightarrow\mathcal{M}_3\\
+\end{matrix}\right.\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa P_\beta^{a-b} P_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\alpha\beta\gamma}[ (1-\kappa r cos(\phi))]}p_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{B}_2\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa U_\beta^{a-b} U_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty} \uuline{ \Psi_{\alpha\beta\gamma}[ (1-\kappa r cos(\phi))]} u_\beta^{a-b}u_\gamma^{b}\rightarrow\mathcal{A}_1\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa V_\beta^{a-b} V_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{\alpha\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{V}_{\delta\beta}^{a-b}\textbf{V}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{B}_3\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa W_\beta^{a-b} W_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ib\kappa \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{\alpha\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{W}_{\delta\beta}^{a-b}\textbf{W}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{B}_4\\
+\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ia\kappa  {B\over {2A}}P_\beta^{a-b}P_\gamma^{b}):=\sum_{b=-\infty}^{+\infty}-ia\kappa{B\over 2A} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty} \uuline{ \Psi_{\alpha\beta\gamma}[ (1-\kappa r cos(\phi))]} p_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{B}_1\\
 \end{aligned}
 \end{equation}
 
@@ -67,15 +69,15 @@ Transform:
 \begin{equation}
 \begin{aligned}
 {d\over {ds}}P_\alpha^a:=\uuline{I}{p'}_\alpha^a\\
--ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a:=\uuline{-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))]} u_\beta^a\\
--\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta P_\beta^a-\Psi_{\{\alpha\}\beta}[r] P_\beta^a:=\uuline{-\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta} p_\beta^a-\uuline{\Psi_{\{\alpha\}\beta}[r] } p_\beta^a=-\uuline{\Psi_{\{\alpha\}\beta}[r] } p_\beta^a\\
-\Psi_{\{\alpha\}\beta\gamma} [r]\sum_{b=-\infty}^{+\infty}U_\beta^{a-b}U_\gamma^a:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\{\alpha\}\beta\gamma}[r]}u_\beta^{a-b}u_\gamma^{b}\\
-\Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)] \sum_{b=-\infty}^{+\infty}\uuline{V_\beta^{a-b}}U_\gamma^a:=\sum_{b=-\infty}^{+\infty}\sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{[\alpha]\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{V}_{\delta\beta}^{a-b}\textbf{I}_{\epsilon\gamma}^{b}}p_\beta^{a-b}u_\gamma^{b}\\
-\Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]\sum_{b=-\infty}^{+\infty}\uuline{W_\beta^{a-b}}U_\gamma^a:=\sum_{b=-\infty}^{+\infty}\sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{(\alpha)\delta\epsilon}[(1-\kappa r cos\phi)]\textbf{W}_{\delta\beta}^{a-b}\textbf{I}_{\epsilon\gamma}^{b}}p_\beta^{a-b}u_\gamma^{b}\\
-ia\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]\sum_{b=-\infty}^{+\infty}P_\beta^{a-b}U_\gamma^{b}:=ia\kappa \sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]}p_\beta^{a-b}u_\gamma^{b}\\
--{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r])\sum_{b=-\infty}^{+\infty}U_\beta^{a-b}U_\gamma^{b}:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{-{\partial\over \partial s} (\Psi_{\alpha\beta\gamma}[r])}u_\beta^{a-b}u_\gamma^{b}\\
--\Psi_{\alpha\beta\gamma}[r]\sum_{b=-\infty}^{+\infty}({{d U_\beta^{a-b} \over {d s}}U_\gamma^{b}}+{dU_\gamma^{b}\over ds}U_\beta^{a-b}):=\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][\textbf{G},\textbf{I}]+\Psi_{\alpha\beta\gamma}[r][\textbf{I},\textbf{G}])u_\beta^{a-b}u_\gamma^{b}\hfill\blacksquare\\
-\Psi_{\alpha\beta\gamma}[rcos\phi]U_\beta^{a-b}\uuline{V_\gamma^b}-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi]U_\beta^{a-b}\uuline{W_\gamma^b}:=\sum_{b=-\infty}^{+\infty} \Psi_{\alpha\beta\gamma}[rcos\phi][\textbf{I},\textbf{V}]-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi][\textbf{I},\textbf{W}]u_\gamma^{b}\\
+-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a:=\uuline{-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))]} u_\beta^a\rightarrow \mathcal{N}\\
+-\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta P_\beta^a-\Psi_{\{\alpha\}\beta}[r] P_\beta^a:=\uuline{-\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta} p_\beta^a-\uuline{\Psi_{\{\alpha\}\beta}[r] } p_\beta^a=-\uuline{\Psi_{\{\alpha\}\beta}[r] } p_\beta^a\rightarrow \mathcal{H}\\
+\Psi_{\{\alpha\}\beta\gamma} [r]\sum_{b=-\infty}^{+\infty}U_\beta^{a-b}U_\gamma^a:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\{\alpha\}\beta\gamma}[r]}u_\beta^{a-b}u_\gamma^{b}\rightarrow \mathcal{D}\\
+\Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)] \sum_{b=-\infty}^{+\infty}\uuline{V_\beta^{a-b}}U_\gamma^a:=\sum_{b=-\infty}^{+\infty}\sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{[\alpha]\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{V}_{\delta\beta}^{a-b}\textbf{I}_{\epsilon\gamma}^{b}}p_\beta^{a-b}u_\gamma^{b}\rightarrow \mathcal{C}_4\\
+\Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]\sum_{b=-\infty}^{+\infty}\uuline{W_\beta^{a-b}}U_\gamma^a:=\sum_{b=-\infty}^{+\infty}\sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{(\alpha)\delta\epsilon}[(1-\kappa r cos\phi)]\textbf{W}_{\delta\beta}^{a-b}\textbf{I}_{\epsilon\gamma}^{b}}p_\beta^{a-b}u_\gamma^{b}\rightarrow \mathcal{C}_5\\
+ia\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]\sum_{b=-\infty}^{+\infty}P_\beta^{a-b}U_\gamma^{b}:=ia\kappa \sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]}p_\beta^{a-b}u_\gamma^{b}\rightarrow \mathcal{C}_3\\
+-{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r])\sum_{b=-\infty}^{+\infty}U_\beta^{a-b}U_\gamma^{b}:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{-{\partial\over \partial s} (\Psi_{\alpha\beta\gamma}[r])}u_\beta^{a-b}u_\gamma^{b}\rightarrow \mathcal{D}\\
+-\Psi_{\alpha\beta\gamma}[r]\sum_{b=-\infty}^{+\infty}({{d U_\beta^{a-b} \over {d s}}U_\gamma^{b}}+{dU_\gamma^{b}\over ds}U_\beta^{a-b}):=\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][\textbf{G},\textbf{I}]+\Psi_{\alpha\beta\gamma}[r][\textbf{I},\textbf{G}])u_\beta^{a-b}u_\gamma^{b}\rightarrow \mathcal{D}\\
+\Psi_{\alpha\beta\gamma}[rcos\phi]U_\beta^{a-b}\uuline{V_\gamma^b}-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi]U_\beta^{a-b}\uuline{W_\gamma^b}:=\{\sum_{b=-\infty}^{+\infty} \Psi_{\alpha\beta\gamma}[rcos\phi][\textbf{I},\textbf{V}]-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi][\textbf{I},\textbf{W}]\}u_\gamma^{a-b}p_\beta^{b}\rightarrow \mathcal{C}_{6,7}\\
 \end{aligned}
 \end{equation}
 
