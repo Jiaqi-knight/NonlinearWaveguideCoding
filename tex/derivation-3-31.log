@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  1 MAR 2020 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  1 MAR 2020 22:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -398,7 +398,17 @@ Overfull \hbox (52.52527pt too wide) detected at line 84
 [][]
  []
 
-[2] [3] [4] [5] (./derivation-3-31.aux) ) 
+[2]
+Overfull \hbox (3.1499pt too wide) detected at line 143
+[][]
+ []
+
+[3] [4]
+Overfull \hbox (65.69508pt too wide) detected at line 170
+[][]
+ []
+
+[5] [6] (./derivation-3-31.aux) ) 
 Here is how much of TeX's memory you used:
  4274 strings out of 492995
  56595 string characters out of 6136402
@@ -407,28 +417,28 @@ Here is how much of TeX's memory you used:
  15626 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,18n,26p,449b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
-{e:/Jiaqi-SJTU-offical/Package/texlive
-/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<e:/Jiaqi-SJTU-offica
-l/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:
-/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/Jiaqi-SJTU-offical/Package
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/Jiaqi-SJTU
--offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fon
-ts/type1/public/cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/20
-17/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><e:/Jiaqi-SJTU-offical/P
-ackage/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><e:/Jia
-qi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfr
-m1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pu
-blic/cm-super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-di
-st/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on derivation-3-31.pdf (5 pages, 183592 bytes).
+{e:/Jiaqi-SJTU-offical/Package/texlive/2017/te
+xmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<e:/Jiaqi-SJTU-offical/Packag
+e/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/Jiaqi-S
+JTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/Jiaqi-SJTU-offical
+/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/
+Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1
+/public/cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf
+-dist/fonts/type1/public/cm-super/sfbx1000.pfb><e:/Jiaqi-SJTU-offical/Package/t
+exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><e:/Jiaqi-SJTU-
+offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pf
+b><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-
+super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts
+/type1/public/cm-super/sfti1000.pfb>
+Output written on derivation-3-31.pdf (6 pages, 193373 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 76 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
