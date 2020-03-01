@@ -2,6 +2,8 @@
 \usepackage{amsmath} %% for equation edit
 \usepackage{amsfonts} %% for equation edit
 \usepackage{ulem} %sout
+\usepackage{amssymb}
+
 
 
 
@@ -72,11 +74,18 @@ Transform:
 \Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]\sum_{b=-\infty}^{+\infty}\uuline{W_\beta^{a-b}}U_\gamma^a:=\sum_{b=-\infty}^{+\infty}\sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\sum_{\delta,\epsilon=0}^\infty \Psi_{(\alpha)\delta\epsilon}[(1-\kappa r cos\phi)]\textbf{W}_{\delta\beta}^{a-b}\textbf{I}_{\epsilon\gamma}^{b}}p_\beta^{a-b}u_\gamma^{b}\\
 ia\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]\sum_{b=-\infty}^{+\infty}P_\beta^{a-b}U_\gamma^{b}:=ia\kappa \sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]}p_\beta^{a-b}u_\gamma^{b}\\
 -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r])\sum_{b=-\infty}^{+\infty}U_\beta^{a-b}U_\gamma^{b}:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{-{\partial\over \partial s} (\Psi_{\alpha\beta\gamma}[r])}u_\beta^{a-b}u_\gamma^{b}\\
--\Psi_{\alpha\beta\gamma}[r]\sum_{b=-\infty}^{+\infty}({{d U_\beta^{a-b} \over {d s}}U_\gamma^{b}}+{dU_\gamma^{b}\over ds}U_\beta^{a-b}):=\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][\textbf{G},\textbf{I}]+\Psi_{\alpha\beta\gamma}[r][\textbf{I},\textbf{G}])u_\beta^{a-b}u_\gamma^{b}\\
+-\Psi_{\alpha\beta\gamma}[r]\sum_{b=-\infty}^{+\infty}({{d U_\beta^{a-b} \over {d s}}U_\gamma^{b}}+{dU_\gamma^{b}\over ds}U_\beta^{a-b}):=\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][\textbf{G},\textbf{I}]+\Psi_{\alpha\beta\gamma}[r][\textbf{I},\textbf{G}])u_\beta^{a-b}u_\gamma^{b}\hfill\blacksquare\\
 \Psi_{\alpha\beta\gamma}[rcos\phi]U_\beta^{a-b}\uuline{V_\gamma^b}-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi]U_\beta^{a-b}\uuline{W_\gamma^b}:=\sum_{b=-\infty}^{+\infty} \Psi_{\alpha\beta\gamma}[rcos\phi][\textbf{I},\textbf{V}]-\kappa \Psi_{\alpha\beta\gamma}[r sin\phi][\textbf{I},\textbf{W}]u_\gamma^{b}\\
 \end{aligned}
 \end{equation}
 
+$\blacksquare$Proof:
+\begin{equation}
+\begin{aligned}
+G_{\alpha\beta}^a=-\Psi_{\{\alpha\}\beta}[r]\\
+-\Psi_{\alpha\beta\gamma}[r]\sum_{b=-\infty}^{+\infty}({{d U_\beta^{a-b} \over {d s}}U_\gamma^{b}}+{dU_\gamma^{b}\over ds}U_\beta^{a-b}):=\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][\textbf{G},\textbf{I}]+\Psi_{\alpha\beta\gamma}[r][\textbf{I},\textbf{G}])u_\beta^{a-b}u_\gamma^{b}
+\end{aligned}
+\end{equation}
 
 \subsubsection{momentum equation II}
 \begin{equation}
@@ -89,7 +98,7 @@ ia\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]\sum_{b=-\infty}^{+\inft
 +\Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)]V_\beta^{a-b}V_\gamma^a
 + \Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]W_\beta^{a-b}V_\gamma^a\\
 +\underline{term\mathcal({D}2+\mathcal{P}2):}  i(a)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}V_\gamma^{b}\\
-+\underline{term \mathcal{D}2:} -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r])U_\beta^{a-b}U_\gamma^{b}
++\underline{term \mathcal{D}2:} -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r])U_\beta^{a-b}V_\gamma^{b}
 -\Psi_{\alpha\beta\gamma}[r]({{d U_\beta^{a-b} \over {d s}}V_\gamma^{b}}+{dV_\gamma^{b}\over ds}U_\beta^{a-b})\\
 +\underline{term \mathcal{X}2:}  \Psi_{\alpha\beta\gamma}[1-\kappa rcos\phi]W_\beta^{a-b}W_\gamma^b-\kappa \Psi_{\alpha\beta\gamma}[r cos\phi]U_\beta^{a-b}U_\gamma^b\\
 \end{aligned}
@@ -104,7 +113,7 @@ Transform:
  \Psi_{[\alpha]\beta\gamma} [r(1-\kappa rcos\phi)]V_\beta^{a-b}V_\gamma^a:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{[\alpha]\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{V}_{\delta\beta}^{a-b}\textbf{V}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\\
 \Psi_{(\alpha)\beta\gamma} [(1-\kappa rcos\phi)]W_\beta^{a-b}V_\gamma^a:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{(\alpha)\delta\epsilon}[1-\kappa r cos\phi]\textbf{W}_{\delta\beta}^{a-b}\textbf{V}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\\
  i(a)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}V_\gamma^{b}:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ ia\kappa \Psi_{\alpha\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{I}_{\delta\beta}^{a-b}\textbf{V}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\\
- -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r])U_\beta^{a-b}U_\gamma^{b}:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}-{\partial\over \partial s} (\Psi_{\alpha\beta\gamma}[r])u_\beta^{a-b}u_\gamma^{b}\\
+ -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r])U_\beta^{a-b}V_\gamma^{b}:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{-{\partial\over \partial s} (\Psi_{\alpha\delta\epsilon}[r])\textbf{I}_{\delta\beta}^{a-b}\textbf{V}_{\epsilon\gamma}^{b}}u_\beta^{a-b}p_\gamma^{b}\\
  -\Psi_{\alpha\beta\gamma}[r]({{d U_\beta^{a-b} \over {d s}}V_\gamma^{b}}+{dV_\gamma^{b}\over ds}U_\beta^{a-b}):==\Psi_{\alpha\beta\gamma}[r][G,I]+\Psi_{\alpha\beta\gamma}[r][I,G]\\
 \end{aligned}
 \end{equation}
