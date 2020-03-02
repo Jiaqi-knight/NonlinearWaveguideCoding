@@ -859,44 +859,7 @@ Thus, we have the final equation:
 
 
 \section{Merge the four equations and eliminate the $V_\gamma^{b}$ and $W_\gamma^{b}$}
-\subsection{nonliear term}
 
-we have to re-derive the momentum equation with multiply $(1-\kappa r cos\phi)$:
-\begin{equation}
-\begin{aligned}
--ia\kappa V^a+{\partial P^a\over {\partial r}}\\
-=
-\sum_{b=-\infty}^{\infty}
-term\mathcal{D}2: -{U^{a-b}\over {1-\kappa r cos\phi}}  {{\partial V^b} \over {\partial s}}-V^{a-b}{{\partial V^b}\over{\partial r}}-{W^{a-b}\over r}{{\partial V^b}\over {\partial \theta}}\\
-+ \sum_{b=-\infty}^{\infty}
-term\mathcal{X}2: {W^{a-b}W^b\over{r}}-{\kappa cos\phi \over{(1-\kappa r cos\phi)}}U^{a-b}U^b\\
-+term\mathcal{P}2:  \sum_{b=-\infty}^{\infty}
-ib\kappa P^{a-b}V^{b}\\
-\end{aligned}
-\end{equation}
-
-LHS-2:${\partial P^a \over \partial r }$
-\begin{equation}
-\begin{aligned}
-\int_0^{2\pi} \int_0^h [{\partial P^a \over \partial r}] r\psi_\alpha dr d\theta\\
-=\int_0^{2\pi}[r\psi_\alpha\psi_\beta]_0^h d\theta P_\beta^a-\int\int \psi_\alpha\psi_\beta dr d\theta P_\beta^a- \int\int {\partial \psi_\alpha\over \partial r}\psi_\beta rdr d\theta  P_\beta^a
-\end{aligned}
-\end{equation}
-Thus, we have the final equation:
-\begin{equation}
-\begin{aligned}
--ia\kappa \Psi_{\alpha\beta}[r]V_\beta^a+\int_0^{2\pi}  [{\psi_\alpha \psi_\beta   r}]_0^h d\theta P_\beta^a
--\Psi_{[\alpha]\beta}[r]P_\beta^aa-\Psi_{\alpha\beta}P_\beta^a\\
-=
-\underline{term \mathcal{D}2:}  \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}V_\gamma^a
-+\Psi_{[\alpha]\beta\gamma} [r]V_\beta^{a-b}V_\gamma^a
-+ \Psi_{(\alpha)\beta\gamma} W_\beta^{a-b}V_\gamma^a\\
-+\underline{term\mathcal({D}2+\mathcal{P}2):}  i(a)\kappa \Psi_{\alpha\beta\gamma}[r]P_\beta^{a-b}V_\gamma^{b}\\
-+\underline{term \mathcal{D}2:} -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r]U_\beta^{a-b}U_\gamma^{b}
--\Psi_{\alpha\beta\gamma}[r]({{d U_\beta^{a-b} \over {d s}}V_\gamma^{b}}+{dV_\gamma^{b}\over ds}U_\beta^{a-b})error\\
-+\underline{term \mathcal{X}2:} \kappa \Psi_{\alpha\beta\gamma}W_\beta^{a-b}W_\gamma^b\\
-\end{aligned}
-\end{equation}
 
 \subsection{$V_\alpha^a $ \& $W_\alpha^a  for RHS$}
 
@@ -1223,27 +1186,81 @@ Transform:
 \end{equation}
 
 
-Finally, we obtain two equations involving just pressure and longitudinal velocity modes:
+Finally, we obtain two equations involving just pressure and longitudinal velocity modes. Here, $\textbf{M}$,$\textbf{N}$,$\mathcal{A}$,$\mathcal{B}$,and $\mathcal{C}$ encoding the curvature of the duct. The terms $\textbf{G}$,$\textbf{H}$,$\textbf{D}$ encode the variation in duct diameter as well as the torsion. The term $\varepsilon$ encodes variation of diameter and the torsion together with curvature if either of the first two are present.
 
 \begin{equation}
 \begin{aligned}
-{u'}_\alpha^a+M_{\alpha\beta}^a p_\beta^a + G_{\alpha\beta}^a u_\beta^a=\mathcal{A}[u,u]+\mathcal{B}[p,p]+\varepsilon[u,p]\\
+{u'}_\alpha^a+\textbf{M}_{\alpha\beta}^a p_\beta^a + \textbf{G}_{\alpha\beta}^a u_\beta^a=\mathcal{A}[u,u]+\mathcal{B}[p,p]+\varepsilon[u,p]\\
 {p'}_\alpha^a-\textbf{N}_{\alpha\beta}^a u_\beta^a-\textbf{H}_{\alpha\beta}^a p_\beta^a=\mathcal{C}[u,p]+\mathcal{D}[u,u]
 \end{aligned}
 \end{equation}
 
 
 
+\section{Separating the $\Psi$ intergrals into radial and angular parts}
+
+\begin{equation}
+\begin{aligned}
+\psi_{\alpha_{m\mu}}(r)=C_{\alpha_{m\mu}}J_m({{j'}_{m\mu} r\over h})e^{im\theta}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+C_{\alpha_{m\mu}}
+=\left\{\begin{matrix}
+{1 \over \sqrt{{\pi\over 2}h^2 J^2_0({j'}_{m\mu})}}, m=0\\
+{1\over \sqrt{({{\pi h^2\over 2}(1-{m^2\over {j'}_{m\mu}^2} )}J^2_m({j'}_{m\mu}))}}, m\neq 0\\
+\end{matrix}\right.\\
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\Psi_{[\alpha](\beta)\gamma}[r(1-\kappa r cos\phi)]=\int_0^{2\pi} \int_0^h [{\partial \psi_\alpha \over \partial r}][{\partial \psi_\beta \over \partial \theta}] \psi_\gamma [r(1-\kappa r cos\phi)] dr d\theta \\
+=\mathcal{X}_{[\alpha]\beta\gamma}[r]\Theta_{\alpha(\beta)\gamma}-\kappa \mathcal{X}_{[\alpha]\beta\gamma}[r^2]\Theta_{\alpha(\beta)\gamma}[cos\phi]
+\end{aligned}
+\end{equation}
+
+with:
+\begin{equation}
+\begin{aligned}
+\mathcal{X}_{[\alpha]\beta\gamma}=\int_0^h {d\over dr}(C_{\alpha_{m\mu}} J_m({j'_{\alpha_{m\mu}}r\over h}))C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})C_{\gamma_{kw}} J_k({j'_{\gamma_{kw}}r\over h})dr\\
+\Theta_{\alpha(\beta)\gamma}=\int_0^{2\pi} e^{im\theta} {d\over d\theta} (e^{in\theta}) e^{ik\theta} d\theta
+\end{aligned}
+\end{equation}
 
 
+Bessel function recurrence relations are:
+\begin{equation}
+\begin{aligned}
+J_{m-1}(x)+J_{m+1}(x)=2m/x J_m(x)\\
+J_{m-1}(x)-J_{m+1}(x)=2J'_m(x)
+\end{aligned}
+\end{equation}
 
+we can have:
+\begin{equation}
+\begin{aligned}
+2J_{m+1}(x)=2m/x J_m(x)-2J'_m(x)\rightarrow \\
+J'_m(x)=m/x J_m(x)-J_{m+1}(x)
+\end{aligned}
+\end{equation}
 
+\begin{equation}
+\begin{aligned}
+\mathcal{X}_{[\alpha]\beta}[r]=\int_0^h {d\over dr}(C_{\alpha_{m\mu}} J_m({j'_{\alpha_{m\mu}}r\over h}))C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})r dr\\
+=\int_0^h {j'_{\alpha_{m\mu}}\over h} C_{\alpha_{m\mu}} [{m\over {j'_{\alpha_{m\mu}}r/ h}} J_m({j'_{\alpha_{m\mu}}r\over h})- J_{m+1}({j'_{\alpha_{m\mu}}r\over h})]C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})r dr\\
+=C_{\alpha_{m\mu}}C_{\beta_{nv}} \int_0^h[{m} J_m({j'_{\alpha_{m\mu}}r\over h})-{j'_{\alpha_{m\mu}}r\over h} J_{m+1}({j'_{\alpha_{m\mu}}r\over h})] J_n({j'_{\beta_{nv}}r\over h})dr\\
+\end{aligned}
+\end{equation}
 
-
-
-
-
-
+The $\Theta$ intergrals can be calculated analytically:
+\begin{equation}
+\begin{aligned}
+\Theta_{\alpha\beta}=\pi \
+\end{aligned}
+\end{equation}
 
 
 
