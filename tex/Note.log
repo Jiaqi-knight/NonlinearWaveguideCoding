@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  1 MAR 2020 22:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  2 MAR 2020 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -250,24 +250,28 @@ y
 \ULC@box=\box38
 Package: ulem 2012/05/18
 \ULdepth=\dimen115
+)
+(e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/tex/latex/amsfonts/amssy
+mb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ) (./Note.aux)
 \openout1 = `Note.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-Class revtex4 Info: Patching LaTeX tabular. on input line 11.
-Class revtex4 Info: cite was not loaded (OK!) on input line 11.
-Class revtex4 Info: multicol was not loaded (OK!) on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+Class revtex4 Info: Patching LaTeX tabular. on input line 12.
+Class revtex4 Info: cite was not loaded (OK!) on input line 12.
+Class revtex4 Info: multicol was not loaded (OK!) on input line 12.
 
 (e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/tex/context/base/mkii/su
 pp-pdf.mkii
@@ -347,17 +351,17 @@ e
 Class revtex4 Warning: Assuming \noaffiliation for  Email: jiaqi\_wang@sjtu.edu
 .cn .
 
-LaTeX Font Info:    Try loading font information for U+lasy on input line 25.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 26.
 (e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
 
 (e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.
 fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 (e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.
 fd
@@ -366,26 +370,26 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 27.
+(amsmath)                 on input line 28.
 
 [1{e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-var/fonts/map/pdftex/updmap
 /pdftex.map}]
-Overfull \hbox (6.58217pt too wide) detected at line 116
+Overfull \hbox (6.58217pt too wide) detected at line 117
 [][]
  []
 
 [2] [3] [4] [5] [6]
-Overfull \hbox (62.89583pt too wide) detected at line 356
+Overfull \hbox (62.89583pt too wide) detected at line 357
 [][]
  []
 
 
-Overfull \hbox (26.40536pt too wide) detected at line 365
+Overfull \hbox (26.40536pt too wide) detected at line 366
 [][]
  []
 
 [7]
-Overfull \hbox (13.58304pt too wide) detected at line 430
+Overfull \hbox (13.58304pt too wide) detected at line 431
 [][]
  []
 
@@ -397,85 +401,102 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
  [10] [11]
-Overfull \hbox (1.76048pt too wide) detected at line 596
+Overfull \hbox (1.76048pt too wide) detected at line 597
 [][]
  []
 
 [12] [13] [14] [15] [16] [17] [18]
-Overfull \hbox (52.44824pt too wide) detected at line 983
+Overfull \hbox (52.44824pt too wide) detected at line 984
 [][]
  []
 
 [19] [20]
-Overfull \hbox (65.69508pt too wide) detected at line 1028
+Overfull \hbox (65.69508pt too wide) detected at line 1029
 [][]
  []
 
 
-Overfull \hbox (26.40536pt too wide) detected at line 1037
+Overfull \hbox (26.40536pt too wide) detected at line 1039
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1039--1040
+Underfull \hbox (badness 10000) in paragraph at lines 1041--1042
 
  []
 
 
-Overfull \hbox (41.09947pt too wide) detected at line 1053
+Overfull \hbox (67.70912pt too wide) detected at line 1057
 [][]
  []
 
 [21]
-Overfull \hbox (2.78142pt too wide) detected at line 1070
+Overfull \hbox (36.97112pt too wide) detected at line 1069
 [][]
  []
 
-[22] [23] [24] [25] [26] [27] (./Note.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
+Overfull \hbox (2.78142pt too wide) detected at line 1086
+[][]
+ []
 
+[22]
+Overfull \hbox (52.52527pt too wide) detected at line 1104
+[][]
+ []
 
- ) 
+[23]
+Overfull \hbox (3.1499pt too wide) detected at line 1163
+[][]
+ []
+
+[24] [25]
+Overfull \hbox (65.69508pt too wide) detected at line 1190
+[][]
+ []
+
+[26] [27] [28] [29] [30] (./Note.aux) ) 
 Here is how much of TeX's memory you used:
- 4093 strings out of 492995
- 54693 string characters out of 6136402
- 152386 words of memory out of 5000000
- 7571 multiletter control sequences out of 15000+600000
+ 4297 strings out of 492995
+ 56730 string characters out of 6136402
+ 152468 words of memory out of 5000000
+ 7772 multiletter control sequences out of 15000+600000
  18834 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,18n,26p,408b,206s stack positions out of 5000i,500n,10000p,200000b,80000s
-{e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/enc/dvips/cm-sup
-er/cm-super-t1.enc}<e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmex10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><e:/Jiaqi-SJTU-offic
-al/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e
-:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/Jiaqi-SJTU-offical/Package
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><e:/Jiaqi-SJT
-U-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><e:/Jiaqi-SJTU-offical/Pack
-age/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/Jiaqi
--SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy9.pfb><e:/Jiaqi-SJTU-offical/Package/texliv
-e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offic
-al/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><e:
-/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super
-/sfbx1728.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type
-1/public/cm-super/sfrm1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texm
-f-dist/fonts/type1/public/cm-super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Package/
-texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on Note.pdf (27 pages, 349216 bytes).
+ 39i,18n,26p,438b,224s stack positions out of 5000i,500n,10000p,200000b,80000s
+{e:/Jiaqi-SJTU-offical/Package/texlive/2
+017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<e:/Jiaqi-SJTU-offical/
+Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/J
+iaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+mextra/cmex7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><e:/Jiaqi-SJTU-offical/Pack
+age/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><e:/Jiaqi-
+SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi9.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><e:/Jiaqi-SJTU-offical
+/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/Ji
+aqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr9.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><e:/Jiaqi-SJTU-offical/Package/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-of
+fical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+<e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msam10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/f
+onts/type1/public/cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/
+2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><e:/Jiaqi-SJTU-offical
+/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><e:/J
+iaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/s
+frm1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/
+public/cm-super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-
+dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on Note.pdf (30 pages, 381372 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
+ 190 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
