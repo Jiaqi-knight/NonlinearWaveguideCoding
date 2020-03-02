@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  2 MAR 2020 17:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  2 MAR 2020 20:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -446,22 +446,27 @@ Overfull \hbox (52.52527pt too wide) detected at line 1104
  []
 
 [23]
-Overfull \hbox (3.1499pt too wide) detected at line 1163
+Overfull \hbox (2.4556pt too wide) detected at line 1117
+[][]
+ []
+
+
+Overfull \hbox (3.1499pt too wide) detected at line 1174
 [][]
  []
 
 [24] [25]
-Overfull \hbox (65.69508pt too wide) detected at line 1190
+Overfull \hbox (65.69508pt too wide) detected at line 1201
 [][]
  []
 
 [26] [27] [28] [29] [30] (./Note.aux) ) 
 Here is how much of TeX's memory you used:
- 4297 strings out of 492995
- 56730 string characters out of 6136402
+ 4293 strings out of 492995
+ 56663 string characters out of 6136402
  152468 words of memory out of 5000000
- 7772 multiletter control sequences out of 15000+600000
- 18834 words of font info for 52 fonts, out of 8000000 for 9000
+ 7769 multiletter control sequences out of 15000+600000
+ 18148 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,18n,26p,438b,224s stack positions out of 5000i,500n,10000p,200000b,80000s
 {e:/Jiaqi-SJTU-offical/Package/texlive/2
@@ -491,12 +496,11 @@ onts/type1/public/cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/
 /Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><e:/J
 iaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/s
 frm1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/
-public/cm-super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-
-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on Note.pdf (30 pages, 381372 bytes).
+public/cm-super/sfti1000.pfb>
+Output written on Note.pdf (30 pages, 370592 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
+ 186 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
