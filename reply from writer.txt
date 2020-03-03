@@ -1,0 +1,29 @@
+Thank you for getting in touch - it is nice to see someone continuing my work.
+
+From what I can see, the derivation you have sent me looks to be all correct so far. You are also correct that we simply need to substitute (3.23a) and (3.23b) into the linear LHS of (3.18) and (3.22). The problem is that (3.23a) and (3.23b) give expressions for $N^a_{\alpha\beta}V^a_{\beta}$ and $N^a_{\alpha\beta}W^a_{\beta}$ respectively. As such we need to apply $N^-1$ to both sides to get expressions for V and W which can be used for the substitution. We don't need to do this for the linear part of the substitution - we already know the linear relationship between the V and W modes with P given by (3.25a) and (3.25b) (hence why you don't see the $N^{-1}$ in any linear terms). Note that we could have done the same thing with the linear terms (applying N^-1) but the result is the same - the matrix product of N^-1 with the matrices pre-multiplying P in (3.23a) and (3.23b) give the matrices V (3.26a) and W (3.26b) (when the number of modes tends to infinity). Also note that on the linear LHS the terms are not coupled temporally so the equation actually represents a set of equations for each $a$. The expression $(N^a_{\alpha\beta})^{-1}$ means "the inverse of N for this particular a".
+
+From here, the rest is just substituting the remaining linear expressions for V and W into the nonlinear RHS as well as the linear expressions for dU/ds, dV/ds and dW/ds. 
+
+With regards to the question of how the integral can be split into a matrix multiply - all of the Psi's are matrices or 3-tensors, with entries given as the inner products of various combinations of the duct basis vectors. If you look in the appendix B, I give closed form expressions for the entries in the 2D case. The point of this work as a whole is to represent the continuous mass and momentum equations as stable infinite dimesionsal vector equations in the basis of duct modes.
+
+I hope this helps clear things up a bit. I am happy to answer any more questions if you have them and look forward to seeing how your work progresses. 
+
+Best wishes,
+James
+
+PS - I would also like to point you to appendix D which provides a simpler derivation of the same equations. I did not have time to try it out during my PhD, but it might be worth looking into.
+
+
+Subject: Question of a derivation in your thesis
+ 
+Dear James 
+
+Kind to email you . I am JIAQI£¬phd student from Shanghai jiaotong university. These days, I spend much time focusing on the basic theory of duct acoustics.I am really interested in your work.My prior work on realistic flow contains complex flow property in the infinite duct. However, the nonlinear and vary-duct factors are ignored. 
+
+This thesis introduces me to the ideas of these factors, which are more general. I also believe the concept of nonlinear is really important for the application of a transonic compressor. 
+
+Here is my step-by-step derivation of 3D general duct. The final equation (3.31 in Ph.D. thesis) still headaches me for many days, and I still have no confidence on how to derivate it. Specifically, Equations (3.23a) and (3.23b) used to eliminate the transverse modes from the linear LHS of equations (3.18) and (3.22). I guess that's why it introduces the term $(N^-1)_{\delta\epsilon}^a$ in the equation A(3.35e) & B(3.35f). However, how can the integral be seperated as matrix multiply . If it is introduced by (3.23a) and (3.23b), why the LHS term $P_\beta^a$ disppear. I have derivate this final equation for several days, with your instructions. Could you give me any idea on how to make it. Really thanks. I learned a lot! 
+
+By the way, the whole material has been pushed on GitHub in public:https://github.com/Jiaqi-knight/NonlinearWaveguideCoding. Welcome to find it. 
+
+Yours 
