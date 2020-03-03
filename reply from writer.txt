@@ -62,8 +62,18 @@ PS - I would also like to point you to appendix D which provides a simpler deriv
 
 
 
+Question3£º03 March 2020 03:01
+
+Another interesting question is:
+
+For 3D duct eigenfuntion,  in your thesis,  $cos(m\phi-\xi\pi/2)$ is introduced, which is scalar. And derive some integral in Appendix B.5a-e.
+
+My question: why not use $\psi_{\alpha_{m\mu}}(r)=C_{\alpha_{m\mu}}J_m({{j'}_{m\mu} r\over h})e^{im\theta}$, which is complex term, and more common to see in other papers.
 
 
+Answer£º2020-03-03 17:57
+
+It was merely a matter of preference  - I find it easier to visualise the modes as being "symmetric" and "anti-symmetric" along the plane of torsion free ducts, but the other method is equally as valid. Initially there was also the motivation that with torsion free ducts the symmetric and anti-symmetric modes are decoupled - as such, there was hope that each set could be solved independently. Due to peculiarities in the derivation this ended up not being the case (see section 3.4). However, if duct width variations are ignored it possible to derive a set of M, N, A, B, ... etc. which are indeed uncoupled (you have to eliminate v and w before expanding about the basis of duct modes - something which (as far as I could see) could not be done if duct width variations are taken into account). With these it is possible to halve the computations by exploiting the symmetry of certain scenarios.
 
 
 
