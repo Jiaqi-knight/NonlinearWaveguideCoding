@@ -1,3 +1,50 @@
+Question 1-On 12/02/2020 12:11,
+That's the equation of£¨2.14a£©-->£¨2.18a£©in the paper-attached.
+
+I am not sure this derivation is whether right or not.
+
+Could you give me any idea on how to make it.
+
+
+Answer£º
+
+I agree that is is not obvious how we get from (2.14a) to (2.18a).   In 
+fact, we use the technique mentioned just after (2.5b), where we use 
+linear terms (from the left hand side of the equations, accurate only to 
+O(M)) to rearrange the nonlinear expressions on the right hand side, as 
+the error in doing this is only O(M^3), which we are neglecting.
+
+Using this technique, the left hand side of (2.14a) says that 
+$\nabla\cdot U^a = iakP^a + O(M^2)$, and so $-P^{a-b}\nabla\cdot U^b = 
+-ibkP^{a-b}P^b + O(M^3)$.  Similarly, the left hand side of (2.14b) says 
+that $\nabla P^a = iakU^a$, and this is what is used to rearrange the 
+other terms.
+
+I hope this makes sense now.  If not, or if you have any other 
+questions, please do let me know.
+
+Dr Ed Brambley
+
+
+
+
+
+Question2£º29 February 2020 14:35£¬
+ 
+Dear James 
+
+Kind to email you . I am JIAQI£¬phd student from Shanghai jiaotong university. These days, I spend much time focusing on the basic theory of duct acoustics.I am really interested in your work.My prior work on realistic flow contains complex flow property in the infinite duct. However, the nonlinear and vary-duct factors are ignored. 
+
+This thesis introduces me to the ideas of these factors, which are more general. I also believe the concept of nonlinear is really important for the application of a transonic compressor. 
+
+Here is my step-by-step derivation of 3D general duct. The final equation (3.31 in Ph.D. thesis) still headaches me for many days, and I still have no confidence on how to derivate it. Specifically, Equations (3.23a) and (3.23b) used to eliminate the transverse modes from the linear LHS of equations (3.18) and (3.22). I guess that's why it introduces the term $(N^-1)_{\delta\epsilon}^a$ in the equation A(3.35e) & B(3.35f). However, how can the integral be seperated as matrix multiply . If it is introduced by (3.23a) and (3.23b), why the LHS term $P_\beta^a$ disppear. I have derivate this final equation for several days, with your instructions. Could you give me any idea on how to make it. Really thanks. I learned a lot! 
+
+By the way, the whole material has been pushed on GitHub in public:https://github.com/Jiaqi-knight/NonlinearWaveguideCoding. Welcome to find it. 
+
+
+
+Answer£º2020-03-03 07:26£¬
+
 Thank you for getting in touch - it is nice to see someone continuing my work.
 
 From what I can see, the derivation you have sent me looks to be all correct so far. You are also correct that we simply need to substitute (3.23a) and (3.23b) into the linear LHS of (3.18) and (3.22). The problem is that (3.23a) and (3.23b) give expressions for $N^a_{\alpha\beta}V^a_{\beta}$ and $N^a_{\alpha\beta}W^a_{\beta}$ respectively. As such we need to apply $N^-1$ to both sides to get expressions for V and W which can be used for the substitution. We don't need to do this for the linear part of the substitution - we already know the linear relationship between the V and W modes with P given by (3.25a) and (3.25b) (hence why you don't see the $N^{-1}$ in any linear terms). Note that we could have done the same thing with the linear terms (applying N^-1) but the result is the same - the matrix product of N^-1 with the matrices pre-multiplying P in (3.23a) and (3.23b) give the matrices V (3.26a) and W (3.26b) (when the number of modes tends to infinity). Also note that on the linear LHS the terms are not coupled temporally so the equation actually represents a set of equations for each $a$. The expression $(N^a_{\alpha\beta})^{-1}$ means "the inverse of N for this particular a".
@@ -14,16 +61,12 @@ James
 PS - I would also like to point you to appendix D which provides a simpler derivation of the same equations. I did not have time to try it out during my PhD, but it might be worth looking into.
 
 
-Subject: Question of a derivation in your thesis
- 
-Dear James 
 
-Kind to email you . I am JIAQI£¬phd student from Shanghai jiaotong university. These days, I spend much time focusing on the basic theory of duct acoustics.I am really interested in your work.My prior work on realistic flow contains complex flow property in the infinite duct. However, the nonlinear and vary-duct factors are ignored. 
 
-This thesis introduces me to the ideas of these factors, which are more general. I also believe the concept of nonlinear is really important for the application of a transonic compressor. 
 
-Here is my step-by-step derivation of 3D general duct. The final equation (3.31 in Ph.D. thesis) still headaches me for many days, and I still have no confidence on how to derivate it. Specifically, Equations (3.23a) and (3.23b) used to eliminate the transverse modes from the linear LHS of equations (3.18) and (3.22). I guess that's why it introduces the term $(N^-1)_{\delta\epsilon}^a$ in the equation A(3.35e) & B(3.35f). However, how can the integral be seperated as matrix multiply . If it is introduced by (3.23a) and (3.23b), why the LHS term $P_\beta^a$ disppear. I have derivate this final equation for several days, with your instructions. Could you give me any idea on how to make it. Really thanks. I learned a lot! 
 
-By the way, the whole material has been pushed on GitHub in public:https://github.com/Jiaqi-knight/NonlinearWaveguideCoding. Welcome to find it. 
 
-Yours 
+
+
+
+
