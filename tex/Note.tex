@@ -92,7 +92,7 @@ Z\alpha_{m\mu} J_m'(\alpha_{m\mu} R)=(w-U_0\kappa_{m\mu})J_m(\alpha_{m\mu} R) \r
 A complete solution may be writtern as:
 \begin{equation}
 \begin{aligned}
-p(x,r,\theta)=\sum_{m=-\infty}^\infty \sum_{\mu=1}^\infty (A_{m\mu}e^{-i\kappa_{m\mu}x}+B_{m\mu}e^{i\kappa_{m\mu}x})U_{m\mu}(r)e^{im\theta}\\
+p(x,r,\theta)=\sum_{m=-\infty}^\infty \sum_{\mu=1}^\infty (A_{m\mu}e^{-i\kappa_{m\mu}x}+B_{m\mu}e^{i\kappa_{m\mu}x})U_{m\mu}(r)e^{im\phi}\\
 \end{aligned}
 \end{equation}
 
@@ -177,8 +177,8 @@ where may be normalized according to:
 In fact, we know that:
 \begin{equation}
 \begin{aligned}
-\int_0^{2\pi} e^{im\theta}e^{im\theta}  d\theta=0\\
-\int_0^{2\pi} e^{im\theta}e^{-im\theta}  d\theta=2\pi\\
+\int_0^{2\pi} e^{im\phi}e^{im\phi}  d\theta=0\\
+\int_0^{2\pi} e^{im\phi}e^{-im\theta}  d\theta=2\pi\\
 \end{aligned}
 \end{equation}
 
@@ -236,7 +236,7 @@ Then, we have(ref: Rienstra-Fundamentals of Duct Acoustics-(55)):
 \end{aligned}
 \end{equation}
 
-Thus, with $\int_0^{2\pi} e^{im\theta}e^{-im\theta}  d\theta=2\pi$,
+Thus, with $\int_0^{2\pi} e^{im\phi}e^{-im\theta}  d\theta=2\pi$,
 $\psi_{\alpha_{m\mu}}(r)=C_{\alpha_{m\mu}}J_m({{j'}_{m\mu} r\over h})e^{im\phi}$,we have:
 \begin{equation}
 \begin{aligned}
@@ -1254,7 +1254,7 @@ Finally, we obtain two equations involving just pressure and longitudinal veloci
 
 \section{Separating the $\Psi$ intergrals into radial and angular parts}
 
-With $\int_0^{2\pi} e^{im\theta}e^{-im\theta}  d\theta=2\pi$,
+With $\int_0^{2\pi} e^{im\phi}e^{-im\theta}  d\theta=2\pi$,
 $\psi_{\alpha_{m\mu}}(r)=C_{\alpha_{m\mu}}J_m({{j'}_{m\mu} r\over h})e^{im\phi}$,we have:
 \begin{equation}
 \begin{aligned}
@@ -1266,19 +1266,11 @@ C_{\alpha_{01}}={1 \over \sqrt{\pi}h}
 
 \begin{equation}
 \begin{aligned}
-\psi_{\alpha_{m\mu}}(r)=C_{\alpha_{m\mu}}J_m({{j'}_{m\mu} r\over h})e^{im\theta}
+\psi_{\alpha_{m\mu}}(r)=C_{\alpha_{m\mu}}J_m({{j'}_{m\mu} r\over h})e^{im\phi}
 \end{aligned}
 \end{equation}
 
-\begin{equation}
-\begin{aligned}
-C_{\alpha_{m\mu}}
-=\left\{\begin{matrix}
-{1 \over \sqrt{{\pi\over 2}h^2 J^2_0({j'}_{m\mu})}}, m=0\\
-{1\over \sqrt{({{\pi h^2\over 2}(1-{m^2\over {j'}_{m\mu}^2} )}J^2_m({j'}_{m\mu}))}}, m\neq 0\\
-\end{matrix}\right.\\
-\end{aligned}
-\end{equation}
+
 
 \begin{equation}
 \begin{aligned}
@@ -1291,7 +1283,7 @@ with:
 \begin{equation}
 \begin{aligned}
 \mathcal{X}_{[\alpha]\beta\gamma}=\int_0^h {d\over dr}(C_{\alpha_{m\mu}} J_m({j'_{\alpha_{m\mu}}r\over h}))C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})C_{\gamma_{kw}} J_k({j'_{\gamma_{kw}}r\over h})dr\\
-\Theta_{\alpha(\beta)\gamma}=\int_0^{2\pi} e^{im\theta} {d\over d\theta} (e^{in\theta}) e^{ik\theta} d\theta
+\Theta_{\alpha(\beta)\gamma}=\int_0^{2\pi} e^{im\phi} {d\over d\theta} (e^{in\phi}) e^{ik\phi} d\theta
 \end{aligned}
 \end{equation}
 
@@ -1323,7 +1315,7 @@ J'_m(x)=m/x J_m(x)-J_{m+1}(x)
 The $\Theta$ intergrals can be calculated analytically:
 \begin{equation}
 \begin{aligned}
-\Theta_{\alpha\beta}=\int_0^{2\pi} e^{im\theta} e^{in\theta} d\theta=\left\{\begin{matrix}
+\Theta_{\alpha\beta}=\int_0^{2\pi} e^{im\phi} e^{in\phi} d\theta=\left\{\begin{matrix}
 0\\
 2\pi, m+n=0
 \end{matrix}\right.
@@ -1343,16 +1335,17 @@ sinx=[e^{ix}-e^{-ix}]/2i
 
 \begin{equation}
 \begin{aligned}
-\Theta_{\alpha\beta}[cos\phi]=\int_0^{2\pi} cos(\theta-\theta_0) e^{im\theta} e^{in\theta} d\theta=1/2\int_0^{2\pi} [e^{i(\theta-\theta_0)}+e^{-i(\theta-\theta_0)}] e^{im\theta} e^{in\theta} d\theta\\
-=1/2\int_0^{2\pi} e^{i(\theta-\theta_0)} e^{im\theta} e^{in\theta} d\theta+1/2\int_0^{2\pi} [e^{-i(\theta-\theta_0)}] e^{im\theta} e^{in\theta} d\theta\\
-=\pi e^{-i\theta_0}\delta_{m,-n-1}+\pi e^{i\theta_0}\delta_{m,-n+1}
+\Theta_{\alpha\beta}[cos\phi]=\int_0^{2\pi} cos(\theta-\theta_0) e^{im\phi} e^{in\phi} d\theta=1/2\int_0^{2\pi} [e^{i(\theta-\theta_0)}+e^{-i(\theta-\theta_0)}] e^{im\phi} e^{in\phi} d\theta\\
+=1/2\int_0^{2\pi} e^{i(\theta-\theta_0)} e^{im\phi} e^{in\phi} d\theta+1/2\int_0^{2\pi} [e^{-i(\theta-\theta_0)}] e^{im\phi} e^{in\phi} d\theta\\
+=\pi e^{-i(1+m+n)\theta_0}\delta_{m,-n-1}+\pi e^{i(m+n-1)\theta_0}\delta_{m,-n+1}\\
+=\pi \delta_{m,-n-1}+\pi \delta_{m,-n+1}
 \end{aligned}
 \end{equation}
 
 
 \begin{equation}
 \begin{aligned}
-\Theta_{(\alpha)\beta}=\int_0^{2\pi} {\partial \over \partial \theta}(e^{im\theta}) e^{in\theta} d\theta
+\Theta_{(\alpha)\beta}=\int_0^{2\pi} {\partial \over \partial \theta}(e^{im\phi}) e^{in\phi} d\theta
 =2\pi im \delta_{m,-n}
 \end{aligned}
 \end{equation}
@@ -1360,43 +1353,43 @@ sinx=[e^{ix}-e^{-ix}]/2i
 
 \begin{equation}
 \begin{aligned}
-\Theta_{(\alpha)\beta}[cos\phi]=im[ \pi e^{-i\theta_0}\delta_{m,-n-1}+\pi e^{i\theta_0}\delta_{m,-n+1}]
+\Theta_{(\alpha)\beta}[cos\phi]=im[ \pi \delta_{m,-n-1}+\pi \delta_{m,-n+1}]
 \end{aligned}
 \end{equation}
 
 \begin{equation}
 \begin{aligned}
-\Theta_{\alpha\beta\gamma}=\int_0^{2\pi} e^{im\theta} e^{in\theta}  e^{ik\theta} d\theta
+\Theta_{\alpha\beta\gamma}=\int_0^{2\pi} e^{im\phi} e^{in\phi}  e^{ik\theta} d\theta
 =2\pi \delta_{m,-n-k}
 \end{aligned}
 \end{equation}
 
 \begin{equation}
 \begin{aligned}
-\Theta_{\alpha\beta\gamma}[cos\phi]=1/2 \int_0^{2\pi} [e^{i(\theta-\theta_0)}+e^{-i(\theta-\theta_0)}]  e^{im\theta} e^{in\theta}  e^{ik\theta} d\theta
-=\pi e^{-i\theta_0}\delta_{m,-n-k-1}+\pi e^{i\theta_0}\delta_{m,-n-k+1}
+\Theta_{\alpha\beta\gamma}[cos\phi]=1/2 \int_0^{2\pi} [e^{i(\theta-\theta_0)}+e^{-i(\theta-\theta_0)}]  e^{im\phi} e^{in\phi}  e^{ik\theta} d\theta
+=\pi \delta_{m,-n-k-1}+\pi \delta_{m,-n-k+1}
 \end{aligned}
 \end{equation}
 
 
 \begin{equation}
 \begin{aligned}
-\Theta_{\alpha\beta\gamma}[sin\phi]=1/2i \int_0^{2\pi} [e^{i(\theta-\theta_0)}-e^{-i(\theta-\theta_0)}]  e^{im\theta} e^{in\theta}  e^{ik\theta} d\theta
-=-i[\pi e^{-i\theta_0}\delta_{m,-n-k-1}-\pi e^{i\theta_0}\delta_{m,-n-k+1}]
+\Theta_{\alpha\beta\gamma}[sin\phi]=1/(2i) \int_0^{2\pi} [e^{i(\theta-\theta_0)}-e^{-i(\theta-\theta_0)}]  e^{im\phi} e^{in\phi}  e^{ik\theta} d\theta
+=-i[\pi \delta_{m,-n-k-1}-\pi \delta_{m,-n-k+1}]
 \end{aligned}
 \end{equation}
 
 \begin{equation}
 \begin{aligned}
-\Theta_{(\alpha)\beta\gamma}=im \int_0^{2\pi} e^{im\theta} e^{in\theta}  e^{ik\theta} d\theta
+\Theta_{(\alpha)\beta\gamma}=im \int_0^{2\pi} e^{im\phi} e^{in\phi}  e^{ik\phi} d\theta
 =2\pi im\delta_{m,-n-k}
 \end{aligned}
 \end{equation}
 
 \begin{equation}
 \begin{aligned}
-\Theta_{(\alpha)\beta\gamma}[cos\phi]=1/2 \int_0^{2\pi} [e^{i(\theta-\theta_0)}+e^{-i(\theta-\theta_0)}]  e^{im\theta} e^{in\theta}  e^{ik\theta} d\theta
-=im[\pi e^{-i\theta_0}\delta_{m,-n-k-1}+\pi e^{i\theta_0}\delta_{m,-n-k+1}]
+\Theta_{(\alpha)\beta\gamma}[cos\phi]=1/2 \int_0^{2\pi} [e^{i(\theta-\theta_0)}+e^{-i(\theta-\theta_0)}]  e^{im\phi} e^{in\phi}  e^{ik\theta} d\theta
+=im[\pi \delta_{m,-n-k-1}+\pi \delta_{m,-n-k+1}]
 \end{aligned}
 \end{equation}
 
@@ -1421,11 +1414,41 @@ C_{\alpha_{m\mu}} {\partial \over \partial r}(J_m({j'_{\alpha_{m\mu}}r\over h(s)
 \end{aligned}
 \end{equation}
 
+\begin{equation}
+\begin{aligned}
+\mathcal{X}_{\{\alpha\}\beta\gamma}=\int_0^h {d\over ds}(C_{\alpha_{m\mu}}(s) J_m({j'_{\alpha_{m\mu}}r\over h(s)}))C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})C_{\gamma_{kw}} J_n({j'_{\gamma_{kw}}r\over h})dr\\
+=\int_0^h [({dC_{\alpha_{m\mu}}(s)\over ds})J_m({j'_{\alpha_{m\mu}}r\over h(s)})+
+C_{\alpha_{m\mu}} J_m({j'_{\alpha_{m\mu}}r\over h(s)}) {-j'_{\alpha_{m\mu}}r\over h(s)^2}{dh(s)\over ds}]C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})C_{\gamma_{kw}} J_n({j'_{\gamma_{kw}}r\over h})dr\\
+=\int_0^h [({d{1\over h(s)}\over ds}){C_{\alpha_{m\mu}}(s)} J_m({j'_{\alpha_{m\mu}}r\over h(s)})+
+C_{\alpha_{m\mu}} J_m({j'_{\alpha_{m\mu}}r\over h(s)}) {-j'_{\alpha_{m\mu}}r\over h(s)^2}{dh(s)\over ds}]C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})C_{\gamma_{kw}} J_n({j'_{\gamma_{kw}}r\over h})dr\\
+=\int_0^h [(-{h'(s)\over h}){C_{\alpha_{m\mu}}(s) } J_m({j'_{\alpha_{m\mu}}r\over h(s)})-
+C_{\alpha_{m\mu}} {\partial \over \partial r}(J_m({j'_{\alpha_{m\mu}}r\over h(s)})) {h'(s)\over h}r]C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})C_{\gamma_{kw}} J_n({j'_{\gamma_{kw}}r\over h})dr\\
+=-{h'\over h}(\mathcal{X}_{[\alpha]\beta\gamma}[r]+\mathcal{X}_{\alpha\beta\gamma})
+\end{aligned}
+\end{equation}
+
 
 \begin{equation}
 \begin{aligned}
-\Theta_{\{\alpha\}\beta}=\int_0^{2\pi} {\partial \over \partial s}(e^{im\theta}) e^{in\theta} d\theta
-=2\pi im \delta_{m,-n}
+\Theta_{\{\alpha\}\beta}=\int_0^{2\pi} {\partial \over \partial s}(e^{im\phi}) e^{in\phi} d\theta
+=-im\int_0^{2\pi} {\partial\theta_0(s) \over \partial s}e^{im\phi}e^{in\phi} d\theta\\
+=-\tau  \Theta_{(\alpha)\beta}=-\tau 2\pi   im \delta_{m,-n}
+\end{aligned}
+\end{equation}
+
+Similarly,
+\begin{equation}
+\begin{aligned}
+{d\over ds}(\Psi_{\alpha\beta\gamma}[r])={d\over ds}(\mathcal{X}_{\alpha\beta\gamma}[r])\Theta_{\alpha\beta\gamma}
+\end{aligned}
+\end{equation}
+
+with
+\begin{equation}
+\begin{aligned}
+{d\over ds}(\mathcal{X}_{\alpha\beta\gamma}[r])
+=\mathcal{X}_{\{\alpha\}\beta\gamma}[r]+\mathcal{X}_{\alpha\{\beta\}\gamma}[r]+\mathcal{X}_{\alpha\beta\{\gamma\}}[r]\\
+=-{h'\over h}(\mathcal{X}_{[\alpha]\beta\gamma}[r^2]-{h'\over h}(\mathcal{X}_{\alpha[\beta]\gamma}[r^2]-{h'\over h}(\mathcal{X}_{\alpha\beta[\gamma]}[r^2]-3{h'\over h}\mathcal{X}_{\alpha\beta\gamma}[r])
 \end{aligned}
 \end{equation}
 
