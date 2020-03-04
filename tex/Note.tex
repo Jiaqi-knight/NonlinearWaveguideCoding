@@ -143,19 +143,64 @@ W^a=\sum_{\alpha=0}^{\infty}W_{\alpha_{m\mu}}^a(s)\psi_{\alpha_{m\mu}} (s,r,\the
 \end{equation}
 
 
-A solution of $\psi$ may have the form the same as the hard walls modes:
+
+
+\subsubsection{Discussion of property of $\psi$}
+In Jams's thesis, $\psi_\alpha=C_{\alpha_{m\mu}}J_m({{j'}_{m\mu} r\over h})cos(m\phi-\xi\pi/2)$.As he mentioned, it was merely a matter of preference  - I find it easier to visualise the modes as being "symmetric" and "anti-symmetric" along the plane of torsion free ducts, but the other method is equally as valid. 
+
+However, there still a problem, which may cause error, but is not mentioned in the thesis:\\
 \begin{equation}
 \begin{aligned}
-\psi_{m\mu}(r)=C_{\alpha_{m\mu}}J_m({{j'}_{m\mu} r\over h})e^{im\theta}
+\int_0^{2\pi} cos(m\phi-\xi\pi/2)^2 d\theta={1+cos(2m\phi-\xi \pi)\over 2}|_0^{2\pi}=\left\{\begin{matrix}
+\pi,m\neq 0\\
+2\pi,m=0,\xi=0\\
+0,m=0,\xi=1
+\end{matrix}\right.
 \end{aligned}
 \end{equation}
 
-where should be normalized according to:
+In the note, we try to introduce the common solution of $\psi$ may have the form the same as the hard walls modes:
+\begin{equation}
+\begin{aligned}
+\psi_{m\mu}(r)=C_{\alpha_{m\mu}}J_m({{j'}_{m\mu} r\over h})e^{im\phi}
+\end{aligned}
+\end{equation}
+
+where may be normalized according to:
 \begin{equation}
 \begin{aligned}
 \int_0^{2\pi}\int_0^h \psi_{\alpha_{m\mu}} \psi_{\beta_{nv}} r dr d\theta=\delta_{\mu v} \delta_{mn}
 \end{aligned}
 \end{equation}
+
+
+In fact, we know that:
+\begin{equation}
+\begin{aligned}
+\int_0^{2\pi} e^{im\theta}e^{im\theta}  d\theta=0\\
+\int_0^{2\pi} e^{im\theta}e^{-im\theta}  d\theta=2\pi\\
+\end{aligned}
+\end{equation}
+
+
+The orthogonality relation of Bessel function, with $J_{-m}(z)=(-1)^m J_m(z)$
+\begin{equation}
+\begin{aligned}
+\int_0^h r J_m({{j'}_{m\mu} r\over h})J_m({{j'}_{mv} r\over h}) dr=0,\mu\neq v\\
+\int_0^h r J_m({{j'}_{m\mu} r\over h})J_{-m}({{j'}_{-mv} r\over h}) dr\\=(-1)^m \int_0^h r J_m({{j'}_{m\mu} r\over h})J_{m}({{j'}_{mv} r\over h}) dr=0,\mu\neq v\\
+\end{aligned}
+\end{equation}
+
+That changes our idea of normalization to:
+
+
+\begin{equation}
+\begin{aligned}
+\uuline{\int_0^{2\pi}\int_0^h \psi_{\alpha_{m\mu}} \psi_{\beta_{nv}} r dr d\theta=(-1)^m\delta_{\mu v} \delta_{m,-n}}
+\end{aligned}
+\end{equation}
+
+
 
 \subsection{Normalised Modes$\rightarrow C_{\alpha_{m\mu}}$}
 
@@ -178,35 +223,31 @@ J_m'(\alpha h)=0 \rightarrow \alpha_{m\mu}={{j'_{m\mu}}\over h} (eigenvalues)
 \end{aligned}
 \end{equation}
 
-Then, we have:
+Then, we have(ref: Rienstra-Fundamentals of Duct Acoustics-(55)):
 \begin{equation}
 \begin{aligned}
-\int_0^h  r J_m(\alpha r)^2 dr\\
-=\left\{\begin{matrix}
-{1\over 2\alpha_{m\mu}^2}(\alpha_{m\mu}^2h^2-m^2)J_m(\alpha_{m\mu} h)^2, m\neq 0\\
-{1\over 2}(h^2)J_0(\alpha_{m\mu} h)^2, m=0
-\end{matrix}\right.\\
-=\left\{\begin{matrix}
-({J_m(\alpha_{m\mu} h)\sqrt{(h^2-{m^2\over \alpha_{m\mu}^2} )}\over \sqrt{2}})^2, m\neq 0\\
-{1\over 2}(h^2)J_0(\alpha_{m\mu} h)^2, m=0
-\end{matrix}\right.\\
-=\left\{\begin{matrix}
-({{h^2\over 2}(1-{m^2\over {j'}_{m\mu}^2} )}J^2_m({j'}_{m\mu})), m\neq 0\\
-{1\over 2}h^2 J^2_0({j'}_{m\mu}), m=0
-\end{matrix}\right.\\
+\int_0^h  r J_m(\alpha r)  J_{-m}(\alpha r)dr=(-1)^m\int_0^h  r J_m(\alpha r)^2 dr\\
+=(-1)^m 
+{1\over 2\alpha_{m\mu}^2}(\alpha_{m\mu}^2h^2-m^2)J_m(\alpha_{m\mu} h)^2\\
+=(-1)^m 
+({J_m(\alpha_{m\mu} h)\sqrt{(h^2-{m^2\over \alpha_{m\mu}^2} )}\over \sqrt{2}})^2\\
+=(-1)^m 
+({{h^2\over 2}(1-{m^2\over {j'}_{m\mu}^2} )}J^2_m({j'}_{m\mu}))\\
 \end{aligned}
 \end{equation}
 
-Thus, 
+Thus, with $\int_0^{2\pi} e^{im\theta}e^{-im\theta}  d\theta=2\pi$,
+$\psi_{\alpha_{m\mu}}(r)=C_{\alpha_{m\mu}}J_m({{j'}_{m\mu} r\over h})e^{im\phi}$,we have:
 \begin{equation}
 \begin{aligned}
-C_{\alpha_{m\mu}}
-=\left\{\begin{matrix}
-{1 \over \sqrt{{\pi\over 2}h^2 J^2_0({j'}_{m\mu})}}, m=0\\
-{1\over \sqrt{({{\pi h^2\over 2}(1-{m^2\over {j'}_{m\mu}^2} )}J^2_m({j'}_{m\mu}))}}, m\neq 0\\
-\end{matrix}\right.\\
+C_{\alpha_{m\mu}}={1\over \sqrt{({{\pi h^2}(1-{m^2\over {j'}_{m\mu}^2} )}J^2_m({j'}_{m\mu}))}}\\
+except for:
+C_{\alpha_{01}}={1 \over \sqrt{\pi}h}
 \end{aligned}
 \end{equation}
+
+for 
+ $\int_0^{2\pi}\int_0^h \psi_{\alpha_{m\mu}} \psi_{\beta_{nv}} r dr d\theta=(-1)^m\delta_{\mu v} \delta_{m,-n} =\widehat{\delta }_{\alpha\beta}$.
 
 
 \subsection{Slowly varying ducts}
@@ -283,7 +324,7 @@ W^a=\sum_{\beta=0}^\infty W_\beta^a (s) \psi_\beta(s,r,\theta)
 with normalized relation:
 \begin{equation}
 \begin{aligned}
-\int_0^{2\pi}\int_0^h \psi_\alpha\psi_\beta r dr d\theta=\delta_{\alpha\beta}
+\int_0^{2\pi}\int_0^h \psi_\alpha\psi_\beta r dr d\theta=\widehat{\delta }_{\alpha\beta}
 \end{aligned}
 \end{equation}
 
@@ -309,19 +350,39 @@ Intergal and insert eq 6, 7 into eq 8:
 \end{equation}
 
 2. the second term:
+
+From 1.1 as example, we know that
+\begin{equation}
+\begin{aligned}
+\int_0^{2\pi}\int_0^h   {{\partial }\over {\partial s}}[ {r U^{a-b}} U^b\psi_\alpha] dr d\theta \\
+={{\partial }\over {\partial s}}\int_0^{2\pi}\int_0^h   [ {r U^{a-b}} U^b\psi_\alpha] dr d\theta 
+-\int_0^{2\pi}{dh(s)\over ds}[ {r U^{a-b}} U^b\psi_\alpha]_{r=h}d\theta\\
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+{d\over d\alpha}(\int_{a(\alpha)}^{b(\beta)}f(x,\alpha)dx)-0+{da(\alpha)\over d\alpha}f(a(\alpha),\alpha)=\int_{a(\alpha)}^{b(\beta)}{\partial \over \partial \alpha}f(x,\alpha)dx
+\end{aligned}
+\end{equation}
+
 \begin{equation}
 \begin{aligned}
 \int_0^{2\pi}\int_0^h \psi_\alpha r [{1\over r} {\partial(U^a r)\over \partial s}] dr d\theta\\
 =\int_0^{2\pi}\int_0^h \psi_\alpha r{\partial( \psi_\beta U_\beta^a)\over \partial s} dr d\theta \\
 =\int_0^{2\pi}\int_0^h \psi_\alpha \psi_\beta r{\partial( U_\beta^a )\over \partial s} dr d\theta +\int_0^{2\pi}\int_0^h \psi_\alpha r{\partial( \psi_\beta )\over \partial s} dr d\theta U_\beta^a\\
-={d U_\beta^a \over d s} \int_0^{2\pi}\int_0^h \psi_\alpha \psi_\beta rdr d\theta + 
-\int_0^{2\pi}\int_0^h  r{\partial( \psi_\alpha \psi_\beta )\over \partial s} dr d\theta U_\beta^a
+=\int_0^{2\pi}\int_0^h {\partial \psi_\alpha \psi_\beta r U_\beta^a \over \partial s} dr d\theta
+-\int_0^{2\pi}\int_0^h {\partial \psi_\alpha \psi_\beta r  \over \partial s}U_\beta^a dr d\theta\\
++\int_0^{2\pi}\int_0^h  r{\partial( \psi_\alpha \psi_\beta )\over \partial s} dr d\theta U_\beta^a
 -\int_0^{2\pi}\int_0^h \psi_\beta   r{\partial( \psi_\alpha )\over \partial s} dr d\theta U_\beta^a\\
-={d U_\beta^a \over d s}\delta_{\alpha\beta}+{\partial(\int_0^{2\pi}\int_0^h  r{\psi_\alpha \psi_\beta} dr d\theta)\over \partial s} U_\beta^a
+={{\partial }\over {\partial s}}\int_0^{2\pi}\int_0^h   [ \psi_\alpha \psi_\beta r U_\beta^a] dr d\theta 
+-\int_0^{2\pi}{dh(s)\over ds}[ \psi_\alpha \psi_\beta r U_\beta^a]_{r=h}d\theta\\
 -\int_0^{2\pi}\int_0^h   {\partial( \psi_\alpha )\over \partial s}\psi_\beta r dr d\theta U_\beta^a\\
-={d U_\alpha^a \over d s}+0-\Psi_{\{\alpha\}\beta}[r]U_\beta^a
+={d \over d s}(U_\beta^a \widehat{\delta }_{\alpha\beta})+0(periodic)-\Psi_{\{\alpha\}\beta}[r]U_\beta^a
 \end{aligned}
 \end{equation}
+
+mark:0(periodic),which is similar in the follow momentum equation, but not eliminate in time.
 
 3. the third term:
 \begin{equation}
@@ -360,7 +421,7 @@ Finally, we obtain the mass equation in the form of eigenfunction, the idea is s
 
 \begin{equation}
 \begin{aligned}
-{d U_\alpha^a \over d s}-\Psi_{\{\alpha\}\beta}[r]U_\beta^a-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))] P_\beta^a -\Psi_{[\alpha]\beta}[ r(1-\kappa r cos(\phi))]V_\beta^a-\Psi_{(\alpha)\beta}[ (1-\kappa r cos(\phi))]W_\beta^a\\
+{d U_\beta^a \over d s}\widehat{\delta }_{\alpha\beta}-\Psi_{\{\alpha\}\beta}[r]U_\beta^a-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))] P_\beta^a -\Psi_{[\alpha]\beta}[ r(1-\kappa r cos(\phi))]V_\beta^a-\Psi_{(\alpha)\beta}[ (1-\kappa r cos(\phi))]W_\beta^a\\
 =\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa P_\beta^{a-b} P_\gamma^{b}-ib\kappa U_\beta^{a-b} U_\gamma^{b}-ib\kappa V_\beta^{a-b} V_\gamma^{b}-ib\kappa  W_\beta^{a-b} W_\gamma^{b}-ia\kappa  {B\over {2A}}P_\beta^{a-b}P_\gamma^{b})\\
 \end{aligned}
 \end{equation}
@@ -663,16 +724,13 @@ From 1.1 as example, we know that
 ={\partial \over {\partial s}} \int_0^{2\pi} \int_0^h  (P_\beta^a \psi_\beta) r\psi_\alpha  dr d\theta
 -{dh(s)\over ds}[P_\beta^a \psi_\beta r\psi_\alpha ]_{r=h}
 -\int_0^{2\pi} \int_0^h [{\partial (\psi_\alpha) \over {\partial s}}] r  \psi_\beta dr d\theta P_\beta^a\\
-={\partial \over {\partial s}} (P_\beta^a \delta_{\alpha \beta})
--\int_0^{2\pi}{dh(s)\over ds}[P_\beta^a \psi_\beta r\psi_\alpha ]_{r=h}d\theta
--\int_0^{2\pi} \int_0^h [{\partial (\psi_\alpha) \over {\partial s}}] r  \psi_\beta dr d\theta P_\beta^a\\
-={d\over {ds}}P_\alpha^a
+={d \over {d s}} (P_\beta^a \widehat{\delta }_{\alpha\beta})
 -\int_0^{2\pi}{dh(s)\over ds}[P_\beta^a \psi_\beta r\psi_\alpha ]_{r=h}d\theta
 -\int_0^{2\pi} \int_0^h [{\partial (\psi_\alpha) \over {\partial s}}] r  \psi_\beta dr d\theta P_\beta^a\\
 \end{aligned}
 \end{equation}
 
-$$= {d\over {ds}}P_\alpha^a-\int_0^{2\pi} \int_0^h{\partial\psi_\beta \psi_\alpha\over \partial r}hh' dr d\theta P_\beta^a -\int_0^{2\pi} \int_0^h [{\partial (\psi_\alpha) \over {\partial s}}] r  \psi_\beta dr d\theta P_\beta^a$$
+
 
 
 4.2 
@@ -688,8 +746,8 @@ $$= {d\over {ds}}P_\alpha^a-\int_0^{2\pi} \int_0^h{\partial\psi_\beta \psi_\alph
 Finally,  putting all together becomes:
 \begin{equation}
 \begin{aligned}
-{d\over {ds}}P_\alpha^a-\int_0^{2\pi}{dh(s)\over ds}[P_\beta^a \psi_\beta r\psi_\alpha ]_{r=h}d\theta-\int_0^{2\pi} \int_0^h [{\partial (\psi_\alpha) \over {\partial s}}] r  \psi_\beta dr d\theta P_\beta^a-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a\\
-={d\over {ds}}P_\alpha^a-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a
+{d \over {d s}} (P_\beta^a )\widehat{\delta }_{\alpha\beta}-\int_0^{2\pi}{dh(s)\over ds}[P_\beta^a \psi_\beta r\psi_\alpha ]_{r=h}d\theta-\int_0^{2\pi} \int_0^h [{\partial (\psi_\alpha) \over {\partial s}}] r  \psi_\beta dr d\theta P_\beta^a-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a\\
+={d \over {d s}} (P_\beta^a )\widehat{\delta }_{\alpha\beta}-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a
 -\int_0^{2\pi} hh'[P_\beta^a \psi_\beta \psi_\alpha ]_{r=h}d\theta-\Psi_{\{\alpha\}\beta}[r] P_\beta^a\\
 =
 \sum_{b=-\infty}^{\infty}\\
@@ -715,7 +773,7 @@ eq(34):
 \end{aligned}
 \end{equation}
 
-\underline{To be conclude, with the $e^s$ term:}
+ with the $e^s$ term:
 \begin{equation}
 \begin{aligned}
 -ia\kappa U^a+{1\over {1-\kappa rcos\phi}}{\partial P^a\over {\partial s}}\\
@@ -732,7 +790,7 @@ We have:
 \begin{equation}
 \begin{aligned}
 -ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a
-+{d\over {ds}}P_\alpha^a
++{d \over {d s}} (P_\beta^a )\widehat{\delta }_{\alpha\beta}
 -\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta P_\beta^a-\Psi_{\{\alpha\}\beta}[r] P_\beta^a\\
 =
 \underline{term \mathcal{D}1:}  \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}U_\gamma^a
@@ -868,7 +926,7 @@ Using the linear relationships:
 \begin{aligned}
 ia\kappa V^a={\partial P^a \over \partial r}\\
 :=\int \int iak V_\beta^a\psi_\beta r \psi_\alpha dr d\theta=\int \int {\partial P_\beta^a\psi_\beta\over \partial r} r \psi_\alpha drd\theta\\
-=i a \kappa V_\beta^a \delta_{\alpha\beta}=\Psi_{\alpha[\beta]}[r]P_\beta^a=\int_0^{2\pi}[r\psi_\alpha\psi_\beta]_0^h d\theta P_\beta^a-\int\int \psi_\alpha\psi_\beta dr d\theta P_\beta^a- \int\int {\partial \psi_\alpha\over \partial r}\psi_\beta rdr d\theta  P_\beta^a
+=i a \kappa V_\beta^a \widehat{\delta }_{\alpha\beta}=\Psi_{\alpha[\beta]}[r]P_\beta^a=\int_0^{2\pi}[r\psi_\alpha\psi_\beta]_0^h d\theta P_\beta^a-\int\int \psi_\alpha\psi_\beta dr d\theta P_\beta^a- \int\int {\partial \psi_\alpha\over \partial r}\psi_\beta rdr d\theta  P_\beta^a
 \end{aligned}
 \end{equation}
 
@@ -876,20 +934,20 @@ ia\kappa V^a={\partial P^a \over \partial r}\\
 \begin{aligned}
 iakW^a={1\over r}{\partial P^a\over \partial \theta}\\
 :=\int \int iak W_\beta^a\psi_\beta r \psi_\alpha dr d\theta=\int \int {\partial P_\beta^a\psi_\beta\over \partial \theta}{1\over r} r \psi_\alpha drd\theta\\
-=i a \kappa W_\beta^a \delta_{\alpha\beta}=\Psi_{\alpha(\beta)}[r]P_\beta^a=0-\Psi_{(\alpha)\beta}[r]P_\beta^a
+=i a \kappa W_\beta^a \widehat{\delta }_{\alpha\beta}=\Psi_{\alpha(\beta)}[r]P_\beta^a=0-\Psi_{(\alpha)\beta}[r]P_\beta^a
 \end{aligned}
 \end{equation}
 
 Thus, we can establish relationships between the tranverse modes and pressure modes (no summation over a)
 \begin{equation}
 \begin{aligned}
-\uuline{V_\alpha^a ={1\over {i a \kappa}}[\int_0^{2\pi}[r\psi_\alpha\psi_\beta]_0^h d\theta -\Psi_{\alpha\beta}- \Psi_{[\alpha]\beta}[r]]P_\beta^a=\textbf{V}_{\alpha\beta}^a P_\beta^a}
+\uuline{V_\beta^a \widehat{\delta }_{\alpha\beta}={1\over {i a \kappa}}[\int_0^{2\pi}[r\psi_\alpha\psi_\beta]_0^h d\theta -\Psi_{\alpha\beta}- \Psi_{[\alpha]\beta}[r]]P_\beta^a=\textbf{V}_{\alpha\beta}^a P_\beta^a}
 \end{aligned}
 \end{equation}
 
 \begin{equation}
 \begin{aligned}
-\uuline{W_\alpha^a =-{1\over {i a \kappa}}\Psi_{(\alpha)\beta}P_\beta^a=\textbf{W}_{\alpha\beta}^a P_\beta^a}
+\uuline{W_\beta^a \widehat{\delta }_{\alpha\beta}=-{1\over {i a \kappa}}\Psi_{(\alpha)\beta}P_\beta^a=\textbf{W}_{\alpha\beta}^a P_\beta^a}
 \end{aligned}
 \end{equation}
 
@@ -931,10 +989,7 @@ LHS:
 =\int_0^{2\pi}\int_0^h {\partial [V_\beta^a \psi_\beta r  \psi_\alpha] \over \partial s}  dr d\theta-\int_0^{2\pi}\int_0^h {\partial r  \psi_\alpha  \over \partial s}   \psi_\beta dr d\theta V_\beta^a\\
 ={\partial \over \partial s}\int_0^{2\pi}\int_0^h [V_\beta^a \psi_\beta r  \psi_\alpha ]  dr d\theta-\int_0^{2\pi}{dh(s)\over ds} [V_\beta^a \psi_\beta r  \psi_\alpha ]_0^h d\theta
 -\int_0^{2\pi}\int_0^h {\partial  \psi_\alpha  \over \partial s}   \psi_\beta r  dr d\theta V_\beta^a\\
-={\partial \over \partial s} V_\beta^a\delta_{\alpha\beta}-\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta U_\beta^a -\Psi_{\{\alpha\}\beta}[r]V_\beta^a\\
-={\partial \over \partial s}\int_0^{2\pi}\int_0^h [V_\beta^a \psi_\beta r  \psi_\alpha ]  dr d\theta-\int_0^{2\pi}{dh(s)\over ds} [V_\beta^a \psi_\beta r  \psi_\alpha ]_0^h d\theta
--\int_0^{2\pi}\int_0^h {\partial  \psi_\alpha  \over \partial s}   \psi_\beta r  dr d\theta V_\beta^a\\
-={d \over d s} V_\alpha^a-\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta U_\beta^a -\Psi_{\{\alpha\}\beta}[r]V_\beta^a\\
+={d \over d s} V_\beta^a\widehat{\delta }_{\alpha\beta}-\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta U_\beta^a -\Psi_{\{\alpha\}\beta}[r]V_\beta^a\\
 \\
 RHS:=\int_0^{2\pi}\int_0^h {\partial \over \partial r}((1-\kappa r cos\phi)U_\beta^a \psi_\beta r \psi_\alpha) dr d\theta-\int_0^{2\pi}\int_0^h {\partial (  r \psi_\alpha)\over \partial r}(1-\kappa r cos\phi)U_\beta^a  \psi_\beta  dr d\theta\\
 =\int_0^{2\pi}[ r (1-\kappa r cos\phi) \psi_\beta \psi_\alpha]_0^h d\theta U_\beta^a
@@ -950,7 +1005,7 @@ Thus, LHS=RHS, we have:
 
 \begin{equation}
 \begin{aligned}
-\uuline{{d \over ds} V_\alpha^a=\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta U_\beta^a +\Psi_{\{\alpha\}\beta}[r]V_\beta^a}\\
+\uuline{{d \over ds} V_\beta^a \widehat{\delta }_{\alpha\beta}=\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta U_\beta^a +\Psi_{\{\alpha\}\beta}[r]V_\beta^a}\\
 \uuline{+\int_0^{2\pi}[ r (1-\kappa r cos\phi) \psi_\beta \psi_\alpha]_0^h d\theta U_\beta^a
 -\Psi_{[\alpha]\beta}[r(1-\kappa r cos\phi)]U_\beta^a
 -\Psi_{\alpha\beta}[(1-\kappa r cos\phi)]U_\beta^a}\\
@@ -976,7 +1031,7 @@ LHS:
 ={\partial \over \partial s}\int_0^{2\pi}\int_0^h [W_\beta^a \psi_\beta r  \psi_\alpha ]  dr d\theta
 -\int_0^{2\pi}{dh(s)\over ds} [W_\beta^a \psi_\beta r  \psi_\alpha ]_0^h d\theta
 -\int_0^{2\pi}\int_0^h {\partial  \psi_\alpha  \over \partial s}   \psi_\beta r  dr d\theta W_\beta^a\\
-={d \over d s} W_\alpha^a-\int_0^{2\pi}{dh(s)\over ds} [ \psi_\beta r  \psi_\alpha ]_0^h d\theta W_\beta^a-\Psi_{\{\alpha\}\beta}[r]W_\beta^a\\
+={d \over d s} W_\beta^a \widehat{\delta }_{\alpha\beta}-\int_0^{2\pi}{dh(s)\over ds} [ \psi_\beta r  \psi_\alpha ]_0^h d\theta W_\beta^a-\Psi_{\{\alpha\}\beta}[r]W_\beta^a\\
 RHS:=\int_0^{2\pi}\int_0^h {\partial \over \partial \theta}((1-\kappa r cos\phi)U_\beta^a \psi_\beta  \psi_\alpha) dr d\theta-\int_0^{2\pi}\int_0^h {\partial ( \psi_\alpha)\over \partial \theta}(1-\kappa r cos\phi)U_\beta^a  \psi_\beta  dr d\theta\\
 =0(periodic)-\Psi_{(\alpha)\beta}[1-\kappa r cos\phi]U_\beta^a 
 \end{aligned}
@@ -985,7 +1040,7 @@ RHS:=\int_0^{2\pi}\int_0^h {\partial \over \partial \theta}((1-\kappa r cos\phi)
 Thus, LHS=RHS, we have:
 \begin{equation}
 \begin{aligned}
-\uuline{{d \over ds} W_\alpha^a=\int_0^{2\pi}{dh(s)\over ds} [ \psi_\beta r  \psi_\alpha ]_0^h d\theta W_\beta^a+\Psi_{\{\alpha\}\beta}[r]W_\beta^a
+\uuline{{d \over ds} W_\beta^a \widehat{\delta }_{\alpha\beta}=\int_0^{2\pi}{dh(s)\over ds} [ \psi_\beta r  \psi_\alpha ]_0^h d\theta W_\beta^a+\Psi_{\{\alpha\}\beta}[r]W_\beta^a
 -\Psi_{(\alpha)\beta}[1-\kappa r cos\phi]U_\beta^a =
 -\Psi_{\alpha\{\beta\}}[r]W_\beta^a-\Psi_{(\alpha)\beta}[1-\kappa r cos\phi]U_\beta^a }
 \end{aligned}
@@ -996,7 +1051,7 @@ Thus, LHS=RHS, we have:
 \subsection{mass equation}
 \begin{equation}
 \begin{aligned}
-{d U_\alpha^a \over d s}-\Psi_{\{\alpha\}\beta}[r]U_\beta^a-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))] P_\beta^a -\Psi_{[\alpha]\beta}[ r(1-\kappa r cos(\phi))]\uuline{V_\beta^a}-\Psi_{(\alpha)\beta}[ (1-\kappa r cos(\phi))]\uuline{W_\beta^a}\\
+{d U_\beta^a \over d s}\widehat{\delta }_{\alpha\beta}-\Psi_{\{\alpha\}\beta}[r]U_\beta^a-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))] P_\beta^a -\Psi_{[\alpha]\beta}[ r(1-\kappa r cos(\phi))]\uuline{V_\beta^a}-\Psi_{(\alpha)\beta}[ (1-\kappa r cos(\phi))]\uuline{W_\beta^a}\\
 =\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa P_\beta^{a-b} P_\gamma^{b}-ib\kappa U_\beta^{a-b} U_\gamma^{b}-ib\kappa \uuline{V_\beta^{a-b} V_\gamma^{b}}-ib\kappa \uuline{ W_\beta^{a-b} W_\gamma^{b}}-ia\kappa  {B\over {2A}}P_\beta^{a-b}P_\gamma^{b})\\
 \end{aligned}
 \end{equation}
@@ -1004,7 +1059,7 @@ Thus, LHS=RHS, we have:
 \textit{Transform:}\\
 \begin{equation}
 \begin{aligned}
-{d U_\alpha^a \over d s}:=\uuline{I}u_\alpha'^a\\
+{d U_\beta^a \over d s}\widehat{\delta }_{\alpha\beta}:=\widehat{\textbf{I}_{\alpha\beta}^a}u_\beta'^a\\
 -\Psi_{\{\alpha\}\beta}[r]U_\beta^a:=\uuline{-\Psi_{\{\alpha\}\beta}[r]}u_\beta^a\rightarrow\mathcal{G}\\
 \left\{\begin{matrix}
 -ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))] P_\beta^a:= \sum_{\beta=0}^{+\infty} \uuline{-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))]} p_\beta^a\rightarrow\mathcal{M}_1\\
@@ -1035,7 +1090,7 @@ Here, may be a little question of transform with P, think about $N^{-1}$, transf
 \subsection{momentum equation I}
 \begin{equation}
 \begin{aligned}
-{d\over {ds}}P_\alpha^a-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a
+{d\over {ds}}P_\beta^a\widehat{\delta }_{\alpha\beta}-ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a
 -\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta P_\beta^a-\Psi_{\{\alpha\}\beta}[r] P_\beta^a\\
 = \sum_{b=-\infty}^{+\infty}
 \underline{term \mathcal{D}1:}  \Psi_{\{\alpha\}\beta\gamma} [r]U_\beta^{a-b}U_\gamma^a
@@ -1051,7 +1106,7 @@ Here, may be a little question of transform with P, think about $N^{-1}$, transf
 Transform:
 \begin{equation}
 \begin{aligned}
-{d\over {ds}}P_\alpha^a:=\uuline{I}{p'}_\alpha^a\\
+{d\over {ds}}P_\beta^a\widehat{\delta }_{\alpha\beta}:=\widehat{\textbf{I}_{\alpha\beta}^a}{p'}_\beta^a\\
 -ia\kappa \Psi_{\alpha\beta}[r(1-\kappa rcos\phi)]U_\beta^a:=\uuline{-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))]} u_\beta^a\rightarrow \mathcal{-N}\\
 -\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta P_\beta^a-\Psi_{\{\alpha\}\beta}[r] P_\beta^a:=\uuline{-\int_0^{2\pi} hh'[ \psi_\beta \psi_\alpha ]_{r=h} d\theta} p_\beta^a-\uuline{\Psi_{\{\alpha\}\beta}[r] } p_\beta^a=\uuline{\Psi_{\{\alpha\}\beta}[r] } p_\beta^a\rightarrow \mathcal{-H}\\
 \Psi_{\{\alpha\}\beta\gamma} [r]\sum_{b=-\infty}^{+\infty}U_\beta^{a-b}U_\gamma^a:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\{\alpha\}\beta\gamma}[r]}u_\beta^{a-b}u_\gamma^{b}\rightarrow \mathcal{D}_4\\
@@ -1100,7 +1155,7 @@ ia\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]\sum_{b=-\infty}^{+\inft
 With:
 \begin{equation}
 \begin{aligned}
-{d \over ds} V_\alpha^a=\{\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta\\
+{d \over ds} V_\beta^a \widehat{\delta }_{\alpha\beta}=\{\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta\\
 +\int_0^{2\pi}[ r (1-\kappa r cos\phi) \psi_\beta \psi_\alpha]_0^h d\theta 
 -\Psi_{[\alpha]\beta}[r(1-\kappa r cos\phi)]
 -\Psi_{\alpha\beta}[(1-\kappa r cos\phi)]\}U_\beta^a\\ -G_{\alpha\beta}^a V_\beta^a\\
@@ -1118,19 +1173,19 @@ Transform:
  i(a)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}V_\gamma^{b}:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ ia\kappa \Psi_{\alpha\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{I}_{\delta\beta}^{a-b}\textbf{V}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{B}_{5.2}\\
  -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r])U_\beta^{a-b}V_\gamma^{b}:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{-{\partial\over \partial s} (\Psi_{\alpha\delta\epsilon}[r])\textbf{I}_{\delta\beta}^{a-b}\textbf{V}_{\epsilon\gamma}^{b}}u_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{\varepsilon}_{1.1}\\
 -\Psi_{\alpha\beta\gamma}[r]\sum_{b=-\infty}^{+\infty}({{d U_\beta^{a-b} \over {d s}}V_\gamma^{b}}+{dV_\gamma^{b}\over ds}U_\beta^{a-b})\\
-:=-\Psi_{\alpha\beta\gamma}[r]\sum_{b=-\infty}^{+\infty}([{-(\textbf{M}p)_\beta^{a-b}-(\textbf{G}u)_\beta^{a-b}]V_\gamma^{b}}\\
-+\{\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta\\
+:=-\Psi_{\alpha\beta\gamma}[r]\sum_{b=-\infty}^{+\infty}(\widehat{\textbf{I}^{a-b}}^{-1}[{-(\textbf{M}p)_\beta^{a-b}-(\textbf{G}u)_\beta^{a-b}]V_\gamma^{b}}\\
++\widehat{\textbf{I}_{\gamma\alpha}^b}^{-1}\{\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta\\
 +\int_0^{2\pi}[ r (1-\kappa r cos\phi) \psi_\beta \psi_\alpha]_0^h d\theta 
 -\Psi_{[\alpha]\beta}[r(1-\kappa r cos\phi)]
--\Psi_{\alpha\beta}[(1-\kappa r cos\phi)]\}U_\beta^aU_\beta^{a-b}\\
--G_{\alpha\beta}^a V_\beta^aU_\beta^{a-b})\\
-=\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][\textbf{G},\textbf{V}]])u_\beta^{a-b}p_\gamma^{b}\rightarrow \mathcal{\varepsilon}_{1.2}\\
-+\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][\textbf{M},\textbf{V}]])p_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{B}_{5.1}\\
--\sum_{b=-\infty}^{+\infty}\Psi_{\alpha\beta\gamma}[r]\{\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha ]_0^h d\theta\\
+-\Psi_{\alpha\beta}[(1-\kappa r cos\phi)]\}U_\beta^b U_\beta^{a-b}\\
+-(\widehat{\textbf{I}_{\gamma\alpha}^b}^{-1} G_{\alpha\beta}^b V_\beta^b)U_\beta^{a-b})\\
+=\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][\widehat{\textbf{I}}^{-1}\textbf{G},\textbf{V}]])u_\beta^{a-b}p_\gamma^{b}\rightarrow \mathcal{\varepsilon}_{1.2}\\
++\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][\widehat{\textbf{I}}^{-1} \textbf{M},\textbf{V}]])p_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{B}_{5.1}\\
+-\sum_{b=-\infty}^{+\infty}\Psi_{\alpha\beta\gamma}[r]\{\widehat{\textbf{I}}^{-1} (\int_0^{2\pi}{{h'}^2\over {1-\kappa h cos\phi}}[r \psi_\beta \psi_\alpha )]_0^h d\theta\\
 +\int_0^{2\pi}[ r (1-\kappa r cos\phi) \psi_\beta \psi_\alpha]_0^h d\theta 
 -\Psi_{[\alpha]\beta}[r(1-\kappa r cos\phi)]
 -\Psi_{\alpha\beta}[(1-\kappa r cos\phi)]\}u_\beta^{a-b}u_\gamma^{b}\rightarrow\mathcal{A}_{2.1,2.2,2.4,2.3}\\
-+\sum_{b=-\infty}^{+\infty}\Psi_{\alpha\beta\gamma}[r][\textbf{I},\textbf{GV}])u_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{\varepsilon}_{1.3}\\
++\sum_{b=-\infty}^{+\infty}\Psi_{\alpha\beta\gamma}[r][\textbf{I},\widehat{\textbf{I}}^{-1} \textbf{GV}])u_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{\varepsilon}_{1.3}\\
 \Psi_{\alpha\beta\gamma}[1-\kappa rcos\phi]W_\beta^{a-b}W_\gamma^b:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ \Psi_{\alpha\delta\epsilon}[1-\kappa r cos\phi]\textbf{W}_{\delta\beta}^{a-b}\textbf{W}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{B}_{5.5}\\
 -\kappa \Psi_{\alpha\beta\gamma}[r cos\phi]U_\beta^{a-b}U_\gamma^b:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{-\kappa \Psi_{\alpha\beta\gamma}[ r cos\phi]}u_\beta^{a-b}u_\gamma^{b}\rightarrow\mathcal{A}_{2.5}\\
 \end{aligned}
@@ -1158,7 +1213,7 @@ Transform:
 With:
 \begin{equation}
 \begin{aligned}
-\uuline{{d \over ds} W_\alpha^a=\int_0^{2\pi}{dh(s)\over ds} [ \psi_\beta r  \psi_\alpha ]_0^h d\theta W_\beta^a+\Psi_{\{\alpha\}\beta}[r]W_\beta^a
+\uuline{{d \over ds} W_\beta^a \widehat{\delta }_{\alpha\beta}=\int_0^{2\pi}{dh(s)\over ds} [ \psi_\beta r  \psi_\alpha ]_0^h d\theta W_\beta^a+\Psi_{\{\alpha\}\beta}[r]W_\beta^a
 -\Psi_{(\alpha)\beta}[1-\kappa r cos\phi]U_\beta^a =-\Psi_{\alpha\{\beta\}}[r]W_\beta^a-\Psi_{(\alpha)\beta}[1-\kappa r cos\phi]U_\beta^a }
 \end{aligned}
 \end{equation}
@@ -1174,12 +1229,12 @@ Transform:
  i(a)\kappa \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos\phi)]P_\beta^{a-b}W_\gamma^{b}:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ ia\kappa \Psi_{\alpha\delta\epsilon}[r(1-\kappa r cos\phi)]\textbf{I}_{\delta\beta}^{a-b}\textbf{W}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{B}_{6.2}\\
  -{{\partial }\over {\partial s}}(\Psi_{\alpha\beta\gamma}[r])U_\beta^{a-b}W_\gamma^{b}:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{-{\partial\over \partial s} (\Psi_{\alpha\delta\epsilon}[r])\textbf{I}_{\delta\beta}^{a-b}\textbf{W}_{\epsilon\gamma}^{b}}u_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{\varepsilon}_{2.1}\\
 -\Psi_{\alpha\beta\gamma}[r]\sum_{b=-\infty}^{+\infty}({{d U_\beta^{a-b} \over {d s}}W_\gamma^{b}}+{dW_\gamma^{b}\over ds}U_\beta^{a-b})\\
-:=-\Psi_{\alpha\beta\gamma}[r]\sum_{b=-\infty}^{+\infty}([{(\textbf{M}p)_\beta^{a-b}+(\textbf{G}u)_\beta^{a-b}]W_\gamma^{b}}
+:=-\Psi_{\alpha\beta\gamma}[r]\sum_{b=-\infty}^{+\infty}(\widehat{\textbf{I}}^{-1}[-{(\textbf{M}p)_\beta^{a-b}-(\textbf{G}u)_\beta^{a-b}]W_\gamma^{b}}
 -\{\textbf{H}W_\beta^a-\Psi_{(\alpha)\beta}[1-\kappa r cos\phi]U_\beta^a \}U_\beta^{a-b}\\
-=-\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][\textbf{G},\textbf{W}]])u_\beta^{a-b}p_\gamma^{b}\rightarrow \mathcal{\varepsilon}_{2.2}\\
--\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][\textbf{M},\textbf{W}]])p_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{B}_{6.1}\\
--\sum_{b=-\infty}^{+\infty}\Psi_{\alpha\beta\gamma}[r][\textbf{I},\textbf{HW}]u_\beta^{a-b}p_\gamma^{b}\rightarrow \mathcal{\varepsilon}_{2.3}\\
-+\sum_{b=-\infty}^{+\infty}\Psi_{\alpha\beta\gamma}[r]  \Psi_{(\alpha)\beta}[1-\kappa r cos\phi]u_\beta^a u_\beta^{a-b}  \rightarrow \mathcal{A}_{3.1}\\ 
+=\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][\widehat{\textbf{I}}^{-1} \textbf{G},\textbf{W}]])u_\beta^{a-b}p_\gamma^{b}\rightarrow \mathcal{\varepsilon}_{2.2}\\
++\sum_{b=-\infty}^{+\infty}(\Psi_{\alpha\beta\gamma}[r][\widehat{\textbf{I}}^{-1} \textbf{M},\textbf{W}]])p_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{B}_{6.1}\\
+-\sum_{b=-\infty}^{+\infty}\Psi_{\alpha\beta\gamma}[r][\textbf{I},\widehat{\textbf{I}}^{-1}\textbf{HW}]u_\beta^{a-b}p_\gamma^{b}\rightarrow \mathcal{\varepsilon}_{2.3}\\
++\sum_{b=-\infty}^{+\infty}\Psi_{\alpha\beta\gamma}[r]  (\widehat{\textbf{I}}^{-1}\Psi_{(\alpha)\beta}[1-\kappa r cos\phi])u_\beta^a u_\beta^{a-b}  \rightarrow \mathcal{A}_{3.1}\\ 
 \kappa \Psi_{\alpha\beta\gamma}[rsin\phi]U_\beta^{a-b}U_\gamma^b:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{\kappa \Psi_{\alpha\beta\gamma}[ r sin\phi]}u_\beta^{a-b}u_\gamma^{b}\rightarrow\mathcal{A}_{3.2}\\
 - \Psi_{\alpha\beta\gamma}[1-\kappa r cos\phi]W_\beta^{a-b}V_\gamma^b:=\sum_{b=-\infty}^{+\infty} \sum_{\beta=0}^{+\infty}\sum_{\gamma=0}^{+\infty}\uuline{ -\Psi_{\alpha\delta\epsilon}[1-\kappa r cos\phi]\textbf{W}_{\delta\beta}^{a-b}\textbf{V}_{\epsilon\gamma}^{b}}p_\beta^{a-b}p_\gamma^{b}\rightarrow\mathcal{B}_{6.5}\\
 \end{aligned}
@@ -1190,14 +1245,24 @@ Finally, we obtain two equations involving just pressure and longitudinal veloci
 
 \begin{equation}
 \begin{aligned}
-{u'}_\alpha^a+\textbf{M}_{\alpha\beta}^a p_\beta^a + \textbf{G}_{\alpha\beta}^a u_\beta^a=\mathcal{A}[u,u]+\mathcal{B}[p,p]+\varepsilon[u,p]\\
-{p'}_\alpha^a-\textbf{N}_{\alpha\beta}^a u_\beta^a-\textbf{H}_{\alpha\beta}^a p_\beta^a=\mathcal{C}[u,p]+\mathcal{D}[u,u]
+\widehat{\textbf{I}_{\alpha\beta}^a} {u'}_\beta^a+\textbf{M}_{\alpha\beta}^a p_\beta^a + \textbf{G}_{\alpha\beta}^a u_\beta^a=\mathcal{A}[u,u]+\mathcal{B}[p,p]+\varepsilon[u,p]\\
+\widehat{\textbf{I}_{\alpha\beta}^a} {p'}_\beta^a-\textbf{N}_{\alpha\beta}^a u_\beta^a-\textbf{H}_{\alpha\beta}^a p_\beta^a=\mathcal{C}[u,p]+\mathcal{D}[u,u]
 \end{aligned}
 \end{equation}
 
 
 
 \section{Separating the $\Psi$ intergrals into radial and angular parts}
+
+With $\int_0^{2\pi} e^{im\theta}e^{-im\theta}  d\theta=2\pi$,
+$\psi_{\alpha_{m\mu}}(r)=C_{\alpha_{m\mu}}J_m({{j'}_{m\mu} r\over h})e^{im\phi}$,we have:
+\begin{equation}
+\begin{aligned}
+C_{\alpha_{m\mu}}={1\over \sqrt{({{\pi h^2}(1-{m^2\over {j'}_{m\mu}^2} )}J^2_m({j'}_{m\mu}))}}\\
+except for:
+C_{\alpha_{01}}={1 \over \sqrt{\pi}h}
+\end{aligned}
+\end{equation}
 
 \begin{equation}
 \begin{aligned}
