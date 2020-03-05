@@ -1,0 +1,25 @@
+% James-3.58
+h=0.1;
+kappa=2/3/h;tau=0.2/h;
+a=kappa/(kappa^2+tau^2);
+b=tau/(kappa^2+tau^2);
+s = 0:0.01:5;
+sw=sqrt(kappa^2+tau^2)*s;
+
+
+n=8;
+for k=1:8
+x(k,:) = a*sin(sw+2*pi*1/n);
+y(k,:) = a*cos(sw+2*pi*1/n);
+z(k,:) = b*sw;
+end
+% figure(1)
+% plot3(x, y, z); 
+% xlabel('x'); ylabel('y'); title('Circula helix');
+% axis equal
+
+figure(2)
+for k=1:8
+tubeplot(x(),y,z,h,s,50);hold on;
+end
+daspect([1,1,1]); camlight;

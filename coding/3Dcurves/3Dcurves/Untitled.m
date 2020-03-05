@@ -1,0 +1,1 @@
+plot(plot::Tube([x, 0, x^2], 1.2, x = -1.4..1.4,Mesh = [20, 10]),Axes = None, CameraDirection = [-3, 1, 2])

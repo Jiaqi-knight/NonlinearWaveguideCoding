@@ -32,6 +32,7 @@ figure(2)
 plot3(x, y, z); 
 xlabel('x'); ylabel('y'); title('Sine wave on Cylinder');
 
+
 % ---------------------------------------------------------------------------- %
 % 7.2.3: Sine wave on Hyperboloid of one sheet
 a = 10.0;
