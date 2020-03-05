@@ -1,4 +1,4 @@
-function [t,n,b]=frenet(x,y,z)
+function [t,n,b,kappa,tau,theta_0]=frenet(x,y,z)
 
 % FRENET Calculate the Frenet frame for a polygonal space curve
 % [t,n,b]=frenet(x,y,z) returns the tangent unit vector, the normal
@@ -21,43 +21,65 @@ t=zeros(N,3);
 b=zeros(N,3);
 n=zeros(N,3);
 
-p=[x y z];
+q=[x y z];
 
 for i=2:(N-1)
-  t(i,:)=(p(i+1,:)-p(i-1,:));
-  tl=norm(t(i,:));
-  if (tl>0)
-    t(i,:)=t(i,:)/tl;
+  t(i,:)=(q(i+1,:)-q(i-1,:));
+  tl(i,:)=norm(t(i,:)); %ds=scalar
+  if (tl(i,:)>0)
+    t(i,:)=t(i,:)/tl(i,:);
   else
     t(i,:)=t(i-1,:);
   end
 end
 
-t(1,:)=p(2,:)-p(1,:);
-t(1,:)=t(1,:)/norm(t(1,:));
+t(1,:)=q(2,:)-q(1,:);
+tl(1,:)=norm(t(1,:));
+t(1,:)=t(1,:)/tl(1,:);
 
-t(N,:)=p(N,:)-p(N-1,:);
-t(N,:)=t(N,:)/norm(t(N,:));
+t(N,:)=q(N,:)-q(N-1,:);
+tl(N,:)=norm(t(N,:));
+t(N,:)=t(N,:)/tl(N,:);
 
+%t:nominalized tangent vector
 for i=2:(N-1)
   n(i,:)=(t(i+1,:)-t(i-1,:));
-  nl=norm(n(i,:));
-  if (nl>0)
-    n(i,:)=n(i,:)/nl;
+  nl(i,:)=norm(n(i,:));
+  if (nl(i,:)>0)
+    n(i,:)=n(i,:)/nl(i,:);
   else
     n(i,:)=n(i-1,:);
   end
 end
-
+%n:norm(dt/ds)
 n(1,:)=t(2,:)-t(1,:);
-n(1,:)=n(1,:)/norm(n(1,:));
+nl(1,:)=norm(n(1,:));
+n(1,:)=n(1,:)/nl(1,:);
 
 n(N,:)=t(N,:)-t(N-1,:);
-n(N,:)=n(N,:)/norm(n(N,:));
+nl(N,:)=norm(n(N,:));
+n(N,:)=n(N,:)/nl(N,:);
 
 for i=1:N
-  b(i,:)=cross(t(i,:),n(i,:));
-  b(i,:)=b(i,:)/norm(b(i,:));
+  b(i,:)=cross(t(i,:),n(i,:)); %normlized
+  %b=txn
+end;
+
+for i=2:(N-1)
+  bl(i,:)=norm((b(i+1,:)-b(i-1,:)));
 end
+bl(1,:)=norm(b(2,:)-b(1,:));
+bl(N,:)=norm(b(N,:)-b(N-1,:));
+
+
+
+kappa=nl./tl;
+tau=bl./tl;
+tll=tl/2;tll(1)=tl(1);tll(end)=tl(end);
+theta_0=cumsum(tau.*tll);
+
+
+
+
 
 

@@ -55,7 +55,7 @@ function [varargout]=tubeplot(x,y,z,varargin)
     vec=varargin{4};
     [t,n,b]=frame(x,y,z,vec);
   else
-    [t,n,b]=frenet(x,y,z);
+    [t,n,b,kappa,tau,theta_0]=frenet(x,y,z);
   end
 
   
@@ -67,13 +67,12 @@ function [varargout]=tubeplot(x,y,z,varargin)
   X=zeros(N,subdivs);
   Y=zeros(N,subdivs);
   Z=zeros(N,subdivs);
-
-  theta=0:(2*pi/(subdivs-1)):(2*pi);
-
+  theta=linspace(2*pi/subdivs,2*pi,subdivs)+1/2*pi;
+  %theta_0=0*theta_0;
   for i=1:N
-    X(i,:)=x(i) + r(i)*(n(i,1)*cos(theta) + b(i,1)*sin(theta));
-    Y(i,:)=y(i) + r(i)*(n(i,2)*cos(theta) + b(i,2)*sin(theta));
-    Z(i,:)=z(i) + r(i)*(n(i,3)*cos(theta) + b(i,3)*sin(theta));
+    X(i,:)=x(i) + r(i)*(n(i,1)*cos(theta-theta_0(i)) + b(i,1)*sin(theta-theta_0(i)));
+    Y(i,:)=y(i) + r(i)*(n(i,2)*cos(theta-theta_0(i)) + b(i,2)*sin(theta-theta_0(i)));
+    Z(i,:)=z(i) + r(i)*(n(i,3)*cos(theta-theta_0(i)) + b(i,3)*sin(theta-theta_0(i)));
   end
 
   if (nargout==0)
@@ -84,8 +83,10 @@ function [varargout]=tubeplot(x,y,z,varargin)
       end
       V=V*ones(1,subdivs);
       surf(X,Y,Z,V,'LineStyle','none');
+
     else
       surf(X,Y,Z,'LineStyle','none');
+
     end
   else
     varargout(1) = {X}; 

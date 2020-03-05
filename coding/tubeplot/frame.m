@@ -54,7 +54,7 @@ for i=2:(N-1)
   end
 end
 
-n(1,:)=cross(t(1,:),vec);
+n(1,:)=cross(t(1,:),vec);%
 n(1,:)=n(1,:)/norm(n(1,:));
 
 n(N,:)=cross(t(N,:),vec);
