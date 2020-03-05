@@ -8,4 +8,7 @@ Thank your for James's help, I think I have solved it.
 
 
 Coding: Tubeplot for helical duct
+
+
 ![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding/tubeplot/HelicalDucts.PNG)
+![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding/tubeplot/RealHelicalDucts.JPG)
