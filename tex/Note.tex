@@ -1251,6 +1251,27 @@ Finally, we obtain two equations involving just pressure and longitudinal veloci
 \end{equation}
 
 
+\section{Introduce the admittance matrix}
+
+Due to the present of evanescent modes these equations are numerically unstable and cannot be integrated directly. Define a relation between the pressure and velicity in terms of the admittance. When solving for pressure, it is easier to work with the addmittance rather than the impedance Z $(Y=Z^{-1})$, to avoid inverting large matrices in the work that will follow.
+
+The following relationship is defined:
+
+\begin{equation}
+\begin{aligned}
+u=Yp+\mathcal{Y}[p,p]
+\end{aligned}
+\end{equation}
+
+where $Y=Y(s)$ is the linear part of the admittance and $\mathcal{Y}=\mathcal{Y}(s)$ is the second order nonlinear correction to the admittance, henceforth referred to as the “nonlinear admittance” term. We differentiate it:
+\begin{equation}
+\begin{aligned}
+u'=Y'p=Yp'+\mathcal{Y}'[p,p]+\mathcal{Y}[p',p]+\mathcal{Y}[p,p']
+\end{aligned}
+\end{equation}
+
+
+
 
 \section{Separating the $\Psi$ intergrals into radial and angular parts}
 
