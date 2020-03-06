@@ -1,6 +1,6 @@
 %-----------------------------------------------------------------%
 %this Code is to prove the tensor calculataion with Dirac's funcrion
-%reconstrcut: \delta_{m,-n}\delta_{u,v}=[I] for easy our model
+%reconstrcut \delta_{m,-n}\delta_{u,v}=[I]
 %provided by Jiaqi, email:Jiaqi_Wang@sjtu.edu.cn
 %2020-03-06
 %-----------------------------------------------------------------%
@@ -17,9 +17,9 @@ delta_m0n=fliplr(delta_mn);
 delta_uv=eye(length(u));
 delta_u0v=fliplr(delta_uv);
 
-%kron_fliplr the second line in order to form I matrix
 delta_mn_u0v=kron_fliplr(delta_mn,delta_u0v)
-delta_m0n_uv=kron_fliplr(delta_m0n,delta_uv); 
+
+delta_m0n_uv=kron_fliplr(delta_m0n,delta_uv); %fliplr the second line in order to form I matrix
 
 
 
