@@ -5,3 +5,8 @@
 %2020-03-06
 %-----------------------------------------------------------------%
 
+clc
+clear
+close all
+subfunction_path1='.\tensor_toolbox-master'
+addpath(genpath(subfunction_path1));
