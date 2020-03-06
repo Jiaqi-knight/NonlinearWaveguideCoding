@@ -13,11 +13,24 @@ jmn(:,k)=temp1(1:n);
 BesselValue(:,k)=temp2(1:n);
 end
 
-Nmn=sqrt(2)./(BesselValue.*sqrt(1-m.^2./jmn.^2));
 
-%Orthogonal vertified:
+
+%Orthogonal vertified-Rienstra:
+Nmn=sqrt(2)./(BesselValue.*sqrt(1-m.^2./jmn.^2));
 for km=1:length(m)
     for kn=1:n
-      temp(kn,km)=sum(chebfun(@(r) besselj(m(km),jmn(kn,km)*r)^2*r*Nmn(kn,km)^2,[0,1]));
+      temp(kn,km)=sum(chebfun(@(r) besselj(m(km),jmn(kn,km)*r)  *  besselj(m(km),jmn(2,km)*r)*r  *  Nmn(2,km) * Nmn(kn,km),[0,1]));
     end
 end
+
+%Orthogonal vertified-James:
+h=1;
+Cmn=sqrt((-1).^m)./(sqrt(pi)*h*BesselValue.*sqrt(1-m.^2./jmn.^2));
+for km=1:length(m)
+    for kn=1:n
+      temp3(kn,km)=sum(chebfun(@(theta) exp(sqrt(-1)*m(km)*theta)*exp(sqrt(-1)*(-m(1))*theta),[0,2*pi]));
+      temp4(kn,km)=sum(chebfun(@(r) besselj(m(km),jmn(kn,km)*r)*besselj(-m(km),jmn(2,km)*r)*r*Cmn(2,km)*Cmn(kn,km),[0,1]));
+    end
+end
+temp5=temp3.*temp4;
+
