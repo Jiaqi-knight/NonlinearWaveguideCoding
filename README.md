@@ -11,6 +11,6 @@ Coding1: Tubeplot for helical duct
 
 ![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding/tubeplot/RealHelicalDucts.jpg)
 
-Coding2: RealHelicalDuctseconstrcut: \delta_{m,-n}\delta_{u,v}=[I] for easy our model
+Coding2: I-Matrix-construction: \delta_{m,-n}\delta_{u,v}=[I] for easy our model
 
 ![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding2/Psi_alpha_beta%5Br%5D.jpg)
