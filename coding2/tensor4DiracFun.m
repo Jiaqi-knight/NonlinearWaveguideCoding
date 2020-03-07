@@ -13,47 +13,60 @@ addpath(genpath(subfunction_path1));
 subfunction_path2='.\chebfun-master'
 addpath(genpath(subfunction_path2));
 
-m=-2:2;u=1:3;
-delta_mn=eye(length(m));
-delta_m0n=fliplr(delta_mn);
-delta_uv=eye(length(u));
-delta_u0v=fliplr(delta_uv);
 
-%kron_fliplr the second line in order to form I matrix
-delta_mn_u0v=kron_fliplr(delta_mn,delta_u0v);
-delta_m0n_uv=kron_fliplr(delta_m0n,delta_uv); 
+
+% %kron_fliplr the second line in order to form I matrix
+% delta_mn_u0v=kron_fliplr(delta_mn,delta_u0v);
+% delta_m0n_uv=kron_fliplr(delta_m0n,delta_uv); 
 
 
 
 %we began to consrtruct 4D tensor
-m=0:10;
-n=4;
-for k=1:length(m)
-temp1=roots(diff(chebfun(@(t) besselj(m(k),t),[0,300]))+0.00001);
-temp2= besselj(m(k),temp1);
+m=5;n=4;
+
+m0=0:m;
+for k=1:length(m0)
+temp1=roots(diff(chebfun(@(t) besselj(m0(k),t),[0,300]))+0.00001);
+temp2= besselj(m0(k),temp1);
 jmn(:,k)=temp1(1:n);
 BesselValue(:,k)=temp2(1:n);
 end
 jmn_pm=[fliplr(jmn) jmn(:,2:end)];
-BesselValue_pm=[fliplr(repmat((-1).^m,n,1).*BesselValue) BesselValue(:,2:end)];
+BesselValue_pm=[fliplr(repmat((-1).^m0,n,1).*BesselValue) BesselValue(:,2:end)];
 h=1;
-m2=-10:10;
-Cmn=(i).^m2./(sqrt(pi)*h*BesselValue_pm.*sqrt(1-m2.^2./jmn_pm.^2));
+m1=-m:m;
+Cmn1=(i).^m1./(sqrt(pi)*h*BesselValue_pm.*sqrt(1-m1.^2./jmn_pm.^2));
+% m2=fliplr(m1);
+% Cmn2=fliplr(Cmn1);
 
-
-for km1=1:length(m2)
-for km2=1:length(m2)
+% we have fliplr the y-axis in oder to form the I matrix, which is better
+% for model calculatation
+for km1=1:length(m1)
+for km2=1:length(m1)
 for kn1=1:n
     for kn2=1:n
-        %cost much time
-        temp4(km1,km2,kn1,kn2)=sum(chebfun(@(r) besselj(m2(km1),jmn_pm(kn1,km1)*r)*besselj(m2(km2),jmn_pm(kn2,km2)*r)*r*Cmn(kn1,km1)*Cmn(kn2,km2),[0,1]));
+        delta_X(kn1+n*(km1-1),kn2+n*(km2-1))=...
+            sum(chebfun(@(r) besselj(m1(end-km1+1),jmn_pm(kn1,end-km1+1)*r)...
+            *besselj(m1(km2),jmn_pm(kn2,km2)*r)*r*Cmn1(kn1,end-km1+1)*Cmn1(kn2,km2),[0,1]));
     end
 end
 end
 end
 
+delta_Theta=2*pi*kron((eye(length(m1))),ones(n));%kron_fliplr(ones(n),fliplr(eye(length(m1))));
+psi_alpha_beta=delta_X.*delta_Theta;
 
+figure;
+subplot(2,3,3);image(real(delta_X),'CDataMapping','scaled');
+grid on;axis equal;axis off;title('X_{\alpha\beta}')
+subplot(2,3,2);image(real(delta_Theta),'CDataMapping','scaled');
+grid on;axis equal;axis off;title('\Theta_{\alpha\beta}')
+subplot(2,3,1);image(real(psi_alpha_beta),'CDataMapping','scaled');
+grid on;axis equal;axis off;title('real(\Psi_{\alpha\beta})=')
 
-figure;image(real(reshape(temp4(2,2,:,:),4,4)),'CDataMapping','scaled');
-
-
+subplot(2,3,6);image(imag(delta_X),'CDataMapping','scaled');
+grid on;axis equal;axis off;title('X_{\alpha\beta}')
+subplot(2,3,5);image(imag(delta_Theta),'CDataMapping','scaled');
+grid on;axis equal;axis off;title('\Theta_{\alpha\beta}')
+subplot(2,3,4);image(imag(psi_alpha_beta),'CDataMapping','scaled');
+grid on;axis equal;axis off;title('imag(\Psi_{\alpha\beta})=')
