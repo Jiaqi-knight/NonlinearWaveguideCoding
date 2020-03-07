@@ -1509,18 +1509,18 @@ with
 
 \begin{equation}
 \begin{aligned}
-Fig1:\Psi_{\alpha\beta}[r]=\mathcal{X}_{\alpha\beta}[r]\Theta_{\alpha\beta}:= \int_0^h r \psi_\alpha \psi_\beta dr (2\pi \delta_{m,-n})\\
+Fig1:\Psi_{\alpha\beta}[r]=\mathcal{X}_{\alpha\beta}[r]\Theta_{\alpha\beta}:= \int_0^h r C_{\alpha_{mu}}(s) J_m({j'_{\alpha_{mu}}r\over h})  C_{\beta_{nv}} (s)J_n({j'_{\beta_{nv}}r\over h})dr (2\pi \delta_{m,-n})\\
 Fig2:  \Psi_{\alpha\beta}[rcos\phi]=\mathcal{X}_{\alpha\beta}[r]\Theta_{\alpha\beta}[cos\phi]:=
- \int_0^h r \psi_\alpha \psi_\beta dr (\pi \delta_{m,-n-1}+\pi \delta_{m,-n+1})\\
+\int_0^h r C_{\alpha_{mu}} J_m({j'_{\alpha_{mu}}r\over h})  C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})dr (\pi \delta_{m,-n-1}+\pi \delta_{m,-n+1})\\
  Fig3:  \Psi_{\alpha\beta}[r^2cos\phi]=\mathcal{X}_{\alpha\beta}[r^2]\Theta_{\alpha\beta}[cos\phi]:=
- \int_0^h r ^2\psi_\alpha \psi_\beta dr (\pi \delta_{m,-n-1}+\pi \delta_{m,-n+1})\\
+\int_0^h r^2 C_{\alpha_{mu}} J_m({j'_{\alpha_{mu}}r\over h})  C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})dr  (\pi \delta_{m,-n-1}+\pi \delta_{m,-n+1})\\
  Fig4:  \Psi_{\alpha\beta}[r^2sins\phi]=\mathcal{X}_{\alpha\beta}[r^2]\Theta_{\alpha\beta}[sin\phi]:=
- \int_0^h r ^2\psi_\alpha \psi_\beta dr (-i(\pi \delta_{m,-n-1}-\pi \delta_{m,-n+1}))\\
+ \int_0^h r^2 C_{\alpha_{mu}} J_m({j'_{\alpha_{mu}}r\over h})  C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})dr (-i(\pi \delta_{m,-n-1}-\pi \delta_{m,-n+1}))\\
   Fig5:  \Psi_{(\alpha)\beta}[r]=\mathcal{X}_{\alpha\beta}[r]\Theta_{(\alpha)\beta}:=
- \int_0^h r \psi_\alpha \psi_\beta dr (2\pi im \delta_{m,-n})\\
+\int_0^h r C_{\alpha_{mu}} J_m({j'_{\alpha_{mu}}r\over h})  C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})dr  (2\pi im \delta_{m,-n})\\
  Fig6:  \Psi_{\{\alpha\}\beta}=\mathcal{X}_{\{\alpha\}\beta}\Theta_{\alpha\beta}+\mathcal{X}_{\alpha\beta}\Theta_{\{\alpha\}\beta}\\
  \mathcal{X}_{\{\alpha\}\beta}:=-{h'\over h}(\mathcal{X}_{[\alpha]\beta}[r]+\mathcal{X}_{\alpha\beta})\\
- \mathcal{X}_{[\alpha]\beta}[r]:=\int_0^h {d\over dr}(C_{\alpha_{m\mu}} J_m({j'_{\alpha_{m\mu}}r\over h}))C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})dr\\
+ \mathcal{X}_{[\alpha]\beta}[r]:=\int_0^h r {d\over dr}(C_{\alpha_{m\mu}} J_m({j'_{\alpha_{m\mu}}r\over h}))C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})dr\\
 \end{aligned}
 \end{equation}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  7 MAR 2020 21:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  7 MAR 2020 22:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -521,6 +521,11 @@ Overfull \hbox (20.26389pt too wide) in paragraph at lines 1503--1504
  [][] 
  []
 
+
+Overfull \hbox (57.73653pt too wide) detected at line 1525
+[][]
+ []
+
 [31 <./Psi_alpha_beta[r].jpg> <./Psi_alpha_beta[rcos_phi].jpg>] [32 <./Psi_alph
 a_beta[r2cos_phi].jpg> <./Psi_alpha_beta[r2sin_phi].jpg>] [33] [34] [35]
 [36] (./Note.aux) ) 
@@ -560,7 +565,7 @@ mf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><e:/Jiaqi-SJTU-offical/Package
 /texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><e:/Jiaqi-SJT
 U-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.
 pfb>
-Output written on Note.pdf (36 pages, 581115 bytes).
+Output written on Note.pdf (36 pages, 581793 bytes).
 PDF statistics:
  209 PDF objects out of 1000 (max. 8388607)
  144 compressed objects within 2 object streams
