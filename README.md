@@ -9,7 +9,13 @@ Thank your for James's help, I think I have solved it.
 
 Coding1: Tubeplot for helical duct
 
-![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding/tubeplot/RealHelicalDucts.jpg)
+1.1
+
+![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding1/tubeplot/RealHelicalDucts.jpg)
+
+1.2
+
+![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding1/tubeplot/HelicalDucts(s).jpg)
 
 Coding2: I-Matrix-construction: \delta_{m,-n}\delta_{u,v}=[I] for easy our model
 
