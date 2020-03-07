@@ -3,6 +3,7 @@
 \usepackage{amsfonts} %% for equation edit
 \usepackage{ulem} %sout
 \usepackage{amssymb}
+\usepackage{graphicx}
 
 
 
@@ -1472,6 +1473,82 @@ with
 =-{h'\over h}(\mathcal{X}_{[\alpha]\beta\gamma}[r^2]-{h'\over h}(\mathcal{X}_{\alpha[\beta]\gamma}[r^2]-{h'\over h}(\mathcal{X}_{\alpha\beta[\gamma]}[r^2]-3{h'\over h}\mathcal{X}_{\alpha\beta\gamma}[r])
 \end{aligned}
 \end{equation}
+
+\subsection{Example for matlab simulation}
+
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=8cm]{Psi_alpha_beta[r].jpg}
+\caption{$\Psi_{\alpha\beta}[r]$}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=8cm]{Psi_alpha_beta[rcos_phi].jpg}
+\caption{$\Psi_{\alpha\beta}[rcos\phi]$}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=8cm]{Psi_alpha_beta[r2cos_phi].jpg}
+\caption{$\Psi_{\alpha\beta}[r2cos_phi]$}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=8cm]{Psi_alpha_beta[r2sin_phi].jpg}
+\caption{$\Psi_{\alpha\beta}[r2sin\phi]$}
+\end{minipage}
+\end{figure}
+
+
+
+\begin{equation}
+\begin{aligned}
+Fig1:\Psi_{\alpha\beta}[r]=\mathcal{X}_{\alpha\beta}[r]\Theta_{\alpha\beta}:= \int_0^h r \psi_\alpha \psi_\beta dr (2\pi \delta_{m,-n})\\
+Fig2:  \Psi_{\alpha\beta}[rcos\phi]=\mathcal{X}_{\alpha\beta}[r]\Theta_{\alpha\beta}[cos\phi]:=
+ \int_0^h r \psi_\alpha \psi_\beta dr (\pi \delta_{m,-n-1}+\pi \delta_{m,-n+1})\\
+ Fig3:  \Psi_{\alpha\beta}[r^2cos\phi]=\mathcal{X}_{\alpha\beta}[r^2]\Theta_{\alpha\beta}[cos\phi]:=
+ \int_0^h r ^2\psi_\alpha \psi_\beta dr (\pi \delta_{m,-n-1}+\pi \delta_{m,-n+1})\\
+ Fig4:  \Psi_{\alpha\beta}[r^2sins\phi]=\mathcal{X}_{\alpha\beta}[r^2]\Theta_{\alpha\beta}[sin\phi]:=
+ \int_0^h r ^2\psi_\alpha \psi_\beta dr (-i(\pi \delta_{m,-n-1}-\pi \delta_{m,-n+1}))\\
+  Fig5:  \Psi_{(\alpha)\beta}[r]=\mathcal{X}_{\alpha\beta}[r]\Theta_{(\alpha)\beta}:=
+ \int_0^h r \psi_\alpha \psi_\beta dr (2\pi im \delta_{m,-n})\\
+ Fig6:  \Psi_{\{\alpha\}\beta}=\mathcal{X}_{\{\alpha\}\beta}\Theta_{\alpha\beta}+\mathcal{X}_{\alpha\beta}\Theta_{\{\alpha\}\beta}\\
+ \mathcal{X}_{\{\alpha\}\beta}:=-{h'\over h}(\mathcal{X}_{[\alpha]\beta}[r]+\mathcal{X}_{\alpha\beta})\\
+ \mathcal{X}_{[\alpha]\beta}[r]:=\int_0^h {d\over dr}(C_{\alpha_{m\mu}} J_m({j'_{\alpha_{m\mu}}r\over h}))C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})dr\\
+\end{aligned}
+\end{equation}
+
+%Psi_pt_alpha_beta[r]
+
+\begin{equation}
+\begin{aligned}
+\Theta_{(\alpha)\beta}=\int_0^{2\pi} {\partial \over \partial \theta}(e^{im\phi}) e^{in\phi} d\theta
+=2\pi im \delta_{m,-n}
+\end{aligned}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
