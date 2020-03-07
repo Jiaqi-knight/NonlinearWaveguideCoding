@@ -12,4 +12,4 @@ Coding: Tubeplot for helical duct
 
 
 ![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding/tubeplot/RealHelicalDucts.jpg)
-![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding2/Psi_alpha_beta.jpg)
+![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding2/Psi_alpha_beta%5Br%5D.jpg)
