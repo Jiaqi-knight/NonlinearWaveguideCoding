@@ -62,11 +62,11 @@ grid on;axis equal;axis off;title('X_{\alpha\beta}')
 subplot(2,3,2);image(real(delta_Theta),'CDataMapping','scaled');
 grid on;axis equal;axis off;title('\Theta_{\alpha\beta}')
 subplot(2,3,1);image(real(psi_alpha_beta),'CDataMapping','scaled');
-grid on;axis equal;axis off;title('real(\Psi_{\alpha\beta})=')
+grid on;axis equal;axis off;title('real(\Psi_{\alpha\beta}[r])=')
 
 subplot(2,3,6);image(imag(delta_X),'CDataMapping','scaled');
 grid on;axis equal;axis off;title('X_{\alpha\beta}')
 subplot(2,3,5);image(imag(delta_Theta),'CDataMapping','scaled');
 grid on;axis equal;axis off;title('\Theta_{\alpha\beta}')
 subplot(2,3,4);image(imag(psi_alpha_beta),'CDataMapping','scaled');
-grid on;axis equal;axis off;title('imag(\Psi_{\alpha\beta})=')
+grid on;axis equal;axis off;title('imag(\Psi_{\alpha\beta}[r])=')
