@@ -1382,14 +1382,14 @@ sinx=[e^{ix}-e^{-ix}]/2i
 \begin{equation}
 \begin{aligned}
 \Theta_{\alpha\beta\gamma}=\int_0^{2\pi} e^{im\phi} e^{in\phi}  e^{ik\theta} d\theta
-=2\pi \delta_{m,-n-k}
+=2\pi \delta_{m,-n,-k}
 \end{aligned}
 \end{equation}
 
 \begin{equation}
 \begin{aligned}
 \Theta_{\alpha\beta\gamma}[cos\phi]=1/2 \int_0^{2\pi} [e^{i(\theta-\theta_0)}+e^{-i(\theta-\theta_0)}]  e^{im\phi} e^{in\phi}  e^{ik\theta} d\theta
-=\pi \delta_{m,-n-k-1}+\pi \delta_{m,-n-k+1}
+=\pi \delta_{m,-n,-k-1}+\pi \delta_{m,-n,-k+1}
 \end{aligned}
 \end{equation}
 
@@ -1397,21 +1397,21 @@ sinx=[e^{ix}-e^{-ix}]/2i
 \begin{equation}
 \begin{aligned}
 \Theta_{\alpha\beta\gamma}[sin\phi]=1/(2i) \int_0^{2\pi} [e^{i(\theta-\theta_0)}-e^{-i(\theta-\theta_0)}]  e^{im\phi} e^{in\phi}  e^{ik\theta} d\theta
-=-i[\pi \delta_{m,-n-k-1}-\pi \delta_{m,-n-k+1}]
+=-i[\pi \delta_{m,-n,-k-1}-\pi \delta_{m,-n,-k+1}]
 \end{aligned}
 \end{equation}
 
 \begin{equation}
 \begin{aligned}
 \Theta_{(\alpha)\beta\gamma}=im \int_0^{2\pi} e^{im\phi} e^{in\phi}  e^{ik\phi} d\theta
-=2\pi im\delta_{m,-n-k}
+=2\pi im\delta_{m,-n,-k}
 \end{aligned}
 \end{equation}
 
 \begin{equation}
 \begin{aligned}
 \Theta_{(\alpha)\beta\gamma}[cos\phi]=1/2 \int_0^{2\pi} [e^{i(\theta-\theta_0)}+e^{-i(\theta-\theta_0)}]  e^{im\phi} e^{in\phi}  e^{ik\theta} d\theta
-=im[\pi \delta_{m,-n-k-1}+\pi \delta_{m,-n-k+1}]
+=im[\pi \delta_{m,-n,-k-1}+\pi \delta_{m,-n,-k+1}]
 \end{aligned}
 \end{equation}
 
@@ -1475,6 +1475,11 @@ with
 \end{equation}
 
 \subsection{Example for matlab simulation}
+\begin{figure}
+  \centerline{\includegraphics[width=8in]{ThetaFun.jpg}}
+  \caption{$Theta$}
+  \end{figure}
+
 
 
 \begin{figure}[htbp]
@@ -1509,7 +1514,7 @@ with
 
 \begin{equation}
 \begin{aligned}
-Fig1:\Psi_{\alpha\beta}[r]=\mathcal{X}_{\alpha\beta}[r]\Theta_{\alpha\beta}:= \int_0^h r C_{\alpha_{mu}}(s) J_m({j'_{\alpha_{mu}}r\over h})  C_{\beta_{nv}} (sc)J_n({j'_{\beta_{nv}}r\over h})dr (2\pi \delta_{m,-n})\\
+Fig1:\Psi_{\alpha\beta}[r]=\mathcal{X}_{\alpha\beta}[r]\Theta_{\alpha\beta}:= \int_0^h r C_{\alpha_{mu}}(s) J_m({j'_{\alpha_{mu}}r\over h})  C_{\beta_{nv}} (scc)J_n({j'_{\beta_{nv}}r\over h})dr (2\pi \delta_{m,-n})\\
 Fig2:  \Psi_{\alpha\beta}[rcos\phi]=\mathcal{X}_{\alpha\beta}[r]\Theta_{\alpha\beta}[cos\phi]:=
 \int_0^h r C_{\alpha_{mu}} J_m({j'_{\alpha_{mu}}r\over h})  C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})dr (\pi \delta_{m,-n-1}+\pi \delta_{m,-n+1})\\
  Fig3:  \Psi_{\alpha\beta}[r^2cos\phi]=\mathcal{X}_{\alpha\beta}[r^2]\Theta_{\alpha\beta}[cos\phi]:=
@@ -1521,6 +1526,8 @@ Fig2:  \Psi_{\alpha\beta}[rcos\phi]=\mathcal{X}_{\alpha\beta}[r]\Theta_{\alpha\b
  Fig6:  \Psi_{\{\alpha\}\beta}=\mathcal{X}_{\{\alpha\}\beta}\Theta_{\alpha\beta}+\mathcal{X}_{\alpha\beta}\Theta_{\{\alpha\}\beta}\\
  \mathcal{X}_{\{\alpha\}\beta}:=-{h'\over h}(\mathcal{X}_{[\alpha]\beta}[r]+\mathcal{X}_{\alpha\beta})\\
  \mathcal{X}_{[\alpha]\beta}[r]:=\int_0^h r {d\over dr}(C_{\alpha_{m\mu}} J_m({j'_{\alpha_{m\mu}}r\over h}))C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})dr\\
+\Theta_{\{\alpha\}\beta}=\int_0^{2\pi} {\partial \over \partial s}(e^{im\phi}) e^{in\phi} d\theta
+=-\tau 2\pi   im \delta_{m,-n}
 \end{aligned}
 \end{equation}
 
