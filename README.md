@@ -19,6 +19,12 @@ Coding1: Tubeplot for helical duct
 
 Coding2: I-Matrix-construction: \delta_{m,-n}\delta_{u,v}=[I] for easy our model
 
+2.1
+
 ![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding2/Psi_alpha_beta%5Br%5D.jpg)
+
+2.2
+
+![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding2/ThetaFun.jpg)
 
 WAITING for updating： 1.using symmestry properties of matric, cut of counting resources. 2. three-d matrix 3. matrix calculations:multiple
