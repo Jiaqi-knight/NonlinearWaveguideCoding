@@ -19,7 +19,7 @@
 %   Copyright 2020, SJTU.
 
 function [T1]= Theta(m,n,dimention,op);
-tau=1
+tau=1;
 switch op
     case 'ab'
         T1=2*pi*deltaT(m,n,dimention,0);

@@ -21,11 +21,11 @@ figure
 for k=1:length(op)
     T1=Theta(m,n,2,op{k});
     h1=subplot(4,length(op),k);image(real(T1),'CDataMapping','scaled');grid on;axis equal;axis off;title([op2_name{k}])
-    xlim(h1,[0.5 44.5]);ylim(h1,[0 44]);
+    xlim(h1,[0 44]);ylim(h1,[0 44]);
     set(h1,'CLim',[-2*pi 2*pi],'DataAspectRatio',[1 1 1]);
 
     h2=subplot(4,length(op),k+length(op));image(imag(T1),'CDataMapping','scaled');grid on;axis equal;axis off;title([op2_name{k}])
-    xlim(h2,[0.5 44.5]);ylim(h2,[5 44]);
+    xlim(h2,[0 44]);ylim(h2,[0 44]);
     set(h2,'CLim',[-2*pi 2*pi],'DataAspectRatio',[1 1 1]);
 
 end
