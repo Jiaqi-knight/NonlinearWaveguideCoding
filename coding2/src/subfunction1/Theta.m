@@ -22,32 +22,32 @@ function [T1]= Theta(m,n,dimention,op);
 tau=1
 switch op
     case 'ab'
-        T1=2*pi*delta(m,n,dimention,0);
+        T1=2*pi*deltaT(m,n,dimention,0);
     case 'pt_ab'
         multiply_factor=m;
-        T1=2*pi*sqrt(-1)*delta(m,n,dimention,0,multiply_factor);
+        T1=2*pi*sqrt(-1)*deltaT(m,n,dimention,0,multiply_factor);
     case   'ps_ab'
         %global tau
         multiply_factor=m;
-        T1=-tau*2*pi*sqrt(-1)*delta(m,n,dimention,0,multiply_factor);
+        T1=-tau*2*pi*sqrt(-1)*deltaT(m,n,dimention,0,multiply_factor);
     case   'ab_cos'
-        T1=pi*(delta(m,n,dimention,1)+delta(m,n,dimention,-1));
+        T1=pi*(deltaT(m,n,dimention,1)+deltaT(m,n,dimention,-1));
     case   'ab_sin'
-        T1=-sqrt(-1)*pi*(delta(m,n,dimention,1)-delta(m,n,dimention,-1));
+        T1=-sqrt(-1)*pi*(deltaT(m,n,dimention,1)-deltaT(m,n,dimention,-1));
     case   'pt_ab_cos'
         multiply_factor=m;    
-        T1=sqrt(-1)*pi*(delta(m,n,dimention,1,multiply_factor)+delta(m,n,dimention,-1,multiply_factor));
+        T1=sqrt(-1)*pi*(deltaT(m,n,dimention,1,multiply_factor)+deltaT(m,n,dimention,-1,multiply_factor));
     case   'pt_ab_sin'
         multiply_factor=m;
-        T1=pi*(delta(m,n,dimention,1,multiply_factor)-delta(m,n,dimention,-1,multiply_factor));
+        T1=pi*(deltaT(m,n,dimention,1,multiply_factor)-deltaT(m,n,dimention,-1,multiply_factor));
     case   'ps_ab_cos'
         %global tau
         multiply_factor=m;
-        T1=-tau*sqrt(-1)*pi*(delta(m,n,dimention,1,multiply_factor)+delta(m,n,dimention,-1,multiply_factor));
+        T1=-tau*sqrt(-1)*pi*(deltaT(m,n,dimention,1,multiply_factor)+deltaT(m,n,dimention,-1,multiply_factor));
     case   'ps_ab_sin'
         %global tau
         multiply_factor=m;
-        T1=-tau*pi*(delta(m,n,dimention,1,multiply_factor)-delta(m,n,dimention,-1,multiply_factor));
+        T1=-tau*pi*(deltaT(m,n,dimention,1,multiply_factor)-deltaT(m,n,dimention,-1,multiply_factor));
         
 end
 

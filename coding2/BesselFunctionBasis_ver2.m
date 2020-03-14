@@ -11,10 +11,8 @@
 clc
 clear
 close all
-subfunction_path1='.\tensor_toolbox-master'
+subfunction_path1='.\src\tensor_toolbox-master'
 addpath(genpath(subfunction_path1));
-subfunction_path2='.\chebfun-master'
-addpath(genpath(subfunction_path2));
 
 %% #######Geometry########%
 s =logspace(0,1,50);
