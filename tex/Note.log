@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  14 MAR 2020 23:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  14 MAR 2020 23:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -470,35 +470,35 @@ Overfull \hbox (80.73242pt too wide) detected at line 1220
 [][]
  []
 
-[26] [27] [28] [29]
-Overfull \hbox (3.4693pt too wide) detected at line 1450
+[26] [27] [28] [29] [30]
+Overfull \hbox (3.4693pt too wide) detected at line 1494
 [][]
  []
 
-[30] <ThetaFun.jpg, id=118, 1927.2pt x 915.42pt>
+[31] <ThetaFun.jpg, id=122, 1927.2pt x 915.42pt>
 File: ThetaFun.jpg Graphic file (type jpg)
  <use ThetaFun.jpg>
-Package pdftex.def Info: ThetaFun.jpg used on input line 1479.
+Package pdftex.def Info: ThetaFun.jpg used on input line 1523.
 (pdftex.def)             Requested size: 578.15999pt x 274.61415pt.
 
-<XFun.jpg, id=119, 1927.2pt x 915.42pt>
+<XFun.jpg, id=123, 1927.2pt x 915.42pt>
 File: XFun.jpg Graphic file (type jpg)
  <use XFun.jpg>
-Package pdftex.def Info: XFun.jpg used on input line 1486.
+Package pdftex.def Info: XFun.jpg used on input line 1530.
 (pdftex.def)             Requested size: 578.15999pt x 274.61415pt.
 
-<PsiFun.jpg, id=120, 1927.2pt x 915.42pt>
+<PsiFun.jpg, id=124, 1927.2pt x 915.42pt>
 File: PsiFun.jpg Graphic file (type jpg)
  <use PsiFun.jpg>
-Package pdftex.def Info: PsiFun.jpg used on input line 1494.
+Package pdftex.def Info: PsiFun.jpg used on input line 1538.
 (pdftex.def)             Requested size: 578.15999pt x 274.61415pt.
 
-Overfull \hbox (57.73653pt too wide) detected at line 1519
+Overfull \hbox (57.73653pt too wide) detected at line 1563
 [][]
  []
 
-[31] [32 <./ThetaFun.jpg> <./XFun.jpg>] [33 <./PsiFun.jpg>] [34] [35] [36]
-[37] [38] (./Note.aux) ) 
+[32] [33 <./ThetaFun.jpg> <./XFun.jpg>] [34 <./PsiFun.jpg>] [35] [36] [37]
+[38] [39] (./Note.aux) ) 
 Here is how much of TeX's memory you used:
  4315 strings out of 492995
  56958 string characters out of 6136402
@@ -536,10 +536,10 @@ kage/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><e:/Jiaqi
 -SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti0
 900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/publ
 ic/cm-super/sfti1000.pfb>
-Output written on Note.pdf (38 pages, 830411 bytes).
+Output written on Note.pdf (39 pages, 830310 bytes).
 PDF statistics:
- 221 PDF objects out of 1000 (max. 8388607)
- 154 compressed objects within 2 object streams
+ 224 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -248,7 +248,7 @@ C_{\alpha_{01}}={1 \over \sqrt{\pi}h}
 \end{equation}
 
 for 
- $\int_0^{2\pi}\int_0^h \psi_{\alpha_{m\mu}} \psi_{\beta_{nv}} r dr d\theta=\delta_{\mu v} \delta_{m,-n} =\widehat{\delta }_{\alpha\beta}$.
+ $\int_0^{2\pi}\int_0^h \psi_{\alpha_{m\mu}} \psi_{\beta_{nv}} r dr d\theta=\delta_{\mu v} \delta_{m,-n} =\widehat{\delta }_{\alpha\beta}=I$.
 
 
 \subsection{Slowly varying ducts}
@@ -1251,6 +1251,16 @@ Finally, we obtain two equations involving just pressure and longitudinal veloci
 \end{aligned}
 \end{equation}
 
+With numerical trick, we easy the Identity Matrix,
+
+
+\begin{equation}
+\begin{aligned}
+ {u'}_\beta^a+\textbf{M}_{\alpha\beta}^a p_\beta^a + \textbf{G}_{\alpha\beta}^a u_\beta^a=\mathcal{A}[u,u]+\mathcal{B}[p,p]+\varepsilon[u,p]\\
+ {p'}_\beta^a-\textbf{N}_{\alpha\beta}^a u_\beta^a-\textbf{H}_{\alpha\beta}^a p_\beta^a=\mathcal{C}[u,p]+\mathcal{D}[u,u]
+\end{aligned}
+\end{equation}
+
 
 \section{Introduce the admittance matrix}
 
@@ -1264,12 +1274,46 @@ u=Yp+\mathcal{Y}[p,p]
 \end{aligned}
 \end{equation}
 
-where $Y=Y(s)$ is the linear part of the admittance and $\mathcal{Y}=\mathcal{Y}(s)$ is the second order nonlinear correction to the admittance, henceforth referred to as the “nonlinear admittance” term. We differentiate it:
+where $Y=Y(s)$ is the linear part of the admittance and $\mathcal{Y}=\mathcal{Y}(s)$ is the second order nonlinear correction to the admittance, henceforth referred to as the  nonlinear admittance term. We differentiate it:
 \begin{equation}
 \begin{aligned}
-u'=Y'p=Yp'+\mathcal{Y}'[p,p]+\mathcal{Y}[p',p]+\mathcal{Y}[p,p']
+u'=Y'p+Yp'+\mathcal{Y}'[p,p]+\mathcal{Y}[p',p]+\mathcal{Y}[p,p']
 \end{aligned}
 \end{equation}
+
+Substitute in eq99 of $u'$,
+
+ \begin{equation}
+\begin{aligned}
+-\textbf{M}_{\alpha\beta}^a p_\beta^a - \textbf{G}_{\alpha\beta}^a u_\beta^a+\mathcal{A}[u,u]+\mathcal{B}[p,p]+\varepsilon[u,p]\\=Y'p+Yp'+\mathcal{Y}'[p,p]+\mathcal{Y}[p',p]+\mathcal{Y}[p,p']
+\end{aligned}
+\end{equation}
+
+Then, $p'$
+ \begin{equation}
+\begin{aligned}
+-\textbf{M}_{\alpha\beta}^a p_\beta^a - \textbf{G}_{\alpha\beta}^a u_\beta^a+\mathcal{A}[u,u]+\mathcal{B}[p,p]+\varepsilon[u,p]\\=Y'p\\
++Y(\textbf{N}_{\alpha\beta}^a u_\beta^a+\textbf{H}_{\alpha\beta}^a p_\beta^a+\mathcal{C}[u,p]+\mathcal{D}[u,u])\\+\mathcal{Y}'[p,p]\\
++\mathcal{Y}[\textbf{N}_{\alpha\beta}^a u+\textbf{H}_{\alpha\beta}^a p,p]\\
++\mathcal{Y}[p,\textbf{N}_{\alpha\beta}^a u+\textbf{H}_{\alpha\beta}^a p]
+\end{aligned}
+\end{equation}
+
+
+Use eq100 to express u in terms of p,
+ \begin{equation}
+\begin{aligned}
+-\textbf{M}_{\alpha\beta}^a p_\beta^a - \textbf{G}_{\alpha\beta}^a Yp_\beta^a- \textbf{G}_{\alpha\beta}^a \mathcal{Y}[p,p]+\mathcal{A}[Yp,Yp]+\mathcal{B}[p,p]+\varepsilon[Yp,p]\\=Y'p\\
++Y(\textbf{N}_{\alpha\beta}^a Y p_\beta^a+\textbf{N}_{\alpha\beta}^a \mathcal{Y}[p,p]+\textbf{H}_{\alpha\beta}^a p_\beta^a+\mathcal{C}[Yp,p]+\mathcal{D}[Yp,Yp])\\+\mathcal{Y}'[p,p]\\
++\mathcal{Y}[\textbf{N}_{\alpha\beta}^a Y p+\textbf{H}_{\alpha\beta}^a p,p]\\
++\mathcal{Y}[p,\textbf{N}_{\alpha\beta}^a Yp+\textbf{H}_{\alpha\beta}^a p]
+\end{aligned}
+\end{equation}
+
+
+
+
+
 
 
 
