@@ -1246,20 +1246,11 @@ Finally, we obtain two equations involving just pressure and longitudinal veloci
 
 \begin{equation}
 \begin{aligned}
-\widehat{\textbf{I}_{\alpha\beta}^a} {u'}_\beta^a+\textbf{M}_{\alpha\beta}^a p_\beta^a + \textbf{G}_{\alpha\beta}^a u_\beta^a=\mathcal{A}[u,u]+\mathcal{B}[p,p]+\varepsilon[u,p]\\
-\widehat{\textbf{I}_{\alpha\beta}^a} {p'}_\beta^a-\textbf{N}_{\alpha\beta}^a u_\beta^a-\textbf{H}_{\alpha\beta}^a p_\beta^a=\mathcal{C}[u,p]+\mathcal{D}[u,u]
+\widehat{\textbf{I}_{\alpha\beta}^a} {u'}_\beta^a+\textbf{M}_{\alpha\beta}^a p_\beta^a + \textbf{G}_{\alpha\beta}^a u_\beta^a=\mathcal{A}_{\alpha\beta\gamma}^{ab}[u_{\beta}^{a-b},u_{\gamma}^{b}]+\mathcal{B}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{b}]+\varepsilon_{\alpha\beta\gamma}^{ab}[u_{\beta}^{a-b},p_{\gamma}^{b}]\\
+\widehat{\textbf{I}_{\alpha\beta}^a} {p'}_\beta^a-\textbf{N}_{\alpha\beta}^a u_\beta^a-\textbf{H}_{\alpha\beta}^a p_\beta^a=\mathcal{C}_{\alpha\beta\gamma}^{ab}[u_{\beta}^{a-b},p_{\gamma}^{b}]+\mathcal{D}_{\alpha\beta\gamma}^{ab}[u_{\beta}^{a-b},u_{\gamma}^{b}]
 \end{aligned}
 \end{equation}
 
-With numerical trick, we easy the Identity Matrix,
-
-
-\begin{equation}
-\begin{aligned}
- {u'}_\beta^a+\textbf{M}_{\alpha\beta}^a p_\beta^a + \textbf{G}_{\alpha\beta}^a u_\beta^a=\mathcal{A}[u,u]+\mathcal{B}[p,p]+\varepsilon[u,p]\\
- {p'}_\beta^a-\textbf{N}_{\alpha\beta}^a u_\beta^a-\textbf{H}_{\alpha\beta}^a p_\beta^a=\mathcal{C}[u,p]+\mathcal{D}[u,u]
-\end{aligned}
-\end{equation}
 
 
 \section{Introduce the admittance matrix}
@@ -1270,7 +1261,7 @@ The following relationship is defined:
 
 \begin{equation}
 \begin{aligned}
-u=Yp+\mathcal{Y}[p,p]
+\widehat{\textbf{I}_{\alpha\beta}^a}  u_{\beta}^a=Y_{\alpha\beta}^a p_{\beta}^a+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{b}]
 \end{aligned}
 \end{equation}
 
@@ -1281,7 +1272,7 @@ u'=Y'p+Yp'+\mathcal{Y}'[p,p]+\mathcal{Y}[p',p]+\mathcal{Y}[p,p']
 \end{aligned}
 \end{equation}
 
-Substitute in eq99 of $u'$,
+Substitute in eq98 of $u'$,
 
  \begin{equation}
 \begin{aligned}
@@ -1309,6 +1300,88 @@ Use eq100 to express u in terms of p,
 +\mathcal{Y}[p,\textbf{N}_{\alpha\beta}^a Yp+\textbf{H}_{\alpha\beta}^a p]
 \end{aligned}
 \end{equation}
+
+This equation has two distinct orders of magnitude: terms linear in p, and terms quadratic in p. We can equate linear terms and the quadratic terms separately to grt two distinct equations:
+ \begin{equation}
+\begin{aligned}
+linear:Y'p+Y\textbf{N}_{\alpha\beta}^a Y p_\beta^a+\textbf{M}_{\alpha\beta}^a p_\beta^a+Y \textbf{H}_{\alpha\beta}^a p_\beta^a+\textbf{G}_{\alpha\beta}^a Yp_\beta^a=0,
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+quadratic:\mathcal{Y}'[p,p]+\mathcal{Y}[\textbf{N}_{\alpha\beta}^a Yp,p]+\mathcal{Y}[p,\textbf{N}_{\alpha\beta}^a Yp]+Y\textbf{N}_{\alpha\beta}^a \mathcal{Y}[p,p]+Y\mathcal{C}[Yp,p]\\-\mathcal{A}[Yp,Yp]-\mathcal{B}[p,p]-\varepsilon[Yp,p]
++\mathcal{Y}[\textbf{H}_{\alpha\beta}^a p,p]+\mathcal{Y}[p, \textbf{H}_{\alpha\beta}^a p]+\textbf{G}_{\alpha\beta}^a \mathcal{Y}[p,p]+Y \mathcal{D}[Yp,Yp]=0
+\end{aligned}
+\end{equation}
+
+As both of these equation hold true for a general p we can eliminate it to obtain an equation for the linear part of the admittance and an equation for the nonlinear part of the admittance:
+ \begin{equation}
+\begin{aligned}
+linear:Y'+Y\textbf{N}_{\alpha\beta}^a Y +\textbf{M}_{\alpha\beta}^a +Y \textbf{H}_{\alpha\beta}^a +\textbf{G}_{\alpha\beta}^a =0,
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+quadratic:\mathcal{Y}'[I,I]+\mathcal{Y}[\textbf{N}_{\alpha\beta}^a Y,I]+\mathcal{Y}[I,\textbf{N}_{\alpha\beta}^a Y]+Y\textbf{N}_{\alpha\beta}^a \mathcal{Y}[I,I]+Y\mathcal{C}[Y,I]\\-\mathcal{A}[Y,Y]-\mathcal{B}[I,I]-\varepsilon[Y,I]
++\mathcal{Y}[\textbf{H}_{\alpha\beta}^a ,I]+\mathcal{Y}[I, \textbf{H}_{\alpha\beta}^a]+\textbf{G}_{\alpha\beta}^a \mathcal{Y}[I,I]+Y \mathcal{D}[Y,Y]=0
+\end{aligned}
+\end{equation}
+
+where $I^a_{\alpha\beta}$ is the identity tensor. Here, the square bracket notation acting on matrices denotes $(Z\mathcal{A}[X,Y])_{pqr}^{ab}=\sum_{s,t,u=0}^\infty Z_{pu}^a \mathcal{A}_{ust}^{ab}X_{sq}^{a-b}Y_{tr}^b$.
+
+These equation are solved from the outlet of the duct, applying the appropriate radiation boundray condition at the duct exit. Once Y(s) and $\mathcal{Y}(s)$ are found throught the duct, eq100 can then be used to replace the velocity modes with pressure modes in eq99, to obtain a numerically stable first order ODE for the pressure modes:
+\begin{equation}
+\begin{aligned}
+p'=NYp-N\mathcal{Y}[p,p]+\mathcal{C}[Yp,p]+Hp+\mathcal{D}[Yp,Yp]
+\end{aligned}
+\end{equation}
+
+This equation can be solved from the source to the outlet. As the equation involves the local admittance at each point, the solution includes both forward and backwards propagating waves together with their nonlinear interaction.
+
+\section{Boudnary Conditions for an infinite uniform duct oulet}
+
+The simplest boundary condition to consider for the adimittance is that of an outlet consisting of an infinitely long uniform duct of constant curvature for which we have only propagating waves and decaying evanescent waves. In such a duct no point can be distinguished from another longitudinally, therefore we must have the adimittance being a fixed point of the admittance equations. To find the fixed points, we begin by combing eq100, ignoring the quadratic terms for the moment, to form a second order ODE for the pressure modes, G,H, the derivatives of M and N vanish:
+\begin{equation}
+\begin{aligned}
+p''+NMp=0
+\end{aligned}
+\end{equation}
+
+The solution in terms of forward and backward modes is given by:
+\begin{equation}
+\begin{aligned}
+p=p^{+}+p^{-}=\sum_{k=1}^\infty(c_k^{+}v_k e^{i\lambda_ks}+c_k^{-}v_k e^{-i\lambda_ks})
+\end{aligned}
+\end{equation}
+
+where the $v_i$ are the eigenvalue of NM with eigenvalues $\lambda_i^2$, with arbitary $c_k^{+}$ and  $c_k^{-}$.  Here, we have split the solution into forward and backward waves. The roots of the $\lambda_k$ are chosen as follows:
+\begin{equation}
+\begin{aligned}
+\lambda_k=\left\{\begin{matrix}
+(\lambda_k^2)^{1/2}, \lambda_k^2>0\\
+i(-\lambda_k^2)^{1/2}, \lambda_k^2<0\\
+\end{matrix}\right.\\
+\end{aligned}
+\end{equation}
+
+to ensure either propagating or decaying evanescent modes in the positive direction. Based on extensive numerical evaluations, we observe that all of the eigenvectors of NM are real. We now introduce the characteristic forword and backwards admittance, linearly relating the forward and backwards modes:
+\begin{equation}
+\begin{aligned}
+u^{\pm}=Y^{\pm}p^{\pm}
+\end{aligned}
+\end{equation}
+
+Using this, together with the linear equation relating pressure and velocity  $(p^{\pm})'=Nu^{\pm}$, we obtain and expression for $Y^{\pm}$
+\begin{equation}
+\begin{aligned}
+NY^{\pm}p^{\pm}=(p^{\pm})':=\\
+NY^{\pm} \sum_{k=1}^\infty(c_k^{\pm}v_k e^{\pm i\lambda_ks})=[\sum_{k=1}^\infty(c_k^{\pm}v_k e^{\pm i\lambda_ks})]'\\
+NY^{\pm} \sum_{k=1}^\infty(c_k^{\pm}v_k e^{\pm i\lambda_ks})=\pm i\lambda_k \sum_{k=1}^\infty(c_k^{\pm}v_k e^{\pm i\lambda_ks})\\
+\end{aligned}
+\end{equation}
+
 
 
 
