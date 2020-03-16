@@ -1374,7 +1374,9 @@ $\Rightarrow$ quadratic-rank 5 tensor(2 upper, 3 lower):
 These equation are solved from the outlet of the duct, applying the appropriate radiation boundray condition at the duct exit. Once Y(s) and $\mathcal{Y}(s)$ are found throught the duct, eq99 can then be used to replace the velocity modes with pressure modes in eq98, to obtain a numerically stable first order ODE for the pressure modes:
 \begin{equation}
 \begin{aligned}
-\widehat{\textbf{I}_{\alpha\beta}^a} {p'}_\beta^a=\textbf{N}_{\alpha\beta}^a {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  Y_{\alpha\beta}^a p_\beta^a -N\mathcal{Y}[p,p]+\mathcal{C}[Yp,p]+Hp+\mathcal{D}[Yp,Yp]
+\widehat{\textbf{I}_{\alpha\beta}^a} {p'}_\beta^a=\textbf{N}_{\alpha\beta}^a {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  Y_{\alpha\beta}^a p_\beta^a +\textbf{N}_{\alpha\beta}^a {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1} \mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{b}]\\
++\textbf{H}_{\alpha\beta}^a p_\beta^a
++\mathcal{C}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b} ,p_{\gamma}^{b}]+\mathcal{D}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b},{\widehat{\textbf{I}_{\gamma \alpha}^{b}}}^{-1}  Y_{\alpha\gamma}^{b} p_\gamma^{b}])
 \end{aligned}
 \end{equation}
 
