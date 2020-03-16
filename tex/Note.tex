@@ -1384,10 +1384,18 @@ This equation can be solved from the source to the outlet. As the equation invol
 
 \section{Boudnary Conditions for an infinite uniform duct oulet}
 
-The simplest boundary condition to consider for the adimittance is that of an outlet consisting of an infinitely long uniform duct of constant curvature for which we have only propagating waves and decaying evanescent waves. In such a duct no point can be distinguished from another longitudinally, therefore we must have the adimittance being a fixed point of the admittance equations. To find the fixed points, we begin by combing eq100, ignoring the quadratic terms for the moment, to form a second order ODE for the pressure modes, G,H, the derivatives of M and N vanish:
+The simplest boundary condition to consider for the adimittance is that of an outlet consisting of an infinitely long uniform duct of constant curvature for which we have only propagating waves and decaying evanescent waves. In such a duct no point can be distinguished from another longitudinally, therefore we must have the adimittance being a fixed point of the admittance equations. To find the fixed points, we begin by combing eq99, ignoring the quadratic terms for the moment, to form a second order ODE for the pressure modes, G,H, the derivatives of M and N vanish:
+
 \begin{equation}
 \begin{aligned}
-p''+NMp=0
+\widehat{\textbf{I}_{\alpha\beta}^a} {u'}_\beta^a+\textbf{M}_{\alpha\beta}^a p_\beta^a =0\\
+\widehat{\textbf{I}_{\alpha\beta}^a} {p'}_\beta^a-\textbf{N}_{\alpha\beta}^a u_\beta^a=0
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\widehat{\textbf{I}_{\alpha\beta}^a} p_\beta^{''a}(s)+\textbf{N}_{\alpha\beta}^a  {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1} \textbf{M}_{\alpha\beta}^a p_\beta^a(s) =0
 \end{aligned}
 \end{equation}
 
@@ -1411,16 +1419,16 @@ i(-\lambda_k^2)^{1/2}, \lambda_k^2<0\\
 to ensure either propagating or decaying evanescent modes in the positive direction. Based on extensive numerical evaluations, we observe that all of the eigenvectors of NM are real. We now introduce the characteristic forword and backwards admittance, linearly relating the forward and backwards modes:
 \begin{equation}
 \begin{aligned}
-u^{\pm}=Y^{\pm}p^{\pm}
+\widehat{\textbf{I}_{\alpha\beta}^{ a}}  u_{\beta}^{\pm a}=Y_{\alpha\beta}^{\pm a} p_{\beta}^{\pm a}
 \end{aligned}
 \end{equation}
 
-Using this, together with the linear equation relating pressure and velocity  $(p^{\pm})'=Nu^{\pm}$, we obtain and expression for $Y^{\pm}$
+Using this, together with the linear equation relating pressure and velocity  $(p_{\beta}^{\pm a})'=N_{\alpha\beta}^a u_{\beta}^{\pm a}$, we obtain and expression for $Y_{\alpha\beta}^{\pm a}$
 \begin{equation}
 \begin{aligned}
-NY^{\pm}p^{\pm}=(p^{\pm})':=\\
+N_{\alpha\beta}^a {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  Y_{\alpha\beta}^{\pm a} p_{\beta}^{\pm a}=(p_{\beta}^{\pm a})':=\\
 NY^{\pm} \sum_{k=1}^\infty(c_k^{\pm}v_k e^{\pm i\lambda_ks})=[\sum_{k=1}^\infty(c_k^{\pm}v_k e^{\pm i\lambda_ks})]'\\
-NY^{\pm} \sum_{k=1}^\infty(c_k^{\pm}v_k e^{\pm i\lambda_ks})=\pm i\lambda_k \sum_{k=1}^\infty(c_k^{\pm}v_k e^{\pm i\lambda_ks})\\
+NY^{\pm} \sum_{k=1}^\infty(c_k^{\pm}v_k e^{\pm i\lambda_ks})=\pm  \sum_{k=1}^\infty(i\lambda_k c_k^{\pm}v_k e^{\pm i\lambda_ks})\\
 \end{aligned}
 \end{equation}
 
