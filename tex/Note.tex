@@ -344,8 +344,8 @@ Intergal and insert eq 6, 7 into eq 8:
 \begin{equation}
 \begin{aligned}
 \int_0^{2\pi}\int_0^h \psi_\alpha r [-ia\kappa (1-\kappa r cos(\phi))P^a] dr d\theta\\
-=-ia\kappa \sum_{\beta}^\infty \int_0^{2\pi}\int_0^h \psi_\alpha\psi_\beta r [(1-\kappa r cos(\phi))] dr d\theta P_\beta^a\\
-=-ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))] P_\beta^a \\
+=-ia\kappa \sum_{\beta=0}^\infty \int_0^{2\pi}\int_0^h \psi_\alpha\psi_\beta r [(1-\kappa r cos(\phi))] dr d\theta P_\beta^a\\
+\Rightarrow -ia \kappa \Psi_{\alpha\beta}[r(1-\kappa cos(\phi))] P_\beta^a \\
 (summation convention)
 \end{aligned}
 \end{equation}
@@ -370,16 +370,16 @@ From 1.1 as example, we know that
 \begin{equation}
 \begin{aligned}
 \int_0^{2\pi}\int_0^h \psi_\alpha r [{1\over r} {\partial(U^a r)\over \partial s}] dr d\theta\\
-=\int_0^{2\pi}\int_0^h \psi_\alpha r{\partial( \psi_\beta U_\beta^a)\over \partial s} dr d\theta \\
+=\sum_{\beta=0}^\infty  \int_0^{2\pi}\int_0^h \psi_\alpha r{\partial( \psi_\beta U_\beta^a)\over \partial s} dr d\theta \\
 =\int_0^{2\pi}\int_0^h \psi_\alpha \psi_\beta r{\partial( U_\beta^a )\over \partial s} dr d\theta +\int_0^{2\pi}\int_0^h \psi_\alpha r{\partial( \psi_\beta )\over \partial s} dr d\theta U_\beta^a\\
 =\int_0^{2\pi}\int_0^h {\partial \psi_\alpha \psi_\beta r U_\beta^a \over \partial s} dr d\theta
 -\int_0^{2\pi}\int_0^h {\partial \psi_\alpha \psi_\beta r  \over \partial s}U_\beta^a dr d\theta\\
 +\int_0^{2\pi}\int_0^h  r{\partial( \psi_\alpha \psi_\beta )\over \partial s} dr d\theta U_\beta^a
 -\int_0^{2\pi}\int_0^h \psi_\beta   r{\partial( \psi_\alpha )\over \partial s} dr d\theta U_\beta^a\\
-={{\partial }\over {\partial s}}\int_0^{2\pi}\int_0^h   [ \psi_\alpha \psi_\beta r U_\beta^a] dr d\theta 
--\int_0^{2\pi}{dh(s)\over ds}[ \psi_\alpha \psi_\beta r U_\beta^a]_{r=h}d\theta\\
--\int_0^{2\pi}\int_0^h   {\partial( \psi_\alpha )\over \partial s}\psi_\beta r dr d\theta U_\beta^a\\
-={d \over d s}(U_\beta^a \widehat{\delta }_{\alpha\beta})+0(periodic)-\Psi_{\{\alpha\}\beta}[r]U_\beta^a
+=\sum_{\beta=0}^\infty  {{\partial }\over {\partial s}}\int_0^{2\pi}\int_0^h   [ \psi_\alpha \psi_\beta r U_\beta^a] dr d\theta 
+-\sum_{\beta=0}^\infty  \int_0^{2\pi}{dh(s)\over ds}[ \psi_\alpha \psi_\beta r U_\beta^a]_{r=h}d\theta\\
+-\sum_{\beta=0}^\infty  \int_0^{2\pi}\int_0^h   {\partial( \psi_\alpha )\over \partial s}\psi_\beta r dr d\theta U_\beta^a\\
+\Rightarrow {d \over d s}(U_\beta^a \widehat{\delta }_{\alpha\beta})+0(periodic)-\Psi_{\{\alpha\}\beta}[r]U_\beta^a
 \end{aligned}
 \end{equation}
 
@@ -389,7 +389,7 @@ mark:0(periodic),which is similar in the follow momentum equation, but not elimi
 \begin{equation}
 \begin{aligned}
 \int_0^{2\pi}\int_0^h \psi_\alpha r [{1\over r}{\partial(V^a r(1-\kappa r cos(\phi)))\over \partial r}] dr d\theta\\
-=\int_0^{2\pi}\int_0^h \psi_\alpha {\partial(\psi_\beta r(1-\kappa r cos(\phi)))\over \partial r} dr d\theta V_\beta^a\\
+=\sum_{\beta=0}^\infty \int_0^{2\pi}\int_0^h \psi_\alpha {\partial(\psi_\beta r(1-\kappa r cos(\phi)))\over \partial r} dr d\theta V_\beta^a\\
 =\int_0^{2\pi}\int_0^h {\partial(\psi_\alpha  \psi_\beta r(1-\kappa r cos(\phi)))\over \partial r}dr d\theta V_\beta^a-\int_0^{2\pi}\int_0^h\psi_\beta  r(1-\kappa r cos(\phi)){\partial(\psi_\alpha  )\over \partial r} dr d\theta V_\beta^a\\
 =0(periodic)-\Psi_{[\alpha]\beta}[ r(1-\kappa r cos(\phi))]V_\beta^a
 \end{aligned}
@@ -399,7 +399,7 @@ mark:0(periodic),which is similar in the follow momentum equation, but not elimi
 \begin{equation}
 \begin{aligned}
 \int_0^{2\pi}\int_0^h \psi_\alpha r [{1\over r}{\partial(W^a (1-\kappa r cos(\phi)))\over \partial \theta}] dr d\theta\\
-=\int_0^{2\pi}\int_0^h \psi_\alpha  [{\partial(\psi_\beta (1-\kappa r cos(\phi)))\over \partial \theta}] dr d\theta W_\beta^a\\
+=\sum_{\beta=0}^\infty \int_0^{2\pi}\int_0^h \psi_\alpha  [{\partial(\psi_\beta (1-\kappa r cos(\phi)))\over \partial \theta}] dr d\theta W_\beta^a\\
 =\int_0^{2\pi}\int_0^h  [{\partial(\psi_\alpha  \psi_\beta (1-\kappa r cos(\phi)))\over \partial \theta}] dr d\theta W_\beta^a
 -\int_0^{2\pi}\int_0^h  \psi_\beta (1-\kappa r cos(\phi))[{\partial(\psi_\alpha )\over \partial \theta}] dr d\theta W_\beta^a\\
 =\int_0^h  [\psi_\alpha  \psi_\beta (1-\kappa r cos(\phi))]_0^{2\pi} dr W_\beta^a
@@ -413,8 +413,8 @@ mark:0(periodic),which is similar in the follow momentum equation, but not elimi
 \begin{equation}
 \begin{aligned}
 \int_0^{2\pi}\int_0^h \psi_\alpha r [(1-\kappa r cos(\phi))\sum_{b=-\infty}^{+\infty}(-ib\kappa P^{a-b} P^{b} -ib\kappa U^{a-b} U^{b}-ib\kappa V^{a-b} V^{b}-ib\kappa W^{a-b} W^{b}  - {B\over {2A}}iakP^bP^{a-b})] dr d\theta\\
-=\int_0^{2\pi}\int_0^h \psi_\alpha \psi_\beta \psi_\gamma r  (1-\kappa r cos(\phi)) drd\theta \\  \sum_{b=-\infty}^{+\infty}(-ib\kappa P_\beta^{a-b} P_\gamma^{b}-ib\kappa U_\beta^{a-b} U_\gamma^{b}-ib\kappa V_\beta^{a-b} V_\gamma^{b}-ib\kappa  W_\beta^{a-b} W_\gamma^{b}-ia\kappa  {B\over {2A}}P_\beta^{a-b}P_\gamma^{b})\\
-=\Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa P_\beta^{a-b} P_\gamma^{b}-ib\kappa U_\beta^{a-b} U_\gamma^{b}-ib\kappa V_\beta^{a-b} V_\gamma^{b}-ib\kappa  W_\beta^{a-b} W_\gamma^{b}-ia\kappa  {B\over {2A}}P_\beta^{a-b}P_\gamma^{b})\\
+=\sum_{\beta=0}^{\infty} \sum _{\gamma=0}^{\infty} \int_0^{2\pi}\int_0^h \psi_\alpha \psi_\beta \psi_\gamma r  (1-\kappa r cos(\phi)) drd\theta \\  \sum_{b=-\infty}^{+\infty}(-ib\kappa P_\beta^{a-b} P_\gamma^{b}-ib\kappa U_\beta^{a-b} U_\gamma^{b}-ib\kappa V_\beta^{a-b} V_\gamma^{b}-ib\kappa  W_\beta^{a-b} W_\gamma^{b}-ia\kappa  {B\over {2A}}P_\beta^{a-b}P_\gamma^{b})\\
+=\sum_{\beta=0}^{\infty} \sum _{\gamma=0}^{\infty} \Psi_{\alpha\beta\gamma}[r(1-\kappa r cos(\phi))] \sum_{b=-\infty}^{+\infty}(-ib\kappa P_\beta^{a-b} P_\gamma^{b}-ib\kappa U_\beta^{a-b} U_\gamma^{b}-ib\kappa V_\beta^{a-b} V_\gamma^{b}-ib\kappa  W_\beta^{a-b} W_\gamma^{b}-ia\kappa  {B\over {2A}}P_\beta^{a-b}P_\gamma^{b})\\
 \end{aligned}
 \end{equation}
 
@@ -1268,7 +1268,7 @@ The following relationship is defined:
 where $Y=Y(s)$ is the linear part of the admittance and $\mathcal{Y}=\mathcal{Y}(s)$ is the second order nonlinear correction to the admittance, henceforth referred to as the  nonlinear admittance term. We differentiate it:
 \begin{equation}
 \begin{aligned}
-u'=Y'p+Yp'+\mathcal{Y}'[p,p]+\mathcal{Y}[p',p]+\mathcal{Y}[p,p']
+\widehat{\textbf{I}_{\alpha\beta}^a} u'={Y}_{\alpha\beta}^{'a} p_{\beta}^a +Y_{\alpha\beta}^{a} p_{\beta}^{'a}+\mathcal{Y}_{\alpha\beta\gamma}^{'ab}[p_{\beta}^{a-b},p_{\gamma}^{b}]+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{'a-b},p_{\gamma}^{b}]+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{'b}]
 \end{aligned}
 \end{equation}
 
@@ -1276,65 +1276,105 @@ Substitute in eq98 of $u'$,
 
  \begin{equation}
 \begin{aligned}
--\textbf{M}_{\alpha\beta}^a p_\beta^a - \textbf{G}_{\alpha\beta}^a u_\beta^a+\mathcal{A}[u,u]+\mathcal{B}[p,p]+\varepsilon[u,p]\\=Y'p+Yp'+\mathcal{Y}'[p,p]+\mathcal{Y}[p',p]+\mathcal{Y}[p,p']
+-\textbf{M}_{\alpha\beta}^a p_\beta^a -\textbf{G}_{\alpha\beta}^a u_\beta^a+ \mathcal{A}_{\alpha\beta\gamma}^{ab}[u_{\beta}^{a-b},u_{\gamma}^{b}]+\mathcal{B}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{b}]+\varepsilon_{\alpha\beta\gamma}^{ab}[u_{\beta}^{a-b},p_{\gamma}^{b}]\\={Y}_{\alpha\beta}^{'a} p_{\beta}^a +Y_{\alpha\beta}^{a} p_{\beta}^{'a}+\mathcal{Y}_{\alpha\beta\gamma}^{'ab}[p_{\beta}^{a-b},p_{\gamma}^{b}]+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{'a-b},p_{\gamma}^{b}]+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{'b}]
 \end{aligned}
 \end{equation}
 
 Then, $p'$
  \begin{equation}
 \begin{aligned}
--\textbf{M}_{\alpha\beta}^a p_\beta^a - \textbf{G}_{\alpha\beta}^a u_\beta^a+\mathcal{A}[u,u]+\mathcal{B}[p,p]+\varepsilon[u,p]\\=Y'p\\
-+Y(\textbf{N}_{\alpha\beta}^a u_\beta^a+\textbf{H}_{\alpha\beta}^a p_\beta^a+\mathcal{C}[u,p]+\mathcal{D}[u,u])\\+\mathcal{Y}'[p,p]\\
-+\mathcal{Y}[\textbf{N}_{\alpha\beta}^a u+\textbf{H}_{\alpha\beta}^a p,p]\\
-+\mathcal{Y}[p,\textbf{N}_{\alpha\beta}^a u+\textbf{H}_{\alpha\beta}^a p]
+-\textbf{M}_{\alpha\beta}^a p_\beta^a -\textbf{G}_{\alpha\beta}^a u_\beta^a+\mathcal{A}_{\alpha\beta\gamma}^{ab}[u_{\beta}^{a-b},u_{\gamma}^{b}]+\mathcal{B}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{b}]+\varepsilon_{\alpha\beta\gamma}^{ab}[u_{\beta}^{a-b},p_{\gamma}^{b}]\\={Y}_{\alpha\beta}^{'a} p_{\beta}^a\\
++Y_{\alpha\beta}^{a}  {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  (\textbf{N}_{\alpha\beta}^a u_\beta^a+\textbf{H}_{\alpha\beta}^a p_\beta^a+\mathcal{C}_{\alpha\beta\gamma}^{ab}[u_{\beta}^{a-b},p_{\gamma}^{b}]+\mathcal{D}_{\alpha\beta\gamma}^{ab}[u_{\beta}^{a-b},u_{\gamma}^{b}])\\+\mathcal{Y}_{\alpha\beta\gamma}^{'ab}[p_{\beta}^{a-b},p_{\gamma}^{b}]\\
++\mathcal{Y}_{\alpha\beta\gamma}^{ab}[\textbf{N}_{\beta\delta}^{a-b} u_{\delta}^{a-b}+\textbf{H}_{\beta\delta}^{a-b} p_{\delta}^{a-b},p_{\gamma}^{b}]\\
++\mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_\beta^{a-b},\textbf{N}_{\gamma\delta}^{b} u_{\delta}^{b}+\textbf{H}_{\gamma\delta}^{b} p_{\delta}^{b}]
 \end{aligned}
 \end{equation}
 
 
-Use eq100 to express u in terms of p,
+Use eq99 to express u in terms of p,$\widehat{\textbf{I}_{\alpha\beta}^a}  u_{\beta}^a=Y_{\alpha\beta}^a p_{\beta}^a+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{b}]$
  \begin{equation}
 \begin{aligned}
--\textbf{M}_{\alpha\beta}^a p_\beta^a - \textbf{G}_{\alpha\beta}^a Yp_\beta^a- \textbf{G}_{\alpha\beta}^a \mathcal{Y}[p,p]+\mathcal{A}[Yp,Yp]+\mathcal{B}[p,p]+\varepsilon[Yp,p]\\=Y'p\\
-+Y(\textbf{N}_{\alpha\beta}^a Y p_\beta^a+\textbf{N}_{\alpha\beta}^a \mathcal{Y}[p,p]+\textbf{H}_{\alpha\beta}^a p_\beta^a+\mathcal{C}[Yp,p]+\mathcal{D}[Yp,Yp])\\+\mathcal{Y}'[p,p]\\
-+\mathcal{Y}[\textbf{N}_{\alpha\beta}^a Y p+\textbf{H}_{\alpha\beta}^a p,p]\\
-+\mathcal{Y}[p,\textbf{N}_{\alpha\beta}^a Yp+\textbf{H}_{\alpha\beta}^a p]
+-\textbf{M}_{\alpha\beta}^a p_\beta^a - \textbf{G}_{\alpha\beta}^a  {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  Y_{\alpha\beta}^a p_\beta^a- \textbf{G}_{\alpha\beta}^a  {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1} \mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{b}] \\
++\mathcal{A}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b},{\widehat{\textbf{I}_{\gamma \alpha}^{b}}}^{-1}  Y_{\alpha\gamma}^{b} p_\gamma^{b}]+\mathcal{B}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{b}]+\varepsilon_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b} ,p_{\gamma}^{b}]\\
+={Y}_{\alpha\beta}^{'a} p_{\beta}^a 
++Y_{\alpha\beta}^{a} {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  (\textbf{N}_{\alpha\beta}^a   {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  Y_{\alpha\beta}^a p_\beta^a+\textbf{N}_{\alpha\beta}^a {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1} \mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{b}] +\textbf{H}_{\alpha\beta}^a p_\beta^a\\
++\mathcal{C}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b} ,p_{\gamma}^{b}]+\mathcal{D}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b},{\widehat{\textbf{I}_{\gamma \alpha}^{b}}}^{-1}  Y_{\alpha\gamma}^{b} p_\gamma^{b}])\\
++\mathcal{Y}_{\alpha\beta\gamma}^{'ab}[p_{\beta}^{a-b},p_{\gamma}^{b}]
++\mathcal{Y}_{\alpha\beta\gamma}^{ab}[\textbf{N}_{\beta\delta}^{a-b} {\widehat{\textbf{I}_{\delta \alpha}^{a-b}}}^{-1}  Y_{\alpha\delta}^{a-b} p_\delta^{a-b} +\textbf{H}_{\beta\delta}^{a-b} p_{\delta}^{a-b},p_{\gamma}^{b}]\\
++\mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_\beta^{a-b},\textbf{N}_{\gamma\delta}^{b} {\widehat{\textbf{I}_{\delta \alpha}^{b}}}^{-1}  Y_{\alpha\delta}^{b} p_\delta^{b} +\textbf{H}_{\gamma\delta}^{b} p_{\delta}^{b}]\\
 \end{aligned}
 \end{equation}
 
 This equation has two distinct orders of magnitude: terms linear in p, and terms quadratic in p. We can equate linear terms and the quadratic terms separately to grt two distinct equations:
  \begin{equation}
 \begin{aligned}
-linear:Y'p+Y\textbf{N}_{\alpha\beta}^a Y p_\beta^a+\textbf{M}_{\alpha\beta}^a p_\beta^a+Y \textbf{H}_{\alpha\beta}^a p_\beta^a+\textbf{G}_{\alpha\beta}^a Yp_\beta^a=0,
+linear:{Y}_{\alpha\beta}^{'a} p_{\beta}^a+Y_{\alpha\beta}^{a} {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}   \textbf{N}_{\alpha\beta}^a {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  Y_{\alpha\beta}^a p_\beta^a+\textbf{M}_{\alpha\beta}^a p_\beta^a+Y_{\alpha\beta}^{a} {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  \textbf{H}_{\alpha\beta}^a p_\beta^a+ \textbf{G}_{\alpha\beta}^a  {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  Y_{\alpha\beta}^a p_\beta^a=0,
 \end{aligned}
 \end{equation}
 
+
 \begin{equation}
 \begin{aligned}
-quadratic:\mathcal{Y}'[p,p]+\mathcal{Y}[\textbf{N}_{\alpha\beta}^a Yp,p]+\mathcal{Y}[p,\textbf{N}_{\alpha\beta}^a Yp]+Y\textbf{N}_{\alpha\beta}^a \mathcal{Y}[p,p]+Y\mathcal{C}[Yp,p]\\-\mathcal{A}[Yp,Yp]-\mathcal{B}[p,p]-\varepsilon[Yp,p]
-+\mathcal{Y}[\textbf{H}_{\alpha\beta}^a p,p]+\mathcal{Y}[p, \textbf{H}_{\alpha\beta}^a p]+\textbf{G}_{\alpha\beta}^a \mathcal{Y}[p,p]+Y \mathcal{D}[Yp,Yp]=0
+quadratic:\mathcal{Y}_{\alpha\beta\gamma}^{'ab}[p_{\beta}^{a-b},p_{\gamma}^{b}]+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[\textbf{N}_{\beta\delta}^{a-b} {\widehat{\textbf{I}_{\delta \alpha}^{a-b}}}^{-1}  Y_{\alpha\delta}^{a-b} p_\delta^{a-b} ,p_{\gamma}^{b}]+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_\beta^{a-b},\textbf{N}_{\gamma\delta}^{b} {\widehat{\textbf{I}_{\delta \alpha}^{b}}}^{-1}  Y_{\alpha\delta}^{b} p_\delta^{b} ]\\
++Y_{\alpha\beta}^{a} {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}   \textbf{N}_{\alpha\beta}^a {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1} \mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{b}] +Y_{\alpha\beta}^{a}{\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  \mathcal{C}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b} ,p_{\gamma}^{b}]\\
+-\mathcal{A}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b},{\widehat{\textbf{I}_{\gamma \alpha}^{b}}}^{-1}  Y_{\alpha\gamma}^{b} p_\gamma^{b}]-\mathcal{B}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{b}]-\varepsilon_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b} ,p_{\gamma}^{b}]\\
++\mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_\beta^{a-b},\textbf{H}_{\gamma\delta}^{b} p_{\delta}^{b}]+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[\textbf{H}_{\beta\delta}^{a-b} p_{\delta}^{a-b},p_{\gamma}^{b} ]+\textbf{G}_{\alpha\beta}^a  {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1} \mathcal{Y}_{\alpha\beta\gamma}^{ab}[p_{\beta}^{a-b},p_{\gamma}^{b}] \\
++Y_{\alpha\beta}^{a} {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  \mathcal{D}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b},{\widehat{\textbf{I}_{\gamma \alpha}^{b}}}^{-1}  Y_{\alpha\gamma}^{b} p_\gamma^{b}]=0
 \end{aligned}
 \end{equation}
 
 As both of these equation hold true for a general p we can eliminate it to obtain an equation for the linear part of the admittance and an equation for the nonlinear part of the admittance:
- \begin{equation}
+  \begin{equation}
 \begin{aligned}
-linear:Y'+Y\textbf{N}_{\alpha\beta}^a Y +\textbf{M}_{\alpha\beta}^a +Y \textbf{H}_{\alpha\beta}^a +\textbf{G}_{\alpha\beta}^a =0,
+linear-2D:{Y}_{\alpha\beta}^{'a} +Y_{\alpha\beta}^{a} {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}   \textbf{N}_{\alpha\beta}^a {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  Y_{\alpha\beta}^a +\textbf{M}_{\alpha\beta}^a +Y_{\alpha\beta}^{a} {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  \textbf{H}_{\alpha\beta}^a + \textbf{G}_{\alpha\beta}^a  {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  Y_{\alpha\beta}^a =0,
+\end{aligned}
+\end{equation}
+ 
+
+For quadratic, with:
+  \begin{equation}
+\begin{aligned}
+(\mathcal{A}[x,y])_{\alpha}^a=(\mathcal{A}_{\alpha\beta\gamma}^{ab}[x_{\beta}^{a-b},y_{\gamma}^b])_{\alpha}^a=\sum_{b=-\infty}^{\infty}\sum_{\beta,\gamma=0}^{\infty}A_{\alpha\beta\gamma}^{ab}x_{\beta}^{a-b}y_{\gamma}^b\\
+\uwave{(\mathcal{A}[X,Y])_{\alpha\beta\gamma}^{ab}}=(\mathcal{A}_{\alpha\delta\epsilon}^{ab}[X_{\delta\beta}^{a-b},Y_{\epsilon\gamma}^b])_{\alpha\beta\gamma}^{ab}=\sum_{\delta,\epsilon=0}^{\infty}A_{\alpha\delta\epsilon}^{ab}X_{\delta\beta}^{a-b}Y_{\epsilon\gamma}^b\\
+Thus,
+\{(\mathcal{A}[X,Y])_{\alpha\beta\gamma}^{ab}[x,y]\}_{\alpha}^a=\{(\mathcal{A}_{\alpha\delta\epsilon}^{ab}[X_{\delta\beta}^{a-b},Y_{\epsilon\gamma}^b])_{\alpha\beta\gamma}^{ab}[x_{\beta}^{a-b},y_{\gamma}^b]\}_{\alpha}^a
+\\
+=\sum_{b=-\infty}^{\infty}\sum_{\beta,\gamma=0}^{\infty}(\sum_{\delta,\epsilon=0}^{\infty}A_{\alpha\delta\epsilon}^{ab}X_{\delta\beta}^{a-b}Y_{\epsilon\gamma}^b)x_{\beta}^{a-b}y_{\gamma}^b
+\\
+=\sum_{b=-\infty}^{\infty}\{\sum_{\delta,\epsilon=0}^{\infty}A_{\alpha\delta\epsilon}^{ab} (\sum_{\beta}^{\infty}X_{\delta\beta}^{a-b}x_{\beta}^{a-b})_{\delta}^{a-b}( \sum_{\gamma=0}^{\infty} Y_{\epsilon\gamma}^b)y_{\gamma}^b)_{\epsilon}^{b}\}
+=\mathcal{A}[Xx,Yy]
 \end{aligned}
 \end{equation}
 
+We now can eliminate p, remaining 3-D tensors:
+
 \begin{equation}
 \begin{aligned}
-quadratic:\mathcal{Y}'[I,I]+\mathcal{Y}[\textbf{N}_{\alpha\beta}^a Y,I]+\mathcal{Y}[I,\textbf{N}_{\alpha\beta}^a Y]+Y\textbf{N}_{\alpha\beta}^a \mathcal{Y}[I,I]+Y\mathcal{C}[Y,I]\\-\mathcal{A}[Y,Y]-\mathcal{B}[I,I]-\varepsilon[Y,I]
-+\mathcal{Y}[\textbf{H}_{\alpha\beta}^a ,I]+\mathcal{Y}[I, \textbf{H}_{\alpha\beta}^a]+\textbf{G}_{\alpha\beta}^a \mathcal{Y}[I,I]+Y \mathcal{D}[Y,Y]=0
+quadratic:\mathcal{Y}_{\alpha\beta\gamma}^{'ab}[I_{\beta\delta}p_{\delta}^{a-b},I_{\gamma\epsilon} p_{\epsilon}^{b}]+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[\textbf{N}_{\beta\delta}^{a-b} {\widehat{\textbf{I}_{\delta \alpha}^{a-b}}}^{-1}  Y_{\alpha\delta}^{a-b} p_\delta^{a-b} ,I_{\gamma\epsilon} p_{\epsilon}^{b}]+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[I_{\beta\delta}p_{\delta}^{a-b},\textbf{N}_{\gamma\delta}^{b} {\widehat{\textbf{I}_{\delta \alpha}^{b}}}^{-1}  Y_{\alpha\delta}^{b} p_\delta^{b} ]\\
++Y_{\alpha\beta}^{a} {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}   \textbf{N}_{\alpha\beta}^a {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1} \mathcal{Y}_{\alpha\beta\gamma}^{ab}[I_{\beta\delta}p_{\delta}^{a-b},I_{\gamma\epsilon} p_{\epsilon}^{b}] +Y_{\alpha\beta}^{a}{\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  \mathcal{C}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b} ,I_{\gamma\epsilon} p_{\epsilon}^{b}]\\
+-\mathcal{A}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b},{\widehat{\textbf{I}_{\gamma \alpha}^{b}}}^{-1}  Y_{\alpha\gamma}^{b} p_\gamma^{b}]-\mathcal{B}_{\alpha\beta\gamma}^{ab}[I_{\beta\delta}p_{\delta}^{a-b},I_{\gamma\epsilon} p_{\epsilon}^{b}]-\varepsilon_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b} ,I_{\gamma\epsilon} p_{\epsilon}^{b}]\\
++\mathcal{Y}_{\alpha\beta\gamma}^{ab}[I_{\beta\delta}p_{\delta}^{a-b},\textbf{H}_{\gamma\delta}^{b} p_{\delta}^{b}]+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[\textbf{H}_{\beta\delta}^{a-b} p_{\delta}^{a-b},I_{\gamma\epsilon} p_{\epsilon}^{b}]+\textbf{G}_{\alpha\beta}^a  {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1} \mathcal{Y}_{\alpha\beta\gamma}^{ab}[I_{\beta\delta}p_{\delta}^{a-b},I_{\gamma\epsilon} p_{\epsilon}^{b}] \\
++Y_{\alpha\beta}^{a} {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  \mathcal{D}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b},{\widehat{\textbf{I}_{\gamma \alpha}^{b}}}^{-1}  Y_{\alpha\gamma}^{b} I_{\gamma\epsilon} p_{\epsilon}^{b}]=0
 \end{aligned}
 \end{equation}
 
-where $I^a_{\alpha\beta}$ is the identity tensor. Here, the square bracket notation acting on matrices denotes $(Z\mathcal{A}[X,Y])_{pqr}^{ab}=\sum_{s,t,u=0}^\infty Z_{pu}^a \mathcal{A}_{ust}^{ab}X_{sq}^{a-b}Y_{tr}^b$.
-
-These equation are solved from the outlet of the duct, applying the appropriate radiation boundray condition at the duct exit. Once Y(s) and $\mathcal{Y}(s)$ are found throught the duct, eq100 can then be used to replace the velocity modes with pressure modes in eq99, to obtain a numerically stable first order ODE for the pressure modes:
+$\Rightarrow$ quadratic-rank 5 tensor(2 upper, 3 lower):
 \begin{equation}
 \begin{aligned}
-p'=NYp-N\mathcal{Y}[p,p]+\mathcal{C}[Yp,p]+Hp+\mathcal{D}[Yp,Yp]
+\uwave{(\mathcal{Y}_{\alpha\beta\gamma}^{'ab}[I_{\beta\delta},I_{\gamma\epsilon}]_{\alpha\beta\gamma}^{ab})}
+\uuline{[p_{\delta}^{a-b}, p_{\epsilon}^{b}]}+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[\textbf{N}_{\beta\delta}^{a-b} {\widehat{\textbf{I}_{\delta \alpha}^{a-b}}}^{-1}  Y_{\alpha\delta}^{a-b} ,I_{\gamma\epsilon} ]\uuline{[p_{\delta}^{a-b}, p_{\epsilon}^{b}]}+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[I_{\beta\delta},\textbf{N}_{\gamma\delta}^{b} {\widehat{\textbf{I}_{\delta \alpha}^{b}}}^{-1}  Y_{\alpha\delta}^{b} ]\uuline{[p_{\delta}^{a-b}, p_{\epsilon}^{b}]}\\
++Y_{\alpha\beta}^{a} {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}   \textbf{N}_{\alpha\beta}^a {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1} \mathcal{Y}_{\alpha\beta\gamma}^{ab}[I_{\beta\delta},I_{\gamma\epsilon} ]\uuline{[p_{\delta}^{a-b}, p_{\epsilon}^{b}] }+Y_{\alpha\beta}^{a}{\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  \mathcal{C}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} p_\beta^{a-b} ,I_{\gamma\epsilon} ]\uuline{[p_{\delta}^{a-b}, p_{\epsilon}^{b}]}\\
+-\mathcal{A}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} ,{\widehat{\textbf{I}_{\gamma \alpha}^{b}}}^{-1}  Y_{\alpha\gamma}^{b} ]\uuline{[p_{\delta}^{a-b}, p_{\epsilon}^{b}]} -\mathcal{B}_{\alpha\beta\gamma}^{ab}[I_{\beta\delta},I_{\gamma\epsilon} ]\uuline{[p_{\delta}^{a-b}, p_{\epsilon}^{b}]}-\varepsilon_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b}  ,I_{\gamma\epsilon} ]\uuline{[p_{\delta}^{a-b}, p_{\epsilon}^{b}]}\\
++\mathcal{Y}_{\alpha\beta\gamma}^{ab}[I_{\beta\delta},\textbf{H}_{\gamma\delta}^{b} p_{\delta}^{b}]+\mathcal{Y}_{\alpha\beta\gamma}^{ab}[\textbf{H}_{\beta\delta}^{a-b} p_{\delta}^{a-b},I_{\gamma\epsilon} ]\uuline{[p_{\delta}^{a-b}, p_{\epsilon}^{b}]}+\textbf{G}_{\alpha\beta}^a  {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1} \mathcal{Y}_{\alpha\beta\gamma}^{ab}[I_{\beta\delta},I_{\gamma\epsilon} ] \uuline{[p_{\delta}^{a-b}, p_{\epsilon}^{b}]}\\
++Y_{\alpha\beta}^{a} {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  \mathcal{D}_{\alpha\beta\gamma}^{ab}[{\widehat{\textbf{I}_{\beta \alpha}^{a-b}}}^{-1}  Y_{\alpha\beta}^{a-b} ,{\widehat{\textbf{I}_{\gamma \alpha}^{b}}}^{-1}  Y_{\alpha\gamma}^{b} I_{\gamma\epsilon} ]\uuline{[p_{\delta}^{a-b}, p_{\epsilon}^{b}]}=0
+\end{aligned}
+\end{equation}
+
+
+These equation are solved from the outlet of the duct, applying the appropriate radiation boundray condition at the duct exit. Once Y(s) and $\mathcal{Y}(s)$ are found throught the duct, eq99 can then be used to replace the velocity modes with pressure modes in eq98, to obtain a numerically stable first order ODE for the pressure modes:
+\begin{equation}
+\begin{aligned}
+\widehat{\textbf{I}_{\alpha\beta}^a} {p'}_\beta^a=\textbf{N}_{\alpha\beta}^a {\widehat{\textbf{I}_{\beta \alpha}^a}}^{-1}  Y_{\alpha\beta}^a p_\beta^a -N\mathcal{Y}[p,p]+\mathcal{C}[Yp,p]+Hp+\mathcal{D}[Yp,Yp]
 \end{aligned}
 \end{equation}
 
