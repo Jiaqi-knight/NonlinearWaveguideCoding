@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  16 MAR 2020 23:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  17 MAR 2020 18:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -480,77 +480,93 @@ Overfull \hbox (14.32384pt too wide) detected at line 1371
 [][]
  []
 
-[30] [31] [32] [33]
-Overfull \hbox (3.4693pt too wide) detected at line 1617
+[30] [31]
+Overfull \hbox (23.91383pt too wide) detected at line 1462
 [][]
  []
 
-[34] <ThetaFun.jpg, id=132, 1927.2pt x 915.42pt>
+
+Overfull \hbox (43.04106pt too wide) detected at line 1475
+[][]
+ []
+
+[32] [33] <3D-model-lambda.jpg, id=128, 389.95688pt x 118.19156pt>
+File: 3D-model-lambda.jpg Graphic file (type jpg)
+
+<use 3D-model-lambda.jpg>
+Package pdftex.def Info: 3D-model-lambda.jpg used on input line 1551.
+(pdftex.def)             Requested size: 289.07999pt x 87.62088pt.
+ [34 <./3D-model-lambda.jpg>] [35]
+Overfull \hbox (3.4693pt too wide) detected at line 1740
+[][]
+ []
+
+[36] <ThetaFun.jpg, id=139, 1927.2pt x 915.42pt>
 File: ThetaFun.jpg Graphic file (type jpg)
  <use ThetaFun.jpg>
-Package pdftex.def Info: ThetaFun.jpg used on input line 1646.
+Package pdftex.def Info: ThetaFun.jpg used on input line 1769.
 (pdftex.def)             Requested size: 578.15999pt x 274.61415pt.
 
-<XFun.jpg, id=133, 1927.2pt x 915.42pt>
+<XFun.jpg, id=140, 1927.2pt x 915.42pt>
 File: XFun.jpg Graphic file (type jpg)
  <use XFun.jpg>
-Package pdftex.def Info: XFun.jpg used on input line 1653.
+Package pdftex.def Info: XFun.jpg used on input line 1776.
 (pdftex.def)             Requested size: 578.15999pt x 274.61415pt.
 
-<PsiFun.jpg, id=134, 1927.2pt x 915.42pt>
+<PsiFun.jpg, id=141, 1927.2pt x 915.42pt>
 File: PsiFun.jpg Graphic file (type jpg)
  <use PsiFun.jpg>
-Package pdftex.def Info: PsiFun.jpg used on input line 1661.
+Package pdftex.def Info: PsiFun.jpg used on input line 1784.
 (pdftex.def)             Requested size: 578.15999pt x 274.61415pt.
 
-Overfull \hbox (57.73653pt too wide) detected at line 1686
+Overfull \hbox (57.73653pt too wide) detected at line 1809
 [][]
  []
 
-[35 <./ThetaFun.jpg>] [36 <./XFun.jpg> <./PsiFun.jpg>] [37] [38] [39] [40]
-[41] (./Note.aux) ) 
+[37] [38 <./ThetaFun.jpg> <./XFun.jpg>] [39 <./PsiFun.jpg>] [40] [41] [42]
+[43] [44] (./Note.aux) ) 
 Here is how much of TeX's memory you used:
- 4316 strings out of 492995
- 56967 string characters out of 6136402
+ 4321 strings out of 492995
+ 57081 string characters out of 6136402
  151468 words of memory out of 5000000
- 7787 multiletter control sequences out of 15000+600000
+ 7791 multiletter control sequences out of 15000+600000
  18834 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,18n,26p,594b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
-{e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts
-/enc/dvips/cm-super/cm-super-t1.enc}<e:/Jiaqi-SJTU-offical/Package/texlive/2017
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/Jiaqi-SJTU-offical/Pa
-ckage/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/Jia
-qi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/Jiaqi-SJTU-offical/Package/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><e:/Jiaqi-SJTU-off
-ical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/Jiaqi-SJTU-offical/Package/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><e:/Jiaqi-SJTU-o
-ffical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+ 39i,18n,26p,712b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
+{e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/
+fonts/enc/dvips/cm-super/cm-super-t1.enc}<e:/Jiaqi-SJTU-offical/Package/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/Jiaqi-SJTU-offic
+al/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e
+:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/Jiaqi-SJTU-offical/Package
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><e:/Jiaqi-SJT
+U-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/Jiaqi-SJTU-offical/Pack
+age/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><e:/Jiaqi-S
+JTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><e:/Jiaqi-SJTU-offica
+l/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy6.pf
 b><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><e:/Jiaqi-SJTU-offical/Pac
-kage/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy6.pfb><e:
-/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msam10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/font
-s/type1/public/cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/201
-7/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><e:/Jiaqi-SJTU-offical/Pa
-ckage/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><e:/Jiaq
-i-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm
-1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pub
-lic/cm-super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dis
-t/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on Note.pdf (41 pages, 846049 bytes).
+fonts/symbols/msam10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist
+/fonts/type1/public/cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offical/Package/texliv
+e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><e:/Jiaqi-SJTU-offic
+al/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><e:
+/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super
+/sfrm1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type
+1/public/cm-super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texm
+f-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on Note.pdf (44 pages, 897328 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 163 compressed objects within 2 object streams
+ 245 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
