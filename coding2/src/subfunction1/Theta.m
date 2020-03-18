@@ -26,6 +26,9 @@ switch op
     case 'pt_ab'
         multiply_factor=m;
         T1=2*pi*sqrt(-1)*deltaT(m,n,dimention,0,multiply_factor);
+    case 'a_pt_b'
+        multiply_factor=fliplr(m);
+        T1=2*pi*sqrt(-1)*deltaT(m,n,dimention,0,multiply_factor);
     case   'ps_ab'
         %global tau
         multiply_factor=m;

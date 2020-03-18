@@ -24,7 +24,7 @@ if dimention==2
             for k=1:length(dk)
                 X1(dk(k))=...
                     sum(chebfun(@(r) Cmn1(on1(k),om1(k))*besselj(m(om1(k)),jmn_pm(on1(k),om1(k))*r/h)...
-                                    *Cmn1(on2(k),om2(k))*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h),[0,h])*rr);
+                    *Cmn1(on2(k),om2(k))*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h),[0,h])*rr);
             end
             X1=reshape(X1,n*length(m),n*length(m));
         case 'pr_ab'
@@ -32,7 +32,15 @@ if dimention==2
             for k=1:length(dk)
                 X1(dk(k))=...
                     sum(diff(chebfun(@(r) Cmn1(on1(k),om1(k))*besselj(m(om1(k)),jmn_pm(on1(k),om1(k))*r/h),[0,h]))*...
-                             chebfun(@(r) Cmn1(on2(k),om2(k))*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h),[0,h])*rr);
+                    chebfun(@(r) Cmn1(on2(k),om2(k))*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h),[0,h])*rr);
+            end
+            X1=reshape(X1,n*length(m),n*length(m));
+        case 'a_pr_b'
+            X1=zeros(1,n*length(m)*n*length(m));
+            for k=1:length(dk)
+                X1(dk(k))=...
+                    sum(chebfun(@(r) Cmn1(on1(k),om1(k))*besselj(m(om1(k)),jmn_pm(on1(k),om1(k))*r/h),[0,h])*...
+                    diff(chebfun(@(r) Cmn1(on2(k),om2(k))*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h),[0,h]))*rr);
             end
             X1=reshape(X1,n*length(m),n*length(m));
         case   'ps_ab'
@@ -59,9 +67,9 @@ elseif dimention==3
             for k=1:length(dk)
                 X1(dk(k))=...
                     sum(chebfun(@(r) Cmn1(on1(k),om1(k))*besselj(m(om1(k)),jmn_pm(on1(k),om1(k))*r/h)...
-                                    *Cmn1(on2(k),om2(k))*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h)...
-                                    *Cmn1(on3(k),om3(k))*besselj(m(om3(k)),jmn_pm(on3(k),om3(k))*r/h)...
-                                   ,[0,h])*rr);
+                    *Cmn1(on2(k),om2(k))*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h)...
+                    *Cmn1(on3(k),om3(k))*besselj(m(om3(k)),jmn_pm(on3(k),om3(k))*r/h)...
+                    ,[0,h])*rr);
             end
             X1=reshape(X1,n*length(m),n*length(m),n*length(m));
         case 'pr_ab'
@@ -69,8 +77,17 @@ elseif dimention==3
             for k=1:length(dk)
                 X1(dk(k))=...
                     sum(diff(chebfun(@(r) Cmn1(on1(k),om1(k))*besselj(m(om1(k)),jmn_pm(on1(k),om1(k))*r/h),[0,h]))*...
-                             chebfun(@(r) Cmn1(on2(k),om2(k))*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h),[0,h])*...
-                             chebfun(@(r) Cmn1(on3(k),om3(k))*besselj(m(om3(k)),jmn_pm(on3(k),om3(k))*r/h),[0,h])*rr);
+                    chebfun(@(r) Cmn1(on2(k),om2(k))*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h),[0,h])*...
+                    chebfun(@(r) Cmn1(on3(k),om3(k))*besselj(m(om3(k)),jmn_pm(on3(k),om3(k))*r/h),[0,h])*rr);
+            end
+            X1=reshape(X1,n*length(m),n*length(m),n*length(m));
+        case 'a_pr_b'
+            X1=zeros(1,n*length(m)*n*length(m)*n*length(m));
+            for k=1:length(dk)
+                X1(dk(k))=...
+                    sum(chebfun(@(r) Cmn1(on1(k),om1(k))*besselj(m(om1(k)),jmn_pm(on1(k),om1(k))*r/h),[0,h])*...
+                    diff(chebfun(@(r) Cmn1(on2(k),om2(k))*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h),[0,h]))*...
+                    chebfun(@(r) Cmn1(on3(k),om3(k))*besselj(m(om3(k)),jmn_pm(on3(k),om3(k))*r/h),[0,h])*rr);
             end
             X1=reshape(X1,n*length(m),n*length(m),n*length(m));
         case   'ps_ab'
@@ -85,7 +102,7 @@ elseif dimention==3
     
     
 end
-% 
+%
 % switch op
 %     case 'ab'
 %         if dimention==2
@@ -93,7 +110,7 @@ end
 %             dk=find(D==1).';%竖列
 %             om1=O.M1(dk)-m(1)+1;om2=O.M2(dk)-m(1)+1;
 %             on1=O.N1(dk);on2=O.N2(dk);
-%             
+%
 %             X1=zeros(1,n*length(m)*n*length(m));
 %             for k=1:length(dk)
 %                 X1(dk(k))=...
@@ -101,7 +118,7 @@ end
 %                     *Cmn1(on2(k),om2(k))*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h),[0,h])*rr);
 %             end
 %             X1=reshape(X1,n*length(m),n*length(m));
-%             
+%
 %         elseif dimention==3
 %             [D,O]=deltaT(m,n,dimention,k);
 %             dk=find(D==1);%y轴先走
@@ -117,15 +134,15 @@ end
 %             end
 %             X1=reshape(X1,n*length(m),n*length(m),n*length(m));
 %         end
-%         
+%
 %     case 'pr_ab'
 %         if dimention==2
-%             
+%
 %             [D,O]=deltaT(m,n,dimention,k);
 %             dk=find(D==1).';%竖列
 %             om1=O.M1(dk)-m(1)+1;om2=O.M2(dk)-m(1)+1;
 %             on1=O.N1(dk);on2=O.N2(dk);
-%             
+%
 %             X1=zeros(1,n*length(m)*n*length(m));
 %             for k=1:length(dk)
 %                 X1(dk(k))=...
@@ -133,7 +150,7 @@ end
 %                     chebfun(@(r) Cmn1(on2(k),om2(k))*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h),[0,h])*rr);
 %             end
 %             X1=reshape(X1,n*length(m),n*length(m));
-%             
+%
 %         elseif dimention==3
 %             [D,O]=deltaT(m,n,dimention,k);
 %             dk=find(D==1);%y轴先走
@@ -148,15 +165,15 @@ end
 %             end
 %             X1=reshape(X1,n*length(m),n*length(m),n*length(m));
 %         end
-%         
+%
 %     case   'ps_ab'
 %         if dimention==2
-%             
+%
 %             [D,O]=deltaT(m,n,dimention,k);
 %             dk=find(D==1).';%竖列
 %             om1=O.M1(dk)-m(1)+1;om2=O.M2(dk)-m(1)+1;
 %             on1=O.N1(dk);on2=O.N2(dk);
-%             
+%
 %             X1=zeros(1,n*length(m)*n*length(m));
 %             for k=1:length(dk)
 %                 X1(dk(k))=...
@@ -164,7 +181,7 @@ end
 %                     chebfun(@(r) Cmn1(on2(k),om2(k))*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h),[0,h])*rr);
 %             end
 %             X1=reshape(X1,n*length(m),n*length(m));
-%             
+%
 %         elseif dimention==3
 %             [D,O]=deltaT(m,n,dimention,k);
 %             dk=find(D==1);%y轴先走
@@ -179,8 +196,8 @@ end
 %             end
 %             X1=reshape(X1,n*length(m),n*length(m),n*length(m));
 %         end
-        
-        
+
+
 end
 
 %% test for 2D

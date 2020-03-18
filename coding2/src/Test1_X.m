@@ -21,7 +21,7 @@ subfunction_path1='.\subfunction1'
 addpath(genpath(subfunction_path1));
 subfunction_path2='.\chebfun-master'
 addpath(genpath(subfunction_path2));
-load('X2.mat');load('X3.mat');
+
 % %% #######Geometry########%
 % s =logspace(0,1,50);
 % h=0.1*exp(linspace(0,1.5,length(s)));

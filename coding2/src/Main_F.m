@@ -8,7 +8,7 @@ clc
 close all
 %opengl('save','software')
 
-load('X2.mat');load('X3.mat');
+load('Database_X2.mat');load('Database_X3.mat');
 subfunction_path1='.\subfunction1'
 addpath(genpath(subfunction_path1));
 subfunction_path2='.\chebfun-master'
@@ -16,7 +16,7 @@ addpath(genpath(subfunction_path2));
 m=-5:5;
 n=4;
 %tau=1;
-a=[1:5];
+a=[1:5]; %P^{a}=P^{a*},U^{a}=U^{a*}
 
 %% #######Geometry########%
 s =logspace(0,1,50);
@@ -30,9 +30,9 @@ theta_0=cumsum(tau.*[0 diff(s)]);
 
 
 %% X-2D-3D
-op={'ab','pr_ab','ps_ab'};op_m={'1','r','r2'};
-op_name2={'X_{\alpha\beta}','X_{[\alpha]\beta}','X_{\{\alpha\}\beta}'};
-op_name3={'X_{\alpha\beta\gamma}','X_{[\alpha]\beta\gamma}','X_{\{\alpha\}\beta\gamma}'};
+op={'ab','pr_ab','ps_ab','a_pr_b'};op_m={'1','r','r2'};
+op_name2={'X_{\alpha\beta}','X_{[\alpha]\beta}','X_{\{\alpha\}\beta}','X_{\alpha[\beta]}'};
+op_name3={'X_{\alpha\beta\gamma}','X_{[\alpha]\beta\gamma}','X_{\{\alpha\}\beta\gamma}','X_{\alpha[\beta]\gamma}'};
 
 Op={'ab','pt_ab','ps_ab','ab_cos','ab_sin','pt_ab_cos','pt_ab_sin','ps_ab_cos','ps_ab_sin'};
 Op2_name={'\Theta_{\alpha\beta}','\Theta_{(\alpha)\beta}','\Theta_{\{\alpha\}\beta}','\Theta_{\alpha\beta}[cos\phi]',...
@@ -46,15 +46,16 @@ Op3_name={'\Theta_{\alpha\beta\gamma}','\Theta_{(\alpha)\beta\gamma}','\Theta_{\
 C=[1 2 3; 4 5 6; 7 8 9];
 out = bsxfun(@times,C,reshape(a,1,1,[]));%permute(a,[3,1,2])
 
-
-V=bsxfun(@times,X2{2,2}.',reshape(1./(sqrt(-1)*a*kappa(1)),1,1,[])); %(3.26)  --À©Õ¹Á½Î¬-s&a
-
-% W
-% M
-% G
+tic
+V=bsxfun(@times,X2{4,2}.*Theta(m,n,2,'ab'),reshape(1./(sqrt(-1)*a.'*kappa),1,1,length(a),length(kappa)));    %(James-3.26,Jiaqi-76)  --expand,{alpha*beta*a*s}
+W=bsxfun(@times,X2{1,1}.'.*Theta(m,n,2,'pt_ab'),reshape(1./(sqrt(-1)*a.'*kappa),1,1,length(a),length(kappa))); %(James-3.27,Jiaqi-77)
+N=bsxfun(@times,X2{1,2}.*Theta(m,n,2,'ab'),reshape((sqrt(-1)*a.'*kappa),1,1,length(a),length(kappa)))...
+    -bsxfun(@times,X2{1,3}.*Theta(m,n,2,'ab_cos'),reshape((sqrt(-1)*a.'*kappa.^2),1,1,length(a),length(kappa)));%(James-3.35b)
+G=-bsxfun(@times,X2{1,2}.*Theta(m,n,2,'ab'),reshape((sqrt(-1)*a.'*kappa),1,1,length(a),length(kappa)))
 % H
 % A
 % B
 % C
 % D
 % E
+toc
