@@ -1,48 +1,5 @@
-%deltaT(m,n,dimention,1,multiply_factor)
-%X Function for \mathacal{X} functions.
-%m:circumferiential mode
-%n:radial mode
-%dimension:
-%   2D           -  \X_{\alpha\beta}
-%   3D           -  \X_{\alpha\beta\gamma}
-%X Options(op):
-%   ab           -  \X_{\alpha\beta}[rr]
-%   pr_ab        -  \X_{[\alpha]\beta}[rr]
-%   ps_ab        -  \X_{\{\alpha\}\beta}[rr]
-%   ref:https://github.com/Jiaqi-knight/NonlinearWaveguideCoding
-%   Email:Jiaqi_Wang@sjtu.edu.cn
-%   Copyright 2020, SJTU.
-%-----------------------------------------------------------------%
 
-clc
-%clear
-close all
-subfunction_path1='.\subfunction1'
-addpath(genpath(subfunction_path1));
-subfunction_path2='.\chebfun-master'
-addpath(genpath(subfunction_path2));
 load('X2.mat');load('X3.mat');
-% %% #######Geometry########%
-% s =logspace(0,1,50);
-% h=0.1*exp(linspace(0,1.5,length(s)));
-% kappa=(2/3)./h;tau=0.2./h;
-% a=kappa./(kappa.^2+tau.^2);
-% b=tau./(kappa.^2+tau.^2);
-% sw=sqrt(kappa.^2+tau.^2).*s;
-%
-% x = a.*sin(sw+0);y = a.*cos(sw+0);z = b.*sw;
-% tubeplot(x,y,z,h,s,50);hold on;plot3(x, y, z);daspect([1,1,1]); camlight;
-
-%%
-% %kron_fliplr the second line in order to form I matrix
-% delta_mn_u0v=kron_fliplr(delta_mn,delta_u0v);
-% delta_m0n_uv=kron_fliplr(delta_m0n,delta_uv);
-
-m=-5:5;
-n=4;
-h=0.1;
-
-
 %%
 m0=0:m(end);
 for k=1:length(m0)
