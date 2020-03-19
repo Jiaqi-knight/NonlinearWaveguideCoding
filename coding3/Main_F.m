@@ -13,6 +13,7 @@ addpath(genpath(subfunction_path1));
 subfunction_path2='.\chebfun-master'
 addpath(genpath(subfunction_path2));
 
+
 %% #######Geometry########%
 Geo.s =logspace(0,1,50);
 Geo.h=0.1*exp(linspace(0,1.5,length(Geo.s)));
@@ -50,15 +51,15 @@ Fun.G=-bsxfun(@times,X(Base,Geo,2,'ps_ab','r').*Theta(Geo,2,'ab'),reshape(ones(s
 Fun.H=-bsxfun(@times,X(Base,Geo,2,'a_ps_b','r').*Theta(Geo,2,'ab'),reshape(ones(size(Geo.kappa.'))*ones(size(Geo.a)),1,1,length(Geo.kappa),length(Geo.a)))...
       -bsxfun(@times,X(Base,Geo,2,'ab','r').*Theta(Geo,2,'a_ps_b'),reshape(ones(size(Geo.kappa.'))*ones(size(Geo.a)),1,1,length(Geo.kappa),length(Geo.a)));%(James-3.35d)
 Fun.H=-Fun.N-(bsxfun(@times,X(Base,Geo,2,'pr_ab','r').*Theta(Geo,2,'ab'),reshape(ones(size(Geo.kappa.'))*ones(size(Geo.a)),1,1,length(Geo.kappa),length(Geo.a)))...
-              -bsxfun(@times,X(Base,Geo,2,'pr_ab','r2').*Theta(Geo,2,'ab_cos'),reshape(ones(size(Geo.kappa.'))*ones(size(Geo.a)),1,1,length(Geo.kappa),length(Geo.a)))).*Fun.V...
+              -bsxfun(@times,X(Base,Geo,2,'pr_ab','r2').*Theta(Geo,2,'ab_cos'),reshape(ones(size(Geo.kappa.'))*ones(size(Geo.a)),1,1,length(Geo.kappa),length(Geo.a))))*Fun.V...
             -(bsxfun(@times,X(Base,Geo,2,'ab','r').*Theta(Geo,2,'pt_ab'),reshape(ones(size(Geo.kappa.'))*ones(size(Geo.a)),1,1,length(Geo.kappa),length(Geo.a)))...
-              -bsxfun(@times,X(Base,Geo,2,'ab','r2').*Theta(Geo,2,'pt_ab_cos'),reshape(ones(size(Geo.kappa.'))*ones(size(Geo.a)),1,1,length(Geo.kappa),length(Geo.a)))).*Fun.W;%(James-3.35a)
-%!!!
+              -bsxfun(@times,X(Base,Geo,2,'ab','r2').*Theta(Geo,2,'pt_ab_cos'),reshape(ones(size(Geo.kappa.'))*ones(size(Geo.a)),1,1,length(Geo.kappa),length(Geo.a))))*Fun.W;%(James-3.35a)
+%!!!mtimesx(A,B)
 % Fun.A
 % Fun.B
 % Fun.C
 % Fun.D
 % Fun.E
 
-
+Fun.V*Fun.V
 toc
