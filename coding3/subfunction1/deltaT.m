@@ -2,7 +2,7 @@
 %   ref:https://github.com/Jiaqi-knight/NonlinearWaveguideCoding
 %   Email:Jiaqi_Wang@sjtu.edu.cn
 %Copyright 2020, SJTU.
-function [D1,O]= deltaJ(m,n,dimention,k,multiply_factor) %k+ right
+function [D1,O]= deltaT(m,n,dimention,k,multiply_factor) %k+ right
 
 
 

@@ -4,14 +4,14 @@
 %dimension:
 %   2D           -  \X_{\alpha\beta}
 %   3D           -  \X_{\alpha\beta\gamma}
-%THETA Options(op):
 %   ref:https://github.com/Jiaqi-knight/NonlinearWaveguideCoding
 %   Email:Jiaqi_Wang@sjtu.edu.cn
 %   Copyright 2020, SJTU.
 
 
-function [X2]= X(s,h,Cmn1,jmn_pm,m,n,dimention,op,op_m);
-        X2=deltaJ(s,h,Cmn1,jmn_pm,m,n,dimention,0,op,op_m)...
-            +deltaJ(s,h,Cmn1,jmn_pm,m,n,dimention,1,op,op_m)...
-            +deltaJ(s,h,Cmn1,jmn_pm,m,n,dimention,-1,op,op_m);
+function [X2]= X(Base,Geo,dimention,op,op_m);
+
+        X2=  deltaJ(Geo.s,Geo.h,Base.Cmn1,Base.jmn_pm,Geo.m,Geo.n,dimention,0,op,op_m)...
+            +deltaJ(Geo.s,Geo.h,Base.Cmn1,Base.jmn_pm,Geo.m,Geo.n,dimention,1,op,op_m)...
+            +deltaJ(Geo.s,Geo.h,Base.Cmn1,Base.jmn_pm,Geo.m,Geo.n,dimention,-1,op,op_m);
 end
