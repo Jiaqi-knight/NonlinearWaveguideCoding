@@ -1728,6 +1728,20 @@ C_{\alpha_{m\mu}} {\partial \over \partial r}(J_m({j'_{\alpha_{m\mu}}r\over h(s)
 
 \begin{equation}
 \begin{aligned}
+\mathcal{X}_{\{\alpha\}\beta}[r]=\int_0^h {d\over ds}(C_{\alpha_{m\mu}}(s) J_m({j'_{\alpha_{m\mu}}r\over h(s)}))C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})rdr\\
+=\int_0^h [({dC_{\alpha_{m\mu}}(s)\over ds})J_m({j'_{\alpha_{m\mu}}r\over h(s)})+
+C_{\alpha_{m\mu}} J_m({j'_{\alpha_{m\mu}}r\over h(s)}) {-j'_{\alpha_{m\mu}}r\over h(s)^2}{dh(s)\over ds}]C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})rdr\\
+=\int_0^h [({d{1\over h(s)}\over ds}){C_{\alpha_{m\mu}}(s)} J_m({j'_{\alpha_{m\mu}}r\over h(s)})+
+C_{\alpha_{m\mu}} J_m({j'_{\alpha_{m\mu}}r\over h(s)}) {-j'_{\alpha_{m\mu}}r\over h(s)^2}{dh(s)\over ds}]C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})rdr\\
+=\int_0^h [(-{h'(s)\over h}){C_{\alpha_{m\mu}}(s) } J_m({j'_{\alpha_{m\mu}}r\over h(s)})-
+C_{\alpha_{m\mu}} {\partial \over \partial r}(J_m({j'_{\alpha_{m\mu}}r\over h(s)})) {h'(s)\over h}r]C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})rdr\\
+=-{h'\over h}(\mathcal{X}_{[\alpha]\beta}[r^2]+\mathcal{X}_{\alpha\beta}[r])
+\end{aligned}
+\end{equation}
+
+
+\begin{equation}
+\begin{aligned}
 \mathcal{X}_{\{\alpha\}\beta\gamma}=\int_0^h {d\over ds}(C_{\alpha_{m\mu}}(s) J_m({j'_{\alpha_{m\mu}}r\over h(s)}))C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})C_{\gamma_{kw}} J_n({j'_{\gamma_{kw}}r\over h})dr\\
 =\int_0^h [({dC_{\alpha_{m\mu}}(s)\over ds})J_m({j'_{\alpha_{m\mu}}r\over h(s)})+
 C_{\alpha_{m\mu}} J_m({j'_{\alpha_{m\mu}}r\over h(s)}) {-j'_{\alpha_{m\mu}}r\over h(s)^2}{dh(s)\over ds}]C_{\beta_{nv}} J_n({j'_{\beta_{nv}}r\over h})C_{\gamma_{kw}} J_n({j'_{\gamma_{kw}}r\over h})dr\\
@@ -1744,7 +1758,14 @@ C_{\alpha_{m\mu}} {\partial \over \partial r}(J_m({j'_{\alpha_{m\mu}}r\over h(s)
 \begin{aligned}
 \Theta_{\{\alpha\}\beta}=\int_0^{2\pi} {\partial \over \partial s}(e^{im\phi}) e^{in\phi} d\theta
 =-im\int_0^{2\pi} {\partial\theta_0(s) \over \partial s}e^{im\phi}e^{in\phi} d\theta\\
-=-\tau  \Theta_{(\alpha)\beta}=-\tau 2\pi   im \delta_{m,-n}
+=-\tau  \Theta_{(\alpha)\beta}=-\tau 2\pi   in \delta_{m,-n}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\Theta_{\alpha\{\beta\}}
+=-\tau  \Theta_{\alpha(\beta)}=-\tau 2\pi   in \delta_{m,-n}
 \end{aligned}
 \end{equation}
 
