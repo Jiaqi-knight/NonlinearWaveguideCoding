@@ -2027,9 +2027,21 @@ As a result, we have an orthogonal coordinate system and as such do not need to 
 https://ww2.mathworks.cn/help/matlab/ref/funm.html
 
 
+\section{mtimesx-does a matrix multiply of two inputs}
 
+ mtimesx is a fast general purpose matrix and scalar multiply routine that utilizes BLAS calls and custom code to perform the calculations. mtimesx also has extended  support for n-Dimensional (nD, n > 2) arrays, treating these as arrays of 2D matrices for the purposes of matrix operations.
+ 
+"Doesn't MATLAB already do this?"  For 2D matrices, yes, it does. However, MATLAB does not always implement the most efficent algorithms for memory access, and MATLAB does not always take full advantage of symmetric cases. The mtimesx 'SPEED' mode attempts to do  both of these to the fullest extent possible. For nD matrices, MATLAB does not have direct support for this. One is forced to write loops to accomplish the same thing that mtimesx can do faster.
 
-
+ Examples:
+\begin{equation}
+\begin{aligned}
+  C = mtimesx(A,B)         \% performs the calculation C = A * B\\
+  C = mtimesx(A,'T',B)     \% performs the calculation C = A.' * B\\
+  C = mtimesx(A,B,'G')     \% performs the calculation C = A * conj(B)\\
+  C = mtimesx(A,'C',B,'C')   \% performs the calculation C = A' * B'\\
+\end{aligned}
+\end{equation}
 
 
 

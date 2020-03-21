@@ -26,7 +26,7 @@ if dimention==2
     [D,O]=deltaT(m,n,dimention,k);
     dk=find(D==1).';%ЪњСа
     om1=O.M1(dk)-m(1)+1;om2=O.M2(dk)-m(1)+1;
-    on1=O.N1(dk);on2=O.N2(dk);
+    on1=O.N1(dk);on2=O.N2(dk);  
     
     switch op
         case 'ab'

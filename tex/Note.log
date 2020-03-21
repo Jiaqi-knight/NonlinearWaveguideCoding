@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  19 MAR 2020 14:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  20 MAR 2020 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -524,7 +524,12 @@ Overfull \hbox (57.73653pt too wide) detected at line 1830
  []
 
 [37] [38 <./ThetaFun.jpg> <./XFun.jpg>] [39 <./PsiFun.jpg>] [40] [41] [42]
-[43] [44] (./Note.aux) ) 
+[43] [44] [45] (./Note.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
+
+
+ ) 
 Here is how much of TeX's memory you used:
  4321 strings out of 492995
  57081 string characters out of 6136402
@@ -533,40 +538,40 @@ Here is how much of TeX's memory you used:
  18834 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,18n,26p,712b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
-{e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/
-fonts/enc/dvips/cm-super/cm-super-t1.enc}<e:/Jiaqi-SJTU-offical/Package/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/Jiaqi-SJTU-offic
-al/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e
+{e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/enc/dvips/cm-sup
+er/cm-super-t1.enc}<e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmex10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/Jiaqi-SJTU-offical/P
+ackage/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><e:/Jia
+qi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi9.pfb><e:/Jiaqi-SJTU-offical/Package/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/Jiaqi-SJTU-off
+ical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><e
 :/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/Jiaqi-SJTU-offical/Package
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><e:/Jiaqi-SJT
-U-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/Jiaqi-SJTU-offical/Pack
-age/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><e:/Jiaqi-S
-JTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><e:/Jiaqi-SJTU-offica
-l/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy6.pf
+s/cm/cmr6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><e:/Jiaqi-SJTU-offical/Package/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/Jiaqi-SJTU-
+offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pf
 b><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/ams
-fonts/symbols/msam10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist
-/fonts/type1/public/cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offical/Package/texliv
-e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><e:/Jiaqi-SJTU-offic
-al/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><e:
-/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super
-/sfrm1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type
-1/public/cm-super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texm
-f-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on Note.pdf (44 pages, 898188 bytes).
+fonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy9.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy6.pfb><e:/Jiaqi-SJTU-offic
+al/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.p
+fb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm
+-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/font
+s/type1/public/cm-super/sfbx1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/201
+7/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><e:/Jiaqi-SJTU-offical/Pa
+ckage/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><e:/Jiaq
+i-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti
+0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pub
+lic/cm-super/sfti1000.pfb>
+Output written on Note.pdf (45 pages, 900670 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
+ 248 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
