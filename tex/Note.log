@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  20 MAR 2020 17:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  22 MAR 2020 22:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -501,35 +501,30 @@ Overfull \hbox (3.4693pt too wide) detected at line 1754
 [][]
  []
 
-<ThetaFun.jpg, id=139, 1927.2pt x 915.42pt>
+[37] <ThetaFun.jpg, id=143, 1927.2pt x 915.42pt>
 File: ThetaFun.jpg Graphic file (type jpg)
  <use ThetaFun.jpg>
-Package pdftex.def Info: ThetaFun.jpg used on input line 1790.
+Package pdftex.def Info: ThetaFun.jpg used on input line 1799.
 (pdftex.def)             Requested size: 578.15999pt x 274.61415pt.
 
-<XFun.jpg, id=140, 1927.2pt x 915.42pt>
+<XFun.jpg, id=144, 1927.2pt x 915.42pt>
 File: XFun.jpg Graphic file (type jpg)
  <use XFun.jpg>
-Package pdftex.def Info: XFun.jpg used on input line 1797.
+Package pdftex.def Info: XFun.jpg used on input line 1806.
 (pdftex.def)             Requested size: 578.15999pt x 274.61415pt.
 
-<PsiFun.jpg, id=141, 1927.2pt x 915.42pt>
+<PsiFun.jpg, id=145, 1927.2pt x 915.42pt>
 File: PsiFun.jpg Graphic file (type jpg)
  <use PsiFun.jpg>
-Package pdftex.def Info: PsiFun.jpg used on input line 1805.
+Package pdftex.def Info: PsiFun.jpg used on input line 1814.
 (pdftex.def)             Requested size: 578.15999pt x 274.61415pt.
 
-Overfull \hbox (57.73653pt too wide) detected at line 1830
+Overfull \hbox (57.73653pt too wide) detected at line 1839
 [][]
  []
 
-[37] [38 <./ThetaFun.jpg> <./XFun.jpg>] [39 <./PsiFun.jpg>] [40] [41] [42]
-[43] [44] [45] (./Note.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
- ) 
+[38 <./ThetaFun.jpg>] [39 <./XFun.jpg> <./PsiFun.jpg>] [40] [41] [42] [43]
+[44] (./Note.aux) ) 
 Here is how much of TeX's memory you used:
  4321 strings out of 492995
  57081 string characters out of 6136402
@@ -538,40 +533,40 @@ Here is how much of TeX's memory you used:
  18834 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,18n,26p,712b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
-{e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/enc/dvips/cm-sup
-er/cm-super-t1.enc}<e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmex10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/Jiaqi-SJTU-offical/P
-ackage/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><e:/Jia
+{e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts
+/enc/dvips/cm-super/cm-super-t1.enc}<e:/Jiaqi-SJTU-offical/Package/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><e:/Jiaqi-SJTU-offical/Pa
+ckage/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><e:/Jia
 qi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi9.pfb><e:/Jiaqi-SJTU-offical/Package/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><e:/Jiaqi-SJTU-off
-ical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><e
-:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><e:/Jiaqi-SJTU-offical/Package/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><e:/Jiaqi-SJTU-
-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pf
+cmmi5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi7.pfb><e:/Jiaqi-SJTU-offical/Package/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><e:/Jiaqi-SJTU-off
+ical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr6.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><e:/Jiaqi-SJTU-offical/Package/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><e:/Jiaqi-SJTU-o
+ffical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy9.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017
-/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy6.pfb><e:/Jiaqi-SJTU-offic
-al/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.p
-fb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm
--super/sfbx0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/font
-s/type1/public/cm-super/sfbx1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/201
-7/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><e:/Jiaqi-SJTU-offical/Pa
-ckage/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><e:/Jiaq
-i-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti
-0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pub
-lic/cm-super/sfti1000.pfb>
-Output written on Note.pdf (45 pages, 900670 bytes).
+fonts/cm/cmsy5.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><e:/Jiaqi-SJTU-offical/Pac
+kage/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy6.pfb><e:
+/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msam10.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/font
+s/type1/public/cm-super/sfbx0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/201
+7/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><e:/Jiaqi-SJTU-offical/Pa
+ckage/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><e:/Jiaq
+i-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm
+1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pub
+lic/cm-super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dis
+t/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on Note.pdf (44 pages, 900056 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
+ 245 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
