@@ -21,7 +21,7 @@ addpath(genpath(subfunction_path4));
 Geo.s =logspace(0,1,50);
 Geo.h=0.1*exp(linspace(0,1.5,length(Geo.s)));
 %Geo.h=0.1*ones(size(Geo.h));
-
+gamma=1.4;
 Geo.kappa=(2/3)./Geo.h;Geo.tau=0.2./Geo.h;
 Geo.sw=sqrt(Geo.kappa.^2+Geo.tau.^2).*Geo.s;
 Geo.x = Geo.kappa./(Geo.kappa.^2+Geo.tau.^2).*sin(Geo.sw+0);Geo.y = Geo.kappa./(Geo.kappa.^2+Geo.tau.^2).*cos(Geo.sw+0);Geo.z = Geo.tau./(Geo.kappa.^2+Geo.tau.^2).*Geo.sw;
@@ -31,8 +31,8 @@ Geo.theta_0=cumsum(Geo.tau.*[0 diff(Geo.s)]);
 %% #######Wave########%
 Geo.m=-1:1;
 Geo.n=1;
-a=[1:2]; %P^{a}=P^{a*},U^{a}=U^{a*}
-b=[-3:3];
+a=[1 2]; %P^{a}=P^{a*},U^{a}=U^{a*}
+b=[-3 -2 -1 1 2 3];
 k=4/norm(Geo.h);
 %% #######Name########%
 Name.op_m={'1','r','r2'};
@@ -52,7 +52,7 @@ tic
 %2D-bsxfun(@times, 3D(\alpha*\beta*s), 1*1*s*a)-->4D[\alpha*\beta*s*a]
 Fun.I2=bsxfun(@times,X(Base,Geo,2,'ab','r').*Theta(Geo,2,'ab'),reshape(ones(size(a)),1,1,1,length(a)));    %(James-3.26,Jiaqi-76)  --expand,{alpha*beta*a*s}
 Fun.V=bsxfun(@times,X(Base,Geo,2,'a_pr_b','r').*Theta(Geo,2,'ab'),reshape(1./(sqrt(-1)*k*a),1,1,1,length(a)));    %(James-3.26,Jiaqi-76)  --expand,{alpha*beta*a*s}
-Fun.W=bsxfun(@times,X(Base,Geo,2,'ab','1').*Theta(Geo,2,'pt_ab'),reshape(-1./(sqrt(-1)*k*a),1,1,1,length(a))); %(James-3.27,Jiaqi-77)
+Fun.W=-bsxfun(@times,X(Base,Geo,2,'ab','1').*Theta(Geo,2,'pt_ab'),reshape(1./(sqrt(-1)*k*a),1,1,1,length(a))); %(James-3.27,Jiaqi-77)
 Fun.N=bsxfun(@times,X(Base,Geo,2,'ab','r').*Theta(Geo,2,'ab'),reshape((sqrt(-1)*k*a),1,1,1,length(a)))...
     -bsxfun(@times,X(Base,Geo,2,'ab','r2').*Theta(Geo,2,'ab_cos'),reshape((sqrt(-1)*k*Geo.kappa.'.*a),1,1,length(Geo.kappa),length(a)));%(James-3.35b)
 Fun.G=-bsxfun(@times,X(Base,Geo,2,'ps_ab','r').*Theta(Geo,2,'ab'),reshape(ones(size(a)),1,1,1,length(a)))...
@@ -92,11 +92,42 @@ Fun.A_3_1_2=permute(bsxfun(@times,Fun.A_3_1_2,reshape(b,1,1,1,1,length(b))),[6,1
 Fun.A_3_2=bsxfun(@times,X(Base,Geo,3,'ab','r').*Theta(Geo,3,'ab_sin'),...
     reshape(bsxfun(@times,Geo.kappa.'*ones(size(b)),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)));
 Fun.A = -Fun.A_1-multiprod(multiprod(Fun.A_2,Fun.N_inv,[2,3]),-multiprod(Fun.I3,Fun.A_2_1,[2,3]),[2,3])...
-       -multiprod(multiprod(Fun.A_3,Fun.N_inv,[2,3]),(multiprod(Fun.I3,Fun.A_3_1_2,[2,3])+Fun.A_3_2),[2,3]);%(James-3.35e)
+    -multiprod(multiprod(Fun.A_3,Fun.N_inv,[2,3]),(multiprod(Fun.I3,Fun.A_3_1_2,[2,3])+Fun.A_3_2),[2,3]);%(James-3.35e)
+Fun.B_1=bsxfun(@times,X(Base,Geo,3,'ab','r').*Theta(Geo,3,'ab'),...
+    reshape(bsxfun(@times,ones(size(Geo.s.'))*((gamma-1)/2*sqrt(-1)*k*ones(size(b))),reshape(a,1,1,[])),1,1,1,length(Geo.s),length(b),length(a)))...
+    -bsxfun(@times,X(Base,Geo,3,'ab','r2').*Theta(Geo,3,'ab_cos'),...
+    reshape(bsxfun(@times,Geo.kappa.'*((gamma-1)/2*sqrt(-1)*k*ones(size(b))),reshape(a,1,1,[])),1,1,1,length(Geo.s),length(b),length(a)));
+Fun.B_2=Fun.A_1;
+for ka=1:length(a)
+    for kb=1:length(b)
+        Fun.B_3(:,:,:,:,kb,ka)=multiprod(multiprod(Fun.B_2(:,:,:,:,kb,ka),...
+            permute(1/(sqrt(-1)*k*(a(ka)-b(kb)))*X(Base,Geo,2,'a_pr_b','r').*Theta(Geo,2,'ab'),[1,2,4,3]),[1,2]),...
+            permute(1/(sqrt(-1)*k*(b(kb)))*X(Base,Geo,2,'a_pr_b','r').*Theta(Geo,2,'ab'),[4,1,2,3]),[2,3]);
+    end
+end
+for ka=1:length(a)
+    for kb=1:length(b)
+        Fun.B_4(:,:,:,:,kb,ka)=multiprod(multiprod(Fun.B_2(:,:,:,:,kb,ka),...
+            permute(1/(sqrt(-1)*k*(a(ka)-b(kb)))*X(Base,Geo,2,'ab','r').*Theta(Geo,2,'pt_ab'),[1,2,4,3]),[1,2]),...
+            permute(1/(sqrt(-1)*k*(b(kb)))*X(Base,Geo,2,'ab','r').*Theta(Geo,2,'pt_ab'),[4,1,2,3]),[2,3]);
+    end
+end
 
-   
-   
-   
+
+
+
+
+
+
+
+
+2*ones(2,1)+ones(2,1,2)
+1+[1;2]
+1/(sqrt(-1)*k*(a(2)-b(6)))
+Fun.B_3=Fun.B_2*Fun.V*Fun.V
+size(Fun.B_2)
+size(Fun.V)
+
 size(Fun.A_2)
 
 multiprod(Fun.I3,Fun.A_2_1,[2,3],[2,3]);
@@ -119,7 +150,7 @@ mtimesx(permute(T,[2,1,3,4]),permute(Fun.I3,[3,2,1,4,5,6]))
 size(T)
 % mtimesx(,)
 % length(size(-Fun.I3))
-% 
+%
 % size(Fun.A_2)
 % size(Fun.N_inv)
 %Fun.A_2=
@@ -128,5 +159,5 @@ size(T)
 % Fun.D
 % Fun.E
 toc
-
+NaN+1
 ones(1,2,3,4)+ones(1,2)
