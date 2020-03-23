@@ -7,12 +7,14 @@
 clc
 clear
 close all
-subfunction_path1='.\subfunction1'
+subfunction_path1='.\subfunction1';
 addpath(genpath(subfunction_path1));
 load('Data_m3_n1_a2_b6.mat');
 
 
-%% #######Wave########%
+%% #######Boudnary########%
+%Infinite Uniform Duct Outlet
+%Case2: Torsion Helical Duct
 
 Bdry_a.N=Fun2_a.N(:,:,end,:);
 Bdry_a_b.N=Fun2_a_b.N(:,:,end,:,:);
@@ -70,6 +72,9 @@ for kb=1:length(a)
     end
 end
 
+Bdry_a.Y_minus=-Bdry_a.Y;
+
+
 Bdry3_a_b.V=permute(Bdry_a_b.V,[1,2,6,3,4,5]);
 Bdry3_b.V=permute(bsxfun(@times,Bdry_b.V,reshape(ones(size(a)),1,1,1,1,length(a))),[6,1,2,3,4,5]);
 Bdry3_a_b.V_inv=permute(Bdry_a_b.V_inv,[1,2,6,3,4,5]);
@@ -87,9 +92,9 @@ Bdry3_a.Lambda=permute(bsxfun(@times,Bdry_a.Lambda,reshape(ones(size(b)),1,1,1,1
 Bdry3_a_b.Lambda=permute(Bdry_a_b.Lambda,[1,2,6,3,4,5]);
 Bdry3_b.Lambda=permute(bsxfun(@times,Bdry_b.Lambda,reshape(ones(size(a)),1,1,1,1,length(a))),[6,1,2,3,4,5]);
 
-Bdry3.Lambda_alpha_a=multiprod(Bdry3_a.Lambda,multiprod(multiprod(Bdry3_ab.II,Bdry3_a_b.I,[1,2]),Bdry3_b.I,[2,3]),[1,2])
-Bdry3.Lambda_beta_a_b=multiprod(multiprod(Bdry3_ab.II,Bdry3_a_b.Lambda,[1,2]),Bdry3_b.I,[2,3])
-Bdry3.Lambda_gamma_b=multiprod(multiprod(Bdry3_ab.II,Bdry3_a_b.I,[1,2]),Bdry3_b.Lambda,[2,3])
+Bdry3.Lambda_alpha_a=multiprod(Bdry3_a.Lambda,multiprod(multiprod(Bdry3_ab.II,Bdry3_a_b.I,[1,2]),Bdry3_b.I,[2,3]),[1,2]);
+Bdry3.Lambda_beta_a_b=multiprod(multiprod(Bdry3_ab.II,Bdry3_a_b.Lambda,[1,2]),Bdry3_b.I,[2,3]);
+Bdry3.Lambda_gamma_b=multiprod(multiprod(Bdry3_ab.II,Bdry3_a_b.I,[1,2]),Bdry3_b.Lambda,[2,3]);
 
 
 
@@ -98,9 +103,8 @@ Bdry3_ab.Yp=(multiprod(Bdry3_a.W_inv,multiprod(multiprod(Bdry3_ab.A,Bdry3_a_b.YV
     -multiprod(multiprod(Bdry3_a.W_inv,Bdry3_a.Y,[1,2]),multiprod(multiprod(Bdry3_ab.C,Bdry3_a_b.YV,[1,2]),Bdry3_b.V,[2,3]),[1,2]))...
     ./(Bdry3.Lambda_alpha_a+Bdry3.Lambda_beta_a_b+Bdry3.Lambda_gamma_b);
 
-
 Bdry3_ab.YY=multiprod(Bdry3_a.W,multiprod(multiprod(Bdry3_ab.Yp,Bdry3_a_b.V_inv,[1,2]),Bdry3_b.V_inv,[2,3]),[1,2]);
-    
+Bdry3_ab.YY_minus=-Bdry3_ab.YY;
 
 %Warning:a-b!=0, be NaN, need to be deleted.
 
