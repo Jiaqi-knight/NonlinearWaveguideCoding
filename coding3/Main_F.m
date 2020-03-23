@@ -1,4 +1,4 @@
-%Main-Fun_action
+%Main-Function
 %   ref:https://github.com/Jiaqi-knight/NonlinearWaveguideCoding
 %   Email:Jiaqi_Wang@sjtu.edu.cn
 %   Copyright 2020, SJTU.
@@ -47,7 +47,7 @@ Name.T3={'\Theta_{\alpha\beta\gamma}','\Theta_{(\alpha)\beta\gamma}','\Theta_{\a
     '\Theta_{\alpha\beta\gamma}[sin\phi]','\Theta_{(\alpha)\beta\gamma}[cos\phi]','\Theta_{(\alpha)\beta\gamma}[sin\phi]','\Theta_{\{\alpha\}\beta\gamma}[cos\phi]','\Theta_{\{\alpha\}\beta\gamma}[sin\phi]'};
 
 %% #######Function########%
-
+tic
 [Base]=BaseJ(Geo.m,Geo.n,Geo.h);
 Psi.ab_r=X(Base,Geo,2,'ab','r').*Theta(Geo,2,'ab');
 Psi.a_pr_b_r =X(Base,Geo,2,'a_pr_b','r').*Theta(Geo,2,'ab');
@@ -82,7 +82,7 @@ Psi.abc_r_sin=X(Base,Geo,3,'ab','r').*Theta(Geo,3,'ab_sin');
 Psi.ps_abc_ps_r=X(Base,Geo,3,'ps(ab)','r').*Theta(Geo,3,'ab');  %(Jiaqi-153)
 Psi.ps_abc_r=X(Base,Geo,3,'ps_ab','r').*Theta(Geo,3,'ab');
 Psi.ps_abc=X(Base,Geo,3,'ps_ab','1').*Theta(Geo,3,'ab');
-
+toc
 tic
 %2D-bsxfun(@times, 3D(\alpha*\beta*s), 1*1*s*a)-->4D[\alpha*\beta*s*a]
 Fun2_a.I2=bsxfun(@times,Psi.ab_r,reshape(ones(size(a)),1,1,1,length(a)));    %(James-3.26,Jiaqi-76)  --expand,{alpha*beta*a*s}
@@ -96,6 +96,8 @@ Fun2_a.N=bsxfun(@times,Psi.ab_r,reshape((sqrt(-1)*k*a),1,1,1,length(a)))...
     -bsxfun(@times,Psi.ab_r2_cos,reshape((sqrt(-1)*k*Geo.kappa.'.*a),1,1,length(Geo.kappa),length(a)));%(James-3.35b)
 Fun2_a_b.N=bsxfun(@times,Psi.ab_r,reshape((sqrt(-1)*k*a_b),1,1,1,length(b),length(a)))...
     -bsxfun(@times,Psi.ab_r2_cos,reshape((sqrt(-1)*k*Geo.kappa.'.*permute(a_b,[3,1,2])),1,1,length(Geo.kappa),length(b),length(a)));%(James-3.35b)
+Fun2_b.N=bsxfun(@times,Psi.ab_r,reshape((sqrt(-1)*k*b),1,1,1,length(b)))...
+    -bsxfun(@times,Psi.ab_r2_cos,reshape((sqrt(-1)*k*Geo.kappa.'.*b),1,1,length(Geo.kappa),length(b )));%(James-3.35b)
 for i=1:length(Geo.s);for j=1:length(a);Fun2_a.N_inv(:,:,i,j)=Fun2_a.N(:,:,i,j)^(-1);end;end;
 Fun2_a.G=-bsxfun(@times,Psi.ps_ab_r_1,reshape(ones(size(a)),1,1,1,length(a)))...
     -bsxfun(@times,Psi.ps_ab_r_2,reshape(ones(size(a)),1,1,1,length(a)));%(James-3.35d)
@@ -113,16 +115,19 @@ Fun2_a.M_2_1=bsxfun(@times,Psi.pr_ab_r,reshape(ones(size(a)),1,1,1,length(a)))..
     -bsxfun(@times,Psi.pr_ab_r2_cos,reshape(Geo.kappa.'.*ones(size(a)),1,1,length(Geo.kappa),length(a)));
 Fun2_a_b.M_2_1=bsxfun(@times,Psi.pr_ab_r,reshape(ones(size(a_b)),1,1,1,length(b),length(a)))...
     -bsxfun(@times,Psi.pr_ab_r2_cos,reshape(Geo.kappa.'.*permute(ones(size(a_b)),[3,1,2]),1,1,length(Geo.kappa),length(b),length(a)));
+Fun2_b.M_2_1=bsxfun(@times,Psi.pr_ab_r,reshape(ones(size(b)),1,1,1,length(b)))...
+    -bsxfun(@times,Psi.pr_ab_r2_cos,reshape(Geo.kappa.'.*ones(size(b)),1,1,length(Geo.kappa),length(b)));
+
 Fun2_a.M_3_1=bsxfun(@times,Psi.pt_ab,reshape(ones(size(a)),1,1,1,length(a)))...
     -bsxfun(@times,Psi.pt_ab_r_cos,reshape(Geo.kappa.'.*ones(size(a)),1,1,length(Geo.kappa),length(a)));
 Fun2_a_b.M_3_1=bsxfun(@times,Psi.pt_ab,reshape(ones(size(a_b)),1,1,1,length(b),length(a)))...
     -bsxfun(@times,Psi.pt_ab_r_cos,reshape(Geo.kappa.'.*permute(ones(size(a_b)),[3,1,2]),1,1,length(Geo.kappa),length(b),length(a)));
-
+Fun2_b.M_3_1=bsxfun(@times,Psi.pt_ab,reshape(ones(size(b)),1,1,1,length(b)))...
+    -bsxfun(@times,Psi.pt_ab_r_cos,reshape(Geo.kappa.'.*ones(size(b)),1,1,length(Geo.kappa),length(b)));
 
 Fun2_a.M  =-Fun2_a.N-multiprod(Fun2_a.M_2_1,Fun2_a.V,[1,2])-multiprod(Fun2_a.M_3_1,Fun2_a.W,[1,2]);%(James-3.35a)
 Fun2_a_b.M=-Fun2_a_b.N-multiprod(Fun2_a_b.M_2_1,Fun2_a_b.V,[1,2])-multiprod(Fun2_a_b.M_3_1,Fun2_a_b.W,[1,2]);%(James-3.35a)
-
-
+Fun2_b.M=-Fun2_b.N-multiprod(Fun2_b.M_2_1,Fun2_b.V,[1,2])-multiprod(Fun2_b.M_3_1,Fun2_b.W,[1,2]);%(James-3.35a)
 
 Fun2_a.A_2_1_1= bsxfun(@times,Psi.ab_s1,reshape(ones(size(a)),1,1,1,length(a)));
 Fun2_a.A_2_1_2= bsxfun(@times,Psi.ab_s2,reshape(ones(size(a)),1,1,1,length(a)));
@@ -163,6 +168,8 @@ Fun3_a_b.H= permute(Fun2_a_b.H,[1,2,6,3,4,5]);
 Fun3_b.H= permute(bsxfun(@times,Fun2_b.H,reshape(ones(size(a)),1,1,1,1,length(a))),[6,1,2,3,4,5]);
 Fun3_ab.B_4=multiprod(multiprod(Fun3_ab.B_2,Fun3_a_b.W,[1,2]),Fun3_b.W,[2,3]);
 Fun3_a_b.M= permute(Fun2_a_b.M,[1,2,6,3,4,5]);
+Fun3_b.M=permute(bsxfun(@times,Fun2_b.M,reshape(ones(size(a)),1,1,1,1,length(a))),[6,1,2,3,4,5]);
+
 Fun3_a_b.I=permute(bsxfun(@times,Fun2_a.I2,reshape(ones(size(b)),1,1,1,1,length(b))),[1,2,6,3,5,4]);
 Fun3_b.I=permute(bsxfun(@times,Fun2_a.I2,reshape(ones(size(b)),1,1,1,1,length(b))),[6,1,2,3,5,4]);
 
