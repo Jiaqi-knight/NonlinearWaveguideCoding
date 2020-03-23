@@ -24,3 +24,11 @@ Coding2: I-Matrix-construction: \delta_{m,-n}\delta_{u,v}=[I] for easy our model
 2.3
 
 ![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/tex/PsiFun.jpg)
+
+Coding3： Function
+
+
+![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/tex/equation1.jpg)
+
+
+
