@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  22 MAR 2020 22:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  23 MAR 2020 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -481,7 +481,7 @@ Overfull \hbox (14.32384pt too wide) detected at line 1371
  []
 
 [30] [31]
-Overfull \hbox (23.91383pt too wide) detected at line 1462
+Overfull \hbox (27.35896pt too wide) detected at line 1462
 [][]
  []
 
@@ -563,7 +563,7 @@ i-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm
 1000.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dist/fonts/type1/pub
 lic/cm-super/sfti0900.pfb><e:/Jiaqi-SJTU-offical/Package/texlive/2017/texmf-dis
 t/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on Note.pdf (44 pages, 900056 bytes).
+Output written on Note.pdf (44 pages, 900042 bytes).
 PDF statistics:
  245 PDF objects out of 1000 (max. 8388607)
  170 compressed objects within 2 object streams

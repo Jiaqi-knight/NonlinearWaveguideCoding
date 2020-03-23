@@ -47,7 +47,7 @@ Name.T3={'\Theta_{\alpha\beta\gamma}','\Theta_{(\alpha)\beta\gamma}','\Theta_{\a
     '\Theta_{\alpha\beta\gamma}[sin\phi]','\Theta_{(\alpha)\beta\gamma}[cos\phi]','\Theta_{(\alpha)\beta\gamma}[sin\phi]','\Theta_{\{\alpha\}\beta\gamma}[cos\phi]','\Theta_{\{\alpha\}\beta\gamma}[sin\phi]'};
 
 %% #######Function########%
-
+tic
 [Base]=BaseJ(Geo.m,Geo.n,Geo.h);
 Psi.ab_r=X(Base,Geo,2,'ab','r').*Theta(Geo,2,'ab');
 Psi.a_pr_b_r =X(Base,Geo,2,'a_pr_b','r').*Theta(Geo,2,'ab');
@@ -82,7 +82,7 @@ Psi.abc_r_sin=X(Base,Geo,3,'ab','r').*Theta(Geo,3,'ab_sin');
 Psi.ps_abc_ps_r=X(Base,Geo,3,'ps(ab)','r').*Theta(Geo,3,'ab');  %(Jiaqi-153)
 Psi.ps_abc_r=X(Base,Geo,3,'ps_ab','r').*Theta(Geo,3,'ab');
 Psi.ps_abc=X(Base,Geo,3,'ps_ab','1').*Theta(Geo,3,'ab');
-
+toc
 tic
 %2D-bsxfun(@times, 3D(\alpha*\beta*s), 1*1*s*a)-->4D[\alpha*\beta*s*a]
 Fun2_a.I2=bsxfun(@times,Psi.ab_r,reshape(ones(size(a)),1,1,1,length(a)));    %(James-3.26,Jiaqi-76)  --expand,{alpha*beta*a*s}
@@ -99,6 +99,9 @@ Fun2_a_b.N=bsxfun(@times,Psi.ab_r,reshape((sqrt(-1)*k*a_b),1,1,1,length(b),lengt
 Fun2_b.N=bsxfun(@times,Psi.ab_r,reshape((sqrt(-1)*k*b),1,1,1,length(b)))...
     -bsxfun(@times,Psi.ab_r2_cos,reshape((sqrt(-1)*k*Geo.kappa.'.*b),1,1,length(Geo.kappa),length(b )));%(James-3.35b)
 for i=1:length(Geo.s);for j=1:length(a);Fun2_a.N_inv(:,:,i,j)=Fun2_a.N(:,:,i,j)^(-1);end;end;
+for i=1:length(Geo.s);for j=1:length(b); for k=1:length(a);if a(k)-b(j)==0;Fun2_a_b.N_inv(:,:,i,j,k)=NaN+NaN*sqrt(-1);else;Fun2_a_b.N_inv(:,:,i,j,k)=Fun2_a_b.N(:,:,i,j,k)^(-1);end;end;end;end;
+for i=1:length(Geo.s);for j=1:length(b);Fun2_b.N_inv(:,:,i,j)=Fun2_b.N(:,:,i,j)^(-1);end;end;
+
 Fun2_a.G=-bsxfun(@times,Psi.ps_ab_r_1,reshape(ones(size(a)),1,1,1,length(a)))...
     -bsxfun(@times,Psi.ps_ab_r_2,reshape(ones(size(a)),1,1,1,length(a)));%(James-3.35d)
 Fun2_b.G=-bsxfun(@times,Psi.ps_ab_r_1,reshape(ones(size(b)),1,1,1,length(b)))...
@@ -168,8 +171,7 @@ Fun3_a_b.H= permute(Fun2_a_b.H,[1,2,6,3,4,5]);
 Fun3_b.H= permute(bsxfun(@times,Fun2_b.H,reshape(ones(size(a)),1,1,1,1,length(a))),[6,1,2,3,4,5]);
 Fun3_ab.B_4=multiprod(multiprod(Fun3_ab.B_2,Fun3_a_b.W,[1,2]),Fun3_b.W,[2,3]);
 Fun3_a_b.M= permute(Fun2_a_b.M,[1,2,6,3,4,5]);
-Fun3_b.M=permute(bsxfun(@times,Fun2_a.M,reshape(ones(size(b)),1,1,1,1,length(b))),[6,1,2,3,5,4]);
-
+Fun3_b.M=permute(bsxfun(@times,Fun2_b.M,reshape(ones(size(a)),1,1,1,1,length(a))),[6,1,2,3,4,5]);
 
 Fun3_a_b.I=permute(bsxfun(@times,Fun2_a.I2,reshape(ones(size(b)),1,1,1,1,length(b))),[1,2,6,3,5,4]);
 Fun3_b.I=permute(bsxfun(@times,Fun2_a.I2,reshape(ones(size(b)),1,1,1,1,length(b))),[6,1,2,3,5,4]);
@@ -232,3 +234,61 @@ Fun3_ab.E =-multiprod(permute(multiprod(Fun3_ab.A_2,Fun3_ab.N_inv,[2,3]),[2,3,1,
 
 
 toc
+
+
+%% #######Boundary########%
+
+Bdry_a.N=Fun2_a.N(:,:,end,:);
+Bdry_a_b.N=Fun2_a_b.N(:,:,end,:,:);
+Bdry_b.N=Fun2_b.N(:,:,end,:);
+
+Bdry_a.N_inv=Fun2_a.N_inv(:,:,end,:);
+Bdry_a_b.N_inv=Fun2_a_b.N_inv(:,:,end,:,:);
+Bdry_b.N_inv=Fun2_b.N_inv(:,:,end,:);
+
+Bdry_a.NM=multiprod(Fun2_a.N(:,:,end,:),Fun2_a.M(:,:,end,:),[1,2]);
+Bdry_a_b.NM=multiprod(Fun2_a_b.N(:,:,end,:,:),Fun2_a_b.M(:,:,end,:,:),[1,2]);
+Bdry_b.NM=multiprod(Fun2_b.N(:,:,end,:),Fun2_b.M(:,:,end,:),[1,2]);
+
+
+
+for ka=1:length(a)
+    Bdry_a.Y(:,:,1,ka) = sqrt(-1)*Bdry_a.N_inv(:,:,1,ka)*sqrtm(Bdry_a.NM(:,:,1,ka));
+    [Bdry_a.V(:,:,1,ka),Bdry_a.Lambda(:,:,1,ka)]=eig(sqrt(-1)*sqrtm(Bdry_a.NM(:,:,1,ka)));
+    [Bdry_a.W(:,:,1,ka),temp]=eig(Bdry_a.Y(:,:,1,ka)*Bdry_a.N(:,:,1,ka));
+    Bdry_a.V_inv(:,:,1,ka)=inv(Bdry_a.V(:,:,1,ka));
+    Bdry_a.W_inv(:,:,1,ka)=inv(Bdry_a.W(:,:,1,ka));
+    
+    % [V(:,:,ka),D(:,:,ka)]=eig(Fun2_a.NM(:,:,end,ka))  %(Jiaqi-114)
+    % sqrt(-1)*diag(conj(sqrt(eig(Fun2_a.N(:,:,end,1)*Fun2_a.M(:,:,end,1)))))   %all real £¨James-3.42£©
+    
+    
+end
+for kb=1:length(b)
+    Bdry_b.Y(:,:,1,kb) = sqrt(-1)*Bdry_b.N_inv(:,:,1,kb)*sqrtm(Bdry_b.NM(:,:,1,kb));
+    [Bdry_b.V(:,:,1,kb),Bdry_b.Lambda(:,:,1,kb)]=eig(sqrt(-1)*sqrtm(Bdry_b.NM(:,:,1,kb)));
+    [Bdry_b.W(:,:,1,kb),temp]=eig(Bdry_b.Y(:,:,1,kb)*Bdry_b.N(:,:,1,kb));
+    Bdry_b.V_inv(:,:,1,kb)=inv(Bdry_b.V(:,:,1,kb));
+    Bdry_b.W_inv(:,:,1,kb)=inv(Bdry_b.W(:,:,1,kb));
+end
+temp1=NaN*ones(size(Bdry_a_b.N(:,:,1,1,1)));
+for kb=1:length(a)
+    for kb=1:length(b)
+        if a(ka)-b(kb)==0
+                Bdry_a_b.Y(:,:,1,kb,ka)=temp1;
+                Bdry_a_b.V(:,:,1,kb,ka)=temp1;
+                Bdry_a_b.Lambda(:,:,1,kb,ka)=temp1;
+                Bdry_a_b.W(:,:,1,kb,ka)=temp1;
+                Bdry_a_b.V_inv(:,:,1,kb,ka)=temp1;
+                Bdry_a_b.W_inv(:,:,1,kb,ka)=temp1;
+            else
+                Bdry_a_b.Y(:,:,1,kb,ka) = sqrt(-1)*Bdry_a_b.N_inv(:,:,1,kb,ka)*sqrtm(Bdry_a_b.NM(:,:,1,kb,ka));
+                [Bdry_a_b.V(:,:,1,kb,ka),Bdry_a_b.Lambda(:,:,1,kb,ka)]=eig(sqrt(-1)*sqrtm(Bdry_a_b.NM(:,:,1,kb,ka)));
+                [Bdry_a_b.W(:,:,1,kb,ka),temp]=eig(Bdry_a_b.Y(:,:,1,kb,ka)*Bdry_a_b.N(:,:,1,kb,ka));
+                Bdry_a_b.V_inv(:,:,1,kb,ka)=inv(Bdry_a_b.V(:,:,1,kb,ka));
+                Bdry_a_b.W_inv(:,:,1,kb,ka)=inv(Bdry_a_b.W(:,:,1,kb,ka));
+            end
+        end
+end
+    
+

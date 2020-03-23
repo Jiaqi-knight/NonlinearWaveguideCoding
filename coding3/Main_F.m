@@ -99,6 +99,9 @@ Fun2_a_b.N=bsxfun(@times,Psi.ab_r,reshape((sqrt(-1)*k*a_b),1,1,1,length(b),lengt
 Fun2_b.N=bsxfun(@times,Psi.ab_r,reshape((sqrt(-1)*k*b),1,1,1,length(b)))...
     -bsxfun(@times,Psi.ab_r2_cos,reshape((sqrt(-1)*k*Geo.kappa.'.*b),1,1,length(Geo.kappa),length(b )));%(James-3.35b)
 for i=1:length(Geo.s);for j=1:length(a);Fun2_a.N_inv(:,:,i,j)=Fun2_a.N(:,:,i,j)^(-1);end;end;
+for i=1:length(Geo.s);for j=1:length(b); for k=1:length(a);if a(k)-b(j)==0;Fun2_a_b.N_inv(:,:,i,j,k)=NaN+NaN*sqrt(-1);else;Fun2_a_b.N_inv(:,:,i,j,k)=Fun2_a_b.N(:,:,i,j,k)^(-1);end;end;end;end;
+for i=1:length(Geo.s);for j=1:length(b);Fun2_b.N_inv(:,:,i,j)=Fun2_b.N(:,:,i,j)^(-1);end;end;
+
 Fun2_a.G=-bsxfun(@times,Psi.ps_ab_r_1,reshape(ones(size(a)),1,1,1,length(a)))...
     -bsxfun(@times,Psi.ps_ab_r_2,reshape(ones(size(a)),1,1,1,length(a)));%(James-3.35d)
 Fun2_b.G=-bsxfun(@times,Psi.ps_ab_r_1,reshape(ones(size(b)),1,1,1,length(b)))...
@@ -224,10 +227,12 @@ Fun3_ab.E_2_3=multiprod(multiprod(Fun3_ab.I3_1,Fun3_a_b.I,[1,2]),multiprod(Fun3_
 Fun3_ab.E_2_4=multiprod(multiprod(Fun3_ab.E_1_4_1,Fun3_a_b.I,[1,2]),Fun3_b.W,[2,3]);
 
 Fun3_ab.E =-multiprod(permute(multiprod(Fun3_ab.A_2,Fun3_ab.N_inv,[2,3]),[2,3,1,4,5,6]),(-Fun3_ab.E_1_1+Fun3_ab.E_1_2+Fun3_ab.E_1_3+Fun3_ab.E_1_4),[1,2])...
-           -multiprod(permute(multiprod(Fun3_ab.A_3,Fun3_ab.N_inv,[2,3]),[2,3,1,4,5,6]),(-Fun3_ab.E_2_1+Fun3_ab.E_2_2-Fun3_ab.E_2_3+Fun3_ab.E_2_4),[1,2]);
+    -multiprod(permute(multiprod(Fun3_ab.A_3,Fun3_ab.N_inv,[2,3]),[2,3,1,4,5,6]),(-Fun3_ab.E_2_1+Fun3_ab.E_2_2-Fun3_ab.E_2_3+Fun3_ab.E_2_4),[1,2]);
 
 
 %Warning:a-b!=0, be NaN, need to be deleted.
 
 
 toc
+
+
