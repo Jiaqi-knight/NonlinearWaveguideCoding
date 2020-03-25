@@ -36,3 +36,8 @@ Coding3： Main_F.m
 
 ![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/tex/Fun3_ab2.PNG)
 
+
+
+Coding4: 
+
+We need further updating code: effecient, consider the effect of h to basis function--》cut off the calculation

@@ -4,7 +4,7 @@
 %Copyright 2020, SJTU.
 
 %coding3 is updating h as array..
-function [X1]= deltaJ(s,h,h_diff,Cmn1,jmn_pm,m,n,dimention,k,op,op_m) %k+ right
+function [X1]= deltaJ(h,h_diff,Cmn1,jmn_pm,m,n,dimention,k,op,op_m) %k+ right
 switch op_m
     case '1'
         for hk=1:length(h)
@@ -60,7 +60,7 @@ if dimention==2
             end
             X1=reshape(X1,n*length(m),n*length(m),length(h));
         case   'ps_ab'
-
+            
             X1=zeros(n*length(m)*n*length(m),length(h));
             for hk=1:length(h)
                 for k=1:length(dk)
@@ -74,7 +74,7 @@ if dimention==2
             end
             X1=reshape(X1,n*length(m),n*length(m),length(h));
         case   'a_ps_b'
-
+            
             X1=zeros(n*length(m)*n*length(m),length(h));
             for hk=1:length(h)
                 for k=1:length(dk)
@@ -128,14 +128,25 @@ elseif dimention==3
             for hk=1:length(h)
                 for k=1:length(dk)
                     X1(dk(k),hk)=...
-                        sum(chebfun(@(r) Cmn1(on1(k),om1(k),hk)*besselj(m(om1(k)),jmn_pm(on1(k),om1(k))*r/h(hk)),[0,h(hk)])*...
-                        diff(chebfun(@(r) Cmn1(on2(k),om2(k),hk)*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h(hk)),[0,h(hk)]))*...
-                        chebfun(@(r) Cmn1(on3(k),om3(k),hk)*besselj(m(om3(k)),jmn_pm(on3(k),om3(k))*r/h(hk)),[0,h(hk)])*rr{hk});
+                        sum(diff(chebfun(@(r) Cmn1(on2(k),om2(k),hk)*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h(hk)),[0,h(hk)]))*...
+                        chebfun(@(r) Cmn1(on3(k),om3(k),hk)*besselj(m(om3(k)),jmn_pm(on3(k),om3(k))*r/h(hk)),[0,h(hk)])*...
+                        chebfun(@(r) Cmn1(on1(k),om1(k),hk)*besselj(m(om1(k)),jmn_pm(on1(k),om1(k))*r/h(hk)),[0,h(hk)])*rr{hk});
                 end
             end
-            X1=reshape(X1,n*length(m),n*length(m),n*length(m));
+            X1=reshape(X1,n*length(m),n*length(m),n*length(m),length(h));
+        case 'ab_pr_c'
+            X1=zeros(n*length(m)*n*length(m)*n*length(m),length(h));
+            for hk=1:length(h)
+                for k=1:length(dk)
+                    X1(dk(k),hk)=...
+                        sum(diff(chebfun(@(r) Cmn1(on3(k),om3(k),hk)*besselj(m(om3(k)),jmn_pm(on3(k),om3(k))*r/h(hk)),[0,h(hk)]))*...
+                        chebfun(@(r) Cmn1(on2(k),om2(k),hk)*besselj(m(om2(k)),jmn_pm(on2(k),om2(k))*r/h(hk)),[0,h(hk)])*...
+                        chebfun(@(r) Cmn1(on1(k),om1(k),hk)*besselj(m(om1(k)),jmn_pm(on1(k),om1(k))*r/h(hk)),[0,h(hk)])*rr{hk});
+                end
+            end
+            X1=reshape(X1,n*length(m),n*length(m),n*length(m),length(h));
         case   'ps_ab'
-
+            
             X1=zeros(n*length(m)*n*length(m)*n*length(m),length(h));
             for hk=1:length(h)
                 for k=1:length(dk)
@@ -151,7 +162,7 @@ elseif dimention==3
             end
             X1=reshape(X1,n*length(m),n*length(m),n*length(m),length(h));
         case  'a_ps_b'
-
+            
             X1=zeros(n*length(m)*n*length(m)*n*length(m),length(h));
             for hk=1:length(h)
                 for k=1:length(dk)
@@ -166,8 +177,21 @@ elseif dimention==3
                 end
             end
             X1=reshape(X1,n*length(m),n*length(m),n*length(m),length(h));
+        case   'h#hC3J3' %(Jiaqi_159)
+            
+            X1=zeros(n*length(m)*n*length(m)*n*length(m),length(h));
+            for hk=1:length(h)
+                for k=1:length(dk)
+                    X1(dk(k),hk)=...
+                        h_diff(hk)*h(hk)*...
+                        Cmn1(on1(k),om1(k),hk)*besselj(m(om1(k)),jmn_pm(on1(k),om1(k)))*...
+                        Cmn1(on2(k),om2(k),hk)*besselj(m(om2(k)),jmn_pm(on2(k),om2(k)))*...
+                        Cmn1(on3(k),om3(k),hk)*besselj(m(om3(k)),jmn_pm(on3(k),om3(k)));
+                end
+            end
+            X1=reshape(X1,n*length(m),n*length(m),n*length(m),length(h));
         case   'ps(ab)' %(Jiaqi_155)
-
+            
             X1=zeros(n*length(m)*n*length(m)*n*length(m),length(h));
             for hk=1:length(h)
                 for k=1:length(dk)

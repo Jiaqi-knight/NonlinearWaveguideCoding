@@ -4,11 +4,11 @@
 %Copyright 2020, SJTU.
 
 %coding3 is updating h as array..
-function [X1]= specialFun(s,h,kappa,m,n,Cmn1,jmn_pm,op) %k+ right
+function [X1]= specialFun(h_diff,h,kappa,m,n,Cmn1,jmn_pm,op) %k+ right
 
 switch op
     case 'hh`^2/[1-\kappa*h*cos\psi]'
-        h_diff=[(h(2)-h(1))/(s(2)-s(1)) diff(h)./diff(s)];
+        %h_diff=[(h(2)-h(1))/(s(2)-s(1)) diff(h)./diff(s)];
         X1=zeros(n*length(m)*n*length(m),length(h));
         [D,O]=deltaT(m,n,2,1);
         om1=O.M1(:)-m(1)+1;om2=O.M2(:)-m(1)+1;
