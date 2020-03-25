@@ -20,12 +20,14 @@ addpath(genpath(subfunction_path4));
 %% #######Geometry########%
 Geo.s =logspace(0,1,50);
 Geo.h=0.1*exp(linspace(0,1.5,length(Geo.s)));
-%Geo.h=0.1*ones(size(Geo.h));
+%Geo_b.h=0.1*ones(size(Geo_b.h));
 gamma=1.4;
-Geo.kappa=(2/3)./Geo.h;Geo.tau=0.2./Geo.h;
+Geo.kappa=(2/3)./Geo.h;Geo.tau=0.0./Geo.h;
 Geo.sw=sqrt(Geo.kappa.^2+Geo.tau.^2).*Geo.s;
 Geo.x = Geo.kappa./(Geo.kappa.^2+Geo.tau.^2).*sin(Geo.sw+0);Geo.y = Geo.kappa./(Geo.kappa.^2+Geo.tau.^2).*cos(Geo.sw+0);Geo.z = Geo.tau./(Geo.kappa.^2+Geo.tau.^2).*Geo.sw;
 Geo.theta_0=cumsum(Geo.tau.*[0 diff(Geo.s)]);
+Geo.h_diff=[(Geo.h(2)-Geo.h(1))/(Geo.s(2)-Geo.s(1)) diff(Geo.h)./diff(Geo.s)];
+
 %tubeplot(x,y,z,h,s,50);hold on;plot3(x, y, z);daspect([1,1,1]); camlight;
 
 %% #######Wave########%
@@ -34,7 +36,16 @@ Geo.n=1;
 a=[1 2]; %P^{a}=P^{a*},U^{a}=U^{a*}
 b=[-3 -2 -1 1 2 3];
 a_b=a-b.';
-k=4/norm(Geo.h);
+k=0.95*1.8412/Geo.h(end);
+
+%%
+Geo_b.m=Geo.m;
+Geo_b.n=Geo.n;
+Geo_b.s=Geo.s(end);
+Geo_b.h=Geo.h(end);
+Geo_b.kappa=Geo.kappa(end)
+Geo_b.tau=Geo.tau(end);
+Geo_b.h_diff=Geo.h_diff(end);
 %% #######Name########%
 Name.op_m={'1','r','r2'};
 Name.op={'ab','pr_ab','a_pr_b','ps_ab','a_ps_b'};
@@ -48,40 +59,40 @@ Name.T3={'\Theta_{\alpha\beta\gamma}','\Theta_{(\alpha)\beta\gamma}','\Theta_{\a
 
 %% #######Function########%
 tic
-[Base]=BaseJ(Geo.m,Geo.n,Geo.h);
-Psi.ab_r=X(Base,Geo,2,'ab','r').*Theta(Geo,2,'ab');
-Psi.a_pr_b_r =X(Base,Geo,2,'a_pr_b','r').*Theta(Geo,2,'ab');
-Psi.ab_pt_ab =X(Base,Geo,2,'ab','1').*Theta(Geo,2,'pt_ab');
-Psi.ab_r2_cos =X(Base,Geo,2,'ab','r2').*Theta(Geo,2,'ab_cos');
-Psi.ps_ab_r_1 =X(Base,Geo,2,'ps_ab','r').*Theta(Geo,2,'ab');
-Psi.ps_ab_r_2 =X(Base,Geo,2,'ab','r').*Theta(Geo,2,'ps_ab');
-Psi.a_ps_b_r_1 =X(Base,Geo,2,'a_ps_b','r').*Theta(Geo,2,'ab');
-Psi.a_ps_b_r_2 =X(Base,Geo,2,'ab','r').*Theta(Geo,2,'a_ps_b');
-Psi.pr_ab_r=X(Base,Geo,2,'pr_ab','r').*Theta(Geo,2,'ab');
-Psi.pr_ab_r2_cos=X(Base,Geo,2,'pr_ab','r2').*Theta(Geo,2,'ab_cos');
-Psi.pt_ab=X(Base,Geo,2,'ab','1').*Theta(Geo,2,'pt_ab');
-Psi.pt_ab_r_cos=X(Base,Geo,2,'ab','r').*Theta(Geo,2,'pt_ab_cos');
-Psi.ab_s1= specialFun(Geo.s,Geo.h,Geo.kappa,Geo.m,Geo.n,Base.Cmn1,Base.jmn_pm,'hh`^2/[1-\kappa*h*cos\psi]');
-Psi.ab_s2= specialFun(Geo.s,Geo.h,Geo.kappa,Geo.m,Geo.n,Base.Cmn1,Base.jmn_pm,'h(1-\kappa*h*cos\psi)');
-Psi.ab=X(Base,Geo,2,'ab','1').*Theta(Geo,2,'ab');
-Psi.ab_r_cos=X(Base,Geo,2,'ab','r').*Theta(Geo,2,'ab_cos');
-Psi.pt_ab_cos=X(Base,Geo,2,'ab','1').*Theta(Geo,2,'pt_ab_cos');
+[Base]=BaseJ(Geo_b.m,Geo_b.n,Geo_b.h);
+Psi.ab_r=X(Base,Geo_b,2,'ab','r').*Theta(Geo_b,2,'ab');
+Psi.a_pr_b_r =X(Base,Geo_b,2,'a_pr_b','r').*Theta(Geo_b,2,'ab');
+Psi.ab_pt_ab =X(Base,Geo_b,2,'ab','1').*Theta(Geo_b,2,'pt_ab');
+Psi.ab_r2_cos =X(Base,Geo_b,2,'ab','r2').*Theta(Geo_b,2,'ab_cos');
+Psi.ps_ab_r_1 =X(Base,Geo_b,2,'ps_ab','r').*Theta(Geo_b,2,'ab');
+Psi.ps_ab_r_2 =X(Base,Geo_b,2,'ab','r').*Theta(Geo_b,2,'ps_ab');
+Psi.a_ps_b_r_1 =X(Base,Geo_b,2,'a_ps_b','r').*Theta(Geo_b,2,'ab');
+Psi.a_ps_b_r_2 =X(Base,Geo_b,2,'ab','r').*Theta(Geo_b,2,'a_ps_b');
+Psi.pr_ab_r=X(Base,Geo_b,2,'pr_ab','r').*Theta(Geo_b,2,'ab');
+Psi.pr_ab_r2_cos=X(Base,Geo_b,2,'pr_ab','r2').*Theta(Geo_b,2,'ab_cos');
+Psi.pt_ab=X(Base,Geo_b,2,'ab','1').*Theta(Geo_b,2,'pt_ab');
+Psi.pt_ab_r_cos=X(Base,Geo_b,2,'ab','r').*Theta(Geo_b,2,'pt_ab_cos');
+Psi.ab_s1= specialFun(Geo_b_b.s,Geo_b_b.h,Geo_b_b.kappa,Geo_b_b.m,Geo_b_b.n,Base.Cmn1,Base.jmn_pm,'hh`^2/[1-\kappa*h*cos\psi]');
+Psi.ab_s2= specialFun(Geo_b_b.s,Geo_b_b.h,Geo_b_b.kappa,Geo_b_b.m,Geo_b_b.n,Base.Cmn1,Base.jmn_pm,'h(1-\kappa*h*cos\psi)');
+Psi.ab=X(Base,Geo_b,2,'ab','1').*Theta(Geo_b,2,'ab');
+Psi.ab_r_cos=X(Base,Geo_b,2,'ab','r').*Theta(Geo_b,2,'ab_cos');
+Psi.pt_ab_cos=X(Base,Geo_b,2,'ab','1').*Theta(Geo_b,2,'pt_ab_cos');
 
-Psi.abc=X(Base,Geo,3,'ab','1').*Theta(Geo,3,'ab');
-Psi.abc_r=X(Base,Geo,3,'ab','r').*Theta(Geo,3,'ab');
-Psi.abc_r2_cos=X(Base,Geo,3,'ab','r2').*Theta(Geo,3,'ab_cos');
-Psi.abc_r_cos= X(Base,Geo,3,'ab','r').*Theta(Geo,3,'ab_cos');
-Psi.abc_r_sin=X(Base,Geo,3,'ab','r').*Theta(Geo,3,'ab_sin');
-Psi.pr_abc_r=X(Base,Geo,3,'pr_ab','r').*Theta(Geo,3,'ab');
-Psi.pr_abc_r2_cos=X(Base,Geo,3,'pr_ab','r2').*Theta(Geo,3,'ab_cos');
-Psi.pt_abc=X(Base,Geo,3,'ab','1').*Theta(Geo,3,'pt_ab');
-Psi.pt_abc_r_cos=X(Base,Geo,3,'ab','r').*Theta(Geo,3,'pt_ab_cos');
-Psi.abc=X(Base,Geo,3,'ab','1').*Theta(Geo,3,'ab');
-Psi.abc_r_cos=X(Base,Geo,3,'ab','r').*Theta(Geo,3,'ab_cos');
-Psi.abc_r_sin=X(Base,Geo,3,'ab','r').*Theta(Geo,3,'ab_sin');
-Psi.ps_abc_ps_r=X(Base,Geo,3,'ps(ab)','r').*Theta(Geo,3,'ab');  %(Jiaqi-153)
-Psi.ps_abc_r=X(Base,Geo,3,'ps_ab','r').*Theta(Geo,3,'ab');
-Psi.ps_abc=X(Base,Geo,3,'ps_ab','1').*Theta(Geo,3,'ab');
+Psi.abc=X(Base,Geo_b,3,'ab','1').*Theta(Geo_b,3,'ab');
+Psi.abc_r=X(Base,Geo_b,3,'ab','r').*Theta(Geo_b,3,'ab');
+Psi.abc_r2_cos=X(Base,Geo_b,3,'ab','r2').*Theta(Geo_b,3,'ab_cos');
+Psi.abc_r_cos= X(Base,Geo_b,3,'ab','r').*Theta(Geo_b,3,'ab_cos');
+Psi.abc_r_sin=X(Base,Geo_b,3,'ab','r').*Theta(Geo_b,3,'ab_sin');
+Psi.pr_abc_r=X(Base,Geo_b,3,'pr_ab','r').*Theta(Geo_b,3,'ab');
+Psi.pr_abc_r2_cos=X(Base,Geo_b,3,'pr_ab','r2').*Theta(Geo_b,3,'ab_cos');
+Psi.pt_abc=X(Base,Geo_b,3,'ab','1').*Theta(Geo_b,3,'pt_ab');
+Psi.pt_abc_r_cos=X(Base,Geo_b,3,'ab','r').*Theta(Geo_b,3,'pt_ab_cos');
+Psi.abc=X(Base,Geo_b,3,'ab','1').*Theta(Geo_b,3,'ab');
+Psi.abc_r_cos=X(Base,Geo_b,3,'ab','r').*Theta(Geo_b,3,'ab_cos');
+Psi.abc_r_sin=X(Base,Geo_b,3,'ab','r').*Theta(Geo_b,3,'ab_sin');
+Psi.ps_abc_ps_r=X(Base,Geo_b,3,'ps(ab)','r').*Theta(Geo_b,3,'ab');  %(Jiaqi-153)
+Psi.ps_abc_r=X(Base,Geo_b,3,'ps_ab','r').*Theta(Geo_b,3,'ab');
+Psi.ps_abc=X(Base,Geo_b,3,'ps_ab','1').*Theta(Geo_b,3,'ab');
 toc
 tic
 %2D-bsxfun(@times, 3D(\alpha*\beta*s), 1*1*s*a)-->4D[\alpha*\beta*s*a]
@@ -93,14 +104,14 @@ Fun2_a.W=-bsxfun(@times,Psi.ab_pt_ab,reshape(1./(sqrt(-1)*k*a),1,1,1,length(a)))
 Fun2_b.W=-bsxfun(@times,Psi.ab_pt_ab,reshape(1./(sqrt(-1)*k*b),1,1,1,length(b))); %(James-3.27,Jiaqi-77)
 Fun2_a_b.W=-bsxfun(@times,Psi.ab_pt_ab,reshape(1./(sqrt(-1)*k*a_b),1,1,1,length(b),length(a))); %(James-3.27,Jiaqi-77)
 Fun2_a.N=bsxfun(@times,Psi.ab_r,reshape((sqrt(-1)*k*a),1,1,1,length(a)))...
-    -bsxfun(@times,Psi.ab_r2_cos,reshape((sqrt(-1)*k*Geo.kappa.'.*a),1,1,length(Geo.kappa),length(a)));%(James-3.35b)
+    -bsxfun(@times,Psi.ab_r2_cos,reshape((sqrt(-1)*k*Geo_b.kappa.'.*a),1,1,length(Geo_b.kappa),length(a)));%(James-3.35b)
 Fun2_a_b.N=bsxfun(@times,Psi.ab_r,reshape((sqrt(-1)*k*a_b),1,1,1,length(b),length(a)))...
-    -bsxfun(@times,Psi.ab_r2_cos,reshape((sqrt(-1)*k*Geo.kappa.'.*permute(a_b,[3,1,2])),1,1,length(Geo.kappa),length(b),length(a)));%(James-3.35b)
+    -bsxfun(@times,Psi.ab_r2_cos,reshape((sqrt(-1)*k*Geo_b.kappa.'.*permute(a_b,[3,1,2])),1,1,length(Geo_b.kappa),length(b),length(a)));%(James-3.35b)
 Fun2_b.N=bsxfun(@times,Psi.ab_r,reshape((sqrt(-1)*k*b),1,1,1,length(b)))...
-    -bsxfun(@times,Psi.ab_r2_cos,reshape((sqrt(-1)*k*Geo.kappa.'.*b),1,1,length(Geo.kappa),length(b )));%(James-3.35b)
-for i=1:length(Geo.s);for j=1:length(a);Fun2_a.N_inv(:,:,i,j)=Fun2_a.N(:,:,i,j)^(-1);end;end;
-for i=1:length(Geo.s);for j=1:length(b); for k=1:length(a);if a(k)-b(j)==0;Fun2_a_b.N_inv(:,:,i,j,k)=NaN+NaN*sqrt(-1);else;Fun2_a_b.N_inv(:,:,i,j,k)=Fun2_a_b.N(:,:,i,j,k)^(-1);end;end;end;end;
-for i=1:length(Geo.s);for j=1:length(b);Fun2_b.N_inv(:,:,i,j)=Fun2_b.N(:,:,i,j)^(-1);end;end;
+    -bsxfun(@times,Psi.ab_r2_cos,reshape((sqrt(-1)*k*Geo_b.kappa.'.*b),1,1,length(Geo_b.kappa),length(b )));%(James-3.35b)
+for i=1:length(Geo_b.s);for j=1:length(a);Fun2_a.N_inv(:,:,i,j)=Fun2_a.N(:,:,i,j)^(-1);end;end;
+for i=1:length(Geo_b.s);for j=1:length(b); for k=1:length(a);if a(k)-b(j)==0;Fun2_a_b.N_inv(:,:,i,j,k)=NaN+NaN*sqrt(-1);else;Fun2_a_b.N_inv(:,:,i,j,k)=Fun2_a_b.N(:,:,i,j,k)^(-1);end;end;end;end;
+for i=1:length(Geo_b.s);for j=1:length(b);Fun2_b.N_inv(:,:,i,j)=Fun2_b.N(:,:,i,j)^(-1);end;end;
 
 Fun2_a.G=-bsxfun(@times,Psi.ps_ab_r_1,reshape(ones(size(a)),1,1,1,length(a)))...
     -bsxfun(@times,Psi.ps_ab_r_2,reshape(ones(size(a)),1,1,1,length(a)));%(James-3.35d)
@@ -115,18 +126,18 @@ Fun2_b.H=-bsxfun(@times,Psi.a_ps_b_r_1,reshape(ones(size(b)),1,1,1,length(b)))..
 Fun2_a_b.H=-bsxfun(@times,Psi.a_ps_b_r_1,reshape(ones(size(a_b)),1,1,1,length(b),length(a)))...
     -bsxfun(@times,Psi.a_ps_b_r_2,reshape(ones(size(a_b)),1,1,1,length(b),length(a)));%(James-3.35d)
 Fun2_a.M_2_1=bsxfun(@times,Psi.pr_ab_r,reshape(ones(size(a)),1,1,1,length(a)))...
-    -bsxfun(@times,Psi.pr_ab_r2_cos,reshape(Geo.kappa.'.*ones(size(a)),1,1,length(Geo.kappa),length(a)));
+    -bsxfun(@times,Psi.pr_ab_r2_cos,reshape(Geo_b.kappa.'.*ones(size(a)),1,1,length(Geo_b.kappa),length(a)));
 Fun2_a_b.M_2_1=bsxfun(@times,Psi.pr_ab_r,reshape(ones(size(a_b)),1,1,1,length(b),length(a)))...
-    -bsxfun(@times,Psi.pr_ab_r2_cos,reshape(Geo.kappa.'.*permute(ones(size(a_b)),[3,1,2]),1,1,length(Geo.kappa),length(b),length(a)));
+    -bsxfun(@times,Psi.pr_ab_r2_cos,reshape(Geo_b.kappa.'.*permute(ones(size(a_b)),[3,1,2]),1,1,length(Geo_b.kappa),length(b),length(a)));
 Fun2_b.M_2_1=bsxfun(@times,Psi.pr_ab_r,reshape(ones(size(b)),1,1,1,length(b)))...
-    -bsxfun(@times,Psi.pr_ab_r2_cos,reshape(Geo.kappa.'.*ones(size(b)),1,1,length(Geo.kappa),length(b)));
+    -bsxfun(@times,Psi.pr_ab_r2_cos,reshape(Geo_b.kappa.'.*ones(size(b)),1,1,length(Geo_b.kappa),length(b)));
 
 Fun2_a.M_3_1=bsxfun(@times,Psi.pt_ab,reshape(ones(size(a)),1,1,1,length(a)))...
-    -bsxfun(@times,Psi.pt_ab_r_cos,reshape(Geo.kappa.'.*ones(size(a)),1,1,length(Geo.kappa),length(a)));
+    -bsxfun(@times,Psi.pt_ab_r_cos,reshape(Geo_b.kappa.'.*ones(size(a)),1,1,length(Geo_b.kappa),length(a)));
 Fun2_a_b.M_3_1=bsxfun(@times,Psi.pt_ab,reshape(ones(size(a_b)),1,1,1,length(b),length(a)))...
-    -bsxfun(@times,Psi.pt_ab_r_cos,reshape(Geo.kappa.'.*permute(ones(size(a_b)),[3,1,2]),1,1,length(Geo.kappa),length(b),length(a)));
+    -bsxfun(@times,Psi.pt_ab_r_cos,reshape(Geo_b.kappa.'.*permute(ones(size(a_b)),[3,1,2]),1,1,length(Geo_b.kappa),length(b),length(a)));
 Fun2_b.M_3_1=bsxfun(@times,Psi.pt_ab,reshape(ones(size(b)),1,1,1,length(b)))...
-    -bsxfun(@times,Psi.pt_ab_r_cos,reshape(Geo.kappa.'.*ones(size(b)),1,1,length(Geo.kappa),length(b)));
+    -bsxfun(@times,Psi.pt_ab_r_cos,reshape(Geo_b.kappa.'.*ones(size(b)),1,1,length(Geo_b.kappa),length(b)));
 
 Fun2_a.M  =-Fun2_a.N-multiprod(Fun2_a.M_2_1,Fun2_a.V,[1,2])-multiprod(Fun2_a.M_3_1,Fun2_a.W,[1,2]);%(James-3.35a)
 Fun2_a_b.M=-Fun2_a_b.N-multiprod(Fun2_a_b.M_2_1,Fun2_a_b.V,[1,2])-multiprod(Fun2_a_b.M_3_1,Fun2_a_b.W,[1,2]);%(James-3.35a)
@@ -135,30 +146,30 @@ Fun2_b.M=-Fun2_b.N-multiprod(Fun2_b.M_2_1,Fun2_b.V,[1,2])-multiprod(Fun2_b.M_3_1
 Fun2_a.A_2_1_1= bsxfun(@times,Psi.ab_s1,reshape(ones(size(a)),1,1,1,length(a)));
 Fun2_a.A_2_1_2= bsxfun(@times,Psi.ab_s2,reshape(ones(size(a)),1,1,1,length(a)));
 Fun2_a.A_2_1_3= bsxfun(@times,Psi.ab,reshape(ones(size(a)),1,1,1,length(a)))...
-    -bsxfun(@times,Psi.ab_r_cos,reshape((Geo.kappa.'.*ones(size(a))),1,1,length(Geo.kappa),length(a)));
+    -bsxfun(@times,Psi.ab_r_cos,reshape((Geo_b.kappa.'.*ones(size(a))),1,1,length(Geo_b.kappa),length(a)));
 Fun2_a.A_2_1_4=Fun2_a.M_2_1;
 Fun2_a.A_3_1_2=bsxfun(@times,Psi.pt_ab,reshape(ones(size(a)),1,1,1,length(a)))...
-    -bsxfun(@times,Psi.pt_ab_cos,reshape(Geo.kappa.'.*ones(size(a)),1,1,length(Geo.kappa),length(a)));
+    -bsxfun(@times,Psi.pt_ab_cos,reshape(Geo_b.kappa.'.*ones(size(a)),1,1,length(Geo_b.kappa),length(a)));
 
 
 %3D-bsxfun(@times, 4D(\alpha*\beta*\gamma*s), 1*1*1*s*b*a)-->6D[\alpha*\beta*gamma*s*b*a]
-Fun3_ab.I3_1=bsxfun(@times,Psi.abc,reshape(bsxfun(@times,ones(size(Geo.s.'))*ones(size(b)),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)));
-Fun3_ab.I3_r=bsxfun(@times,Psi.abc_r,reshape(bsxfun(@times,ones(size(Geo.s.'))*ones(size(b)),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)));
+Fun3_ab.I3_1=bsxfun(@times,Psi.abc,reshape(bsxfun(@times,ones(size(Geo_b.s.'))*ones(size(b)),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)));
+Fun3_ab.I3_r=bsxfun(@times,Psi.abc_r,reshape(bsxfun(@times,ones(size(Geo_b.s.'))*ones(size(b)),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)));
 
-Fun3_ab.A_1=bsxfun(@times,Psi.abc_r,reshape(bsxfun(@times,ones(size(Geo.s.'))*(sqrt(-1)*k*b),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)))...
-    -bsxfun(@times,Psi.abc_r2_cos,reshape(bsxfun(@times,Geo.kappa.'*(sqrt(-1)*k*b),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)));
+Fun3_ab.A_1=bsxfun(@times,Psi.abc_r,reshape(bsxfun(@times,ones(size(Geo_b.s.'))*(sqrt(-1)*k*b),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)))...
+    -bsxfun(@times,Psi.abc_r2_cos,reshape(bsxfun(@times,Geo_b.kappa.'*(sqrt(-1)*k*b),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)));
 Fun3_ab.A_2=  permute(bsxfun(@times,Fun2_a.M_2_1,reshape(ones(size(b)),1,1,1,1,length(b))),[6,1,2,3,5,4]);
 Fun3_ab.N_inv=permute(bsxfun(@times,Fun2_a.N_inv,reshape(ones(size(b)),1,1,1,1,length(b))),[6,1,2,3,5,4]);
 Fun3_ab.A_2_1=permute(bsxfun(@times,Fun2_a.A_2_1_1+Fun2_a.A_2_1_2+Fun2_a.A_2_1_3+Fun2_a.A_2_1_4,reshape(ones(size(b)),1,1,1,1,length(b))),[6,1,2,3,5,4]);
-Fun3_ab.A_2_2=bsxfun(@times,Psi.abc_r_cos,reshape(bsxfun(@times,Geo.kappa.'*ones(size(b)),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)));
+Fun3_ab.A_2_2=bsxfun(@times,Psi.abc_r_cos,reshape(bsxfun(@times,Geo_b.kappa.'*ones(size(b)),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)));
 Fun3_ab.A_3=  permute(bsxfun(@times,Fun2_a.M_3_1,reshape(ones(size(b)),1,1,1,1,length(b))),[6,1,2,3,5,4]);
 Fun3_ab.A_3_1_2=permute(bsxfun(@times,Fun2_a.A_3_1_2,reshape(ones(size(b)),1,1,1,1,length(b))),[6,1,2,3,5,4]);
-Fun3_ab.A_3_2=bsxfun(@times,Psi.abc_r_sin,reshape(bsxfun(@times,Geo.kappa.'*ones(size(b)),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)));
+Fun3_ab.A_3_2=bsxfun(@times,Psi.abc_r_sin,reshape(bsxfun(@times,Geo_b.kappa.'*ones(size(b)),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)));
 Fun3_ab.A = -Fun3_ab.A_1...
     -multiprod(permute(multiprod(Fun3_ab.A_2,Fun3_ab.N_inv,[2,3]),[2,3,1,4,5,6]),(-multiprod(Fun3_ab.I3_r,Fun3_ab.A_2_1,[2,3])-Fun3_ab.A_2_2),[1,2])...
     -multiprod(permute(multiprod(Fun3_ab.A_3,Fun3_ab.N_inv,[2,3]),[2,3,1,4,5,6]),(multiprod(Fun3_ab.I3_r,Fun3_ab.A_3_1_2,[2,3])+Fun3_ab.A_3_2),[1,2]);%(James-3.35e)
-Fun3_ab.B_1=bsxfun(@times,Psi.abc_r,reshape(bsxfun(@times,ones(size(Geo.s.'))*((gamma-1)/2*sqrt(-1)*k*ones(size(b))),reshape(a,1,1,[])),1,1,1,length(Geo.s),length(b),length(a)))...
-    -bsxfun(@times,Psi.abc_r2_cos,reshape(bsxfun(@times,Geo.kappa.'*((gamma-1)/2*sqrt(-1)*k*ones(size(b))),reshape(a,1,1,[])),1,1,1,length(Geo.s),length(b),length(a)));
+Fun3_ab.B_1=bsxfun(@times,Psi.abc_r,reshape(bsxfun(@times,ones(size(Geo_b.s.'))*((gamma-1)/2*sqrt(-1)*k*ones(size(b))),reshape(a,1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)))...
+    -bsxfun(@times,Psi.abc_r2_cos,reshape(bsxfun(@times,Geo_b.kappa.'*((gamma-1)/2*sqrt(-1)*k*ones(size(b))),reshape(a,1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)));
 Fun3_ab.B_2=Fun3_ab.A_1;
 Fun3_a_b.V= permute(Fun2_a_b.V,[1,2,6,3,4,5]);
 Fun3_b.V= permute(bsxfun(@times,Fun2_b.V,reshape(ones(size(a)),1,1,1,1,length(a))),[6,1,2,3,4,5]);
@@ -178,14 +189,14 @@ Fun3_b.I=permute(bsxfun(@times,Fun2_a.I2,reshape(ones(size(b)),1,1,1,1,length(b)
 
 Fun3_ab.B_5_1=multiprod(multiprod(Fun3_ab.I3_r,Fun3_a_b.M,[1,2]),Fun3_b.V,[2,3]);
 Fun3_ab.B_5_2=multiprod(multiprod(Fun3_ab.B_1/((gamma-1)/2),Fun3_a_b.I,[1,2]),Fun3_b.V,[2,3]);
-Fun3_ab.B_5_31=bsxfun(@times,Psi.pr_abc_r,reshape(bsxfun(@times,ones(size(Geo.s.'))*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)))...
-    -bsxfun(@times,Psi.pr_abc_r2_cos,reshape(bsxfun(@times,Geo.kappa.'*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)));
+Fun3_ab.B_5_31=bsxfun(@times,Psi.pr_abc_r,reshape(bsxfun(@times,ones(size(Geo_b.s.'))*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)))...
+    -bsxfun(@times,Psi.pr_abc_r2_cos,reshape(bsxfun(@times,Geo_b.kappa.'*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)));
 Fun3_ab.B_5_3=multiprod(multiprod(Fun3_ab.B_5_31,Fun3_a_b.V,[1,2]),Fun3_b.V,[2,3]);
-Fun3_ab.B_5_41=bsxfun(@times,Psi.pt_abc,reshape(bsxfun(@times,ones(size(Geo.s.'))*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)))...
-    -bsxfun(@times,Psi.pt_abc_r_cos,reshape(bsxfun(@times,Geo.kappa.'*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)));
+Fun3_ab.B_5_41=bsxfun(@times,Psi.pt_abc,reshape(bsxfun(@times,ones(size(Geo_b.s.'))*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)))...
+    -bsxfun(@times,Psi.pt_abc_r_cos,reshape(bsxfun(@times,Geo_b.kappa.'*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)));
 Fun3_ab.B_5_4=multiprod(multiprod(Fun3_ab.B_5_41,Fun3_a_b.W,[1,2]),Fun3_b.V,[2,3]);
-Fun3_ab.B_5_51=bsxfun(@times,Psi.abc,reshape(bsxfun(@times,ones(size(Geo.s.'))*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)))...
-    -bsxfun(@times,Psi.abc_r_cos,reshape(bsxfun(@times,Geo.kappa.'*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)));
+Fun3_ab.B_5_51=bsxfun(@times,Psi.abc,reshape(bsxfun(@times,ones(size(Geo_b.s.'))*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)))...
+    -bsxfun(@times,Psi.abc_r_cos,reshape(bsxfun(@times,Geo_b.kappa.'*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)));
 Fun3_ab.B_5_5=multiprod(multiprod(Fun3_ab.B_5_51,Fun3_a_b.W,[1,2]),Fun3_b.W,[2,3]);
 
 Fun3_ab.B_6_1=multiprod(multiprod(Fun3_ab.I3_r,Fun3_a_b.M,[1,2]),Fun3_b.W,[2,3]);
@@ -203,9 +214,9 @@ Fun3_ab.C_2=multiprod(multiprod(Fun3_ab.I3_r,Fun3_a_b.M,[1,2]),Fun3_b.I,[2,3]);
 Fun3_ab.C_3=Fun3_ab.B_1/((gamma-1)/2);
 Fun3_ab.C_4=multiprod(multiprod(Fun3_ab.B_5_31,Fun3_a_b.I,[1,2]),Fun3_b.V,[2,3]);
 Fun3_ab.C_5=multiprod(multiprod(Fun3_ab.B_5_41,Fun3_a_b.I,[1,2]),Fun3_b.W,[2,3]);
-Fun3_ab.B_6_1=bsxfun(@times,Psi.abc_r_cos,reshape(bsxfun(@times,Geo.kappa.'*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)));
+Fun3_ab.B_6_1=bsxfun(@times,Psi.abc_r_cos,reshape(bsxfun(@times,Geo_b.kappa.'*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)));
 Fun3_ab.C_6=multiprod(multiprod(Fun3_ab.B_6_1,Fun3_a_b.I,[1,2]),Fun3_b.V,[2,3]);
-Fun3_ab.B_7_1=bsxfun(@times,Psi.abc_r_sin,reshape(bsxfun(@times,Geo.kappa.'*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo.s),length(b),length(a)));
+Fun3_ab.B_7_1=bsxfun(@times,Psi.abc_r_sin,reshape(bsxfun(@times,Geo_b.kappa.'*(ones(size(b))),reshape(ones(size(a)),1,1,[])),1,1,1,length(Geo_b.s),length(b),length(a)));
 Fun3_ab.C_7=multiprod(multiprod(Fun3_ab.B_7_1,Fun3_a_b.I,[1,2]),Fun3_b.W,[2,3]);
 Fun3_ab.C=Fun3_ab.C_1+Fun3_ab.C_2+Fun3_ab.C_3+Fun3_ab.C_4+Fun3_ab.C_5+Fun3_ab.C_6-Fun3_ab.C_7; %(James-3.35g)
 

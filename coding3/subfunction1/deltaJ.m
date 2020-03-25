@@ -4,7 +4,7 @@
 %Copyright 2020, SJTU.
 
 %coding3 is updating h as array..
-function [X1]= deltaJ(s,h,Cmn1,jmn_pm,m,n,dimention,k,op,op_m) %k+ right
+function [X1]= deltaJ(s,h,h_diff,Cmn1,jmn_pm,m,n,dimention,k,op,op_m) %k+ right
 switch op_m
     case '1'
         for hk=1:length(h)
@@ -60,7 +60,7 @@ if dimention==2
             end
             X1=reshape(X1,n*length(m),n*length(m),length(h));
         case   'ps_ab'
-            h_diff=[(h(2)-h(1))/(s(2)-s(1)) diff(h)./diff(s)];
+
             X1=zeros(n*length(m)*n*length(m),length(h));
             for hk=1:length(h)
                 for k=1:length(dk)
@@ -74,7 +74,7 @@ if dimention==2
             end
             X1=reshape(X1,n*length(m),n*length(m),length(h));
         case   'a_ps_b'
-            h_diff=[(h(2)-h(1))/(s(2)-s(1)) diff(h)./diff(s)];
+
             X1=zeros(n*length(m)*n*length(m),length(h));
             for hk=1:length(h)
                 for k=1:length(dk)
@@ -135,7 +135,7 @@ elseif dimention==3
             end
             X1=reshape(X1,n*length(m),n*length(m),n*length(m));
         case   'ps_ab'
-            h_diff=[(h(2)-h(1))/(s(2)-s(1)) diff(h)./diff(s)];
+
             X1=zeros(n*length(m)*n*length(m)*n*length(m),length(h));
             for hk=1:length(h)
                 for k=1:length(dk)
@@ -151,7 +151,7 @@ elseif dimention==3
             end
             X1=reshape(X1,n*length(m),n*length(m),n*length(m),length(h));
         case  'a_ps_b'
-            h_diff=[(h(2)-h(1))/(s(2)-s(1)) diff(h)./diff(s)];
+
             X1=zeros(n*length(m)*n*length(m)*n*length(m),length(h));
             for hk=1:length(h)
                 for k=1:length(dk)
@@ -167,7 +167,7 @@ elseif dimention==3
             end
             X1=reshape(X1,n*length(m),n*length(m),n*length(m),length(h));
         case   'ps(ab)' %(Jiaqi_155)
-            h_diff=[(h(2)-h(1))/(s(2)-s(1)) diff(h)./diff(s)];
+
             X1=zeros(n*length(m)*n*length(m)*n*length(m),length(h));
             for hk=1:length(h)
                 for k=1:length(dk)
