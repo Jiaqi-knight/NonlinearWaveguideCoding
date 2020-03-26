@@ -12,3 +12,4 @@ Base.jmn_pm=[fliplr(jmn) jmn(:,2:end)];
 BesselValue_pm=[fliplr(repmat((-1).^m0,n,1).*BesselValue) BesselValue(:,2:end)];
 Base.Cmn1=bsxfun(@times,(sqrt(-1)).^m./(sqrt(pi)*BesselValue_pm.*sqrt(1-m.^2./Base.jmn_pm.^2)),reshape(1./h,1,1,[]));%£¨Jiaqi-130£©4*11*50
 
+end

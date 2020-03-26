@@ -4,7 +4,10 @@
 %Copyright 2020, SJTU.
 
 %coding3 is updating h as array..
-function [X1]= deltaJ(h,h_diff,Cmn1,jmn_pm,m,n,dimention,k,op,op_m) %k+ right
+function [X1]= deltaJ(h,h_diff,m,n,dimention,k,op,op_m) %k+ right
+[Base]=BaseJ(m,n,h);
+Cmn1=Base.Cmn1;
+jmn_pm=Base.jmn_pm;
 switch op_m
     case '1'
         for hk=1:length(h)

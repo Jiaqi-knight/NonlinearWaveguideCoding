@@ -32,8 +32,8 @@ Geo.h_diff=[(Geo.h(2)-Geo.h(1))/(Geo.s(2)-Geo.s(1)) diff(Geo.h)./diff(Geo.s)];
 %tubeplot(x,y,z,h,s,50);hold on;plot3(x, y, z);daspect([1,1,1]); camlight;
 
 %% #######Wave########%
-Geo.m=-1:1;
-Geo.n=1;
+Geo.m=-2:2;
+Geo.n=2;
 a=[1 2]; %P^{a}=P^{a*},U^{a}=U^{a*}
 b=[-3 -2 -1 1 2 3];
 a_b=a-b.';
@@ -59,26 +59,29 @@ Name.T3=    {'\Theta_{\alpha\beta\gamma}','\Theta_{(\alpha)\beta\gamma}','\Theta
             '\Theta_{\alpha\beta\gamma}[sin\phi]','\Theta_{(\alpha)\beta\gamma}[cos\phi]','\Theta_{(\alpha)\beta\gamma}[sin\phi]','\Theta_{\{\alpha\}\beta\gamma}[cos\phi]','\Theta_{\{\alpha\}\beta\gamma}[sin\phi]'};
 
 %% #######Function########%
+%
+[Base]=BaseJ(Geo_b.m,Geo_b.n,Geo_b.h);
+
 %% different h can be similarly deal with
 tic
-X2.ab=         X(Geo_b,2,'ab','1');        %1/h
-X2.ab_r=       X(Geo_b,2,'ab','r');        %1
-X2.ab_r2 =     X(Geo_b,2,'ab','r2');       %h
-X2.pr_ab_r=    X(Geo_b,2,'pr_ab','r');     %1/h
-X2.pr_ab_r2=   X(Geo_b,2,'pr_ab','r2');    %1
-X2.a_pr_b_r =  X(Geo_b,2,'a_pr_b','r');    %1
-X2.a_ps_b_r =  X(Geo_b,2,'a_ps_b','r');    %h'/h
-X2.ps_ab_r =   X(Geo_b,2,'ps_ab','r');     %h'/h
-toc;tic
-X3.abc=        X(Geo_b,3,'ab','1');        %1/h^2
-X3.abc_r=      X(Geo_b,3,'ab','r');        %1/h
-X3.abc_r2=     X(Geo_b,3,'ab','r2');       %1
-X3.ps_abc_r=   X(Geo_b,3,'ps_ab','r');     %h'/h^2 
-X3.ps_abc=     X(Geo_b,3,'ps_ab','1');     %h'/h^3
-X3.pr_abc_r=   X(Geo_b,3,'pr_ab','r');     %1/h^2
-X3.pr_abc_r2=  X(Geo_b,3,'pr_ab','r2');    %1/h
-X3.ps_abc_ps_r=X(Geo_b,3,'ps(ab)','r');    %h'/h^2
+X2.ab=         X(Base,Geo_b,2,'ab','1');        %1/h
+X2.ab_r=       X(Base,Geo_b,2,'ab','r');        %1
+X2.ab_r2 =     X(Base,Geo_b,2,'ab','r2');       %h
+X2.pr_ab_r=    X(Base,Geo_b,2,'pr_ab','r');     %1/h
+X2.pr_ab_r2=   X(Base,Geo_b,2,'pr_ab','r2');    %1
+X2.a_pr_b_r =  X(Base,Geo_b,2,'a_pr_b','r');    %1
+X2.a_ps_b_r =  X(Base,Geo_b,2,'a_ps_b','r');    %h'/h
+X2.ps_ab_r =   X(Base,Geo_b,2,'ps_ab','r');     %h'/h
 toc
+X3.abc=        X(Base,Geo_b,3,'ab','1');        %1/h^2
+X3.abc_r=      X(Base,Geo_b,3,'ab','r');        %1/h
+X3.abc_r2=     X(Base,Geo_b,3,'ab','r2');       %1
+X3.ps_abc_r=   X(Base,Geo_b,3,'ps_ab','r');     %h'/h^2 
+X3.ps_abc=     X(Base,Geo_b,3,'ps_ab','1');     %h'/h^3
+X3.pr_abc_r=   X(Base,Geo_b,3,'pr_ab','r');     %1/h^2
+X3.pr_abc_r2=  X(Base,Geo_b,3,'pr_ab','r2');    %1/h
+X3.ps_abc_ps_r2=X(Base,Geo_b,3,'ps(ab)','r');%h'/h^2
+
 %%
 T2.ab=         Theta(Geo_b,2,'ab');
 T2.ps_ab=      Theta(Geo_b,2,'ps_ab');

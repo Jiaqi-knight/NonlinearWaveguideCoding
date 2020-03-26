@@ -249,6 +249,8 @@ C_{\alpha_{01}}={1 \over \sqrt{\pi}h}
 
 for 
  $\int_0^{2\pi}\int_0^h \psi_{\alpha_{m\mu}} \psi_{\beta_{nv}} r dr d\theta=\delta_{\mu v} \delta_{m,-n} =\widehat{\delta }_{\alpha\beta}=I$.
+ 
+
 
 
 \subsection{Slowly varying ducts}
@@ -1639,7 +1641,14 @@ C_{\alpha_{01}}={1 \over \sqrt{\pi}h}
 \end{aligned}
 \end{equation}
 
-
+ 
+ By normolization, h is not bother the equation of I,:
+ 
+  $\int_0^h C1 C2 J1 J2 r dr=\int_0^1 {C_1^\#\over h} {C_2^\#\over h} J1(j_1' z) J2(j_2'z) z h hdz=\int_0^1 {C_1^\#} {C_2^\#2} J1(j_1' z) J2(j_2'z) z dz$.
+  
+   $\int_0^h C1 C2 C3 J1 J2 J3 r dr=\int_0^1 {C_1^\#\over h} {C_2^\#\over h}  {C_3^\#\over h}  J1(j_1' z) J2(j_2'z) J3(j_3'z)  z h hdz={1\over h}\int_0^1 {C_1^\#} {C_2^\#}  {C_3^\#2}  J1(j_1' z) J2(j_2'z) J3(j_3'z)  zdz$.
+   
+Which this derivation could be used to simplify the code.
 
 \begin{equation}
 \begin{aligned}
