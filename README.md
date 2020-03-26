@@ -40,4 +40,7 @@ Coding3： Main_F.m
 
 Coding4: 
 
-We need further updating code: effecient, consider the effect of h to basis function--》cut off the calculation
+We need further updating code: effecient, consider the effect of h to basis function--》cut off the calculation.
+
+Where, the structure of coding,is decided on that \kappa is only in Main_Equation, and \tau is in only \Theta Function, h' only in \XFun.
+Interesting!
