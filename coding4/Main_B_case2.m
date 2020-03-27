@@ -4,12 +4,12 @@
 %   Copyright 2020, SJTU.
 %-----------------------------------------------------------------%
 
-clc
-clear
-close all
-subfunction_path1='.\subfunction1';
-addpath(genpath(subfunction_path1));
-load('Data_m3_n1_a2_b6.mat');
+% clc
+% clear
+% close all
+% subfunction_path1='.\subfunction1';
+% addpath(genpath(subfunction_path1));
+% load('Data_m3_n1_a2_b6.mat');
 
 
 %% #######Boudnary########%

@@ -44,3 +44,6 @@ We need further updating code: effecient, consider the effect of h to basis func
 
 Where, the structure of coding,is decided on that \kappa is only in Main_Equation, and \tau is in only \Theta Function, h' only in \XFun.
 Interesting!
+
+Except of specialFun,  case 'hh`^2/[1-\kappa*h*cos\psi]',
+                       'h(1-\kappa*h*cos\psi)'

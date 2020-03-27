@@ -19,21 +19,26 @@ subfunction_path4='E:\Jiaqi-SJTU-DOIT\Maincode\GITHUB-wjq\NonlinearWaveguideCodi
 addpath(genpath(subfunction_path4));
 
 %% #######Geometry########%
-Geo.s =logspace(0,1,50);
-Geo.h=0.1*exp(linspace(0,1.5,length(Geo.s)));
-%Geo_b.h=0.1*ones(size(Geo_b.h));
-gamma=1.4;
-Geo.kappa=(2/3)./Geo.h;Geo.tau=1/2./Geo.h;
+%Geo.s =logspace(0,1,10);
+Geo.s =linspace(0,10,100);
+%Geo.h=0.1*exp(linspace(0,1.5,length(Geo.s)));
+Geo.h=1*ones(size(Geo.s));
+
+%Geo.tau=1/2./Geo.h;
+Geo.tau=linspace(0,1,100)
+
+Geo.kappa=(2/3)./Geo.h;
 Geo.sw=sqrt(Geo.kappa.^2+Geo.tau.^2).*Geo.s;
 Geo.x = Geo.kappa./(Geo.kappa.^2+Geo.tau.^2).*sin(Geo.sw+0);Geo.y = Geo.kappa./(Geo.kappa.^2+Geo.tau.^2).*cos(Geo.sw+0);Geo.z = Geo.tau./(Geo.kappa.^2+Geo.tau.^2).*Geo.sw;
 Geo.theta_0=cumsum(Geo.tau.*[0 diff(Geo.s)]);
 Geo.h_diff=[(Geo.h(2)-Geo.h(1))/(Geo.s(2)-Geo.s(1)) diff(Geo.h)./diff(Geo.s)];
+gamma=1.4;
 
-%tubeplot(x,y,z,h,s,50);hold on;plot3(x, y, z);daspect([1,1,1]); camlight;
+tubeplot(Geo.x,Geo.y,Geo.z,Geo.h,Geo.s,50);hold on;plot3(Geo.x, Geo.y, Geo.z);daspect([1,1,1]); camlight;
 
 %% #######Wave########%
-Geo.m=-1:1;
-Geo.n=1;
+Geo.m=-3:3;
+Geo.n=3;
 a=[1 2]; %P^{a}=P^{a*},U^{a}=U^{a*}
 b=[-3 -2 -1 1 2 3];
 a_b=a-b.';
@@ -42,11 +47,11 @@ k=0.95*1.8412/Geo.h(end);
 %%
 Geo_b.m=Geo.m;
 Geo_b.n=Geo.n;
-Geo_b.s=[Geo.s(1) Geo.s(end)];
-Geo_b.h=[Geo.h(1) Geo.h(end)];
-Geo_b.kappa=[Geo.kappa(1) Geo.kappa(end)];
-Geo_b.tau=[Geo.tau(1) Geo.tau(end)];
-Geo_b.h_diff=[Geo.h_diff(1) Geo.h_diff(end)]
+Geo_b.s=Geo.s;                  %[Geo.s(1) Geo.s(end)];
+Geo_b.h=Geo.h;                  %[Geo.h(1) Geo.h(end)];
+Geo_b.kappa=Geo.kappa;          %[Geo.kappa(1) Geo.kappa(end)];
+Geo_b.tau=Geo.tau;              %[Geo.tau(1) Geo.tau(end)];
+Geo_b.h_diff=Geo.h_diff         %[Geo.h_diff(1) Geo.h_diff(end)]
 %% #######Name########%
 Name.op_m=  {'1','r','r2'};
 Name.op=    {'ab','pr_ab','a_pr_b','ps_ab','a_ps_b'};
@@ -54,9 +59,9 @@ Name.X2=    {'X_{\alpha\beta}','X_{[\alpha]\beta}','X_{\{\alpha\}\beta}','X_{\al
 Name.X3=    {'X_{\alpha\beta\gamma}','X_{[\alpha]\beta\gamma}','X_{\{\alpha\}\beta\gamma}','X_{\alpha\{\beta\}\gamma}'};
 Name.T=     {'ab','pt_ab','a_pt_b','ps_ab','a_ps_b','ab_cos','ab_sin','pt_ab_cos','pt_ab_sin','ps_ab_cos','ps_ab_sin'};
 Name.T2=    {'\Theta_{\alpha\beta}','\Theta_{(\alpha)\beta}','\Theta_{\alpha(\beta)}','\Theta_{\{\alpha\}\beta}','\Theta_{\alpha\{\beta\}}','\Theta_{\alpha\beta}[cos\phi]',...
-             '\Theta_{\alpha\beta}[sin\phi]','\Theta_{(\alpha)\beta}[cos\phi]','\Theta_{(\alpha)\beta}[sin\phi]','\Theta_{\{\alpha\}\beta}[cos\phi]','\Theta_{\{\alpha\}\beta}[sin\phi]'};
+    '\Theta_{\alpha\beta}[sin\phi]','\Theta_{(\alpha)\beta}[cos\phi]','\Theta_{(\alpha)\beta}[sin\phi]','\Theta_{\{\alpha\}\beta}[cos\phi]','\Theta_{\{\alpha\}\beta}[sin\phi]'};
 Name.T3=    {'\Theta_{\alpha\beta\gamma}','\Theta_{(\alpha)\beta\gamma}','\Theta_{\alpha(\beta)\gamma}','\Theta_{\{\alpha\}\beta\gamma}','\Theta_{\alpha\{\beta\}\gamma}','\Theta_{\alpha\beta\gamma}[cos\phi]',...
-            '\Theta_{\alpha\beta\gamma}[sin\phi]','\Theta_{(\alpha)\beta\gamma}[cos\phi]','\Theta_{(\alpha)\beta\gamma}[sin\phi]','\Theta_{\{\alpha\}\beta\gamma}[cos\phi]','\Theta_{\{\alpha\}\beta\gamma}[sin\phi]'};
+    '\Theta_{\alpha\beta\gamma}[sin\phi]','\Theta_{(\alpha)\beta\gamma}[cos\phi]','\Theta_{(\alpha)\beta\gamma}[sin\phi]','\Theta_{\{\alpha\}\beta\gamma}[cos\phi]','\Theta_{\{\alpha\}\beta\gamma}[sin\phi]'};
 
 %% #######Function########%
 %% different h can be similarly deal with
@@ -73,7 +78,7 @@ toc;tic
 X3.abc=        X(Geo_b,3,'ab','1');        %1/h^2
 X3.abc_r=      X(Geo_b,3,'ab','r');        %1/h
 X3.abc_r2=     X(Geo_b,3,'ab','r2');       %1
-X3.ps_abc_r=   X(Geo_b,3,'ps_ab','r');     %h'/h^2 
+X3.ps_abc_r=   X(Geo_b,3,'ps_ab','r');     %h'/h^2
 X3.ps_abc=     X(Geo_b,3,'ps_ab','1');     %h'/h^3
 X3.pr_abc_r=   X(Geo_b,3,'pr_ab','r');     %1/h^2
 X3.pr_abc_r2=  X(Geo_b,3,'pr_ab','r2');    %1/h
@@ -108,8 +113,8 @@ Psi.pt_ab_r_cos=    X2.ab_r         .*T2.pt_ab_cos;
 Psi.ab=             X2.ab           .*T2.ab;
 Psi.ab_r_cos=       X2.ab_r         .*T2.ab_cos;
 Psi.pt_ab_cos=      X2.ab           .*T2.pt_ab_cos;
-Psi.ab_s1= specialFun(Geo_b.h_diff,Geo_b.h,Geo_b.kappa,Geo_b.m,Geo_b.n,Base.Cmn1,Base.jmn_pm,'hh`^2/[1-\kappa*h*cos\psi]');
-Psi.ab_s2= specialFun(Geo_b.h_diff,Geo_b.h,Geo_b.kappa,Geo_b.m,Geo_b.n,Base.Cmn1,Base.jmn_pm,'h(1-\kappa*h*cos\psi)');
+Psi.ab_s1= specialFun(Geo_b.h_diff,Geo_b.h,Geo_b.kappa,Geo_b.m,Geo_b.n,'hh`^2/[1-\kappa*h*cos\psi]');
+Psi.ab_s2= specialFun(Geo_b.h_diff,Geo_b.h,Geo_b.kappa,Geo_b.m,Geo_b.n,'h(1-\kappa*h*cos\psi)');
 
 
 Psi.abc=                X3.abc          .*T3.abc;
@@ -278,10 +283,116 @@ Fun3_ab.E =     -multiprod(permute(multiprod(Fun3_ab.A_2,Fun3_ab.N_inv,[2,3]),[2
 
 
 %Warning:a-b!=0, be NaN, need to be deleted.
-
-
 toc
 
+%% #######Boudnary########%
+%Infinite Uniform Duct Outlet-H=G=0;
+%Case1: Torsion Free Outlet
+%Case2: Torsion Helical Duct
+%L=(-G -M;N H);%L^2=((G^2-MN) (GM-MH);(HN-NG) (H^2-NM))
+Fun2_a.NM=              multiprod(Fun2_a.N,Fun2_a.M,[1,2]);
+Fun2_a_b.NM=            multiprod(Fun2_a_b.N,Fun2_a_b.M,[1,2]);
+Fun2_b.NM=              multiprod(Fun2_b.N,Fun2_b.M,[1,2]);
+Fun2_a.L=               [-Fun2_a.G  -Fun2_a.M;...
+                          Fun2_a.N   Fun2_a.H];
+Fun2_a.L2=              multiprod(Fun2_a.L,Fun2_a.L,[1,2]);
+for kh=1:length(Geo_b.h)
+    for ka=1:length(a)
+        Fun2_a.Y(:,:,kh,ka) =                                 sqrt(-1)*Fun2_a.N_inv(:,:,kh,ka)*sqrtm(Fun2_a.NM(:,:,kh,ka));
+        [Fun2_a.Vb(:,:,kh,ka),Fun2_a.Lambda(:,:,kh,ka)]=      eig(sqrt(-1)*sqrtm(Fun2_a.NM(:,:,kh,ka)));
+        [Fun2_a.Wb(:,:,kh,ka),Fun2_a.Lambda1(:,:,kh,ka)]=     eig(Fun2_a.Y(:,:,kh,ka)*Fun2_a.N(:,:,kh,ka));
+        Fun2_a.Vb_inv(:,:,kh,ka)=                             inv(Fun2_a.Vb(:,:,kh,ka));
+        Fun2_a.Wb_inv(:,:,kh,ka)=                             inv(Fun2_a.Wb(:,:,kh,ka));
+        [Fun2_a.Vb_H(:,:,kh,ka),Fun2_a.Lambda_H(:,:,kh,ka)]=  eig(Fun2_a.L(:,:,kh,ka)); %sqrt(-1)*
+        
+    end
+end
+for kh=1:length(Geo_b.h)
+    for kb=1:length(b)
+        Fun2_b.Y(:,:,kh,kb) = sqrt(-1)*Fun2_b.N_inv(:,:,kh,kb)*sqrtm(Fun2_b.NM(:,:,kh,kb));
+        [Fun2_b.Vb(:,:,kh,kb),Fun2_b.Lambda(:,:,kh,kb)]=eig(sqrt(-1)*sqrtm(Fun2_b.NM(:,:,kh,kb)));
+        [Fun2_b.Wb(:,:,kh,kb),temp]=eig(Fun2_b.Y(:,:,kh,kb)*Fun2_b.N(:,:,kh,kb));
+        Fun2_b.Vb_inv(:,:,kh,kb)=inv(Fun2_b.Vb(:,:,kh,kb));
+        Fun2_b.Wb_inv(:,:,kh,kb)=inv(Fun2_b.Wb(:,:,kh,kb));
+    end
+end
 
 
 
+temp1=(NaN+NaN*sqrt(-1))*ones(size(Fun2_a_b.N(:,:,1,1,1)));
+for kh=1:length(Geo_b.h)
+for kb=1:length(a)
+    for kb=1:length(b)
+        if a(ka)-b(kb)==0
+                Fun2_a_b.Y(:,:,kh,kb,ka)=         temp1;
+                Fun2_a_b.Vb(:,:,kh,kb,ka)=        temp1;
+                Fun2_a_b.Lambda(:,:,kh,kb,ka)=    temp1;
+                Fun2_a_b.Wb(:,:,kh,kb,ka)=        temp1;
+                Fun2_a_b.Vb_inv(:,:,kh,kb,ka)=    temp1;
+                Fun2_a_b.Wb_inv(:,:,kh,kb,ka)=    temp1;
+        else
+                Fun2_a_b.Y(:,:,kh,kb,ka) = sqrt(-1)*Fun2_a_b.N_inv(:,:,kh,kb,ka)*sqrtm(Fun2_a_b.NM(:,:,kh,kb,ka));
+                [Fun2_a_b.Vb(:,:,kh,kb,ka),Fun2_a_b.Lambda(:,:,1,kb,ka)]=eig(sqrt(-1)*sqrtm(Fun2_a_b.NM(:,:,kh,kb,ka)));
+                [Fun2_a_b.Wb(:,:,kh,kb,ka),temp]=eig(Fun2_a_b.Y(:,:,kh,kb,ka)*Fun2_a_b.N(:,:,kh,kb,ka));
+                Fun2_a_b.Vb_inv(:,:,kh,kb,ka)=inv(Fun2_a_b.Vb(:,:,kh,kb,ka));
+                Fun2_a_b.Wb_inv(:,:,kh,kb,ka)=inv(Fun2_a_b.Wb(:,:,kh,kb,ka));
+            end
+        end
+    end
+end
+
+Fun2_a.Y_minus=        -Fun2_a.Y;
+Fun3_a_b.Vb=           permute(Fun2_a_b.Vb,[1,2,6,3,4,5]);
+Fun3_b.Vb=             permute(bsxfun(@times,Fun2_b.Vb,reshape(ones(size(a)),1,1,1,1,length(a))),[6,1,2,3,4,5]);
+Fun3_a_b.Vb_inv=       permute(Fun2_a_b.Vb_inv,[1,2,6,3,4,5]);
+Fun3_b.Vb_inv=         permute(bsxfun(@times,Fun2_b.Vb_inv,reshape(ones(size(a)),1,1,1,1,length(a))),[6,1,2,3,4,5]);
+Fun3_a_b.YV=           permute(multiprod(Fun2_a_b.Y,Fun2_a_b.Vb,[1,2]),[1,2,6,3,4,5]);
+Fun3_b.YV=             permute(bsxfun(@times,multiprod(Fun2_b.Y,Fun2_b.Vb,[1,2]),reshape(ones(size(a)),1,1,1,1,length(a))),[6,1,2,3,4,5]);
+Fun3_a.Wb=             permute(bsxfun(@times,Fun2_a.Wb,reshape(ones(size(b)),1,1,1,1,length(b))),[1,2,6,3,5,4]);
+Fun3_a.Wb_inv=         permute(bsxfun(@times,Fun2_a.Wb_inv,reshape(ones(size(b)),1,1,1,1,length(b))),[1,2,6,3,5,4]);
+Fun3_a.Y=              permute(bsxfun(@times,Fun2_a.Y,reshape(ones(size(b)),1,1,1,1,length(b))),[1,2,6,3,5,4]);
+Fun3_ab.II=            ones(size(Fun3_ab.A));
+Fun3_a.Lambda=         permute(bsxfun(@times,Fun2_a.Lambda,reshape(ones(size(b)),1,1,1,1,length(b))),[1,2,6,3,5,4]);
+Fun3_a_b.Lambda=       permute(Fun2_a_b.Lambda,[1,2,6,3,4,5]);
+Fun3_b.Lambda=         permute(bsxfun(@times,Fun2_b.Lambda,reshape(ones(size(a)),1,1,1,1,length(a))),[6,1,2,3,4,5]);
+Fun3.Lambda_alpha_a=   multiprod(Fun3_a.Lambda,multiprod(multiprod(Fun3_ab.II,Fun3_a_b.I,[1,2]),Fun3_b.I,[2,3]),[1,2]);
+Fun3.Lambda_beta_a_b=  multiprod(multiprod(Fun3_ab.II,Fun3_a_b.Lambda,[1,2]),Fun3_b.I,[2,3]);
+Fun3.Lambda_gamma_b=   multiprod(multiprod(Fun3_ab.II,Fun3_a_b.I,[1,2]),Fun3_b.Lambda,[2,3]);
+Fun3_ab.Yp=            (multiprod(Fun3_a.Wb_inv,multiprod(multiprod(Fun3_ab.A,Fun3_a_b.YV,[1,2]),Fun3_b.YV,[2,3]),[1,2])...
+                       +multiprod(Fun3_a.Wb_inv,multiprod(multiprod(Fun3_ab.B,Fun3_a_b.Vb,[1,2]),Fun3_b.Vb,[2,3]),[1,2])...
+                       -multiprod(multiprod(Fun3_a.Wb_inv,Fun3_a.Y,[1,2]),multiprod(multiprod(Fun3_ab.C,Fun3_a_b.YV,[1,2]),Fun3_b.Vb,[2,3]),[1,2]))...
+                       ./(Fun3.Lambda_alpha_a+Fun3.Lambda_beta_a_b+Fun3.Lambda_gamma_b);
+Fun3_ab.YY=            multiprod(Fun3_a.Wb,multiprod(multiprod(Fun3_ab.Yp,Fun3_a_b.Vb_inv,[1,2]),Fun3_b.Vb_inv,[2,3]),[1,2]);
+Fun3_ab.YY_minus=      -Fun3_ab.YY;
+
+%Warning:a-b!=0, be NaN, need to be deleted.
+
+
+
+
+figure
+for kh=1:length(Geo_b.h)
+subplot(2,1,1);
+Lambda_H=diag(Fun2_a.Lambda1(:,:,kh,1));
+plot(Geo_b.tau.*ones(size(Lambda_H)),real(Lambda_H),'.')
+subplot(2,1,2);
+Lambda_H=diag(Fun2_a.Lambda1(:,:,kh,1));
+plot(Geo_b.tau.*ones(size(Lambda_H)),imag(Lambda_H),'.')
+end
+
+figure
+for kh=1:length(Geo_b.h)
+subplot(2,1,1);
+Lambda_H=diag(Fun2_a.Lambda1(:,:,kh,2));
+plot(Geo_b.tau.*ones(size(Lambda_H)),real(Lambda_H),'.')
+subplot(2,1,2);
+Lambda_H=diag(Fun2_a.Lambda1(:,:,kh,2));
+plot(Geo_b.tau.*ones(size(Lambda_H)),imag(Lambda_H),'.')
+end
+
+figure
+subplot(2,1,1);image(real(Fun2_a.H(:,:,3,1)),'CDataMapping','scaled');grid on;axis equal;axis off;
+subplot(2,1,2);image(imag(Fun2_a.H(:,:,3,1)),'CDataMapping','scaled');grid on;axis equal;axis off;
+
+Fun2_a.H(:,:,100,1)./Fun2_a.H(:,:,99,1)
+Geo.tau(100)/Geo.tau(99)

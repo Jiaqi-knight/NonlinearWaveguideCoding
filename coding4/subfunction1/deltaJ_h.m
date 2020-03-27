@@ -311,7 +311,7 @@ end
 % %set(h1,'CLim',[-2*pi 2*pi],'DataAspectRatio',[1 1 1]);
 % subplot(1,4,2)
 % h1 = slice(imag(X1), [], [], 1:size(X1,3));set(h1, 'EdgeColor','none');alpha(.1);axis equal;
-%set(h1,'CLim',[-2*pi 2*pi],'DataAspectRatio',[1 1 1]);
+% set(h1,'CLim',[-2*pi 2*pi],'DataAspectRatio',[1 1 1]);
 % subplot(1,4,3)
 % h1 = slice(real(O.L3), [], [], 1:size(O.L1,3));set(h1, 'EdgeColor','none');alpha(.1);axis equal;
 % %set(h1,'CLim',[-2*pi 2*pi],'DataAspectRatio',[1 1 1]);

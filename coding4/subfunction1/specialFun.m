@@ -4,7 +4,12 @@
 %Copyright 2020, SJTU.
 
 %coding3 is updating h as array..
-function [X1]= specialFun(h_diff,h,kappa,m,n,Cmn1,jmn_pm,op) %k+ right
+%coding4 is further updating find the ralationship between each h arry
+
+function [X1]= specialFun(h_diff,h,kappa,m,n,op) %k+ right
+[Base]=BaseJ(m,n,h);
+Cmn1=Base.Cmn1;
+jmn_pm=Base.jmn_pm;
 
 switch op
     case 'hh`^2/[1-\kappa*h*cos\psi]'
