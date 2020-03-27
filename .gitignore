@@ -3864,3 +3864,4 @@ coding2/tensor_toolbox-master/tt_subsubsref.m
 coding2/tensor_toolbox-master/tt_valscheck.m
 coding2/tensor_toolbox-master/tucker_als.m
 coding2/tensor_toolbox-master/tucker_sym.m
+*.mat

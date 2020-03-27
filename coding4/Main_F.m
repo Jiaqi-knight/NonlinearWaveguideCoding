@@ -37,12 +37,12 @@ gamma=1.4;
 tubeplot(Geo.x,Geo.y,Geo.z,Geo.h,Geo.s,50);hold on;plot3(Geo.x, Geo.y, Geo.z);daspect([1,1,1]); camlight;
 
 %% #######Wave########%
-Geo.m=-3:3;
-Geo.n=3;
+Geo.m=[-10:10];
+Geo.n=5;
 a=[1 2]; %P^{a}=P^{a*},U^{a}=U^{a*}
 b=[-3 -2 -1 1 2 3];
 a_b=a-b.';
-k=0.95*1.8412/Geo.h(end);
+k=0.95*0.8/Geo.h(end);
 
 %%
 Geo_b.m=Geo.m;
@@ -100,7 +100,6 @@ T3.pt_abc_cos= Theta(Geo_b,3,'pt_ab_cos');
 %%
 Psi.ab_r=           X2.ab_r         .*T2.ab;
 Psi.a_pr_b_r =      X2.a_pr_b_r     .*T2.ab;
-Psi.ab_pt_ab =      X2.ab           .*T2.pt_ab;
 Psi.ab_r2_cos =     X2.ab_r2        .*T2.ab_cos;
 Psi.ps_ab_r_1 =     X2.ps_ab_r      .*T2.ab;
 Psi.ps_ab_r_2 =     X2.ab_r         .*T2.ps_ab;
@@ -141,9 +140,9 @@ Fun2_a.I2=      bsxfun(@times,Psi.ab_r,reshape(ones(size(a)),1,1,1,length(a))); 
 Fun2_a.V=       bsxfun(@times,Psi.a_pr_b_r,reshape(1./(sqrt(-1)*k*a),1,1,1,length(a)));    %(James-3.26,Jiaqi-76)  --expand,{alpha*beta*a*s}
 Fun2_b.V=       bsxfun(@times,Psi.a_pr_b_r,reshape(1./(sqrt(-1)*k*b),1,1,1,length(b)));    %(James-3.26,Jiaqi-76)  --expand,{alpha*beta*a*s}
 Fun2_a_b.V=     bsxfun(@times,Psi.a_pr_b_r,reshape(1./(sqrt(-1)*k*a_b),1,1,1,length(b),length(a)));    %(James-3.26,Jiaqi-76)  --expand,{alpha*beta*a*s}
-Fun2_a.W=       -bsxfun(@times,Psi.ab_pt_ab,reshape(1./(sqrt(-1)*k*a),1,1,1,length(a))); %(James-3.27,Jiaqi-77)
-Fun2_b.W=       -bsxfun(@times,Psi.ab_pt_ab,reshape(1./(sqrt(-1)*k*b),1,1,1,length(b))); %(James-3.27,Jiaqi-77)
-Fun2_a_b.W=     -bsxfun(@times,Psi.ab_pt_ab,reshape(1./(sqrt(-1)*k*a_b),1,1,1,length(b),length(a))); %(James-3.27,Jiaqi-77)
+Fun2_a.W=       -bsxfun(@times,Psi.pt_ab,reshape(1./(sqrt(-1)*k*a),1,1,1,length(a))); %(James-3.27,Jiaqi-77)
+Fun2_b.W=       -bsxfun(@times,Psi.pt_ab,reshape(1./(sqrt(-1)*k*b),1,1,1,length(b))); %(James-3.27,Jiaqi-77)
+Fun2_a_b.W=     -bsxfun(@times,Psi.pt_ab,reshape(1./(sqrt(-1)*k*a_b),1,1,1,length(b),length(a))); %(James-3.27,Jiaqi-77)
 Fun2_a.N=       bsxfun(@times,Psi.ab_r,reshape((sqrt(-1)*k*a),1,1,1,length(a)))...
                 -bsxfun(@times,Psi.ab_r2_cos,reshape((sqrt(-1)*k*Geo_b.kappa.'.*a),1,1,length(Geo_b.kappa),length(a)));%(James-3.35b)
 Fun2_a_b.N=     bsxfun(@times,Psi.ab_r,reshape((sqrt(-1)*k*a_b),1,1,1,length(b),length(a)))...
@@ -303,8 +302,9 @@ for kh=1:length(Geo_b.h)
         [Fun2_a.Wb(:,:,kh,ka),Fun2_a.Lambda1(:,:,kh,ka)]=     eig(Fun2_a.Y(:,:,kh,ka)*Fun2_a.N(:,:,kh,ka));
         Fun2_a.Vb_inv(:,:,kh,ka)=                             inv(Fun2_a.Vb(:,:,kh,ka));
         Fun2_a.Wb_inv(:,:,kh,ka)=                             inv(Fun2_a.Wb(:,:,kh,ka));
-        [Fun2_a.Vb_H(:,:,kh,ka),Fun2_a.Lambda_H(:,:,kh,ka)]=  eig(Fun2_a.L(:,:,kh,ka)); %sqrt(-1)*
-        
+        [Fun2_a.Vb_H(:,:,kh,ka),Fun2_a.Lambda_H(:,:,kh,ka)]=  eig(sqrt(-1)*(Fun2_a.L(:,:,kh,ka))); %sqrt(-1)*
+        %[Fun2_a.Vb_H1(:,:,kh,ka),Fun2_a.Lambda_H1(:,:,kh,ka)]=  eig(sqrt(-1)*(Fun2_a.L(:,:,kh,ka).')); %sqrt(-1)*
+
     end
 end
 for kh=1:length(Geo_b.h)
@@ -372,27 +372,30 @@ Fun3_ab.YY_minus=      -Fun3_ab.YY;
 
 figure
 for kh=1:length(Geo_b.h)
+ clear Lambda_H
 subplot(2,1,1);
-Lambda_H=diag(Fun2_a.Lambda1(:,:,kh,1));
+Lambda_H=diag(Fun2_a.Lambda_H(:,:,kh,1));
 plot(Geo_b.tau.*ones(size(Lambda_H)),real(Lambda_H),'.')
 subplot(2,1,2);
-Lambda_H=diag(Fun2_a.Lambda1(:,:,kh,1));
 plot(Geo_b.tau.*ones(size(Lambda_H)),imag(Lambda_H),'.')
 end
 
 figure
 for kh=1:length(Geo_b.h)
+clear Lambda_H
 subplot(2,1,1);
-Lambda_H=diag(Fun2_a.Lambda1(:,:,kh,2));
+Lambda_H=diag(Fun2_a.Lambda_H(:,:,kh,2));
 plot(Geo_b.tau.*ones(size(Lambda_H)),real(Lambda_H),'.')
 subplot(2,1,2);
-Lambda_H=diag(Fun2_a.Lambda1(:,:,kh,2));
 plot(Geo_b.tau.*ones(size(Lambda_H)),imag(Lambda_H),'.')
 end
 
 figure
-subplot(2,1,1);image(real(Fun2_a.H(:,:,3,1)),'CDataMapping','scaled');grid on;axis equal;axis off;
-subplot(2,1,2);image(imag(Fun2_a.H(:,:,3,1)),'CDataMapping','scaled');grid on;axis equal;axis off;
+for kh=1:length(Geo_b.h)
+subplot(2,1,1);image(real(Fun2_a.L(:,:,kh,1)),'CDataMapping','scaled');grid on;axis equal;axis off;
+subplot(2,1,2);image(imag(Fun2_a.L(:,:,kh,1)),'CDataMapping','scaled');grid on;axis equal;axis off;
+pause(0.1)
+end
 
-Fun2_a.H(:,:,100,1)./Fun2_a.H(:,:,99,1)
-Geo.tau(100)/Geo.tau(99)
+
+

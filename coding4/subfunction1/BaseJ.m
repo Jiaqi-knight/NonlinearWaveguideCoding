@@ -1,7 +1,7 @@
 function [Base]=BaseJ(m,n,h)
 
 %%
-m0=0:m(end);
+m0=m((length(m)+1)/2:end);
 for k=1:length(m0)
     temp1=roots(diff(chebfun(@(t) besselj(m0(k),t),[0,300]))+0.00001);
     temp2= besselj(m0(k),temp1);

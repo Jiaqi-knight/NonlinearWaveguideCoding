@@ -20,9 +20,12 @@ end
 if dimention==2
     [D,O]=deltaT(m,n,dimention,k);
     dk=find(D==1).';%ЪњСа
-    om1=O.M1(dk)-m(1)+1;om2=O.M2(dk)-m(1)+1;
+    %om1=O.M1(dk)-m(1)+1;om2=O.M2(dk)-m(1)+1;
     on1=O.N1(dk);on2=O.N2(dk);
     
+   temp=mod(find(m.'-O.M1(dk)==0),length(m));temp(find(temp==0))=length(m);
+   om1=temp;
+   
     switch op
         case 'ab'
             ht_2=1;h_times=ht_2.*ht_1;
