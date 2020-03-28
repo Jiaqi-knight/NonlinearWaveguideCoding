@@ -34,6 +34,8 @@ Coding3： Main_F.m
 
 ![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/tex/Fun3_ab.PNG)
 
+
+
 ![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/tex/Fun3_ab2.PNG)
 
 
@@ -47,3 +49,7 @@ Interesting!
 
 Except of specialFun,  case 'hh`^2/[1-\kappa*h*cos\psi]',
                        'h(1-\kappa*h*cos\psi)'
+
+Coding4-Main_F_focus_vertification
+
+![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/tex/Spectrum_L.png)
