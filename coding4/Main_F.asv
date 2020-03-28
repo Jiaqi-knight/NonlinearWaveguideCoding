@@ -64,7 +64,6 @@ Geo_b.h=Geo.h;                  %[Geo.h(1) Geo.h(end)];
 Geo_b.kappa=Geo.kappa;          %[Geo.kappa(1) Geo.kappa(end)];
 Geo_b.tau=Geo.tau;              %[Geo.tau(1) Geo.tau(end)];
 Geo_b.h_diff=Geo.h_diff         %[Geo.h_diff(1) Geo.h_diff(end)]
-Geo_b.theta_0=Geo.theta_0;
 %% #######Name########%
 Name.op_m=  {'1','r','r2'};
 Name.op=    {'ab','pr_ab','a_pr_b','ps_ab','a_ps_b'};
@@ -125,8 +124,8 @@ Psi.pt_ab_r_cos=    X2.ab_r         .*T2.pt_ab_cos;
 Psi.ab=             X2.ab           .*T2.ab;
 Psi.ab_r_cos=       X2.ab_r         .*T2.ab_cos;
 Psi.pt_ab_cos=      X2.ab           .*T2.pt_ab_cos;
-Psi.ab_s1= specialFun(Geo_b.theta_0,Geo_b.h_diff,Geo_b.h,Geo_b.kappa,Geo_b.m,Geo_b.n,'hh`^2/[1-\kappa*h*cos\psi]');
-Psi.ab_s2= specialFun(Geo_b.theta_0,Geo_b.h_diff,Geo_b.h,Geo_b.kappa,Geo_b.m,Geo_b.n,'h(1-\kappa*h*cos\psi)');
+Psi.ab_s1= specialFun(Geo_b.h_diff,Geo_b.h,Geo_b.kappa,Geo_b.m,Geo_b.n,'hh`^2/[1-\kappa*h*cos\psi]');
+Psi.ab_s2= specialFun(Geo_b.h_diff,Geo_b.h,Geo_b.kappa,Geo_b.m,Geo_b.n,'h(1-\kappa*h*cos\psi)');
 
 
 Psi.abc=                X3.abc          .*T3.abc;

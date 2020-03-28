@@ -31,12 +31,12 @@ Geo.h=1*ones(size(Geo.s));
 
 %Geo.tau=1/2./Geo.h;
 %Geo.tau=linspace(0,4,500)
-%Geo.tau =logspace(0,0.6,500)-1;
-Geo.tau =0.0*ones(size(Geo.s));
+Geo.tau =logspace(0,0.6,500)-1;
+%Geo.tau =0.0*ones(size(Geo.s));
 %Geo.tau =logspace(0,0.1,500)-1;
 
-%Geo.kappa=(2/3)./Geo.h;
-Geo.kappa=logspace(0,0.6,500)-1
+Geo.kappa=(2/3)./Geo.h;
+%Geo.kappa=logspace(0,0.6,500)-1
 
 Geo.sw=sqrt(Geo.kappa.^2+Geo.tau.^2).*Geo.s;
 Geo.x = Geo.kappa./(Geo.kappa.^2+Geo.tau.^2).*sin(Geo.sw+0);Geo.y = Geo.kappa./(Geo.kappa.^2+Geo.tau.^2).*cos(Geo.sw+0);Geo.z = Geo.tau./(Geo.kappa.^2+Geo.tau.^2).*Geo.sw;
@@ -121,7 +121,7 @@ Fun2_a.M  =     -Fun2_a.N-multiprod(Fun2_a.M_2_1,Fun2_a.V,[1,2])-multiprod(Fun2_
 
 
 Fun2_a.L=               [-Fun2_a.G  -Fun2_a.M;...
-    Fun2_a.N   Fun2_a.H];
+                          Fun2_a.N   Fun2_a.H];
 Fun2_a.L2=              multiprod(Fun2_a.L,Fun2_a.L,[1,2]);
 for kh=1:length(Geo_b.h)
     for ka=1:length(a)
@@ -130,139 +130,146 @@ for kh=1:length(Geo_b.h)
 end
 toc
 
+Fun2_a.Vb_H(22:42,:,kh,ka)
+eigvalue=diag(Fun2_a.Lambda_H(22:42,22:42,kh,ka))
+
+order=(find(real(eigvalue)<0))
+eigvalue(order)
 
 
-close all
-fieldnames = {'LL2.gif'};
-k=1;
-figure(3);    set(gcf,'outerposition',get(0,'screensize'));%最大化
-suptitle('Spectrum of L \kappa=[0,2],h=1,k=1.75,\tau=0,m=[-5:5],n=[1:3]');
-for kh=1
-    Lambda_H1=diag(Fun2_a.Lambda_H(:,:,kh,1));
-    Lambda_H2=diag(Fun2_a.Lambda_H(:,:,kh,2));
-    Lambda_H3=diag(Fun2_a.Lambda_H(:,:,kh,3));
-    
-    subplot(4,6,[1 2 7 8]);grid on
-    plot(real(Lambda_H1),imag(Lambda_H1),'MarkerSize',1,'Marker','x','LineWidth',1,'LineStyle','none','Color',[1,0,0]);hold on
-    %ylim([-50 50]);xlim([-20 20]);
-    title('a=1');ylabel('\lambda')
-    
-    subplot(4,6,[3 4 9 10]);grid on
-    plot(real(Lambda_H2),imag(Lambda_H2),'MarkerSize',1,'Marker','x','LineWidth',1,'LineStyle','none','Color',[1,0,0]);hold on
-    %ylim([-50 50]);xlim([-20 20]);
-    
-    subplot(4,6,[5 6 11 12]);grid on
-    plot(real(Lambda_H3),imag(Lambda_H3),'MarkerSize',1,'Marker','x','LineWidth',1,'LineStyle','none','Color',[1,0,0]);hold on
-    %ylim([-50 50]); xlim([-20 20]);
-    title('a=3')
-    
-    
-    subplot(4,6,[13 14]);grid on;
-    plot(real(Lambda_H1),Geo_b.kappa(kh)*ones(size(Lambda_H1)),'MarkerSize',1,'Marker','x','LineWidth',0.15,'LineStyle','none',...
-        'Color',[1 0 0]);hold on;ylabel('real')
-    %ylim([-10 10]);
-    subplot(4,6,[19 20]);grid on
-    plot(imag(Lambda_H1),Geo_b.kappa(kh)*ones(size(Lambda_H1)),'MarkerSize',1,'Marker','x','LineWidth',0.15,'LineStyle','none',...
-        'Color',[1 0 0]);hold on;ylabel('imag')
-    %ylim([-10 10]);
-    subplot(4,6,[15 16]);grid on
-    plot(real(Lambda_H2),Geo_b.kappa(kh)*ones(size(Lambda_H2)),'MarkerSize',1,'Marker','x','LineWidth',0.15,'LineStyle','none',...
-        'Color',[1 0 0]);hold on;ylabel('real')
-    %ylim([-10 10]);
-    subplot(4,6,[21 22]);grid on
-    plot(imag(Lambda_H2),Geo_b.kappa(kh)*ones(size(Lambda_H2)),'MarkerSize',1,'Marker','x','LineWidth',0.15,'LineStyle','none',...
-        'Color',[1 0 0]);hold on;ylabel('imag')
-    %ylim([-10 10]);
-    subplot(4,6,[17 18]);grid on
-    plot(real(Lambda_H3),Geo_b.kappa(kh)*ones(size(Lambda_H3)),'MarkerSize',1,'Marker','x','LineWidth',0.15,'LineStyle','none',...
-        'Color',[1 0 0]);hold on;ylabel('real')
-    %ylim([-10 10]);
-    subplot(4,6,[23 24]);grid on
-    plot(imag(Lambda_H3),Geo_b.kappa(kh)*ones(size(Lambda_H3)),'MarkerSize',1,'Marker','x','LineWidth',0.15,'LineStyle','none',...
-        'Color',[1 0 0]);hold on;ylabel('imag')
-    
-    pause(1)
-end
-
-
-
-frame = getframe(gcf); % 获取整个窗口内容的图像
-im=frame2im(frame);
-[I{k},map{k}]=rgb2ind(im,256);
-imwrite(I{k},map{k},fieldnames{1},'gif','Loopcount',Inf,'DelayTime',1);
-
-waitingTime=1-log(1:length(Geo_b.h))/log(length(Geo_b.h));
-
-
-for kh=2:length(Geo_b.h)
-    Lambda_H1=diag(Fun2_a.Lambda_H(:,:,kh,1));
-    Lambda_H2=diag(Fun2_a.Lambda_H(:,:,kh,2));
-    Lambda_H3=diag(Fun2_a.Lambda_H(:,:,kh,3));
-    k=k+1;
-    subplot(4,6,[1 2 7 8]);grid on
-    plot(real(Lambda_H1),imag(Lambda_H1),'MarkerSize',0.2,'Marker','x','LineWidth',0.15,'LineStyle','none','Color',[0,0,0]);hold on
-    %ylim([-50 50]);xlim([-20 20]);
-    
-    subplot(4,6,[3 4 9 10]);grid on
-    plot(real(Lambda_H2),imag(Lambda_H2),'MarkerSize',0.2,'Marker','x','LineWidth',0.15,'LineStyle','none','Color',[0,0,0]);hold on
-    %ylim([-50 50]);xlim([-20 20]);
-    
-    subplot(4,6,[5 6 11 12]);grid on
-    plot(real(Lambda_H3),imag(Lambda_H3),'MarkerSize',0.2,'Marker','x','LineWidth',0.15,'LineStyle','none','Color',[0,0,0]);hold on
-    %ylim([-50 50]); xlim([-20 20]);
-    
-    
-    subplot(4,6,[13 14]);grid on
-    plot(real(Lambda_H1),Geo_b.kappa(kh)*ones(size(Lambda_H1)),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none',...
-        'Color',[0 0 0]);hold on;ylabel('real')
-    %ylim([-10 10]);
-    subplot(4,6,[19 20]);grid on
-    plot(imag(Lambda_H1),Geo_b.kappa(kh)*ones(size(Lambda_H1)),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none',...
-        'Color',[0 0 0]);hold on;ylabel('imag')
-    %ylim([-10 10]);
-    subplot(4,6,[15 16]);grid on
-    plot(real(Lambda_H2),Geo_b.kappa(kh)*ones(size(Lambda_H2)),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none',...
-        'Color',[0 0 0]);hold on;ylabel('real')
-    %ylim([-10 10]);
-    subplot(4,6,[21 22]);grid on
-    plot(imag(Lambda_H2),Geo_b.kappa(kh)*ones(size(Lambda_H2)),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none',...
-        'Color',[0 0 0]);hold on;ylabel('imag')
-    %ylim([-10 10]);
-    subplot(4,6,[17 18]);grid on
-    plot(real(Lambda_H3),Geo_b.kappa(kh)*ones(size(Lambda_H3)),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none',...
-        'Color',[0 0 0]);hold on;ylabel('real')
-    %ylim([-10 10]);
-    subplot(4,6,[23 24]);grid on
-    plot(imag(Lambda_H3),Geo_b.kappa(kh)*ones(size(Lambda_H3)),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none',...
-        'Color',[0 0 0]);hold on;ylabel('imag')
-    
-    
-    frame = getframe(gcf);% 获取整个窗口内容的图像
-    im=frame2im(frame);
-    [I{k},map{k}]=rgb2ind(im,256);
-    %追加模式
-    imwrite(I{k},map{k},fieldnames{1},'gif','WriteMode','append','DelayTime',waitingTime(k));
-    
-    %pause(0.1)
-end
-
-% for kh=2:length(Geo_b.h)
-% subplot(1,3,1);grid on
-% Lambda_H=diag(Fun2_a.Lambda_H(:,:,kh,1));
-% plot(real(Lambda_H),imag(Lambda_H),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none');hold on
-% ylim([-50 50]);xlim([-20 20]);
-%
-% subplot(1,3,2);grid on
-% Lambda_H=diag(Fun2_a.Lambda_H(:,:,kh,2));
-% plot(real(Lambda_H),imag(Lambda_H),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none');hold on
-% ylim([-50 50]);xlim([-20 20]);
-%
-% subplot(1,3,3);grid on
-% Lambda_H=diag(Fun2_a.Lambda_H(:,:,kh,3));
-% plot(real(Lambda_H),imag(Lambda_H),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none');hold on
-% ylim([-50 50]); xlim([-20 20]);
-% pause(0.1)
+% 
+% 
+% close all
+% fieldnames = {'LL2.gif'};
+% k=1;
+% figure(3);    set(gcf,'outerposition',get(0,'screensize'));%最大化
+% suptitle('Spectrum of L \kappa=[0,2],h=1,k=1.75,\tau=0,m=[-5:5],n=[1:3]');
+% for kh=1
+%     Lambda_H1=diag(Fun2_a.Lambda_H(:,:,kh,1));
+%     Lambda_H2=diag(Fun2_a.Lambda_H(:,:,kh,2));
+%     Lambda_H3=diag(Fun2_a.Lambda_H(:,:,kh,3));
+%     
+%     subplot(4,6,[1 2 7 8]);grid on
+%     plot(real(Lambda_H1),imag(Lambda_H1),'MarkerSize',1,'Marker','x','LineWidth',1,'LineStyle','none','Color',[1,0,0]);hold on
+%     %ylim([-50 50]);xlim([-20 20]);
+%     title('a=1');ylabel('\lambda')
+%     
+%     subplot(4,6,[3 4 9 10]);grid on
+%     plot(real(Lambda_H2),imag(Lambda_H2),'MarkerSize',1,'Marker','x','LineWidth',1,'LineStyle','none','Color',[1,0,0]);hold on
+%     %ylim([-50 50]);xlim([-20 20]);
+%     
+%     subplot(4,6,[5 6 11 12]);grid on
+%     plot(real(Lambda_H3),imag(Lambda_H3),'MarkerSize',1,'Marker','x','LineWidth',1,'LineStyle','none','Color',[1,0,0]);hold on
+%     %ylim([-50 50]); xlim([-20 20]);
+%     title('a=3')
+%     
+%     
+%     subplot(4,6,[13 14]);grid on;
+%     plot(real(Lambda_H1),Geo_b.kappa(kh)*ones(size(Lambda_H1)),'MarkerSize',1,'Marker','x','LineWidth',0.15,'LineStyle','none',...
+%         'Color',[1 0 0]);hold on;ylabel('real')
+%     %ylim([-10 10]);
+%     subplot(4,6,[19 20]);grid on
+%     plot(imag(Lambda_H1),Geo_b.kappa(kh)*ones(size(Lambda_H1)),'MarkerSize',1,'Marker','x','LineWidth',0.15,'LineStyle','none',...
+%         'Color',[1 0 0]);hold on;ylabel('imag')
+%     %ylim([-10 10]);
+%     subplot(4,6,[15 16]);grid on
+%     plot(real(Lambda_H2),Geo_b.kappa(kh)*ones(size(Lambda_H2)),'MarkerSize',1,'Marker','x','LineWidth',0.15,'LineStyle','none',...
+%         'Color',[1 0 0]);hold on;ylabel('real')
+%     %ylim([-10 10]);
+%     subplot(4,6,[21 22]);grid on
+%     plot(imag(Lambda_H2),Geo_b.kappa(kh)*ones(size(Lambda_H2)),'MarkerSize',1,'Marker','x','LineWidth',0.15,'LineStyle','none',...
+%         'Color',[1 0 0]);hold on;ylabel('imag')
+%     %ylim([-10 10]);
+%     subplot(4,6,[17 18]);grid on
+%     plot(real(Lambda_H3),Geo_b.kappa(kh)*ones(size(Lambda_H3)),'MarkerSize',1,'Marker','x','LineWidth',0.15,'LineStyle','none',...
+%         'Color',[1 0 0]);hold on;ylabel('real')
+%     %ylim([-10 10]);
+%     subplot(4,6,[23 24]);grid on
+%     plot(imag(Lambda_H3),Geo_b.kappa(kh)*ones(size(Lambda_H3)),'MarkerSize',1,'Marker','x','LineWidth',0.15,'LineStyle','none',...
+%         'Color',[1 0 0]);hold on;ylabel('imag')
+%     
+%     pause(1)
 % end
-
-
-
+% 
+% 
+% 
+% frame = getframe(gcf); % 获取整个窗口内容的图像
+% im=frame2im(frame);
+% [I{k},map{k}]=rgb2ind(im,256);
+% imwrite(I{k},map{k},fieldnames{1},'gif','Loopcount',Inf,'DelayTime',1);
+% 
+% waitingTime=1-log(1:length(Geo_b.h))/log(length(Geo_b.h));
+% 
+% 
+% for kh=2:length(Geo_b.h)
+%     Lambda_H1=diag(Fun2_a.Lambda_H(:,:,kh,1));
+%     Lambda_H2=diag(Fun2_a.Lambda_H(:,:,kh,2));
+%     Lambda_H3=diag(Fun2_a.Lambda_H(:,:,kh,3));
+%     k=k+1;
+%     subplot(4,6,[1 2 7 8]);grid on
+%     plot(real(Lambda_H1),imag(Lambda_H1),'MarkerSize',0.2,'Marker','x','LineWidth',0.15,'LineStyle','none','Color',[0,0,0]);hold on
+%     %ylim([-50 50]);xlim([-20 20]);
+%     
+%     subplot(4,6,[3 4 9 10]);grid on
+%     plot(real(Lambda_H2),imag(Lambda_H2),'MarkerSize',0.2,'Marker','x','LineWidth',0.15,'LineStyle','none','Color',[0,0,0]);hold on
+%     %ylim([-50 50]);xlim([-20 20]);
+%     
+%     subplot(4,6,[5 6 11 12]);grid on
+%     plot(real(Lambda_H3),imag(Lambda_H3),'MarkerSize',0.2,'Marker','x','LineWidth',0.15,'LineStyle','none','Color',[0,0,0]);hold on
+%     %ylim([-50 50]); xlim([-20 20]);
+%     
+%     
+%     subplot(4,6,[13 14]);grid on
+%     plot(real(Lambda_H1),Geo_b.kappa(kh)*ones(size(Lambda_H1)),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none',...
+%         'Color',[0 0 0]);hold on;ylabel('real')
+%     %ylim([-10 10]);
+%     subplot(4,6,[19 20]);grid on
+%     plot(imag(Lambda_H1),Geo_b.kappa(kh)*ones(size(Lambda_H1)),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none',...
+%         'Color',[0 0 0]);hold on;ylabel('imag')
+%     %ylim([-10 10]);
+%     subplot(4,6,[15 16]);grid on
+%     plot(real(Lambda_H2),Geo_b.kappa(kh)*ones(size(Lambda_H2)),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none',...
+%         'Color',[0 0 0]);hold on;ylabel('real')
+%     %ylim([-10 10]);
+%     subplot(4,6,[21 22]);grid on
+%     plot(imag(Lambda_H2),Geo_b.kappa(kh)*ones(size(Lambda_H2)),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none',...
+%         'Color',[0 0 0]);hold on;ylabel('imag')
+%     %ylim([-10 10]);
+%     subplot(4,6,[17 18]);grid on
+%     plot(real(Lambda_H3),Geo_b.kappa(kh)*ones(size(Lambda_H3)),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none',...
+%         'Color',[0 0 0]);hold on;ylabel('real')
+%     %ylim([-10 10]);
+%     subplot(4,6,[23 24]);grid on
+%     plot(imag(Lambda_H3),Geo_b.kappa(kh)*ones(size(Lambda_H3)),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none',...
+%         'Color',[0 0 0]);hold on;ylabel('imag')
+%     
+%     
+%     frame = getframe(gcf);% 获取整个窗口内容的图像
+%     im=frame2im(frame);
+%     [I{k},map{k}]=rgb2ind(im,256);
+%     %追加模式
+%     imwrite(I{k},map{k},fieldnames{1},'gif','WriteMode','append','DelayTime',waitingTime(k));
+%     
+%     %pause(0.1)
+% end
+% 
+% % for kh=2:length(Geo_b.h)
+% % subplot(1,3,1);grid on
+% % Lambda_H=diag(Fun2_a.Lambda_H(:,:,kh,1));
+% % plot(real(Lambda_H),imag(Lambda_H),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none');hold on
+% % ylim([-50 50]);xlim([-20 20]);
+% %
+% % subplot(1,3,2);grid on
+% % Lambda_H=diag(Fun2_a.Lambda_H(:,:,kh,2));
+% % plot(real(Lambda_H),imag(Lambda_H),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none');hold on
+% % ylim([-50 50]);xlim([-20 20]);
+% %
+% % subplot(1,3,3);grid on
+% % Lambda_H=diag(Fun2_a.Lambda_H(:,:,kh,3));
+% % plot(real(Lambda_H),imag(Lambda_H),'MarkerSize',0.2,'Marker','.','LineWidth',0.15,'LineStyle','none');hold on
+% % ylim([-50 50]); xlim([-20 20]);
+% % pause(0.1)
+% % end
+% 
+% 
+% 
