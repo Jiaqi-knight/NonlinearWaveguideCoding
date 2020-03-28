@@ -5,7 +5,7 @@
 
 %coding3 is updating h as array..
 function [X1]= deltaJ_h(h,h_diff,m,n,dimention,k,op,op_m) %k+ right
-[Base]=BaseJ(m,n,1);
+[Base]=BaseJ1(m,n,1);
 Cmn1=Base.Cmn1;
 jmn_pm=Base.jmn_pm;
 switch op_m

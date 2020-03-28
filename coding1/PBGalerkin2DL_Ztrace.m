@@ -14,7 +14,7 @@ function PBGalerkin2DL_Ztrace();
   volgsigma   = 0;
   onlysigma   = 0;
   smallfrqapp = 0;
-  makemovie   = 0;         % only if plotoffile=1
+  makemovie   = 1;         % only if plotoffile=1
   profiel     = 'par';     % 'flat', 'linear' or 'parabolic' or 'bou' .....
   dispth      = 0.010;
   dpsbug      = 0;         % dpsimplify bug
