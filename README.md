@@ -38,3 +38,5 @@ Coding4-Main_F_focus_vertification
 
 
 ![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding4/LL.gif)
+![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding4/LL2.gif)
+
