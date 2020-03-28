@@ -52,4 +52,5 @@ Except of specialFun,  case 'hh`^2/[1-\kappa*h*cos\psi]',
 
 Coding4-Main_F_focus_vertification
 
-![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/tex/Spectrum_L.png)
+
+![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/coding4/LL.gif）
