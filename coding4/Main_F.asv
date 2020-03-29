@@ -371,9 +371,9 @@ Fun3.Lambda_alpha_a=   multiprod(Fun3_a.Lambda,multiprod(multiprod(Fun3_ab.II,Fu
 Fun3.Lambda_beta_a_b=  multiprod(multiprod(Fun3_ab.II,Fun3_a_b.Lambda,[1,2]),Fun3_b.I,[2,3]);
 Fun3.Lambda_gamma_b=   multiprod(multiprod(Fun3_ab.II,Fun3_a_b.I,[1,2]),Fun3_b.Lambda,[2,3]);
 Fun3_ab.Yp=            (multiprod(Fun3_a.Wb_inv,multiprod(multiprod(Fun3_ab.A,Fun3_a_b.YV,[1,2]),Fun3_b.YV,[2,3]),[1,2])...
-    +multiprod(Fun3_a.Wb_inv,multiprod(multiprod(Fun3_ab.B,Fun3_a_b.Vb,[1,2]),Fun3_b.Vb,[2,3]),[1,2])...
-    -multiprod(multiprod(Fun3_a.Wb_inv,Fun3_a.Y,[1,2]),multiprod(multiprod(Fun3_ab.C,Fun3_a_b.YV,[1,2]),Fun3_b.Vb,[2,3]),[1,2]))...
-    ./(Fun3.Lambda_alpha_a+Fun3.Lambda_beta_a_b+Fun3.Lambda_gamma_b);
+                       +multiprod(Fun3_a.Wb_inv,multiprod(multiprod(Fun3_ab.B,Fun3_a_b.Vb,[1,2]),Fun3_b.Vb,[2,3]),[1,2])...
+                       -multiprod(multiprod(Fun3_a.Wb_inv,Fun3_a.Y,[1,2]),multiprod(multiprod(Fun3_ab.C,Fun3_a_b.YV,[1,2]),Fun3_b.Vb,[2,3]),[1,2]))...
+                        ./(Fun3.Lambda_alpha_a+Fun3.Lambda_beta_a_b+Fun3.Lambda_gamma_b);
 Fun3_ab.YY=            multiprod(Fun3_a.Wb,multiprod(multiprod(Fun3_ab.Yp,Fun3_a_b.Vb_inv,[1,2]),Fun3_b.Vb_inv,[2,3]),[1,2]);
 Fun3_ab.YY_minus=      -Fun3_ab.YY;
 
@@ -394,6 +394,7 @@ for kh=1:length(Geo_b.h)
     end
 end
 %b
+order_b=[];
 for kh=1:length(Geo_b.h)
     for kb=1:length(b)
         [Fun2_b.Vb_H(:,:,kh,kb),Fun2_b.Lambda_H(:,:,kh,kb)]= eig(( Fun2_b.L(:,:,kh,kb))); %sqrt(-1)*
@@ -470,7 +471,7 @@ Fun3_b.Vb_H=             permute(bsxfun(@times,Fun2_b.Vb_HH,reshape(ones(size(a)
 Fun3_a_b.Vb_inv_H=       permute(Fun2_a_b.Vb_inv_HH,[1,2,6,3,4,5]);
 Fun3_b.Vb_inv_H=         permute(bsxfun(@times,Fun2_b.Vb_inv_HH,reshape(ones(size(a)),1,1,1,1,length(a))),[6,1,2,3,4,5]);
 
-Fun3_a_b.YV_H=            permute(multiprod(Fun2_a_b.Y_H,Fun2_a_b.Vb_HH,[1,2]),[1,2,6,3,4,5]);
+Fun3_a_b.YV_H=            permute(multiprod(Fun2_a_b.Y_H,Fun2_a_b.Vb_HH,[1,2]),[1,2,6,3,4,5]);%!!!!!!!!!¾ùÎª0£¬bug
 Fun3_b.YV_H=              permute(bsxfun(@times,multiprod(Fun2_b.Y_H,Fun2_b.Vb_HH,[1,2]),reshape(ones(size(a)),1,1,1,1,length(a))),[6,1,2,3,4,5]);
 Fun3_a.Wb_H=              permute(bsxfun(@times,Fun2_a.Wb_H,reshape(ones(size(b)),1,1,1,1,length(b))),[1,2,6,3,5,4]);
 Fun3_a.Wb_inv_H=          permute(bsxfun(@times,Fun2_a.Wb_inv_H,reshape(ones(size(b)),1,1,1,1,length(b))),[1,2,6,3,5,4]);
@@ -495,5 +496,7 @@ Fun3_ab.YY_H=            multiprod(Fun3_a.Wb_H,multiprod(multiprod(Fun3_ab.Yp_H,
 
 %Warning:a-b!=0, be NaN, need to be deleted.
 
+t1=multiprod(Fun3_ab.A,Fun3_a_b.YV_H,[1,2]);
 
 
+Fun3_ab.YY_H(:,:,:,50,1,1)
