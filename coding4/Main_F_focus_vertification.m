@@ -52,7 +52,7 @@ Geo.n=3;
 a=[1 2 3]; %P^{a}=P^{a*},U^{a}=U^{a*}
 b=[-3 -2 -1 1 2 3];
 a_b=a-b.';
-k=0.95*1.8412/Geo.h(end);
+k=0.95*1.8412/Geo.h(end)-0.00001*i; %+-;
 
 %%
 Geo_b.m=Geo.m;
@@ -126,15 +126,39 @@ Fun2_a.L2=              multiprod(Fun2_a.L,Fun2_a.L,[1,2]);
 for kh=1:length(Geo_b.h)
     for ka=1:length(a)
         [Fun2_a.Vb_H(:,:,kh,ka),Fun2_a.Lambda_H(:,:,kh,ka)]=    eig(( Fun2_a.L(:,:,kh,ka))); %sqrt(-1)*
+        eigenvalues=diag(Fun2_a.Lambda_H(:,:,kh,ka));
+        order(:,kh,ka)=find(real(eigenvalues)<0);
+        Fun2_a.Vb_HH(:,:,kh,ka)=Fun2_a.Vb_H(length(Geo_b.m)*Geo_b.n+1:end,order(:,kh,ka),kh,ka);
+        Fun2_a.Vb_inv_HH(:,:,kh,ka)=inv(Fun2_a.Vb_HH(:,:,kh,ka));
+        Fun2_a.Lambda_HH(:,:,kh,ka)=diag(eigenvalues(order(:,kh,ka)));
     end
 end
 toc
 
-Fun2_a.Vb_H(22:42,:,kh,ka)
-eigvalue=diag(Fun2_a.Lambda_H(22:42,22:42,kh,ka))
 
-order=(find(real(eigvalue)<0))
-eigvalue(order)
+
+
+
+
+% Fun2_a.Vb_H(22:42,:,kh,ka)
+% clear eigvalue order
+% %for hk=1:length(Geo_b.h)
+% eigvalue=diag(Fun2_a.Lambda_H(:,:,500,1));
+% order=(find(real(eigvalue)<0));
+% temp1=eigvalue(order);
+% %end
+
+
+
+
+
+
+
+
+% figure;
+% plot(imag(eigvalue),real(eigvalue),'.')
+% hold on
+% plot(imag(temp1),real(temp1),'x')
 
 
 % 
