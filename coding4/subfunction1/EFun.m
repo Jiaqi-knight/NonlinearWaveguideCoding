@@ -18,6 +18,7 @@ tic
 disp('EFun..Begin...')
 %2D-bsxfun(@times, 3D(\alpha*\beta*s), 1*1*s*a)-->4D[\alpha*\beta*s*a]
 Fun2_a.I2=      bsxfun(@times,Psi.ab_r,reshape(ones(size(a)),1,1,1,length(a)));    %(James-3.26,Jiaqi-76)  --expand,{alpha*beta*a*s}
+Out.I2=Fun2_a.I2;
 Fun2_a.V=       bsxfun(@times,Psi.a_pr_b_r,reshape(1./(sqrt(-1)*k*a),1,1,1,length(a)));    %(James-3.26,Jiaqi-76)  --expand,{alpha*beta*a*s}
 Fun2_b.V=       bsxfun(@times,Psi.a_pr_b_r,reshape(1./(sqrt(-1)*k*b),1,1,1,length(b)));    %(James-3.26,Jiaqi-76)  --expand,{alpha*beta*a*s}
 Fun2_a_b.V=     bsxfun(@times,Psi.a_pr_b_r,reshape(1./(sqrt(-1)*k*a_b),1,1,1,length(b),length(a)));    %(James-3.26,Jiaqi-76)  --expand,{alpha*beta*a*s}

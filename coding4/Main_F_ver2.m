@@ -86,7 +86,6 @@ Name.T2=    {'\Theta_{\alpha\beta}','\Theta_{(\alpha)\beta}','\Theta_{\alpha(\be
 Name.T3=    {'\Theta_{\alpha\beta\gamma}','\Theta_{(\alpha)\beta\gamma}','\Theta_{\alpha(\beta)\gamma}','\Theta_{\{\alpha\}\beta\gamma}','\Theta_{\alpha\{\beta\}\gamma}','\Theta_{\alpha\beta\gamma}[cos\phi]',...
     '\Theta_{\alpha\beta\gamma}[sin\phi]','\Theta_{(\alpha)\beta\gamma}[cos\phi]','\Theta_{(\alpha)\beta\gamma}[sin\phi]','\Theta_{\{\alpha\}\beta\gamma}[cos\phi]','\Theta_{\{\alpha\}\beta\gamma}[sin\phi]'};
 %% #######Function########%
-[eX2,eX3]= XFun(RK_b)
 [Psi]= PFun(Geo_b)
 [ePsi]= PFun(RK_b)
 [Out]= EFun(Geo_b,Psi,Wave,1)
@@ -96,6 +95,36 @@ Name.T3=    {'\Theta_{\alpha\beta\gamma}','\Theta_{(\alpha)\beta\gamma}','\Theta
 
 %Initial pressure modes
 
+%suppose:
+%a=1
+P0=zeros(length(Geo_b.m)*Geo_b.n,1,1,length(Wave.a));
+
+P0(2,1,1,1)=1
+
+L=multiprod(Out.N_a,Ad.Y_a,[1,2])+Out.H_a;
+L1=L(:,:,1:end-1,:)
+ds=diff(Geo_b.s)
+for ka=1:length(Wave.a)
+for ks=1:length(ds)
+    L_inv(:,:,ks,ka)=inv(L1(:,:,ks,ka));
+end
+end
+
+exp1=exp(bsxfun(@times,L1,reshape(ds.'*ones(size(Wave.a)),1,1,length(ds),length(Wave.a))))  
+
+exp2=multiprod(L_inv,(Fun2_a.I2(:,:,1:end-1,:)-exp1),[1,2])
 
 
- 
+for ka=1:length(Wave.a)
+for  ks=1:length(ds)
+
+    P0(:,:,ks+1,ka)=exp1(:,:,ks,ka)*P0(:,:,ks,ka)-exp2(:,:,ks,ka)*P0(:,:,ks,ka);
+
+end
+end
+Ad.YY_ab
+
+
+Wave.a_b
+
+Wave.b
