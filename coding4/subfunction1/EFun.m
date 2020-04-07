@@ -402,6 +402,8 @@ Out.C=Fun3_ab.C;
 Out.D=Fun3_ab.D;
 Out.E=Fun3_ab.E;
 
+Out.C(find(isnan(Out.C)))=0;
+Out.D(find(isnan(Out.D)))=0;
 
 end
 

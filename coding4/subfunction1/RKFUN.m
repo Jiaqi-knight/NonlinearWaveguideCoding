@@ -17,15 +17,15 @@ Ad.Y_a(:,:,length(or_n),:)=Y_a_0;
 for k=1:length(or_n)-1
     k_1= - multiprod(multiprod(Y_a_0,Out.N_a(:,:,length(or_n)-k+1,:),[1,2]),Y_a_0,[1,2])- Out.M_a(:,:,length(or_n)-k+1,:) - multiprod(Y_a_0,Out.H_a(:,:,length(or_n)-k+1,:),[1,2]) - multiprod(Out.G_a(:,:,length(or_n)-k+1,:),Y_a_0,[1,2]);
     Y_1= Y_a_0-k_1*(Geo_b.s(length(or_n)-k+1)-RK_b.s(length(or_r)-k+1));
-    max(max(max(k_1)))
+    %max(max(max(k_1)))
     k_2= - multiprod(multiprod(Y_1,OutRK.N_a(:,:,length(or_r)-k+1,:),[1,2]),Y_1,[1,2])-OutRK.M_a(:,:,length(or_r)-k+1,:) -  multiprod(Y_1,OutRK.H_a(:,:,length(or_r)-k+1,:),[1,2]) - multiprod(OutRK.G_a(:,:,length(or_r)-k+1,:),Y_1,[1,2]);
     Y_2= Y_a_0-k_2*(Geo_b.s(length(or_n)-k+1)-RK_b.s(length(or_r)-k+1));
-    max(max(max(k_2)))
+    %max(max(max(k_2)))
     k_3= - multiprod(multiprod(Y_2,OutRK.N_a(:,:,length(or_r)-k+1,:),[1,2]),Y_2,[1,2])-OutRK.M_a(:,:,length(or_r)-k+1,:) - multiprod(Y_2,OutRK.H_a(:,:,length(or_r)-k+1,:),[1,2]) - multiprod(OutRK.G_a(:,:,length(or_r)-k+1,:),Y_2,[1,2]);
     Y_3= Y_a_0-k_3*(Geo_b.s(length(or_n)-k+1)-Geo_b.s(length(or_n)-k));
-    max(max(max(k_3)))
+    %max(max(max(k_3)))
     k_4= - multiprod(multiprod(Y_3,Out.N_a(:,:,length(or_n)-k,:),[1,2]),Y_3,[1,2])-Out.M_a(:,:,length(or_n)-k,:) - multiprod(Y_3,Out.H_a(:,:,length(or_n)-k,:),[1,2]) - multiprod(Out.G_a(:,:,length(or_n)-k,:),Y_3,[1,2]);
-    max(max(max(k_4)))
+    %max(max(max(k_4)))
     Y_a_0= Y_a_0 - (1/6)*(k_1+2*k_2+2*k_3+k_4)*(Geo_b.s(length(or_n)-k+1)-Geo_b.s(length(or_n)-k));
     Ad.Y_a(:,:,length(or_n)-k,:)=Y_a_0;
     Ad.Y_a1(:,:,length(or_n)-k,:)=1/2*(Y_1+Y_2);
@@ -36,15 +36,15 @@ Ad.Y_b(:,:,length(or_n),:)=Y_b_0;
 for k=1:length(or_n)-1
     k_1= - multiprod(multiprod(Y_b_0,Out.N_b(:,:,length(or_n)-k+1,:),[1,2]),Y_b_0,[1,2])- Out.M_b(:,:,length(or_n)-k+1,:) - multiprod(Y_b_0,Out.H_b(:,:,length(or_n)-k+1,:),[1,2]) - multiprod(Out.G_b(:,:,length(or_n)-k+1,:),Y_b_0,[1,2]);
     Y_1= Y_b_0-k_1*(Geo_b.s(length(or_n)-k+1)-RK_b.s(length(or_r)-k+1));
-    max(max(max(k_1)))
+    %max(max(max(k_1)))
     k_2= - multiprod(multiprod(Y_1,OutRK.N_b(:,:,length(or_r)-k+1,:),[1,2]),Y_1,[1,2])-OutRK.M_b(:,:,length(or_r)-k+1,:) -  multiprod(Y_1,OutRK.H_b(:,:,length(or_r)-k+1,:),[1,2]) - multiprod(OutRK.G_b(:,:,length(or_r)-k+1,:),Y_1,[1,2]);
     Y_2= Y_b_0-k_2*(Geo_b.s(length(or_n)-k+1)-RK_b.s(length(or_r)-k+1));
-    max(max(max(k_2)))
+    %max(max(max(k_2)))
     k_3= - multiprod(multiprod(Y_2,OutRK.N_b(:,:,length(or_r)-k+1,:),[1,2]),Y_2,[1,2])-OutRK.M_b(:,:,length(or_r)-k+1,:) - multiprod(Y_2,OutRK.H_b(:,:,length(or_r)-k+1,:),[1,2]) - multiprod(OutRK.G_b(:,:,length(or_r)-k+1,:),Y_2,[1,2]);
     Y_3= Y_b_0-k_3*(Geo_b.s(length(or_n)-k+1)-Geo_b.s(length(or_n)-k));
-    max(max(max(k_3)))
+    %max(max(max(k_3)))
     k_4= - multiprod(multiprod(Y_3,Out.N_b(:,:,length(or_n)-k,:),[1,2]),Y_3,[1,2])-Out.M_b(:,:,length(or_n)-k,:) - multiprod(Y_3,Out.H_b(:,:,length(or_n)-k,:),[1,2]) - multiprod(Out.G_b(:,:,length(or_n)-k,:),Y_3,[1,2]);
-    max(max(max(k_4)))
+    %max(max(max(k_4)))
     Y_b_0= Y_b_0 - (1/6)*(k_1+2*k_2+2*k_3+k_4)*(Geo_b.s(length(or_n)-k+1)-Geo_b.s(length(or_n)-k));
     Ad.Y_b(:,:,length(or_n)-k,:)=Y_b_0;
     Ad.Y_b1(:,:,length(or_n)-k,:)=1/2*(Y_1+Y_2);
@@ -55,26 +55,26 @@ Ad.Y_a_b(:,:,length(or_n),:,:)=Y_a_b_0;
 for k=1:length(or_n)-1
     k_1= - multiprod(multiprod(Y_a_b_0,Out.N_a_b(:,:,length(or_n)-k+1,:,:),[1,2]),Y_a_b_0,[1,2])- Out.M_a_b(:,:,length(or_n)-k+1,:,:) - multiprod(Y_a_b_0,Out.H_a_b(:,:,length(or_n)-k+1,:,:),[1,2]) - multiprod(Out.G_a_b(:,:,length(or_n)-k+1,:,:),Y_a_b_0,[1,2]);
     Y_1= Y_a_b_0-k_1*(Geo_b.s(length(or_n)-k+1)-RK_b.s(length(or_r)-k+1));
-    max(max(max(k_1)))
+    %max(max(max(k_1)))
     k_2= - multiprod(multiprod(Y_1,OutRK.N_a_b(:,:,length(or_r)-k+1,:,:),[1,2]),Y_1,[1,2])-OutRK.M_a_b(:,:,length(or_r)-k+1,:,:) -  multiprod(Y_1,OutRK.H_a_b(:,:,length(or_r)-k+1,:,:),[1,2]) - multiprod(OutRK.G_a_b(:,:,length(or_r)-k+1,:,:),Y_1,[1,2]);
     Y_2= Y_a_b_0-k_2*(Geo_b.s(length(or_n)-k+1)-RK_b.s(length(or_r)-k+1));
-    max(max(max(k_2)))
+    %max(max(max(k_2)))
     k_3= - multiprod(multiprod(Y_2,OutRK.N_a_b(:,:,length(or_r)-k+1,:,:),[1,2]),Y_2,[1,2])-OutRK.M_a_b(:,:,length(or_r)-k+1,:,:) - multiprod(Y_2,OutRK.H_a_b(:,:,length(or_r)-k+1,:,:),[1,2]) - multiprod(OutRK.G_a_b(:,:,length(or_r)-k+1,:,:),Y_2,[1,2]);
     Y_3= Y_a_b_0-k_3*(Geo_b.s(length(or_n)-k+1)-Geo_b.s(length(or_n)-k));
-    max(max(max(k_3)))
+    %max(max(max(k_3)))
     k_4= - multiprod(multiprod(Y_3,Out.N_a_b(:,:,length(or_n)-k,:,:),[1,2]),Y_3,[1,2])-Out.M_a_b(:,:,length(or_n)-k,:,:) - multiprod(Y_3,Out.H_a_b(:,:,length(or_n)-k,:,:),[1,2]) - multiprod(Out.G_a_b(:,:,length(or_n)-k,:,:),Y_3,[1,2]);
-    max(max(max(k_4)))
+    %max(max(max(k_4)))
     Y_a_b_0= Y_a_b_0 - (1/6)*(k_1+2*k_2+2*k_3+k_4)*(Geo_b.s(length(or_n)-k+1)-Geo_b.s(length(or_n)-k));
     Ad.Y_a_b(:,:,length(or_n)-k,:,:)=Y_a_b_0;
     Ad.Y_a_b_1(:,:,length(or_n)-k,:,:)=1/2*(Y_1+Y_2);
 end
 
 %vertification
-max(max(max(Ad.Y_a(:,:,1,:)-Ad.Y_a(:,:,end,:))))
-max(max(max(Ad.Y_b(:,:,1,:)-Ad.Y_b(:,:,end,:))))
-max(max(max(Ad.Y_a_b(:,:,1,:)-Ad.Y_a_b(:,:,end,:))))
-max(max(Ad.Y_a_b(:,:,2,5,3)-Ad.Y_a(:,:,2,1)))
-max(max(Ad.Y_a_b(:,:,2,5,3)-Ad.Y_b(:,:,2,4)))
+% max(max(max(Ad.Y_a(:,:,1,:)-Ad.Y_a(:,:,end,:))))
+% max(max(max(Ad.Y_b(:,:,1,:)-Ad.Y_b(:,:,end,:))))
+% max(max(max(Ad.Y_a_b(:,:,1,:)-Ad.Y_a_b(:,:,end,:))))
+% max(max(Ad.Y_a_b(:,:,2,5,3)-Ad.Y_a(:,:,2,1)))
+% max(max(Ad.Y_a_b(:,:,2,5,3)-Ad.Y_b(:,:,2,4)))
 
 % YY,James-3.38
 
@@ -122,7 +122,7 @@ for k=1:length(or_n)-1
         [1,2])...
         + multiprod(multiprod(Out.E(:,:,:,length(or_n)-k+1,:,:),            Out.Y_a_b(:,:,:,length(or_n)-k+1,:,:),[1,2]),  Out.I_b,[2,3]);
     YY_1= YY_a_0-k_1*(Geo_b.s(length(or_n)-k+1)-RK_b.s(length(or_r)-k+1));
-    max(max(max(k_1(:,:,:,1,1,1))))
+    %max(max(max(k_1(:,:,:,1,1,1))))
     k_2= - multiprod(multiprod(YY_1,           OutRK.NY_a_b(:,:,:,length(or_r)-k+1,:,:),[1,2]), Out.I_b,[2,3])...
         - multiprod(multiprod(YY_1,           Out.I_a_b,[1,2]),  OutRK.NY_b(:,:,:,length(or_r)-k+1,:,:),[2,3])...
         - multiprod(OutRK.NY_a(:,:,:,length(or_r)-k+1,:,:),...
@@ -143,7 +143,7 @@ for k=1:length(or_n)-1
         [1,2])...
         + multiprod(multiprod(OutRK.E(:,:,:,length(or_r)-k+1,:,:),          OutRK.Y_a_b_1(:,:,:,length(or_r)-k+1,:,:),[1,2]),  Out.I_b,[2,3]);
     YY_2= YY_a_0-k_2*(Geo_b.s(length(or_n)-k+1)-RK_b.s(length(or_r)-k+1));
-    max(max(max(k_2(:,:,:,1,1,1))))
+    %max(max(max(k_2(:,:,:,1,1,1))))
     k_3= - multiprod(multiprod(YY_2,           OutRK.NY_a_b(:,:,:,length(or_r)-k+1,:,:),[1,2]), Out.I_b,[2,3])...
         - multiprod(multiprod(YY_2,           Out.I_a_b,[1,2]),  OutRK.NY_b(:,:,:,length(or_r)-k+1,:,:),[2,3])...
         - multiprod(OutRK.NY_a(:,:,:,length(or_r)-k+1,:,:),...
@@ -164,7 +164,7 @@ for k=1:length(or_n)-1
         [1,2])...
         + multiprod(multiprod(OutRK.E(:,:,:,length(or_r)-k+1,:,:),          OutRK.Y_a_b_1(:,:,:,length(or_r)-k+1,:,:),[1,2]),  Out.I_b,[2,3]);
     YY_3= YY_a_0-k_3*(Geo_b.s(length(or_n)-k+1)-Geo_b.s(length(or_n)-k));
-    max(max(max(k_3(:,:,:,1,1,1))))
+    %max(max(max(k_3(:,:,:,1,1,1))));
     k_4= - multiprod(multiprod(YY_3,           Out.NY_a_b(:,:,:,length(or_n)-k,:,:),[1,2]), Out.I_b,[2,3])...
         - multiprod(multiprod(YY_3,           Out.I_a_b,[1,2]),  Out.NY_b(:,:,:,length(or_n)-k,:,:),[2,3])...
         - multiprod(Out.NY_a(:,:,:,length(or_n)-k,:,:),...
@@ -184,7 +184,7 @@ for k=1:length(or_n)-1
         multiprod(multiprod(Out.D(:,:,:,length(or_n)-k,:,:), Out.Y_a_b(:,:,:,length(or_n)-k,:,:),[1,2]),  Out.Y_b(:,:,:,length(or_n)-k,:,:),[2,3]),...
         [1,2])...
         + multiprod(multiprod(Out.E(:,:,:,length(or_n)-k,:,:),          Out.Y_a_b(:,:,:,length(or_n)-k,:,:),[1,2]),  Out.I_b,[2,3]);
-    max(max(max(k_4(:,:,:,1,1,1))))
+    %max(max(max(k_4(:,:,:,1,1,1))));
     
     YY_a_0= YY_a_0 - (1/6)*(k_1+2*k_2+2*k_3+k_4)*(Geo_b.s(length(or_n)-k+1)-Geo_b.s(length(or_n)-k));
     Ad.YY_ab(:,:,:,length(or_n)-k,:,:)=YY_a_0;
@@ -193,12 +193,15 @@ end
 
 
 %vertification
-max(max(max(Ad.YY_ab(:,:,:,1,:,:)-Ad.YY_ab(:,:,:,end,:,:))))
-max(max(max(Ad.YY_ab(:,:,:,1,5,3))))  %NaN
+max(max(max(Ad.YY_ab(:,:,:,1,:,:)-Ad.YY_ab(:,:,:,end,:,:))));
+max(max(max(Ad.YY_ab(:,:,:,1,5,3))));  %NaN
 
 disp('RK Algorithm..Finish!')
 toc
 
-
+Ad.Y_a(find(isnan(Ad.Y_a)))=0;
+Ad.YY_ab(find(isnan(Ad.YY_ab)))=0;
+Ad.Y_a_b(find(isnan(Ad.Y_a_b)))=0;
+Ad.Y_b(find(isnan(Ad.Y_b)))=0;
 
 end

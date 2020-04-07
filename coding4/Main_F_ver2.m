@@ -23,19 +23,19 @@ else
     disp('ÎÄ¼þ¼Ð´æÔÚ£¡');
 end
 % %% #######Geometry########%
-ns=51;%odd
-Geo.s =linspace(0,1,ns);
+ns=101;%odd
+Geo.s =linspace(0,5,ns);
 or_n=1:2:ns;or_r=2:2:ns;
 %Geo.h=0.1*exp(linspace(0,1.5,length(Geo.s)));
 Geo.h=1*ones(size(Geo.s));
 
 Geo.tau=0.0./Geo.h;
 %Geo.tau=linspace(0,4,500)
-%Geo.tau =logspace(0,0.6,50)-1;
+%Geo.tau =logspace(0,0.6,ns)-1;
 %Geo.tau =0.0*ones(size(Geo.s));
 %Geo.tau =logspace(0,0.1,500)-1;
 
-Geo.kappa=(0.0001)./Geo.h;
+Geo.kappa=(0)./Geo.h;
 %Geo.kappa=logspace(0,0.6,500)-1
 
 Geo.sw=sqrt(Geo.kappa.^2+Geo.tau.^2).*Geo.s;
@@ -48,7 +48,7 @@ saveas(h,[save_directory,'\','Geo','.png'])
 
 
 % %% #######Wave########%
-Geo.m=[-1:1];
+Geo.m=[-6:6];
 Geo.n=1;
 Wave.a=[1 2 3]; %P^{a}=P^{a*},U^{a}=U^{a*}
 Wave.b=[-3 -2 -1 1 2 3];
@@ -90,41 +90,53 @@ Name.T3=    {'\Theta_{\alpha\beta\gamma}','\Theta_{(\alpha)\beta\gamma}','\Theta
 [ePsi]= PFun(RK_b)
 [Out]= EFun(Geo_b,Psi,Wave,1)
 [OutRK]= EFun(RK_b,ePsi,Wave,0)
-[Ad]= RKFUN(Geo_b,RK_b,Out,OutRK,Wave,or_n,or_r) 
+[Ad]= RKFUN(Geo_b,RK_b,Out,OutRK,Wave,or_n,or_r)
 %%
+beta=1+(Wave.gamma-1)/2;
+M=0.1;
+Wave.k
+sigma=Geo_b.s./(beta*M*Wave.k);
+
+L=multiprod(Out.N_a,Ad.Y_a,[1,2])+Out.H_a%-permute(bsxfun(@times,eye(length(Geo.m)*Geo.n),reshape(beta*M*Wave.k.*Wave.a.^2./max(Wave.a),1,1,length(Wave.a))),[1,2,4,3]);
+L1=L(:,:,1:end-1,:);
+ds=diff(Geo_b.s);
+exp1=bsxfun(@times,L1,reshape(ds.'*ones(size(Wave.a)),1,1,length(ds),length(Wave.a)));%expm
+
+for ka=1:length(Wave.a)
+    for ks=1:length(ds)
+        L_inv(:,:,ks,ka)=inv(L1(:,:,ks,ka));
+        Exp1(:,:,ks,ka)=expm(exp1(:,:,ks,ka));
+    end
+end
+Exp2=multiprod(L_inv,(Out.I2(:,:,1:end-1,:)-Exp1),[1,2]);
 
 %Initial pressure modes
-
-%suppose:
-%a=1
-P0=zeros(length(Geo_b.m)*Geo_b.n,1,1,length(Wave.a));
-
-P0(2,1,1,1)=1
-
-L=multiprod(Out.N_a,Ad.Y_a,[1,2])+Out.H_a;
-L1=L(:,:,1:end-1,:)
-ds=diff(Geo_b.s)
-for ka=1:length(Wave.a)
-for ks=1:length(ds)
-    L_inv(:,:,ks,ka)=inv(L1(:,:,ks,ka));
-end
-end
-
-exp1=exp(bsxfun(@times,L1,reshape(ds.'*ones(size(Wave.a)),1,1,length(ds),length(Wave.a))))  
-
-exp2=multiprod(L_inv,(Fun2_a.I2(:,:,1:end-1,:)-exp1),[1,2])
-
-
-for ka=1:length(Wave.a)
+or_ab=max(Wave.a)-min(Wave.b);
+P_list=bsxfun(@times,zeros(length(Geo_b.m)*Geo_b.n,or_ab*2+1),reshape(ones(size(Geo_b.s)),1,1,length(Geo_b.s)));
+kka=1;
+%p_intial=[0 0 0.5 0 0 0];
+P_list(7,or_ab+kka+1,1)=M;
+P_list(:,or_ab-kka+1,1)=conj(P_list(:,or_ab+kka+1,1));
+tic
 for  ks=1:length(ds)
-
-    P0(:,:,ks+1,ka)=exp1(:,:,ks,ka)*P0(:,:,ks,ka)-exp2(:,:,ks,ka)*P0(:,:,ks,ka);
-
+    
+    P_a_b=permute(reshape(P_list(:,Wave.a_b+or_ab+1,ks),length(Geo_b.m)*Geo_b.n,length(Wave.b),length(Wave.a)),[1,4,5,6,2,3]);
+    P_b=permute(bsxfun(@times,P_list(:,Wave.b+or_ab+1,ks),reshape(ones(size(Wave.a)),1,1,length(Wave.a))),[4,1,5,6,2,3]);
+    
+    term1=multiprod(permute(bsxfun(@times,Out.N_a(:,:,ks,:),reshape(ones(size(Wave.b)),1,1,1,1,length(Wave.b))),[1,2,6,3,5,4]),...
+        multiprod(multiprod(Ad.YY_ab(:,:,:,ks,:,:),P_a_b,[1,2]),P_b,[2,3]),[1,2]);
+    term2=multiprod(multiprod(Out.C(:,:,:,ks,:,:),multiprod(permute(Ad.Y_a_b(:,:,ks,:,:),[1,2,6,3,4,5]),P_a_b,[1,2]),[1,2]),P_b,[2,3]);
+    term3=multiprod(multiprod(Out.D(:,:,:,ks,:,:),multiprod(permute(Ad.Y_a_b(:,:,ks,:,:),[1,2,6,3,4,5]),P_a_b,[1,2]),[1,2]),...
+        multiprod(permute(bsxfun(@times,Ad.Y_b(:,:,ks,:),reshape(ones(size(Wave.a)),1,1,1,1,length(Wave.a))),[6,1,2,3,4,5]),P_b,[2,3]),[2,3]);
+    
+    temp_p=permute(multiprod(Exp1(:,:,ks,:),permute(P_list(:,Wave.a+or_ab+1,ks),[1,3,4,2]),[1,2])...
+        -multiprod(Exp2(:,:,ks,:),permute(sum(term1+term2+term3,5),[1,2,4,6,5,3]),[1,2]),[1,4,2,3]);
+    %temp_p=permute(multiprod(Exp1(:,:,ks,:),permute(P_list(:,Wave.a+or_ab+1,ks),[1,3,4,2]),[1,2]),[1,4,2,3]);
+    P_list(:,or_ab+1-max(Wave.a):or_ab+max(Wave.a)+1,ks+1)=[fliplr(conj(temp_p)) zeros(length(Geo_b.m)*Geo_b.n,1) temp_p];
+    
 end
-end
-Ad.YY_ab
+toc
 
 
-Wave.a_b
-
-Wave.b
+figure;
+plot(abs((permute(P_list(:,8,:),[1,3,2]))).')
