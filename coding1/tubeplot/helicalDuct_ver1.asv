@@ -1,0 +1,61 @@
+% James-3.58
+%h(s)
+clc
+clear
+close all
+s = 0:0.01:4;
+h=0.1*exp(linspace(0,1.5,length(s)));
+kappa=(2/3)./h;tau=0.2./h;
+a=kappa./(kappa.^2+tau.^2);
+b=tau./(kappa.^2+tau.^2);
+
+sw=sqrt(kappa.^2+tau.^2).*s;
+
+
+n=1;
+for k=1:n
+x(k,:) = a.*sin(sw+2*pi*k/n);
+y(k,:) = a.*cos(sw+2*pi*k/n);
+z(k,:) = b.*sw;
+end
+% figure(1)
+%  
+% xlabel('x'); ylabel('y'); title('Circula helix');
+% axis equal
+
+figure
+for k=1:n
+[X,Y,Z,x,y,z,t]=tubeplot(x(k,:),y(k,:),z(k,:),h,s,50);hold on;
+end
+
+[qx, qy ,qz] = meshgrid(-2:0.1:2, -2:0.1:2, -2:0.1:2);
+[isin]=inshape_tube(qx(:),qy(:),qz(:),x,y,z,t,h);
+k_in=find(isin==1);
+
+plot3(qx(k_in), qy(k_in), qz(k_in),'.');
+
+
+%% 
+
+
+%% 
+
+
+plot3(x, y, z);
+daspect([1,1,1]); camlight;
+
+%% gpu计算prefer
+function [isin]=inshape_tube(x0,y0,z0,x,y,z,t,r)
+%x0=1;y0=1;z0=1;  
+for  k=1:length(x0)
+temp=sum(([x y z]-[x0(k) y0(k) z0(k)]).*t,2);
+[value,order]=min(abs(temp));
+k_zeros=find (temp(1:end-1).*temp(2:end)<=0);
+r0=sqrt((x(k_zeros)-x0(k)).^2+(y(k_zeros)-y0(k)).^2+(z(k_zeros)-z0(k)).^2);
+%disp('判断r0是否在r内')
+%有一个为真即可isin
+try
+isin(k)=(min(r0.'-r(k_zeros))<=0);
+
+end
+end

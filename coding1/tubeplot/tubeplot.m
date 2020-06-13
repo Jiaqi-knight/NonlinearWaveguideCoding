@@ -58,11 +58,6 @@ function [varargout]=tubeplot(x,y,z,varargin)
     [t,n,b,kappa,tau,theta_0]=frenet(x,y,z);
   end
 
-  
-
-  
-  
-
 
   X=zeros(N,subdivs);
   Y=zeros(N,subdivs);
@@ -75,7 +70,7 @@ function [varargout]=tubeplot(x,y,z,varargin)
     Z(i,:)=z(i) + r(i)*(n(i,3)*cos(theta-theta_0(i)) + b(i,3)*sin(theta-theta_0(i)));
   end
 
-  if (nargout==0)
+  %if (nargout==0)
     if (nargin > 4)
       V=varargin{2};
       if (size(V,1)==1)
@@ -88,8 +83,13 @@ function [varargout]=tubeplot(x,y,z,varargin)
       surf(X,Y,Z,'LineStyle','none');
 
     end
-  else
+  %else
     varargout(1) = {X}; 
     varargout(2) = {Y}; 
     varargout(3) = {Z}; 
+    varargout(4) = {x}; 
+    varargout(5) = {y}; 
+    varargout(6) = {z}; 
+    varargout(7) = {t}; 
+
   end

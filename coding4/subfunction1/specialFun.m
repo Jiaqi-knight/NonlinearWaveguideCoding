@@ -51,6 +51,25 @@ switch op
             end
         end
         X1=reshape(X1,n*length(m),n*length(m),length(h));
+         case 'h'
+        
+        X1=zeros(n*length(m)*n*length(m),length(h));
+        [D,O]=deltaT(m,n,2,1);
+        om1=O.M1(:)-m(1)+1;om2=O.M2(:)-m(1)+1;
+        on1=O.N1(:);on2=O.N2(:);
+        
+        for hk=1:length(h)
+            for k=1:length(om1)
+                X1(k,hk)=...
+                    quad(@(theta) h(hk)...
+                    *Cmn1(on1(k),om1(k),hk)*Cmn1(on2(k),om2(k),hk)...
+                    *besselj(m(om1(k)),jmn_pm(on1(k),om1(k)))...
+                    *besselj(m(om2(k)),jmn_pm(on2(k),om2(k)))...
+                    .*exp(sqrt(-1)*m(om1(k))*(theta-theta_0(hk)))...
+                    .*exp(sqrt(-1)*m(om2(k))*(theta-theta_0(hk))),0,2*pi,1e-4);
+            end
+        end
+        X1=reshape(X1,n*length(m),n*length(m),length(h));
 end
 
 end

@@ -7,8 +7,8 @@ function [D1,O]= deltaT(m,n,dimention,k,multiply_factor) %k+ right
 
 
 if dimention==2
-    m1=m;
-    m2=fliplr(m);
+    m1=fliplr(m);
+    m2=m;
     %% ¼ò»¯-µÈ¼Û
     %     for k1=1:length(m1)
     %         for k2=1:length(m2)

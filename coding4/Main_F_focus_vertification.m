@@ -9,13 +9,7 @@ clear
 %close all
 opengl('save','software')
 %load('Database_X2.mat');load('Database_X3.mat');
-subfunction_path1='.\subfunction1'
-addpath(genpath(subfunction_path1));
-subfunction_path2='E:\Jiaqi-SJTU-DOIT\Maincode\GITHUB-wjq\NonlinearWaveguideCoding\coding2\src\chebfun-master';
-addpath(genpath(subfunction_path2));
-subfunction_path3='E:\Jiaqi-SJTU-DOIT\Maincode\GITHUB-wjq\NonlinearWaveguideCoding\coding2\src\tensor_toolbox-master';
-addpath(genpath(subfunction_path3));
-subfunction_path4='E:\Jiaqi-SJTU-DOIT\Maincode\GITHUB-wjq\NonlinearWaveguideCoding\coding4\subfunction1\Multiprod_2009';
+subfunction_path4='C:\Users\Jiaqi-knight\Documents\GitHub\NonlinearWaveguideCoding\coding4\subfunction1';
 addpath(genpath(subfunction_path4));
 save_directory='./data';
 if ~exist(save_directory)
