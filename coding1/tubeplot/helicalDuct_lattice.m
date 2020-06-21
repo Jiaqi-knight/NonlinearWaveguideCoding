@@ -29,6 +29,9 @@ for k=1:n
 end
 
 [qx, qy ,qz] = meshgrid(-2:0.1:2, -2:0.1:2, -2:0.1:2);
+
+
+
 [isin]=inshape_tube(qx(:),qy(:),qz(:),x,y,z,t,h);
 k_in=find(isin==1);
 
