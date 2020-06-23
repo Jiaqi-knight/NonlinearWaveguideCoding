@@ -1,0 +1,73 @@
+function[Riemanntensor]=computeRiemanntensor3D(geometricdata,secondChristoffelsymbol,metriccoefficients)
+
+%%
+%        Project: Fluid - structure interaction on deformable surfaces
+%         Author: Luca Di Stasio
+%    Institution: ETH Zürich
+%                 Institute for Building Materials
+% Research group: Computational Physics for Engineering Materials
+%        Version: 0.1
+%  Creation date: May 29th, 2014
+%    Last update: May 29th, 2014
+%
+%    Description: 
+%          Input: 
+%         Output: 
+
+%%
+
+g11 = metriccoefficients(:,1);
+g22 = metriccoefficients(:,2);
+g33 = metriccoefficients(:,3);
+g12 = metriccoefficients(:,4);
+g13 = metriccoefficients(:,5);
+g23 = metriccoefficients(:,6);
+
+Gamma111 = secondChristoffelsymbol(:,1);
+Gamma112 = secondChristoffelsymbol(:,2);
+Gamma113 = secondChristoffelsymbol(:,3);
+Gamma121 = secondChristoffelsymbol(:,4);
+Gamma122 = secondChristoffelsymbol(:,5);
+Gamma123 = secondChristoffelsymbol(:,6);
+Gamma131 = secondChristoffelsymbol(:,7);
+Gamma132 = secondChristoffelsymbol(:,8);
+Gamma133 = secondChristoffelsymbol(:,9);
+Gamma211 = secondChristoffelsymbol(:,10);
+Gamma212 = secondChristoffelsymbol(:,11);
+Gamma213 = secondChristoffelsymbol(:,12);
+Gamma221 = secondChristoffelsymbol(:,13);
+Gamma222 = secondChristoffelsymbol(:,14);
+Gamma223 = secondChristoffelsymbol(:,15);
+Gamma231 = secondChristoffelsymbol(:,16);
+Gamma232 = secondChristoffelsymbol(:,17);
+Gamma233 = secondChristoffelsymbol(:,18);
+Gamma311 = secondChristoffelsymbol(:,19);
+Gamma312 = secondChristoffelsymbol(:,20);
+Gamma313 = secondChristoffelsymbol(:,21);
+Gamma321 = secondChristoffelsymbol(:,22);
+Gamma322 = secondChristoffelsymbol(:,23);
+Gamma323 = secondChristoffelsymbol(:,24);
+Gamma331 = secondChristoffelsymbol(:,25);
+Gamma332 = secondChristoffelsymbol(:,26);
+Gamma333 = secondChristoffelsymbol(:,27);
+
+% Rlijk = Gamma_lik/j - Gamma_lij/k + Gamma_ljs*Gamma_sik - Gamma_lks*Gamma_sij
+% Gamma_lik/1 =
+% (geometricdata(:,8).*Gamma_lik(geometricdata(:,5),1)+geometricdata(:,9).*Gamma_lik(geometricdata(:,6),1)+geometricdata(:,10).*Gamma_lik(geometricdata(:,7),1))./geometricdata(:,4)
+% Gamma_lik/2 =
+% (geometricdata(:,15).*Gamma_lik(geometricdata(:,12),1)+geometricdata(:,16).*Gamma_lik(geometricdata(:,13),1)+geometricdata(:,17).*Gamma_lik(geometricdata(:,14),1))./geometricdata(:,11)
+% Gamma_lik/3 =
+% (geometricdata(:,22).*Gamma_lik(geometricdata(:,19),1)+geometricdata(:,23).*Gamma_lik(geometricdata(:,20),1)+geometricdata(:,24).*Gamma_lik(geometricdata(:,21),1))./geometricdata(:,18)
+% Gamma_lij/1 =
+% (geometricdata(:,8).*Gamma_lij(geometricdata(:,5),1)+geometricdata(:,9).*Gamma_lij(geometricdata(:,6),1)+geometricdata(:,10).*Gamma_lij(geometricdata(:,7),1))./geometricdata(:,4)
+% Gamma_lij/2 =
+% (geometricdata(:,15).*Gamma_lij(geometricdata(:,12),1)+geometricdata(:,16).*Gamma_lij(geometricdata(:,13),1)+geometricdata(:,17).*Gamma_lij(geometricdata(:,14),1))./geometricdata(:,11)
+% Gamma_lij/3 =
+% (geometricdata(:,22).*Gamma_lij(geometricdata(:,19),1)+geometricdata(:,23).*Gamma_lij(geometricdata(:,20),1)+geometricdata(:,24).*Gamma_lij(geometricdata(:,21),1))./geometricdata(:,18)
+
+
+
+
+% Riemanntensor_lijk = g_ls*R_sijk
+
+RiemanntensorLIJK = gLS.*RSIJK; 

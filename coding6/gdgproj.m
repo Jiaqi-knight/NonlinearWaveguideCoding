@@ -36,7 +36,7 @@
 
 %% ================================================================
 function gdgproj(which_surface)
-
+close all
 % Find out which surface to work with.
 % flatsetup() is in flatsetup.m, etc.
 if (strcmp(which_surface, 'flat'))
