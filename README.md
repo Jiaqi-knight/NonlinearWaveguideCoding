@@ -1,5 +1,8 @@
 # NonlinearWaveguideCoding
  
+new：
+![](https://github.com/Jiaqi-knight/NonlinearWaveguideCoding/blob/master/tex/ModelforLBM_in_curvilinear_coordinates.PNG)
+
 
 Coding1: Tubeplot for helical duct
 
