@@ -1,0 +1,52 @@
+Version history of spherium.m by Andy French 
+
+14th April 2013. v2.1
+Use can select 'bespoke' as a colormap option. This will load the file bespoke_colormap.mat.
+
+17th August 2012. v2.0
+Major refactor. Different spheria now have separate GUIs which define their parameters. 'plugin' style architecture. Spheria have common code and 
+are automatically picked up by the main GUI. Code is accessed via a strong naming convention which must match the SPHERIA directory name.
+Surface generation is therefore decoupled from the generic effects applied by the main spherium code. This should aid maintenance and simplify the addition of future plugins.
+Some minor updated too. Hydrogenic orbitals and Klein bottles are now parameterized. Polyspike and polyhedron generators are also included. 
+The 'low resolution' button has been removed as each spheria controls is resolution separately.
+PNG images are now date and time stamped rather than overwritten. Close routin is also improved to allow for the code to 
+be closed when is is run from a read-only drive.
+
+14th March 2012. v1.6
+Camera roll and pan buttons added. Colour map and imporved sine, log etc colouring options added. Now the latter works with surfaces and klein bottle.
+
+11th March 2012. v1.5
+View and Rotate3D replaced by camera functions. Spheria normalized such that overall radii = 1. Cam dolly now modifies azi consistently. Blue button removed! 
+Replaced by fast_update_gui function within spherium.m
+
+13th February 2012. v1.4
+Removal of fig2pic in favour of a variable resolution print command (!). Modifications to crop2fig and then a new function (fitpic2paper) to achieve
+the desired output. Load transparency, holes and texture maps from files. Default and current versions are stored in the functions directory.
+
+14th December 2011. v1.3
+Aborted attempt to add polyhedra to spheria objects. This can't be done until one can define platonic solids
+in erms of azi and elev. Currently they can be constructed as patch objects, but this is incompatible with
+the spheria, which are surface objects.
+New functions 'spike' and 'detonate' added to give extra effects. Note spherefunctions can be defined as
+a function and called from spherium.
+
+12th November 2011. v1.2
+Lights increased from one to three. GUI modified to edit properties of lights. 
+More could easily be added without modification to interface as lights are selected via a drop down menu.
+handles.S modified to include an indexed light(n). structure holding light properties.
+
+8/9th November 2011. v1.1
+Texture map now can be applied to all surfaces.
+Transparency and Holes maps can also be applied. .jpg files 'texture', 'holes' and 'transparency'
+control these effects. Colour conversions are done automatically within spherium so they don't have to be grayscale, black and white etc.
+.mat file structure modified to include transparency, holes and new texture.jpg colorfunction. Batch converter written to modify files.
+
+5th July 2011. v1.
+Numerous modifications to version presented to schools in Marseilles this year.
+Hydrogenic orbitals, Klein bottle, 3D rotation, lighting control, bug fix relating to PNG output 
+(spheria are now nicely scaled to the output paper), better error handling regarding invalid spherefunctia,
+status bar with basic instructions, version history....
+
+Original concept developed between 2008 and 2011. Spherium as a GUI was developed during March 2011
+in preparation for a British Council sponsored 'Science in Schools' event in Marseilles.
+Many thanks to the Mathworks for provision of a temporary licence during this time.

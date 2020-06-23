@@ -65,8 +65,14 @@ elseif (strcmp(which_surface, 'saddle'))
 	[x,y,z,ds,dt] = saddlesetup();
 elseif (strcmp(which_surface, 'monkey'))
 	[x,y,z,ds,dt] = monkeysetup();
-elseif (strcmp(which_surface, 'wjq'))
-	[x,y,z,ds,dt] =wjqsetup();
+elseif (strcmp(which_surface, 'helical'))
+	[x,y,z,ds,dt] = helicalsetup();
+elseif (strcmp(which_surface, 'ammonite'))
+    load ammonite_para;
+	[x,y,z,ds,dt]=make_ammonite( s.add_ridges, s.add_ridges_to_colour, s.add_bumps,...
+    s.add_bumps_to_colour, s.spiral_type, s.spiral_turns, s.points_per_turn, s.cross_section_ratio,...
+    s.bump_amplitude, s.ridge_frequency, s.spiral_bump_amplitude, s.spiral_bump_frequency, s.helicity );
+
 else
 	error 'Unrecognized surface.  Please type ''help gdgproj'' for more information.'
 end

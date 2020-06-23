@@ -1,0 +1,19 @@
+Potential future modifications to spherium.m
+
+Andy French. 14th Feb 2012
+
+1) Add a second light source. Independent controls of colour and light position. DONE
+2) Major refactor. Common GUI functions, callbacks in separate files.
+3) PDF of instructions with illustrations.
+4) Plug in spheria architecture, with each spheria type auto generating edit boxes! 
+(Rather than dis-enabling parts of the GUI as currently happens).
+5) Enable colorbars and axes to be plotted during PNG save mode. DONE
+6) Construct spheria gallery. Online and possibly in an art gallery! ONGOING
+7) Make the cropped figure pre PNG construction slightly bigger. Perhaps full screen? DONE
+8) Ammonite bump amplitude is actually ammonite ridge amplitude....
+9) Investigate how to apply textures, holes and transparency in a non-distorted manner. Possibly via tiling? Define surfaces in u,v to avoid angular distortion?
+10) Code review for speed and memory efficiency. unit8 rather than doubles etc....
+11) Port to C#....
+12) Modify ammonite to construct spiral horns, possibly curved. This may mean parameterizing the extruded ellipse radius in a different way. Perhaps a more efficient 
+way of encoding ammonite via the GUI? Let spiral function be a function like the spherical function (but this time one parameter, t).
+13) 3D rotation should be relative to current view, not an absolute coordinate set.
