@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  17 APR 2020 16:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  30 JUN 2020 23:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -328,210 +328,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 29.
+(amsmath)                 on input line 39.
 
 [1{c:/Program Files/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-Overfull \hbox (6.58217pt too wide) detected at line 118
-[][]
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
-
- []
-
-[3] [4] [5] [6] [7]
-Overfull \hbox (62.89583pt too wide) detected at line 421
-[][]
- []
-
-
-Overfull \hbox (34.44969pt too wide) detected at line 430
-[][]
- []
-
-[8]
-Overfull \hbox (13.58304pt too wide) detected at line 495
-[][]
- []
-
-[9] [10]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
- [11] [12]
-Overfull \hbox (1.76048pt too wide) detected at line 661
-[][]
- []
-
-[13] [14]
-Overfull \hbox (2.79445pt too wide) detected at line 777
-[][]
- []
-
-[15] [16] [17] [18] [19]
-Overfull \hbox (52.44824pt too wide) detected at line 1005
-[][]
- []
-
-[20]
-Overfull \hbox (80.73242pt too wide) detected at line 1050
-[][]
- []
-
-
-Overfull \hbox (34.44969pt too wide) detected at line 1060
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1062--1063
-
- []
-
-
-Overfull \hbox (67.70912pt too wide) detected at line 1078
-[][]
- []
-
-[21]
-Overfull \hbox (41.76048pt too wide) detected at line 1090
-[][]
- []
-
-
-Overfull \hbox (2.78142pt too wide) detected at line 1107
-[][]
- []
-
-[22]
-Overfull \hbox (52.52527pt too wide) detected at line 1125
-[][]
- []
-
-[23]
-Overfull \hbox (2.4556pt too wide) detected at line 1138
-[][]
- []
-
-
-Overfull \hbox (3.1499pt too wide) detected at line 1195
-[][]
- []
-
-[24] [25]
-Overfull \hbox (80.73242pt too wide) detected at line 1222
-[][]
- []
-
-[26] [27] [28] [29]
-Overfull \hbox (12.5245pt too wide) detected at line 1361
-[][]
- []
-
-
-Overfull \hbox (14.32384pt too wide) detected at line 1373
-[][]
- []
-
-[30] [31]
-Overfull \hbox (27.35896pt too wide) detected at line 1464
-[][]
- []
-
-
-Overfull \hbox (43.04106pt too wide) detected at line 1477
-[][]
- []
-
-[32] [33] <3D-model-lambda.jpg, id=128, 389.95688pt x 118.19156pt>
-File: 3D-model-lambda.jpg Graphic file (type jpg)
-
-<use 3D-model-lambda.jpg>
-Package pdftex.def Info: 3D-model-lambda.jpg used on input line 1553.
-(pdftex.def)             Requested size: 289.07999pt x 87.62088pt.
- [34 <./3D-model-lambda.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 1658--1659
-[]$[][] \OML/cmm/m/it/10 C\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 2\
-OML/cmm/m/it/10 C\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 J\OT1/cmr/m/n/10 1\OML/cmm/m
-/it/10 J\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 J\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 rd
-r \OT1/cmr/m/n/10 = [][] [][][]\OML/cmm/m/it/10 J\OT1/cmr/m/n/10 1(\OML/cmm/m/i
-t/10 j[]z\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 J\OT1/cmr/m/n/10 2(\OML/cmm/m/it/10 
-j[]z\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 J\OT1/cmr/m/n/10 3(\OML/cmm/m/it/10 j[]z\
-OT1/cmr/m/n/10 )\OML/cmm/m/it/10 zhhdz \OT1/cmr/m/n/10 =
- []
-
-[35] [36]
-Overfull \hbox (3.4693pt too wide) detected at line 1829
-[][]
- []
-
-[37] <ThetaFun.jpg, id=143, 1927.2pt x 915.42pt>
-File: ThetaFun.jpg Graphic file (type jpg)
- <use ThetaFun.jpg>
-Package pdftex.def Info: ThetaFun.jpg used on input line 1874.
-(pdftex.def)             Requested size: 578.15999pt x 274.61415pt.
-
-<XFun.jpg, id=144, 1927.2pt x 915.42pt>
-File: XFun.jpg Graphic file (type jpg)
- <use XFun.jpg>
-Package pdftex.def Info: XFun.jpg used on input line 1881.
-(pdftex.def)             Requested size: 578.15999pt x 274.61415pt.
-
-<PsiFun.jpg, id=145, 1927.2pt x 915.42pt>
-File: PsiFun.jpg Graphic file (type jpg)
- <use PsiFun.jpg>
-Package pdftex.def Info: PsiFun.jpg used on input line 1889.
-(pdftex.def)             Requested size: 578.15999pt x 274.61415pt.
-
-Overfull \hbox (57.73653pt too wide) detected at line 1914
-[][]
- []
-
-[38] [39 <./ThetaFun.jpg> <./XFun.jpg>] [40 <./PsiFun.jpg>] [41] [42] [43]
-[44] [45] (./Note.aux) ) 
+[2] [3] [4] (./Note.aux) ) 
 Here is how much of TeX's memory you used:
- 4321 strings out of 492995
- 55876 string characters out of 6136402
- 151468 words of memory out of 5000000
- 7791 multiletter control sequences out of 15000+600000
- 18834 words of font info for 52 fonts, out of 8000000 for 9000
+ 4258 strings out of 492995
+ 55105 string characters out of 6136402
+ 138467 words of memory out of 5000000
+ 7747 multiletter control sequences out of 15000+600000
+ 11070 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,18n,26p,712b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Program Files/texlive/2017/texmf-dist/fonts/enc/dvi
-ps/cm-super/cm-super-t1.enc}<c:/Program Files/texlive/2017/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb><c:/Program Files/texlive/2017/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><c:/Program Files/texlive/2017/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/Program Files/texlive/2017/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/Program Files/texlive/2017/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Program Files/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/Program Files/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Program Files/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Program Files/
-texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/Program Fil
-es/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Program 
-Files/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Progr
-am Files/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/
-Program Files/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-<c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy9.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/l
-atxfont/lasy6.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/
-amsfonts/symbols/msam10.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/typ
-e1/public/cm-super/sfbx0900.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts
-/type1/public/cm-super/sfbx1000.pfb><c:/Program Files/texlive/2017/texmf-dist/f
-onts/type1/public/cm-super/sfbx1728.pfb><c:/Program Files/texlive/2017/texmf-di
-st/fonts/type1/public/cm-super/sfrm1000.pfb><c:/Program Files/texlive/2017/texm
-f-dist/fonts/type1/public/cm-super/sfti0900.pfb><c:/Program Files/texlive/2017/
-texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on Note.pdf (45 pages, 904240 bytes).
+ 39i,13n,26p,470b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Program Files/texlive/2017/texmf-dist/fonts/enc/d
+vips/cm-super/cm-super-t1.enc}<c:/Program Files/texlive/2017/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb><c:/Program Files/texlive/2017/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Program Files/texlive/2017/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Program Files/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Program Files/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Program Files/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Program Files/texli
+ve/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/Program Files/t
+exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/Program Fil
+es/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Note.pdf (4 pages, 111725 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
+ 54 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
