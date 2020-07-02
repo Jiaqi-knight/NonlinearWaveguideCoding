@@ -769,10 +769,10 @@ firstdevneighbours(indicesE9,5:8)   = [1*ones(length(indicesE9),1)   indicesE9-N
 firstdevneighbours(indicesE10,5:8)  = [1*ones(length(indicesE10),1)  indicesE10-Nx*Ny          indicesE10-(Nz-1)*Nx*Ny  zeros(length(indicesE10),1)];
 firstdevneighbours(indicesE11,5:8)  = [1*ones(length(indicesE11),1)  indicesE11-Nx*Ny          indicesE11-(Nz-1)*Nx*Ny  zeros(length(indicesE11),1)];
 firstdevneighbours(indicesE12,5:8)  = [1*ones(length(indicesE12),1)  indicesE12-Nx*Ny          indicesE12-(Nz-1)*Nx*Ny  zeros(length(indicesE12),1)];
-firstdevneighbours(indicesC5,5:8)   = [1*ones(length(indicesC5),1)   indicesC5-Nx*Ny           indicesC5-(Nz-1)*Nx*Ny   zeros(length(indicesC5),1)];
-firstdevneighbours(indicesC6,5:8)   = [1*ones(length(indicesC6),1)   indicesC6-Nx*Ny           indicesC6-(Nz-1)*Nx*Ny   zeros(length(indicesC6),1)];
-firstdevneighbours(indicesC7,5:8)   = [1*ones(length(indicesC7),1)   indicesC7-Nx*Ny           indicesC7-(Nz-1)*Nx*Ny   zeros(length(indicesC7),1)];
-firstdevneighbours(indicesC8,5:8)   = [1*ones(length(indicesC8),1)   indicesC8-Nx*Ny           indicesC8-(Nz-1)*Nx*Ny   zeros(length(indicesC8),1)];
+firstdevneighbours(indicesC5,5:8)   = [1*ones(length(indicesC5),1)   indicesC5+(Nz-1)*Nx*Ny    indicesC5+Nx*Ny          zeros(length(indicesC5),1)];
+firstdevneighbours(indicesC6,5:8)   = [1*ones(length(indicesC6),1)   indicesC6+(Nz-1)*Nx*Ny    indicesC6+Nx*Ny          zeros(length(indicesC6),1)];
+firstdevneighbours(indicesC7,5:8)   = [1*ones(length(indicesC7),1)   indicesC7+(Nz-1)*Nx*Ny    indicesC7+Nx*Ny          zeros(length(indicesC7),1)];
+firstdevneighbours(indicesC8,5:8)   = [1*ones(length(indicesC8),1)   indicesC8+(Nz-1)*Nx*Ny    indicesC8+Nx*Ny          zeros(length(indicesC8),1)];
 
 end
 if any(periodicity==2)
@@ -791,10 +791,10 @@ firstdevneighbours(indicesE3,5:8)   = [1*ones(length(indicesE3),1)   indicesE3-N
 firstdevneighbours(indicesE8,5:8)   = [1*ones(length(indicesE8),1)   indicesE8-Nx          indicesE8-(Ny-1)*Nx   zeros(length(indicesE8),1)];
 firstdevneighbours(indicesE7,5:8)   = [1*ones(length(indicesE7),1)   indicesE7-Nx          indicesE7-(Ny-1)*Nx   zeros(length(indicesE7),1)];
 firstdevneighbours(indicesE11,5:8)  = [1*ones(length(indicesE11),1)  indicesE11-Nx         indicesE11-(Ny-1)*Nx  zeros(length(indicesE11),1)];
-firstdevneighbours(indicesC4,5:8)   = [1*ones(length(indicesC4),1)   indicesC4-Nx          indicesC4-(Ny-1)*Nx   zeros(length(indicesC4),1)];
-firstdevneighbours(indicesC3,5:8)   = [1*ones(length(indicesC3),1)   indicesC3-Nx          indicesC3-(Ny-1)*Nx   zeros(length(indicesC3),1)];
-firstdevneighbours(indicesC7,5:8)   = [1*ones(length(indicesC7),1)   indicesC7-Nx          indicesC7-(Ny-1)*Nx   zeros(length(indicesC7),1)];
-firstdevneighbours(indicesC8,5:8)   = [1*ones(length(indicesC8),1)   indicesC8-Nx          indicesC8-(Ny-1)*Nx   zeros(length(indicesC8),1)];
+firstdevneighbours(indicesC4,5:8)   = [1*ones(length(indicesC4),1)   indicesC4+(Ny-1)*Nx     indicesC4+Nx          zeros(length(indicesC4),1)];
+firstdevneighbours(indicesC3,5:8)   = [1*ones(length(indicesC3),1)   indicesC3+(Ny-1)*Nx     indicesC3+Nx          zeros(length(indicesC3),1)];
+firstdevneighbours(indicesC7,5:8)   = [1*ones(length(indicesC7),1)   indicesC7+(Ny-1)*Nx     indicesC7+Nx          zeros(length(indicesC7),1)];
+firstdevneighbours(indicesC8,5:8)   = [1*ones(length(indicesC8),1)   indicesC8+(Ny-1)*Nx     indicesC8+Nx          zeros(length(indicesC8),1)];
 
 end
 if any(periodicity==3)
@@ -803,20 +803,20 @@ firstdevneighbours(indicesE4,5:8)   = [1*ones(length(indicesE4),1)   indicesE4-1
 firstdevneighbours(indicesE5,5:8)   = [1*ones(length(indicesE5),1)   indicesE5-1            indicesE5-(Nx-1)          zeros(length(indicesE5),1)];
 firstdevneighbours(indicesE8,5:8)   = [1*ones(length(indicesE8),1)   indicesE8-1            indicesE8-(Nx-1)          zeros(length(indicesE8),1)];
 firstdevneighbours(indicesE12,5:8)  = [1*ones(length(indicesE12),1)  indicesE12-1           indicesE12-(Nx-1)         zeros(length(indicesE12),1)];
-firstdevneighbours(indicesC4,5:8)  =  [1*ones(length(indicesC4),1)   indicesC4-1            indicesC4-(Nx-1)          zeros(length(indicesC4),1)];
-firstdevneighbours(indicesC1,5:8)  =  [1*ones(length(indicesC1),1)   indicesC1-1            indicesC1-(Nx-1)          zeros(length(indicesC1),1)];
-firstdevneighbours(indicesC5,5:8)  =  [1*ones(length(indicesC5),1)   indicesC5-1            indicesC5-(Nx-1)          zeros(length(indicesC5),1)];
-firstdevneighbours(indicesC8,5:8)  =  [1*ones(length(indicesC8),1)   indicesC8-1            indicesC8-(Nx-1)          zeros(length(indicesC8),1)];
+firstdevneighbours(indicesC4,5:8)  = [1*ones(length(indicesC4),1)  indicesE12-1            indicesC4-(Nx-1)         zeros(length(indicesC4),1)];
+firstdevneighbours(indicesC1,5:8)  = [1*ones(length(indicesC1),1)  indicesC1-1           indicesE12-(Nx-1)         zeros(length(indicesE12),1)];
+firstdevneighbours(indicesC5,5:8)  = [1*ones(length(indicesE12),1)  indicesE12-1           indicesE12-(Nx-1)         zeros(length(indicesE12),1)];
+firstdevneighbours(indicesC8,5:8)  = [1*ones(length(indicesE12),1)  indicesE12-1           indicesE12-(Nx-1)         zeros(length(indicesE12),1)];
 
 firstdevneighbours(indicesF5,5:8)   = [1*ones(length(indicesF5),1)   indicesF5+(Nx-1)       indicesF5+1   zeros(length(indicesF5),1)];
 firstdevneighbours(indicesE2,5:8)   = [1*ones(length(indicesE2),1)   indicesE2+(Nx-1)       indicesE2+1   zeros(length(indicesE2),1)];
 firstdevneighbours(indicesE6,5:8)   = [1*ones(length(indicesE6),1)   indicesE6+(Nx-1)       indicesE6+1   zeros(length(indicesE6),1)];
 firstdevneighbours(indicesE7,5:8)   = [1*ones(length(indicesE7),1)   indicesE7+(Nx-1)       indicesE7+1   zeros(length(indicesE7),1)];
 firstdevneighbours(indicesE10,5:8)  = [1*ones(length(indicesE10),1)  indicesE10+(Nx-1)      indicesE10+1  zeros(length(indicesE10),1)];
-firstdevneighbours(indicesC3,5:8)   = [1*ones(length(indicesC3),1)   indicesC3+(Nx-1)       indicesC3+1   zeros(length(indicesC3),1)];
-firstdevneighbours(indicesC2,5:8)   = [1*ones(length(indicesC2),1)   indicesC2+(Nx-1)       indicesC2+1   zeros(length(indicesC2),1)];
-firstdevneighbours(indicesC6,5:8)   = [1*ones(length(indicesC6),1)   indicesC6+(Nx-1)       indicesC6+1   zeros(length(indicesC6),1)];
-firstdevneighbours(indicesC7,5:8)   = [1*ones(length(indicesC7),1)   indicesC7+(Nx-1)       indicesC7+1   zeros(length(indicesC7),1)];
+firstdevneighbours(indicesC4,5:8)   = [1*ones(length(indicesC4),1)   indicesC4+(Ny-1)*Nx     indicesC4+Nx          zeros(length(indicesC4),1)];
+firstdevneighbours(indicesC1,5:8)   = [1*ones(length(indicesC1),1)   indicesC1+(Ny-1)*Nx     indicesC1+Nx          zeros(length(indicesC1),1)];
+firstdevneighbours(indicesC5,5:8)   = [1*ones(length(indicesC5),1)   indicesC5+(Ny-1)*Nx     indicesC5+Nx          zeros(length(indicesC5),1)];
+firstdevneighbours(indicesC8,5:8)   = [1*ones(length(indicesC8),1)   indicesC8+(Ny-1)*Nx     indicesC8+Nx          zeros(length(indicesC8),1)];
 
 end
 

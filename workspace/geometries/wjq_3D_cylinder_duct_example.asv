@@ -76,7 +76,7 @@ deltaq = [deltar deltat deltaz];
 
 N = Nr*Nt*Nz;
 
-lattice = generatelattice3D(eta1min,Neta1,deltaeta1,eta2min,Neta2,deltaeta2,eta3min,Neta3,deltaeta3,rmin,rmax,Nr,tmin,tmax,Nt,zmin,zmax,Nz);
+lattice = generatelattice3D(eta1min,Neta1,deltaeta1,eta2min,Neta2,deltaeta2,eta3min,Neta3,deltaeta3,rmin,rmax,Nr,tmin,tmax,Nt,Nz,zmax,Nz);
 
 %lattice第5，6,7列为transform后的坐标点
 % Apply the parameterization to obtain R^3 coordinates

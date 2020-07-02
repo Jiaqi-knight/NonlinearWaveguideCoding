@@ -10,23 +10,26 @@ function[covariantbase]=computecovariantbase3D(N,deltaq,lattice,firstdevneighbou
 %  Creation date: May 28th, 2014
 %    Last update: July 8th, 2014
 %
-%    Description: 
-%          Input: 
-%         Output: 
+%    Description:
+%          Input:
+%         Output:
 
 %%
 
 covariantbase = zeros(N,9);
 
 for i=1:N
+    ii=i;
     for j=1:3
         switch firstdevneighbours(i,4*(j-1)+1)
             case 1
                 covariantbase(i,3*(j-1)+1:3*(j-1)+3) = 0.5.*[(lattice(firstdevneighbours(i,4*(j-1)+3),7)-lattice(firstdevneighbours(i,4*(j-1)+2),7)) (lattice(firstdevneighbours(i,4*(j-1)+3),8)-lattice(firstdevneighbours(i,4*(j-1)+2),8)) (lattice(firstdevneighbours(i,4*(j-1)+3),9)-lattice(firstdevneighbours(i,4*(j-1)+2),9))]./deltaq(j);
             case 2
-                covariantbase(i,3*(j-1)+1:3*(j-1)+3) = [(-1.5*lattice(firstdevneighbours(i,4*(j-1)+2),7)+2*lattice(firstdevneighbours(i,4*(j-1)+3),7)-0.5*lattice(firstdevneighbours(i,4*(j-1)+4),7)) (-1.5*lattice(firstdevneighbours(i,4*(j-1)+2),8)+2*lattice(firstdevneighbours(i,4*(j-1)+3),8)-0.5*lattice(firstdevneighbours(i,4*(j-1)+4),8)) (-1.5*lattice(firstdevneighbours(i,4*(j-1)+2),9)+2*lattice(firstdevneighbours(i,4*(j-1)+3),9)-0.5*lattice(firstdevneighbours(i,4*(j-1)+4),9))]/deltaq(j);
+                %covariantbase(i,3*(j-1)+1:3*(j-1)+3) = [(-1.5*lattice(firstdevneighbours(i,4*(j-1)+2),7)+2*lattice(firstdevneighbours(i,4*(j-1)+3),7)-0.5*lattice(firstdevneighbours(i,4*(j-1)+4),7)) (-1.5*lattice(firstdevneighbours(i,4*(j-1)+2),8)+2*lattice(firstdevneighbours(i,4*(j-1)+3),8)-0.5*lattice(firstdevneighbours(i,4*(j-1)+4),8)) (-1.5*lattice(firstdevneighbours(i,4*(j-1)+2),9)+2*lattice(firstdevneighbours(i,4*(j-1)+3),9)-0.5*lattice(firstdevneighbours(i,4*(j-1)+4),9))]/deltaq(j);
+                covariantbase(i,3*(j-1)+1:3*(j-1)+3) = [(-lattice(firstdevneighbours(i,4*(j-1)+2),7)+lattice(firstdevneighbours(i,4*(j-1)+3),7)) (-lattice(firstdevneighbours(i,4*(j-1)+2),8)+lattice(firstdevneighbours(i,4*(j-1)+3),8)) (-lattice(firstdevneighbours(i,4*(j-1)+2),9)+lattice(firstdevneighbours(i,4*(j-1)+3),9))]/deltaq(j);
             case 3
-                covariantbase(i,3*(j-1)+1:3*(j-1)+3) = [(1.5*lattice(firstdevneighbours(i,4*(j-1)+2),7)-2*lattice(firstdevneighbours(i,4*(j-1)+3),7)+0.5*lattice(firstdevneighbours(i,4*(j-1)+4),7)) (-1.5*lattice(firstdevneighbours(i,4*(j-1)+2),8)+2*lattice(firstdevneighbours(i,4*(j-1)+3),8)-0.5*lattice(firstdevneighbours(i,4*(j-1)+4),8)) (-1.5*lattice(firstdevneighbours(i,4*(j-1)+2),9)+2*lattice(firstdevneighbours(i,4*(j-1)+3),9)-0.5*lattice(firstdevneighbours(i,4*(j-1)+4),9))]/deltaq(j);
+                %covariantbase(i,3*(j-1)+1:3*(j-1)+3) = [(1.5*lattice(firstdevneighbours(i,4*(j-1)+2),7)-2*lattice(firstdevneighbours(i,4*(j-1)+3),7)+0.5*lattice(firstdevneighbours(i,4*(j-1)+4),7)) (-1.5*lattice(firstdevneighbours(i,4*(j-1)+2),8)+2*lattice(firstdevneighbours(i,4*(j-1)+3),8)-0.5*lattice(firstdevneighbours(i,4*(j-1)+4),8)) (-1.5*lattice(firstdevneighbours(i,4*(j-1)+2),9)+2*lattice(firstdevneighbours(i,4*(j-1)+3),9)-0.5*lattice(firstdevneighbours(i,4*(j-1)+4),9))]/deltaq(j);
+                covariantbase(i,3*(j-1)+1:3*(j-1)+3) = -[(-lattice(firstdevneighbours(i,4*(j-1)+2),7)+lattice(firstdevneighbours(i,4*(j-1)+3),7)) (-lattice(firstdevneighbours(i,4*(j-1)+2),8)+lattice(firstdevneighbours(i,4*(j-1)+3),8)) (-lattice(firstdevneighbours(i,4*(j-1)+2),9)+lattice(firstdevneighbours(i,4*(j-1)+3),9))]/deltaq(j);
         end
     end
 end
