@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  30 JUN 2020 23:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  2 JUL 2020 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -331,30 +331,46 @@ Package amsmath Warning: Foreign command \over;
 (amsmath)                 on input line 39.
 
 [1{c:/Program Files/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3] [4] (./Note.aux) ) 
+[2] [3] <Gamma_theta_theta^r.jpg, id=21, 562.1pt x 421.575pt>
+File: Gamma_theta_theta^r.jpg Graphic file (type jpg)
+
+<use Gamma_theta_theta^r.jpg>
+Package pdftex.def Info: Gamma_theta_theta^r.jpg used on input line 196.
+(pdftex.def)             Requested size: 289.07999pt x 216.80798pt.
+
+<Gamma_r_theta^theta.jpg, id=22, 562.1pt x 421.575pt>
+File: Gamma_r_theta^theta.jpg Graphic file (type jpg)
+
+<use Gamma_r_theta^theta.jpg>
+Package pdftex.def Info: Gamma_r_theta^theta.jpg used on input line 201.
+(pdftex.def)             Requested size: 289.07999pt x 216.80798pt.
+ [4 <./Gamma_theta_theta^r.jpg> <./Gamma_r_theta^theta.jpg>] [5] [6] (./Note.au
+x) ) 
 Here is how much of TeX's memory you used:
- 4258 strings out of 492995
- 55105 string characters out of 6136402
+ 4294 strings out of 492995
+ 55621 string characters out of 6136402
  138467 words of memory out of 5000000
- 7747 multiletter control sequences out of 15000+600000
- 11070 words of font info for 33 fonts, out of 8000000 for 9000
+ 7772 multiletter control sequences out of 15000+600000
+ 14278 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,13n,26p,470b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Program Files/texlive/2017/texmf-dist/fonts/enc/d
-vips/cm-super/cm-super-t1.enc}<c:/Program Files/texlive/2017/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><c:/Program Files/texlive/2017/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Program Files/texlive/2017/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Program Files/texlive/2017/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Program Files/texlive/2017/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Program Files/texlive/20
-17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Program Files/texli
-ve/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/Program Files/t
-exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/Program Fil
-es/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Note.pdf (4 pages, 111725 bytes).
+ 39i,13n,26p,470b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Program Files/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super
+-t1.enc}<c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmex10.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi6.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi7.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><c:/Program Files/texlive/2017/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr9.pfb><c:/Program Files/texlive/2017/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Program Files/texlive/2017/texmf-d
+ist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/Program Files/texlive/2017/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/Program Files/texlive/2017
+/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Note.pdf (6 pages, 221957 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

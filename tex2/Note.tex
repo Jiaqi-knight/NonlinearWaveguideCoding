@@ -192,9 +192,93 @@ Thus, we can conclude the 3D Christoffel symbols:
 \end{aligned}
 \end{equation}
 
+\begin{figure}
+  \centerline{\includegraphics[width=4in]{Gamma_theta_theta^r.jpg}}
+  \caption{$\Gamma_{\theta\theta}^r$}
+  \end{figure}
+  
+\begin{figure}
+  \centerline{\includegraphics[width=4in]{Gamma_r_theta^theta.jpg}}
+  \caption{$\Gamma_{r\theta}^\theta$}
+  \end{figure}
+  
 
-\subsection{numerical implement by matlab}
-	For the duct case, cylinderical coordinates are given by the transformation
+
+
+\subsection{Intrinsic curvature}
+
+ref:https://www.youtube.com/watch?v=YJFTWp31WhQ
+
+The intrinstic curvature of a surface does not depend upon any embedding in higher dimensional space but depends upon relation between points within the surface.
+
+A two dimensional being restricted to the surface of a sphere would draw a triagle whose angles sum to more than 180 degree and so would have to conclude that the surface is curved.
+
+The Riemann tensor can tell if intrinsic curvature cccurs in a given space
+\begin{equation}
+\begin{aligned}
+R_{\mu\gamma\beta}^\alpha={{\partial \Gamma_{\mu\beta}^\alpha}\over \partial x^\gamma}-{{\partial \Gamma_{\mu\gamma}^\alpha}\over \partial x^\beta}+\Gamma_{\mu\beta}^v \Gamma_{v\gamma}^\alpha-\Gamma_{\mu\gamma}^v\Gamma_{v\beta}^\alpha
+\end{aligned}
+\end{equation}
+
+In 3-D the Riemann tensor has 81 components but with the following symmetry properties this number is reduced:
+
+\begin{equation}
+\begin{aligned}
+R_{abcd}=R_{cdab}=-R_{bacd}=-R_{abdc}
+\end{aligned}
+\end{equation}
+
+
+Due to these symmetries of the Riemann tensor the number of independent components is reduced to 6 independent components
+
+\begin{equation}
+\begin{aligned}
+{n^2(n^2-1)\over 12}|_{n=3}=6 
+\end{aligned}
+\end{equation}
+
+And the individual components are:
+\begin{equation}
+\begin{aligned}
+R_{r\theta r}^\theta,R_{rzr}^{z},R_{\theta z \theta}^z, R_{r\theta r}^z, R_{\theta r \theta}^z, R_{zrz}^\theta
+\end{aligned}
+\end{equation}
+
+In this cylinder case, all 81 of the Riemann tensor componets are zero in this space and all of the contraction of these components will also be zero because we are in flat Euclidean space.
+
+The Ricci tensor is found by,
+\begin{equation}
+\begin{aligned}
+R_{\mu v}=g^{\alpha\beta}R_{\alpha\mu\gamma\beta}
+\end{aligned}
+\end{equation}
+
+The Ricci scalar is found using,
+\begin{equation}
+\begin{aligned}
+R=g^{\mu v}R_{\mu v}
+\end{aligned}
+\end{equation}
+
+So the Riemann tensor has identified this space as being curved since not all of its compoents are zero.
+
+and the Ricci scalar or curvature scalar tells us that this space has constant curvature.
+
+A sphere is a highly symmetric object, The Riemann tensor for a maximally symmteric space also be found using,
+\begin{equation}
+\begin{aligned}
+R_{\rho \sigma \mu v}={R\over n(n-1)}(g_{\rho\mu}g_{\sigma v}-g_{\rho v}g_{\sigma\mu})
+\end{aligned}
+\end{equation}
+
+
+\subsection{Cosmological constant}
+The Einstein field equation,
+\begin{equation}
+\begin{aligned}
+R_{\alpha v}-1/2g_{\alpha v}R={8\pi G\over c^4} T_{\alpha v}
+\end{aligned}
+\end{equation}
 
 
 
