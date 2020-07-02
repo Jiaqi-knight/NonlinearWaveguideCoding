@@ -1,0 +1,14 @@
+{
+	"MarkerColor": [0,0,1],
+	"MarkerSize": 6,
+	"MarkerStyle": "+",
+	"MarkerFillColor": "none",
+	"MarkerVisible": 0,
+	"LineColor": "g",
+	"LineWidth": 2,
+	"LineStyle": "-",
+	"LineVisible": 1,
+	"FillColor": [0,1,1],
+	"FillOpacity": 1,
+	"FillVisible": 0
+}

@@ -1,0 +1,79 @@
+commit e3336d0e0b52ef7cdd01531a6b226c0735ad809c
+Author: LucaDiStasio <luca.distasio@gmail.com>
+Date:   Wed Nov 8 17:30:57 2017 +0100
+
+    commit on 08/11/2017 at 17:30
+
+ matlab/Structured/Mesh_manager/getindices2D.asv | 148 ------------------------
+ matlab/Structured/meshGenCircHolesGradedRect.m  |   2 +-
+ 2 files changed, 1 insertion(+), 149 deletions(-)
+
+commit d72cb6a6ac2ce16606f9a301d6083280ffe0dbe4
+Author: LucaDiStasio <luca.distasio@gmail.com>
+Date:   Wed Nov 1 13:43:32 2017 +0100
+
+    commit on 01/11/2017 at 13:43
+
+ .../Structured/Basic_generators/gradedRectangle.m  |   2 +
+ .../Elliptic_smoothing/sparseellipticgridgen2D.m   |  11 +-
+ .../sparseellipticgridgen2Dinternalboundaries.m    |  16 +-
+ .../Mesh_manager/build_neighbourhoods2D.m          |  11 +-
+ matlab/Structured/Mesh_manager/getindices2D.asv    | 148 +++++
+ matlab/Structured/Mesh_manager/getindices2D.m      |  18 +-
+ .../transfiniteinterpolation2D.m                   |  11 +-
+ matlab/Structured/filterRectangularMesh.m          | 110 ++--
+ matlab/Structured/meshGenCircHolesGradedRect.m     | 594 ++++++++++++++++-----
+ matlab/Structured/meshGenGradedCircSec.m           |   8 +-
+ 10 files changed, 743 insertions(+), 186 deletions(-)
+
+commit 8a706e2b4872e88944e29df1ca8c1bb2094469cb
+Author: LucaDiStasio <luca.distasio@gmail.com>
+Date:   Tue Oct 31 22:51:52 2017 +0100
+
+    commit on 31/10/2017 at 22:51
+
+ matlab/Structured/Elliptic_smoothing/JFNKmethod.m  |  47 +++--
+ .../ellipticgridgen2Dinternalboundaries.m          |  42 ++--
+ .../sparseellipticgridgen2Dinternalboundaries.m    |  41 ++--
+ .../Mesh_manager/build_neighbourhoods2D.m          |  10 +-
+ matlab/Structured/checkCircleIntersections.m       |  16 +-
+ matlab/Structured/meshGenCircHolesGradedRect.m     | 212 ++++++++++++++++++++-
+ matlab/Structured/meshGenGradedAnnularSec.m        |   4 +-
+ matlab/Structured/meshGenGradedCircSec.m           |   6 +-
+ 8 files changed, 323 insertions(+), 55 deletions(-)
+
+commit 9cf115da219022b8211063837fd8e7bde2902a1b
+Author: LucaDiStasio <luca.distasio@gmail.com>
+Date:   Mon Oct 30 18:54:17 2017 +0100
+
+    commit on 30/10/2017 at 18:54
+
+ .../Basic_generators/gradedRectangle.asv           |  38 --------
+ .../Structured/Basic_generators/gradedRectangle.m  |   4 +-
+ .../Elliptic_smoothing/sparseellipticgridgen2D.m   |   2 +-
+ .../Mesh_manager/build_neighbourhoods2D.m          |  40 +++++---
+ .../transfiniteinterpolation2D.m                   |   2 +-
+ matlab/Structured/filterRectangularMesh.m          |   2 +-
+ matlab/Structured/meshGenCircHolesGradedRect.m     |  40 +++++++-
+ matlab/Structured/meshGenGradedAnnularSec.m        | 104 ++++++++++++++++++---
+ matlab/Structured/meshGenGradedCircSec.m           |  67 ++++++++++---
+ 9 files changed, 215 insertions(+), 84 deletions(-)
+
+commit c190d2e2acf07ca36a40bb46703b95aa4ba4be31
+Author: LucaDiStasio <luca.distasio@gmail.com>
+Date:   Mon Oct 30 16:52:51 2017 +0100
+
+    working on generating 2d fiber mesh with choice of finite element
+
+ matlab/Structured/meshGenGradedCircSec.m | 287 ++++++++++++++++++++++++++-----
+ 1 file changed, 241 insertions(+), 46 deletions(-)
+
+commit 09f76042a6348c6471b15e928d4bb327023e8acc
+Author: LucaDiStasio <luca.distasio@gmail.com>
+Date:   Fri Oct 27 10:39:27 2017 +0200
+
+    commit on 27/10/2017 at 10:38
+
+ matlab/Structured/higherOrderGradedRectangle.m |  2 +-
+ matlab/Structured/meshGenGradedCircSec.m       | 37 ++++++++++++++++++++++++--
+ 2 files changed, 36 insertions(+), 3 deletions(-)

@@ -1,0 +1,1 @@
+In function: getindices2D\n\nStarting timer\nTimer stopped.\n\nELAPSED WALLCLOCK TIME: 0.0063998 [s]\n\nExiting function: getindices2D\nIn function: build_neighbourhoods2D\n\nStarting timer\nTimer stopped.\n\nELAPSED WALLCLOCK TIME: 0.032861 [s]\n\nExiting function: build_neighbourhoods2D\n

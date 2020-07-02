@@ -1,0 +1,1 @@
+In function: transfiniteinterpolation2D\n\nStarting timer\nIn function: getindices2D\n\nStarting timer\nTimer stopped.\n\nELAPSED WALLCLOCK TIME: 0.012843 [s]\n\nExiting function: getindices2D\nTimer stopped.\n\nELAPSED WALLCLOCK TIME: 0.25133 [s]\n\nExiting function: transfiniteinterpolation2D\n

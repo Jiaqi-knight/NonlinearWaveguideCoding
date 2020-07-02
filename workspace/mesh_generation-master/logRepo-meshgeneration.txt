@@ -1,0 +1,35 @@
+commit e3336d0e0b52ef7cdd01531a6b226c0735ad809c
+Author: LucaDiStasio <luca.distasio@gmail.com>
+Date:   Wed Nov 8 17:30:57 2017 +0100
+
+    commit on 08/11/2017 at 17:30
+
+commit d72cb6a6ac2ce16606f9a301d6083280ffe0dbe4
+Author: LucaDiStasio <luca.distasio@gmail.com>
+Date:   Wed Nov 1 13:43:32 2017 +0100
+
+    commit on 01/11/2017 at 13:43
+
+commit 8a706e2b4872e88944e29df1ca8c1bb2094469cb
+Author: LucaDiStasio <luca.distasio@gmail.com>
+Date:   Tue Oct 31 22:51:52 2017 +0100
+
+    commit on 31/10/2017 at 22:51
+
+commit 9cf115da219022b8211063837fd8e7bde2902a1b
+Author: LucaDiStasio <luca.distasio@gmail.com>
+Date:   Mon Oct 30 18:54:17 2017 +0100
+
+    commit on 30/10/2017 at 18:54
+
+commit c190d2e2acf07ca36a40bb46703b95aa4ba4be31
+Author: LucaDiStasio <luca.distasio@gmail.com>
+Date:   Mon Oct 30 16:52:51 2017 +0100
+
+    working on generating 2d fiber mesh with choice of finite element
+
+commit 09f76042a6348c6471b15e928d4bb327023e8acc
+Author: LucaDiStasio <luca.distasio@gmail.com>
+Date:   Fri Oct 27 10:39:27 2017 +0200
+
+    commit on 27/10/2017 at 10:38

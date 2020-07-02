@@ -1,0 +1,19 @@
+"C:\Program Files (x86)\JetBrains\CLion 2016.3.2\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\OneDrive\01_Luca\07_DocMASE\06_WD\interpolation\cpp
+CMake Error at C:/Program Files (x86)/JetBrains/CLion 2016.3.2/bin/cmake/share/cmake-3.6/Modules/CMakeMinGWFindMake.cmake:22 (message):
+  sh.exe was found in your PATH, here:
+
+  C:/Program Files/Git/bin/sh.exe
+
+  For MinGW make to work correctly sh.exe must NOT be in your path.
+
+  Run cmake from a shell that does not have sh.exe in your PATH.
+
+  If you want to use a UNIX shell, then use MSYS Makefiles.
+
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
+CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
+-- Configuring incomplete, errors occurred!
