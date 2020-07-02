@@ -328,10 +328,12 @@ set(gcf, 'PaperPosition', [0 0 3.0 3.0])
 %print -depsc figures/Nhat.eps
 
 
-%% metriccoefficients
+%% metriccoefficients 
 [metriccoefficients,g,sqrtg] = computemetriccoefficients3D(covariantbase);
 metric=reshape(metriccoefficients,[Nr,Nt,Nz,6]);
-g_name={'g_{11}','g_{22}','g_{33}','g_{12}/g_{21}','g_{13}/g_{31}','g_{23}/g_{32}'}
+g_name={'g_{11}','g_{22}','g_{33}','g_{12}g_{21}','g_{13}g_{31}','g_{23}g_{32}'}
+% save_name={'g11','g22','g33','g12g21','g13g31','g23g32'}
+
 for kk=1:6
 h=figure;
 axes1 = axes('Parent',h);
@@ -341,7 +343,8 @@ end
 colorbar('peer',axes1);
 title(g_name{kk})
 end
-[q,q1]=max(metriccoefficients(:,:))
+
+%%
 contravariantbase = computecontravariantbase3D(covariantbase,sqrtg);
 
 [reciprocalmetriccoefficients,g,sqrtg] = computereciprocalmetriccoefficients3D(contravariantbase);
@@ -349,6 +352,26 @@ contravariantbase = computecontravariantbase3D(covariantbase,sqrtg);
 firstChristoffelsymbol = computefirstChristoffelsymbol3D(N,deltaq,covariantbase,firstdevneighbours);
 
 secondChristoffelsymbol = computesecondChristoffelsymbol3D(N,deltaq,covariantbase,contravariantbase,firstdevneighbours);
+Christoffelsymbol=reshape(secondChristoffelsymbol,[Nr,Nt,Nz,27]);
+Gamma_name={'\Gamma_{rr}^r',            '\Gamma_{r\theta}^r',           '\Gamma_{rz}^r',...
+            '\Gamma_{\theta r}^r',      '\Gamma_{\theta \theta}^r',     '\Gamma_{\theta z}^r',...
+            '\Gamma_{zr}^r',            '\Gamma_{z\theta}^r',           '\Gamma_{zz}^r',...
+            '\Gamma_{rr}^\theta',       '\Gamma_{r\theta}^\theta',      '\Gamma_{rz}^\theta',...
+            '\Gamma_{\theta r}^\theta', '\Gamma_{\theta \theta}^\theta', '\Gamma_{\theta z}^\theta',...
+            '\Gamma_{zr}^\theta',       '\Gamma_{z\theta}^\theta',       '\Gamma_{zz}^\theta',...
+            '\Gamma_{rr}^z',            '\Gamma_{r\theta}^z',            '\Gamma_{rz}^z',...
+            '\Gamma_{\theta r}^z',      '\Gamma_{\theta \theta}^z',      '\Gamma_{\theta z}^z',...
+            '\Gamma_{zr}^z',            '\Gamma_{z\theta}^z',            '\Gamma_{zz}^z',...
+            }
+for kk=1:27
+h=figure;
+axes1 = axes('Parent',h);
+for k=1:Nz
+surf(xyz(:,:,k,7),xyz(:,:,k,8),xyz(:,:,k,9),Christoffelsymbol(:,:,k,kk));hold on;
+end
+colorbar('peer',axes1);
+title(Gamma_name{kk})
+end
 
 Riemanntensor = computeRiemanntensor3D(N,deltaq,secondChristoffelsymbol,metriccoefficients,firstdevneighbours);
 

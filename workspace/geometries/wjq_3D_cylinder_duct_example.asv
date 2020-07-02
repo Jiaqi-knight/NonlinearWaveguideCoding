@@ -76,7 +76,7 @@ deltaq = [deltar deltat deltaz];
 
 N = Nr*Nt*Nz;
 
-lattice = generatelattice3D(eta1min,Neta1,deltaeta1,eta2min,Neta2,deltaeta2,eta3min,Neta3,deltaeta3,rmin,rmax,Nr,tmin,tmax,Nt,Nz,zmax,Nz);
+lattice = generatelattice3D(eta1min,Neta1,deltaeta1,eta2min,Neta2,deltaeta2,eta3min,Neta3,deltaeta3,rmin,rmax,Nr,tmin,tmax,Nt,zmin,zmax,Nz);
 
 %lattice第5，6,7列为transform后的坐标点
 % Apply the parameterization to obtain R^3 coordinates
@@ -328,10 +328,12 @@ set(gcf, 'PaperPosition', [0 0 3.0 3.0])
 %print -depsc figures/Nhat.eps
 
 
-%% metriccoefficients
+%% metriccoefficients 
 [metriccoefficients,g,sqrtg] = computemetriccoefficients3D(covariantbase);
 metric=reshape(metriccoefficients,[Nr,Nt,Nz,6]);
-g_name={'g_{11}','g_{22}','g_{33}','g_{12}/g_{21}','g_{13}/g_{31}','g_{23}/g_{32}'}
+g_name={'g_{11}','g_{22}','g_{33}','g_{12}g_{21}','g_{13}g_{31}','g_{23}g_{32}'}
+% save_name={'g11','g22','g33','g12g21','g13g31','g23g32'}
+
 for kk=1:6
 h=figure;
 axes1 = axes('Parent',h);
@@ -341,7 +343,8 @@ end
 colorbar('peer',axes1);
 title(g_name{kk})
 end
-[q,q1]=max(metriccoefficients(:,:))
+
+%%
 contravariantbase = computecontravariantbase3D(covariantbase,sqrtg);
 
 [reciprocalmetriccoefficients,g,sqrtg] = computereciprocalmetriccoefficients3D(contravariantbase);
@@ -349,6 +352,16 @@ contravariantbase = computecontravariantbase3D(covariantbase,sqrtg);
 firstChristoffelsymbol = computefirstChristoffelsymbol3D(N,deltaq,covariantbase,firstdevneighbours);
 
 secondChristoffelsymbol = computesecondChristoffelsymbol3D(N,deltaq,covariantbase,contravariantbase,firstdevneighbours);
+Christoffelsymbol=reshape(secondChristoffelsymbol,[Nr,Nt,Nz,27]);
+for kk=1:27
+h=figure;
+axes1 = axes('Parent',h);
+for k=1:Nz
+surf(xyz(:,:,k,7),xyz(:,:,k,8),xyz(:,:,k,9),Christoffelsymbol(:,:,k,kk));hold on;
+end
+colorbar('peer',axes1);
+% title(g_name{kk})
+end
 
 Riemanntensor = computeRiemanntensor3D(N,deltaq,secondChristoffelsymbol,metriccoefficients,firstdevneighbours);
 
