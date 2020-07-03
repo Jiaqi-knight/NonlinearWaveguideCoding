@@ -114,7 +114,7 @@ else
     structuralneighbours(indicesF5,:)   = [5*ones(length(indicesF5),1) -1*ones(length(indicesF5),1)   indicesF5+1            indicesF5-Nx           indicesF5+Nx           indicesF5-Nx*Ny         indicesF5+Nx*Ny      ];
 end
 %bug
-if any(periodicity==1) && any(periodicity==2) && any(periodicity==3) %三面均对称
+if any(periodicity==1) && any(periodicity==2) && any(periodicity==3) %三面均对称（for ball）
     structuralneighbours(indicesE1,:)   = [6*ones(length(indicesE1),1)  indicesE1-1            indicesE1+1            indicesE1+(Ny-1)*Nx    indicesE1+Nx           indicesE1+(Nz-1)*Nx*Ny    indicesE1+Nx*Ny      ];
     structuralneighbours(indicesE2,:)   = [6*ones(length(indicesE2),1)  indicesE2-1            indicesE2-(Nx-1)       indicesE2-Nx           indicesE2+Nx           indicesE2+(Nz-1)*Nx*Ny    indicesE2+Nx*Ny      ];
     structuralneighbours(indicesE3,:)   = [6*ones(length(indicesE3),1)  indicesE3-1            indicesE3+1            indicesE3-Nx           indicesE3-(Ny-1)*Nx    indicesE3+(Nz-1)*Nx*Ny    indicesE3+Nx*Ny      ];

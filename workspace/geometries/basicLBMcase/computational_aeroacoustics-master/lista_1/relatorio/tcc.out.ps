@@ -1,0 +1,88 @@
+%!
+/pdfmark where{pop}
+{/globaldict where{pop globaldict}{userdict}ifelse/pdfmark/cleartomark load put}
+ifelse
+[
+/Title(Parte 1)
+/Count -5
+/Action/GoTo/Dest(chapter.1)cvn
+/OUT pdfmark
+[
+/Title(Script de fluxo principal: main\137lbgk.m)
+/Action/GoTo/Dest(section.1.1)cvn
+/OUT pdfmark
+[
+/Title(Script de cria\347\343o de lattice: build\137lattice\137D2Q9.m)
+/Action/GoTo/Dest(section.1.2)cvn
+/OUT pdfmark
+[
+/Title(Script de cria\347\343o de perturba\347\365es iniciais: , \040set\137initial\137disturbances.m)
+/Action/GoTo/Dest(section.1.3)cvn
+/OUT pdfmark
+[
+/Title(Script de propaga\347\343o das c\351lulas de lattice: stream\137lattice.m)
+/Action/GoTo/Dest(section.1.4)cvn
+/OUT pdfmark
+[
+/Title(Script de colis\343o das c\351lulas de lattice: collide\137lattice.m)
+/Action/GoTo/Dest(section.1.5)cvn
+/OUT pdfmark
+[
+/Title(Parte 2)
+/Count -3
+/Action/GoTo/Dest(chapter.2)cvn
+/OUT pdfmark
+[
+/Title(B - Procedures)
+/Count -6
+/Action/GoTo/Dest(section.2.1)cvn
+/OUT pdfmark
+[
+/Title(1 - Define the number of necessary time steps NTS for an acoustic disturbance to propagate from the center of the lattice until its boundaries. Remember that the lattice - as default in the provided Matlab code lbgk1.m - is 300 \040300 cells.)
+/Action/GoTo/Dest(subsection.2.1.1)cvn
+/OUT pdfmark
+[
+/Title(2 - Create an harmonic acoustic source in the center of the lattice. One way to accomplish that is to impose an harmonic density fluctuation.)
+/Action/GoTo/Dest(subsection.2.1.2)cvn
+/OUT pdfmark
+[
+/Title(3 - Obtain the numerical result for the acoustic pressure field pan at ta = NTS along the lattice coordinate vector x = [150 : 300, 150]. The numerical results should be obtained for three different wavelength discretizations \(d = 8, 16, and 25 cells per wavelength\). One way to change the wavelength discretization is to keep the lattice pitch x constant and vary the source frequency freq. Calculate also the phase of the source when ta = NTS at x = [150, 150]. Save the results for each discretization along with the distance vector x.)
+/Action/GoTo/Dest(subsection.2.1.3)cvn
+/OUT pdfmark
+[
+/Title(4 - Calculate, in physical unities, the fluid kinematic viscosity, as well as the pressure amplitude at the acoustic source corresponding to the default lattice variables used in the simulations. Use these values to obtain the analytical pressure field p a as a function of the distance vector x based on Eq. \(2\). You may use the Matalab function cylin wave.m for the calculations of p a . Save the resulting vectors of p a for different source frequencies f req, and repeat this step using, at this time, the kinematic viscosity of air in STP \(vp = 1.5 \04010 -5 m 2 /s\) to determine the analytical acoustic field p air as a function of the distance vector x. Save it.)
+/Action/GoTo/Dest(subsection.2.1.4)cvn
+/OUT pdfmark
+[
+/Title(5 - In a single figure, plot pan\(x\) for each discretization scheme, as well as their respective analytical solution pa\(x\).)
+/Action/GoTo/Dest(subsection.2.1.5)cvn
+/OUT pdfmark
+[
+/Title(6 - In one figure, compare the different results obtained for p a \(x\) and p air \(x\).)
+/Action/GoTo/Dest(subsection.2.1.6)cvn
+/OUT pdfmark
+[
+/Title(C - Questions)
+/Count -3
+/Action/GoTo/Dest(section.2.2)cvn
+/OUT pdfmark
+[
+/Title(1 - What is the observed effect of a low discretization scheme? Do these results qualitatively agree with the analysis conducted by Wilde \(2006\) with respect to wave dissipation \(see slides from the last class\)? Please, justify.)
+/Action/GoTo/Dest(subsection.2.2.1)cvn
+/OUT pdfmark
+[
+/Title(2 - For high discretization schemes \(16, 25 cells per wavelength\) a slight disagreement between pan\(x\) and pa\(x\) should be noticeable when the wave approaches the lattice boundary. Can you explain why?)
+/Action/GoTo/Dest(subsection.2.2.2)cvn
+/OUT pdfmark
+[
+/Title(3 - Due to the limitations of the LBGK model, the physical viscosity used in the simulations is O\(2\) higher than the kinematic viscosity of air in normal conditions. Even so, the error between pan\(x\), pa\(x\), pair \(x\) reasonably small. Can you draw any conclusions over this fact?)
+/Action/GoTo/Dest(subsection.2.2.3)cvn
+/OUT pdfmark
+[
+/Title(D - OpenLB)
+/Action/GoTo/Dest(section.2.3)cvn
+/OUT pdfmark
+[
+/Title(Refer\352ncias)
+/Action/GoTo/Dest(section*.3)cvn
+/OUT pdfmark
