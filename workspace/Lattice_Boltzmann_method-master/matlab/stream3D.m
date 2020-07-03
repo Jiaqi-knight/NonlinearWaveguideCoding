@@ -1,31 +1,46 @@
-function[f]=stream3D(N,Q,fold,lattice)
+function[f]=stream3D(N,Q,scheme,fold,lattice)
 
 %%
-%        Project: Fluid - structure interaction on deformable surfaces
-%         Author: Luca Di Stasio
-%    Institution: ETH Z眉rich
-%                 Institute for Building Materials
-% Research group: Computational Physics for Engineering Materials
+%        Project: Duct Acoustic xx curvilinear coordination by LBM
+%         Author: Jiaqi Wang
+%    Institution: Shanghai Jiaotong University
+%                 Sound and Vibration insitition
+% Research group:
 %        Version: 0.1
-%  Creation date: May 30th, 2014
-%    Last update: June 24th, 2014
+%  Creation date: July 3rd, 2020
+%    Last update: J
 %
-%    Description: 
-%          Input: 
-%         Output: 
-%     f(:,:,1) = [f(:,1:2,1) f(:,2:Mc-1,1)];
-%     f(:,:,2) = [f(1:2,:,2);f(2:Nr-1,:,2)];
-%     f(:,:,3) = [f(:,2:Mc-1,3) f(:,Mc-1:Mc,3)];
-%     f(:,:,4) = [f(2:Nr-1,:,4);f(Nr-1:Nr,:,4)];
-%     f(:,:,5) = [f(:,1:2,5) f(:,2:Mc-1,5)];
-%     f(:,:,5) = [f(1:2,:,5);f(2:Nr-1,:,5)];
-%     f(:,:,6) = [f(:,2:Mc-1,6) f(:,Mc-1:Mc,6)];
-%     f(:,:,6) = [f(1:2,:,6);f(2:Nr-1,:,6)];
-%     f(:,:,7) = [f(:,2:Mc-1,7) f(:,Mc-1:Mc,7)];
-%     f(:,:,7) = [f(2:Nr-1,:,7);f(Nr-1:Nr,:,7)];
-%     f(:,:,8) = [f(:,1:2,8) f(:,2:Mc-1,8)];
-%     f(:,:,8) = [f(2:Nr-1,:,8);f(Nr-1:Nr,:,8)];
+%    Description: 圆柱-》Vertification code for g_ij, & christoffel symbol
+%    R(u,n)=[sin(u)*cos(n), sin(u)*sin(n),cos(u)]
+%    g=[dR/du*dR/du dR/du*dR/dn;
+%       dR/dn*dR/du dR/dn*dR/dn;]
+%    gamma_bc^a=1/2*g^ad*(g_bd,c+g_cd,c-g_bc,d)
+%
+%          Input:
+%         Output:
+
 %%
 
-     
-            
+Nr=max(lattice(:,1))+1;
+Nt=max(lattice(:,2))+1;
+Nz=max(lattice(:,3))+1;
+
+for k=1:N
+    for kk=1:Q
+        xx = lattice(k,1) + scheme(kk,1);
+        yy = lattice(k,2) + scheme(kk,2);
+        zz = lattice(k,3) + scheme(kk,3);
+        if (xx > Nr-1 || xx < 0)%全周期性边界条件
+            xx = mod(xx+Nr,Nr);
+        end
+        if (yy > Nt-1 || yy < 0)
+            yy =mod(yy+Nt,Nt);
+        end
+        if (zz > Nz-1 || zz < 0)
+            zz = mod(zz+Nz,Nz);
+        end
+        id=xx+1+(yy)*Nr+(zz)*Nr*Nt;
+        f(id,kk)=fold(k,kk);
+    end
+end
+end

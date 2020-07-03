@@ -1,4 +1,4 @@
-function[rho]=computerho3D(f)
+function [rho]=computerho3D(f)
 
 %%
 %        Project: Fluid - structure interaction on deformable surfaces

@@ -49,26 +49,6 @@ prune = [9;10;11;18;19;27];
 
 prune = [10;11;18;19];
 [schemeQ41,QD41] = constructentropicDnscheme(D,scheme1D,pruneflag,prune);
-[schemeQ41,cs,cssq,T0]=initializeELBMscheme(3,41);
-
-figure;
-for k=1:41
-quiver3(0,0,0,schemeQ41(k,1),schemeQ41(k,1),schemeQ41(k,1),'.'); hold on;
-% quiver3(...
-% 	downsample(xyz(:,:,k,7),mxds),...
-% 	downsample(xyz(:,:,k,8),mxds),...
-% 	downsample(xyz(:,:,k,9),mxds),...
-% 	downsample(cobase(:,:,k,7), mxds),...
-% 	downsample(cobase(:,:,k,8), mxds),...
-% 	downsample(cobase(:,:,k,9), mxds));
-end
-title 'Nhat';
-% Create Nhat.eps
-set(gcf, 'PaperPositionMode', 'Manual');
-set(gcf, 'PaperPosition', [0 0 3.0 3.0])
-%print -depsc figures/Nhat.eps
-
-
 
 D = 2;
 
