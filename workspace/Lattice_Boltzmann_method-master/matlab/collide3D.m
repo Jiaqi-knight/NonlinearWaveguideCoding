@@ -17,6 +17,6 @@ function[f]=collide3D(Q,fold,feq,Flambda,beta,dt)
 %%
 
 for q=1:Q
-    f(:,q) = (1-beta).*fold(:,q) + beta.*feq(:,q) ;%+ dt*Flambda(:,q)
+    f(:,q) = (1-beta).*fold(:,q) + beta.*feq(:,q);% + dt*Flambda(:,q);
 end
 return

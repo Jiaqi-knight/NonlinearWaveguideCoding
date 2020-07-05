@@ -37,7 +37,7 @@ Dt = (1/sqrt(3))*Dx/c_p       % lattice time step
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Lattice parameters (micro - lattice unities)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-omega = 1.9;                                      % Relaxation frequency
+omega = 0.8;                                      % Relaxation frequency
 tau = 1/omega;                                    % Relaxation time
 rho_l = 1;                                        % avereged fluid density (latice density
 cs = 1/sqrt(3);                                   % lattice speed of sound
@@ -80,7 +80,7 @@ f(Nr/2, Mc/2,9) = rho_l;
 
 
 
-for ta = 1 : 2500*sqrt(3)
+for ta = 1 : 250*sqrt(3)
     
     % Block 5.1
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

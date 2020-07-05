@@ -24,12 +24,14 @@ close all
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-subfunction_path1=genpath('C:\Users\wjq\Desktop\NonlinearWaveguideCoding-master (1)\NonlinearWaveguideCoding-master\workspace\mesh_generation-master\matlab\Structured');
-subfunction_path2=genpath('C:\Users\wjq\Desktop\NonlinearWaveguideCoding-master (1)\NonlinearWaveguideCoding-master\workspace\interpolation-master\matlab');
-subfunction_path3=genpath('C:\Users\wjq\Desktop\NonlinearWaveguideCoding-master (1)\NonlinearWaveguideCoding-master\workspace\differential_geometry-master\matlab');
+subfunction_path1=genpath('C:\Users\Jiaqi-knight\Documents\GitHub\NonlinearWaveguideCoding\workspace\mesh_generation-master\matlab\Structured');
+subfunction_path2=genpath('C:\Users\Jiaqi-knight\Documents\GitHub\NonlinearWaveguideCoding\workspace\interpolation-master\matlab');
+subfunction_path3=genpath('C:\Users\Jiaqi-knight\Documents\GitHub\NonlinearWaveguideCoding\workspace\differential_geometry-master\matlab');
+subfunction_path4=genpath('C:\Users\Jiaqi-knight\Documents\GitHub\NonlinearWaveguideCoding\workspace\Lattice_Boltzmann_method-master\matlab');
 addpath(subfunction_path1);
 addpath(subfunction_path2);
 addpath(subfunction_path3);
+addpath(subfunction_path4);
 formatOut = 'mm-dd-yy-HH-MM-SS';
 logfullfile=[datestr(now,formatOut),'.log'];
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,7 +58,7 @@ eta3max = eta3min + (Neta3-1)*deltaeta3;
 
 Nr = Neta1;
 rmin = 1;
-rmax = 2.5;
+rmax = 2*pi+1;
 deltar = (rmax-rmin)/(Nr-1);
 
 Nt = Neta2;
@@ -68,7 +70,7 @@ tmin:deltat:tmax;
 
 Nz = Neta3;
 zmin = 0;
-zmax = 2;
+zmax = 2*pi;
 deltaz = (zmax-zmin)/(Nz-1);
 deltaq = [deltar deltat deltaz];
 
@@ -78,17 +80,14 @@ lattice = generatelattice3D(eta1min,Neta1,deltaeta1,eta2min,Neta2,deltaeta2,eta3
 
 %lattice第5，6,7列为transform后的坐标点
 % Apply the parameterization to obtain R^3 coordinates
-lattice(:,7) = lattice(:,4).*cos(lattice(:,5)); %x
-lattice(:,8) = lattice(:,4).*sin(lattice(:,5)); %y
-lattice(:,9) = lattice(:,6); %z
-
 % lattice(:,7) = lattice(:,4).*cos(lattice(:,5)); %x
 % lattice(:,8) = lattice(:,4).*sin(lattice(:,5)); %y
 % lattice(:,9) = lattice(:,6); %z
 
+
 [indicesbulk,indicesinternalbulk,indicesF1,indicesF2,indicesF3,indicesF4,indicesF5,indicesF6,indicesinternalF1,indicesinternalF2,indicesinternalF3,indicesinternalF4,indicesinternalF5,indicesinternalF6,indicesE1,indicesE2,indicesE3,indicesE4,indicesE5,indicesE6,indicesE7,indicesE8,indicesE9,indicesE10,indicesE11,indicesE12,indicesinternalE1,indicesinternalE2,indicesinternalE3,indicesinternalE4,indicesinternalE5,indicesinternalE6,indicesinternalE7,indicesinternalE8,indicesinternalE9,indicesinternalE10,indicesinternalE11,indicesinternalE12,indicesC1,indicesC2,indicesC3,indicesC4,indicesC5,indicesC6,indicesC7,indicesC8,indicesinternalC1,indicesinternalC2,indicesinternalC3,indicesinternalC4,indicesinternalC5,indicesinternalC6,indicesinternalC7,indicesinternalC8]=getindices3D(Nr,Nt,Nz);
 %% visualization
-f1 = figure();
+f1 = figure();axis equal
 title('Computational and physical domains')
 hold on
 subplot(1,2,1);
@@ -147,6 +146,7 @@ ylabel('$\xi_{2}$','Interpreter','LaTex')
 zlabel('$\xi_{3}$','Interpreter','LaTex')
 title('Mesh in lattice domain (computational space)')
 subplot(fphys);%view(fphys,[-42.3 -6.8]);
+axis equal
 plot3(lattice(:,7),lattice(:,8),lattice(:,9),'b.')
 hold on
 plot3(lattice(indicesC1,7),lattice(indicesC1,8),lattice(indicesC1,9),'Marker','pentagram')
@@ -211,6 +211,7 @@ typeintbounds = 0;
 xyz=reshape(lattice,[Nr,Nt,Nz,9]);
 mxds=1;
 covariantbase = computecovariantbase3D(N,deltaq,lattice,firstdevneighbours);
+covariantbase(:,5)=1;%!!!!bug
 cobase=reshape(covariantbase,[Nr,Nt,Nz,9]);
 
 %% metriccoefficients
@@ -231,8 +232,6 @@ Christoffelsymbol=reshape(secondChristoffelsymbol,[Nr,Nt,Nz,27]);
 
 
 
-cs = 1/sqrt(3);                                   % lattice speed of sound
-cs2 = cs^2;                                       % Squared speed of sound cl^2
 
 %% LBM
 D=3;Q=41;
@@ -244,14 +243,18 @@ invcssq=1/cssq;
 rho=ones(N,1);
 u=zeros(N,3);
 xx=Nr/2,yy=Nt/2,zz=Nz/2
-id=xx+1+(yy)*Nr+(zz)*Nr*Nt;
-rho(id)=0.1;
+id=xx+1+(yy)*Nr+(zz)*Nr*Nt; 
 F=zeros(N,3);
-[fin]=computefequilibrium3D(N,Q,rho,u,reciprocalmetriccoefficients,scheme,invcssq);
-dt=1;
-beta = 1.9;                                      % Relaxation frequency
+rho_l = 1;  
+[fin]=rho_l/Q*ones(N,Q);   
+
+rho_l = 0.01;   % initial disturbance
+fin(id,1) = rho_l;
+dx=deltar;
+dt = (cs)*dx/340       % lattice time step
+beta = 1;      % Relaxation frequency
 % h=figure;
-for solutime=1:50
+for solutime=1:100
     %eq(nx,ny,nz,&fIn,&fOut,&rho,&ux,&uy,&uz,c,wi,sd,omega,lambda,&ts,T0,dt,ca,ftrue);
     %stream(nx,ny,nz,&fIn,&fOut,c,sd);
     [feq]=computefequilibrium3D(N,Q,rho,u,reciprocalmetriccoefficients,scheme,invcssq);
