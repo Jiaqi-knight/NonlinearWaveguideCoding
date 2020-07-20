@@ -235,11 +235,9 @@ Christoffelsymbol=reshape(secondChristoffelsymbol,[Nr,Nt,Nz,27]);
 
 %% LBM
 D=3;Q=41;
-[scheme,cs,cssq,T0]=initializeELBMscheme(D,Q);
-invcssq=1/cssq;
-% ftrue = 1;  %potential on/off
-%make_lattice(&fIn,&fOut,c,wi,nx,ny,nz,sd,lambda,T0);
-%≥ı ºªØrho∫Õu
+[scheme,cs,cssq,invcs,invcssq,T0]=initializeELBMscheme(D,Q);
+
+
 rho=ones(N,1);
 u=zeros(N,3);
 xx=Nr/2,yy=Nt/2,zz=Nz/2
@@ -249,17 +247,19 @@ rho_l = 1;
 [fin]=rho_l/Q*ones(N,Q);   
 
 rho_l = 0.01;   % initial disturbance
-fin(id,1) = rho_l;
+fin(id,:) = rho_l;
 dx=deltar;
 dt = (cs)*dx/340       % lattice time step
 beta = 1;      % Relaxation frequency
 % h=figure;
 for solutime=1:100
+    fin(id,:) = rho_l;    
     %eq(nx,ny,nz,&fIn,&fOut,&rho,&ux,&uy,&uz,c,wi,sd,omega,lambda,&ts,T0,dt,ca,ftrue);
     %stream(nx,ny,nz,&fIn,&fOut,c,sd);
     [feq]=computefequilibrium3D(N,Q,rho,u,reciprocalmetriccoefficients,scheme,invcssq);
     [fout]=stream3D(N,Q,scheme,fin,lattice);%propagation
-    [rho]=computerho3D(fout);[u]=computevelocity3D(N,Q,rho,fout,scheme);
+    [rho]=computerho3D(fout);
+    [u]=computevelocity3D(N,Q,rho,fout,scheme);
     [Fgeom]=computegeometricforcing3D(N,Q,secondChristoffelsymbol,scheme);
     [Fext]=computeexternalforcing3D(N,Q,contravariantbase,F);
     [Flambda]=computeforcingterm3D(N,Q,Fgeom,Fext,rho,u,reciprocalmetriccoefficients,scheme,invcssq);

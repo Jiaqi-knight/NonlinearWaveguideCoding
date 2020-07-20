@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  5 JUL 2020 22:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.20)  6 JUL 2020 10:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -311,16 +311,16 @@ e
 Class revtex4 Warning: Assuming \noaffiliation for  Email: jiaqi\_wang@sjtu.edu
 .cn .
 
-LaTeX Font Info:    Try loading font information for U+lasy on input line 25.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 27.
 (c:/Program Files/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+LaTeX Font Info:    Try loading font information for U+msa on input line 27.
 
 (c:/Program Files/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 27.
 
 (c:/Program Files/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -328,39 +328,49 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 27.
+(amsmath)                 on input line 39.
 
 [1{c:/Program Files/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3] [4] [5] (./Note.aux) ) 
+[2] [3] <Gamma_theta_theta^r.jpg, id=21, 562.1pt x 421.575pt>
+File: Gamma_theta_theta^r.jpg Graphic file (type jpg)
+
+<use Gamma_theta_theta^r.jpg>
+Package pdftex.def Info: Gamma_theta_theta^r.jpg used on input line 196.
+(pdftex.def)             Requested size: 289.07999pt x 216.80798pt.
+
+<Gamma_r_theta^theta.jpg, id=22, 562.1pt x 421.575pt>
+File: Gamma_r_theta^theta.jpg Graphic file (type jpg)
+
+<use Gamma_r_theta^theta.jpg>
+Package pdftex.def Info: Gamma_r_theta^theta.jpg used on input line 201.
+(pdftex.def)             Requested size: 289.07999pt x 216.80798pt.
+ [4 <./Gamma_theta_theta^r.jpg> <./Gamma_r_theta^theta.jpg>] [5] [6] (./Note.au
+x) ) 
 Here is how much of TeX's memory you used:
- 4273 strings out of 492995
- 55291 string characters out of 6136402
- 128467 words of memory out of 5000000
- 7756 multiletter control sequences out of 15000+600000
- 15626 words of font info for 39 fonts, out of 8000000 for 9000
+ 4294 strings out of 492995
+ 55621 string characters out of 6136402
+ 138467 words of memory out of 5000000
+ 7772 multiletter control sequences out of 15000+600000
+ 14278 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,10n,26p,483b,174s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Program Files/texlive/2017/texmf-dist/fonts/e
-nc/dvips/cm-super/cm-super-t1.enc}<c:/Program Files/texlive/2017/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Program Files/texlive/2017/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/Program Files/texlive/2017/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Program Files/texlive/2017/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Program Files/texlive/20
-17/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Program Files/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Program Files/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Program Files
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Program F
-iles/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:
-/Program Files/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb
-><c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000
-.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx
-1728.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/cm-super/
-sfrm1000.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/cm-su
-per/sfti0900.pfb>
-Output written on Note.pdf (5 pages, 167370 bytes).
+ 39i,13n,26p,470b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Program Files/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super
+-t1.enc}<c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmex10.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi6.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi7.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><c:/Program Files/texlive/2017/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><c:/Program Files/texlive/2017/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr9.pfb><c:/Program Files/texlive/2017/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Program Files/texlive/2017/texmf-d
+ist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/Program Files/texlive/2017/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/Program Files/texlive/2017
+/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Note.pdf (6 pages, 223221 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -11,7 +11,7 @@
 
 
 \begin{document}
-\title{Note:Lattice Bolzmann model for the simulation of the wave equation in curvilinear coordinates} 
+\title{Note: The Lattice Bolzmann method: Fundamentals and acoustics} 
 %%% first author
 \author{
      Email: jiaqi\_wang@sjtu.edu.cn
@@ -19,275 +19,167 @@
 
 \maketitle
 
-\section{cylinderical ducts}
-\subsection{metric tensor and Christoffel symbols}
-	For the duct case, cylinderical coordinates are given by the transformation
-
-
+\section{Fundamental Theory}
+\subsection{Macroscopic continuum}
+\subsubsection{mass conservation}
 \begin{equation}
 \begin{aligned}
-x=rcos\theta\\
-y=rsin\theta\\
-z=z
-\end{aligned}
-\end{equation}
-
-The metric tensor are derived:
-
-\begin{equation}
-\begin{aligned}
-g_{rr}={\partial x\over \partial r}\cdot {\partial x\over \partial r}+{\partial y\over \partial r}\cdot {\partial y\over \partial r}+{\partial z\over \partial r}\cdot {\partial z\over \partial r}\\
-={\partial rcos\theta\over \partial r}\cdot {\partial rcos\theta\over \partial r}+{\partial r sin\theta\over \partial r}\cdot {\partial r sin\theta\over \partial r}+{\partial z\over \partial r}\cdot {\partial z\over \partial r}\\
-=cos^2\theta+sin^2\theta=1
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-g_{r\theta}=g_{\theta r}={\partial x\over \partial r}\cdot {\partial x\over \partial \theta}+{\partial y\over \partial r}\cdot {\partial y\over \partial \theta}+{\partial z\over \partial r}\cdot {\partial z\over \partial \theta}\\
-={\partial rcos\theta\over \partial r}\cdot {\partial rcos\theta\over \partial \theta}+{\partial r sin\theta\over \partial r}\cdot {\partial r sin\theta\over \partial \theta}+{\partial z\over \partial r}\cdot {\partial z\over \partial \theta}\\
-=-cos\theta\cdot r sin\theta+sin\theta\cdot r cos\theta +0=0
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-g_{r z}=g_{z r}={\partial x\over \partial r}\cdot {\partial x\over \partial z}+{\partial y\over \partial r}\cdot {\partial y\over \partial z}+{\partial z\over \partial r}\cdot {\partial z\over \partial z}\\
-=0
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-g_{\theta \theta}={\partial x\over \partial \theta}\cdot {\partial x\over \partial \theta}+{\partial y\over \partial \theta}\cdot {\partial y\over \partial \theta}+{\partial z\over \partial \theta}\cdot {\partial z\over \partial \theta}\\
-={\partial rcos\theta\over \partial \theta}\cdot {\partial rcos\theta\over \partial \theta}+{\partial r sin\theta\over \partial \theta}\cdot {\partial r sin\theta\over \partial \theta}+{\partial z\over \partial \theta}\cdot {\partial z\over \partial \theta}\\
-=(-r sin\theta)^2+(r cos\theta)^2+0=r^2
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-g_{\theta z}=g_{z \theta}={\partial x\over \partial \theta}\cdot {\partial x\over \partial z}+{\partial y\over \partial \theta}\cdot {\partial y\over \partial z}+{\partial z\over \partial \theta}\cdot {\partial z\over \partial z}\\
-=0
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-g_{z z}={\partial x\over \partial z}\cdot {\partial x\over \partial z}+{\partial y\over \partial z}\cdot {\partial y\over \partial z}+{\partial z\over \partial z}\cdot {\partial z\over \partial z}\\
-=1
-\end{aligned}
-\end{equation}
-
-Thus, we have:
-
-\begin{equation}
-\begin{aligned}
-g_{ij}=
-\begin{pmatrix}
-1 & 0 & 0\\ 0 &r^2 & 0\\0 & 0 &1
-\end{pmatrix}
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-g^{ij}=
-\begin{pmatrix}
-1 & 0 & 0\\ 0 &1/{r^2} & 0\\0 & 0 &1
-\end{pmatrix}
-\end{aligned}
-\end{equation}
-
-Next, we begin to derive the Christoffel symbols:
-\begin{equation}
-\begin{aligned}
-\Gamma_{bc}^a=1/2 g^{ad}(g_{bd,c}+g_{cd,b}-g_{bc,d})
-\end{aligned}
-\end{equation}
-
-ref:https://www.youtube.com/watch?v=Axhz7NAk4BM
-
-1. for a=r, b=c=$\theta$, d can be r, $\theta$ , z, using Einstein summation convention:
-\begin{equation}
-\begin{aligned}
-\Gamma_{\theta \theta}^r=1/2 g^{r d}(g_{\theta d,\theta}+g_{\theta d,\theta}-g_{\theta \theta,d})\\
-=1/2 g^{r r}(g_{\theta r,\theta}+g_{\theta r,\theta}-g_{\theta \theta,r})+1/2 g^{r \theta}(g_{\theta \theta,\theta}+g_{\theta \theta,\theta}-g_{\theta \theta,\theta})+1/2 g^{r z}(g_{\theta z,\theta}+g_{\theta z,\theta}-g_{\theta \theta,z})\\
-=1/2 g^{r r}({\partial g_{\theta r}\over\partial \theta}+{\partial g_{\theta r}\over\partial \theta}-{\partial g_{\theta \theta}\over\partial r})+1/2 g^{r \theta}({\partial g_{\theta \theta}\over\partial \theta}+{\partial g_{\theta \theta}\over\partial \theta}-{\partial g_{\theta \theta}\over\partial \theta})+1/2 g^{r z}({\partial g_{\theta z}\over\partial \theta}+{\partial g_{\theta z}\over\partial \theta}-{\partial g_{\theta \theta}\over\partial z})\\
-=1/2\cdot (-2r)=-r
-\end{aligned}
-\end{equation}
-
-2. for a=$\theta$, b=r, c=$\theta$, d can be r, $\theta$ , z, using Einstein summation convention:
-\begin{equation}
-\begin{aligned}
-\Gamma_{r \theta}^\theta=1/2 g^{\theta d}(g_{r d,\theta}+g_{\theta d,r}-g_{r\theta,d})\\
-=1/2 g^{\theta r}(g_{r r,\theta}+g_{\theta r,r}-g_{r \theta,r})+1/2 g^{\theta \theta}(g_{r \theta,\theta}+g_{\theta \theta,r}-g_{r \theta,\theta})+1/2 g^{\theta z}(g_{r z,\theta}+g_{\theta z,r}-g_{r \theta,z})\\
-=1/2 g^{\theta r}({\partial g_{r r}\over\partial \theta}+{\partial g_{\theta r}\over\partial r}-{\partial g_{r \theta}\over\partial r})+1/2 g^{\theta \theta}({\partial g_{r \theta}\over\partial \theta}+{\partial g_{\theta \theta}\over\partial r}-{\partial g_{r \theta}\over\partial \theta})+1/2 g^{\theta z}({\partial g_{r z}\over\partial \theta}+{\partial g_{\theta z}\over\partial r}-{\partial g_{r \theta}\over\partial z})\\
-=0+1/2\cdot (1/r^2)\cdot (2r)=1/r
-\end{aligned}
-\end{equation}
-
-3.symmetry-> for a=$\theta$, b=$\theta$, c=r, d can be r, $\theta$ , z, using Einstein summation convention:
-\begin{equation}
-\begin{aligned}
-\Gamma_{\theta r }^\theta=1/2 g^{ad}(g_{bd,c}+g_{cd,b}-g_{bc,d})=1/2 g^{ad}(g_{cd,b}+g_{bd,c}-g_{cb,d})\\=
-\Gamma_{r \theta}^\theta=1/r
-\end{aligned}
-\end{equation}
-
-4.for a=z, 
-\begin{equation}
-\begin{aligned}
-\Gamma_{b c }^z=0
-\end{aligned}
-\end{equation}
-
-5.for b=z, 
-\begin{equation}
-\begin{aligned}
-\Gamma_{z c }^a=1/2 g^{ad}(g_{z d,c}+g_{cd,z}-g_{zc,d})=0
-\end{aligned}
-\end{equation}
-
-6. for a=r, b=r,:
-\begin{equation}
-\begin{aligned}
-\Gamma_{rc}^r=1/2 g^{rd}(g_{rd,c}+g_{cd,r}-g_{rc,d})=>(d=r)=>1/2 g^{rr}(g_{rr,c}+g_{cr,r}-g_{rc,r})=0
-\end{aligned}
-\end{equation}
-
-7. for b=r, c=r,:
-\begin{equation}
-\begin{aligned}
-\Gamma_{rr}^a=1/2 g^{ad}(g_{rd,r}+g_{rd,r}-g_{rr,d})=0
-\end{aligned}
-\end{equation}
-
-Thus, we can conclude the 3D Christoffel symbols:
-\begin{equation}
-\begin{aligned}
-\Gamma_{bc}^r=
-\begin{pmatrix}
-0 & 0 & 0\\ 0 &-r & 0\\0 & 0 &0
-\end{pmatrix}
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-\Gamma_{bc}^\theta=
-\begin{pmatrix}
-0 & 1/r & 0\\1/r &0 & 0\\0 & 0 &0
-\end{pmatrix}
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
-\Gamma_{bc}^z=
-\begin{pmatrix}
-0 & 0 & 0\\ 0 &0 & 0\\0 & 0 &0
-\end{pmatrix}
-\end{aligned}
-\end{equation}
-
-\begin{figure}
-  \centerline{\includegraphics[width=4in]{Gamma_theta_theta^r.jpg}}
-  \caption{$\Gamma_{\theta\theta}^r$}
-  \end{figure}
-  
-\begin{figure}
-  \centerline{\includegraphics[width=4in]{Gamma_r_theta^theta.jpg}}
-  \caption{$\Gamma_{r\theta}^\theta$}
-  \end{figure}
-  
-
-
-
-\subsection{Intrinsic curvature}
-
-ref:https://www.youtube.com/watch?v=YJFTWp31WhQ
-
-The intrinstic curvature of a surface does not depend upon any embedding in higher dimensional space but depends upon relation between points within the surface.
-
-A two dimensional being restricted to the surface of a sphere would draw a triagle whose angles sum to more than 180 degree and so would have to conclude that the surface is curved.
-
-The Riemann tensor can tell if intrinsic curvature cccurs in a given space
-\begin{equation}
-\begin{aligned}
-R_{\mu\gamma\beta}^\alpha={{\partial \Gamma_{\mu\beta}^\alpha}\over \partial x^\gamma}-{{\partial \Gamma_{\mu\gamma}^\alpha}\over \partial x^\beta}+\Gamma_{\mu\beta}^v \Gamma_{v\gamma}^\alpha-\Gamma_{\mu\gamma}^v\Gamma_{v\beta}^\alpha
-\end{aligned}
-\end{equation}
-
-In 3-D the Riemann tensor has 81 components but with the following symmetry properties this number is reduced:
-
-\begin{equation}
-\begin{aligned}
-R_{abcd}=R_{cdab}=-R_{bacd}=-R_{abdc}
+{\partial \rho \over \partial t}+\triangledown \cdot (\rho \textbf{u})=0
 \end{aligned}
 \end{equation}
 
 
-Due to these symmetries of the Riemann tensor the number of independent components is reduced to 6 independent components
-
+\subsubsection{satet principle}
 \begin{equation}
 \begin{aligned}
-{n^2(n^2-1)\over 12}|_{n=3}=6 
+p=p(\rho,T)=\rho RT
+\end{aligned}
+\end{equation}
+R is the specific gas constant. For ideal gases, this equation of state is :
+\begin{equation}
+\begin{aligned}
+{p\over p_0}={\rho\over \rho_0}^\gamma e^{(s-s_0)/c_V}
+\end{aligned}
+\end{equation}
+$\gamma=c_p/c_V$ is the heat capacity ratio or adiabatic index, which relate the heat capacities at constant pressure $c_p$ and at constant volume $c_V$.
+
+\subsubsection{The Euler model}
+Leomhard Euler, with mass and momentum conservation.
+\begin{equation}
+\begin{aligned}
+{\partial \rho \over \partial t}+\triangledown \cdot (\rho \textbf{u})=0\\
+\rho{D\textbf{u}\over Dt}=-\triangledown p+F\\
+\rho{De\over Dt}=-p\triangledown \cdot \textbf{u}
 \end{aligned}
 \end{equation}
 
-And the individual components are:
+F is the external body force density, which is typically gravitational.
+
+The momentum equation describeds how the velocity of a particle higher pressures push the particle towards lower pressures.
+
+The energy equation describes how the internal energy is either decreased  by expansion (the particle pushing on its surroundings), or increased by compression (the sorrounding pushing on the particle).
+
+
+
+\subsubsection{The Navier-Stokes-Fourier model}
+The Euler model is less accurate than the Navier-Stokes-Fourier model as it lacks the effects of internal friction and heat conduction in the fluid.
+
+The momentum equation in this model is of the form of the Cauchy mementum equation.
 \begin{equation}
 \begin{aligned}
-R_{r\theta r}^\theta,R_{rzr}^{z},R_{\theta z \theta}^z, R_{r\theta r}^z, R_{\theta r \theta}^z, R_{zrz}^\theta
+\rho{D u_\alpha\over Dt}={\partial \sigma_{\alpha \beta}\over \partial x_\beta}+F_\alpha
 \end{aligned}
 \end{equation}
 
-In this cylinder case, all 81 of the Riemann tensor componets are zero in this space and all of the contraction of these components will also be zero because we are in flat Euclidean space.
+a general equation which can describe momentum conservation in any continuum, even a solid. The Cauchy stress $\sigma$ describes the stresses due to internal forces.
 
-The Ricci tensor is found by,
+The three equation of the Navier-Stokes-Fourier model are
 \begin{equation}
 \begin{aligned}
-R_{\mu v}=g^{\alpha\beta}R_{\alpha\mu\gamma\beta}
+{\partial \rho \over \partial t} +\triangledown \cdot (\rho \textbf{u})=0\\
+\rho{D u_\alpha\over Dt}=-{\partial p\over \partial x_\alpha}+{\partial \sigma_{\alpha \beta}\over \partial x_\beta}+F_\alpha\\
+\rho {De\over Dt}=(-\delta_{\alpha\beta}p +\sigma'_{\alpha\beta}){\partial u_\beta\over \partial x_\alpha}-{\partial q_\alpha\over \partial x_\alpha}
 \end{aligned}
 \end{equation}
 
-The Ricci scalar is found using,
+Thses euqation include the heat flux q and split the Cauchy stress tensor into two terms as $\sigma=-p\textbf{I}+\sigma'$. 
+
+The deviatoric stress tensor for a simple fluid, which was first dertmined by Stokes is:
 \begin{equation}
 \begin{aligned}
-R=g^{\mu v}R_{\mu v}
+\sigma'_{\alpha\beta}=\mu ({\partial u_\beta\over \partial x_\alpha}+{\partial u_\alpha \over \partial x_\beta}-{2\over 3}\delta_{\alpha\beta}{\partial u_\gamma\over \partial x_\gamma})+\mu_\beta\delta_{\alpha\beta}{\partial u_\gamma\over \partial x_\gamma}
 \end{aligned}
 \end{equation}
 
-So the Riemann tensor has identified this space as being curved since not all of its compoents are zero.
-
-and the Ricci scalar or curvature scalar tells us that this space has constant curvature.
-
-A sphere is a highly symmetric object, The Riemann tensor for a maximally symmteric space also be found using,
+and the heat flux is assumed to be given by Fourier's law,
 \begin{equation}
 \begin{aligned}
-R_{\rho \sigma \mu v}={R\over n(n-1)}(g_{\rho\mu}g_{\sigma v}-g_{\rho v}g_{\sigma\mu})
+q_\alpha =-\kappa {\partial T\over \partial x_\alpha}
 \end{aligned}
 \end{equation}
 
+These euqation include the material coefficents of dynamic shear viscosity $\mu$, dynamic bulk viscosity $\mu_\beta$, and thermal conductivity $\kappa$. Often the kinematic shear viscosity $v=\mu/\rho$ and the kinematic bulk viscosity $v_B=\mu_B/\rho$ are used instead of their dynamic counterparts.
 
-\subsection{Cosmological constant}
-The Einstein field equation,
+In the momentum equation, the additional $\sigma'$ term represents the friction between adjacent parts of the fluid moving at different speed.  $\sigma'$ also accurs in the energy equation, representing the energy increase due to frictional heating. The final q term represents the heat conduct between adjacent parts of the fluid with different temperatures.
+
+In many subfields of fluid mechanics, the fluid is often considered to be incompressible, meaning that the density $\rho$ is constant. This assumption simplifies the mass conservation equation to $\triangledown \cdot \textbf{u}=0$. Consequently, the bulk viscosity in eq7 becomes irrelevant, as its term is zero. For this reason, bulk viscosity is often neglected in fluid mechanics. Still, it is relevant in acoustics and high-velocity compressible flow.
+
+
+\subsection{Acoustics}
+The wave equation can be derived directly from the conservation equations of mass and momentum.
+
+The assumption is that the sound wave is weak enough that the equations can be linearised. Then to find a more complex wave equation that takes into accout the effects of viscosity and heat conduction. Later, look at the effect of molecular rotation and vibration on sound propation, and the mathematical modeling of the multipole sound sources. Also, when the sound wave is strong, and nonlinear effects occur.
+
+The filed quantities of acoustics can be divided into two parts,
 \begin{equation}
 \begin{aligned}
-R_{\alpha v}-1/2g_{\alpha v}R={8\pi G\over c^4} T_{\alpha v}
+\rho(x,t)=\rho_0+\rho'(x,t),\\
+p(x,t)=p_0+p'(x,t),\\
+u(x,t)=u_0+u'(x,t)
 \end{aligned}
 \end{equation}
 
+The subscripted zeroes denote a constant rest state, and the primed quantities are small fluctuations. The human ear's threshold of pain is at about 140dB, which corresponds to a relative RMS pressure $p'_{rms}/p_0=~2*10^{-3}$ in air, with $p_0$ being the standard atmospheric pressure. Thus, linearisation is a highly valid approximation for the sound waves we ecounter in daily life.
 
+\subsubsection{Ideal wave equation}
+The ideal wave equation neglects as many nonideal effects, such as viscosity and heat conduction, as possible. Even so, it is sufficient to describe most cases in acoustics with very good accuracy.
 
+The wave euqation is derived from the linearised form of the Euler mass and momentum equations. Except for exremely low frequencies or long-range atmospheric or underwater propagation, the effect of gravitational force are also negligible. The linearised and forceless Euler mass and momentum equation are:
+\begin{equation}
+\begin{aligned}
+{\partial\rho\over \partial t}+\rho_0{\partial u_\alpha \over \partial x_\alpha}=0\\
+\rho_0{\partial u_\alpha\over \partial t}+{\partial p\over \partial x_\alpha}=0
+\end{aligned}
+\end{equation}
 
+The sum $\partial $ eq10 , minus each other gives,
+\begin{equation}
+\begin{aligned}
+{\partial^2\rho\over \partial t^2}-\triangledown^2 p=0
+\end{aligned}
+\end{equation}
 
+To take the final step to the wave equation, we need to related $p'$ and $\rho'$ through an equation of state. Typically, the isentropic relation
+\begin{equation}
+\begin{aligned}
+{p\over p_0}=({\rho\over \rho_0})^\gamma
+\end{aligned}
+\end{equation}
+is used.
 
+This relation follows from eq3 and the assumption of near-constant entropy, $s=s_0$. From this equation, $p'$ and $\rho'$ can be related as:
+\begin{equation}
+\begin{aligned}
+{p'\over \rho'}=~({\partial p\over \partial \rho})_s,0={\gamma p_0 \over \rho_0}=c_0^2
+\end{aligned}
+\end{equation}
 
+where the derivative has been evaluated at the rest state. We will soon see that $c_0$ is ideal speed of sound.
 
+Using this, we can re-express the time derivative term eq11 as $\partial^2 \rho/\partial t^2=\partial^2 \rho'/\partial t^2=(1/c_0^2)\partial^2 p'/\partial t^2$, and at last we find the ideal wave equation:
+\begin{equation}
+\begin{aligned}
+{1\over c_0^2}{\partial^2 p\over \partial t^2}-\triangledown^2p=0
+\end{aligned}
+\end{equation}
 
+\subsubsection{Viscous and thermoviscous wave equation}
+In any fluid, viscosity and heat conduction cause some absorption of sound waves. These effects become relevant at high frequencies and long propagation distances. The effect of viscosity on sound wave propagation was first examined by Stokes, in the same article where he derived the stress tensor for a fluid.
+\begin{equation}
+\begin{aligned}
+{1\over c_0^2}{\partial^2 p\over \partial t^2}-(1+[\tau_v+\tau_\kappa]{\partial \over \partial t})\triangledown^2p=0
+\end{aligned}
+\end{equation}
+
+where the thermal relaxation time 
+\begin{equation}
+\begin{aligned}
+\tau_\kappa ={1\over c_0^2}{\kappa (\gamma-r)\over \rho_0 c_p}\\
+\tau_v={1\over c_0^2}({4\over 3 v}+v_B)
+\end{aligned}
+\end{equation}
+
+The most physical fluids, $\tau_v$ is $10^{-10}$ s for gases and $10^{-12}$s for liquids. $\tau_\kappa$ is $7.4*10^{-11}$s, and $2.6*10^{-16}$s, which is negligible compared to $\tau_v$.
 
 
 

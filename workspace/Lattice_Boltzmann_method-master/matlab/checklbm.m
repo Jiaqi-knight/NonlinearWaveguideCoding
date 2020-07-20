@@ -17,6 +17,7 @@
 clear all
 close all
 clc
+[scheme,cs,cssq,invcs,invcssq,T0]=initializeELBMscheme(1,7);
 
 Q = 5;
 
