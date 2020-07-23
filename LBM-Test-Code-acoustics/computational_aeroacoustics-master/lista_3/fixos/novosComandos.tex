@@ -1,0 +1,122 @@
+\newcommand{\curso}[1]{\def\imprimircurso{#1}}
+
+\newcommand{\palavraChaveUm}[1]{\def\imprimirpalavrachaveum{#1}}
+\newcommand{\palavraChaveDois}[1]{\def\imprimirpalavrachavedois{#1}}
+
+\newcommand{\cdu}[1]{\def\nomecdu{#1}}
+\newcommand{\dataDaAprovacao}[1]{\def\imprimirdatadaaprovacao{#1}}
+
+\newcommand{\membroConvidadoUm}[1]{\def\imprimirmembroconvidadoum{#1}}
+\newcommand{\membroConvidadoDois}[1]{\def\imprimirmembroconvidadodois{#1}}
+
+\newcommand\BackgroundPic{%
+	\put(0,0){%
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\vfill
+			\centering
+			\includegraphics[width=\paperwidth,height=\paperheight,%
+				keepaspectratio]{figuras/capa.eps}%
+			\vfill
+		}
+	}
+}
+
+\renewcommand{\imprimircapa}{%
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Cover UFSC - EAC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newgeometry{left=0cm,right=1.5cm,top=0cm,bottom=0cm}
+
+\thispagestyle{empty}
+
+\begin{capa}
+
+\begin{figure}[!ht]
+\begin{minipage}[c]{.21\textwidth}
+\vspace{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Edit here the COLOR of the side box
+% Cores de capas padronizadas
+% Comentar e utilizar a correta
+%\colorbox{pos}    % Trabalho mestrado/pos
+%\colorbox{grad}    % Trabalho graduaao
+\colorbox{gray}  % Relatorio/Trabalho
+%\colorbox{manual}  % Manual/tutorial
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	{
+	\begin{minipage}[b]{2.5cm}
+	\vspace{300mm}
+	$\,$ 
+	\end{minipage}
+	}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.78\textwidth}
+	\vspace{-1cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+%%% Edit here the header	
+	{\rule[1.1em]{1.0\linewidth}{.1pt}}\hfill
+	%{\rule[1.1em]{.6\linewidth}{.1pt}}\hfill
+	%\includegraphics[height=1.5cm,page=1]{posufsc.png} % Corner logo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+  \begin{minipage}[t]{1\linewidth}
+		\sffamily
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+%%% Edit here the text
+		\vfill
+		\vspace{2cm}
+		%{Versao 1.15$\,\beta$}
+		
+		\vspace{2cm}
+		\Huge Lista 3
+		
+	
+		\vspace{1cm}
+		 \textbf{Axissimetria e Paredes Não-Alinhadas\\
+		 	\Large{Aeroacústica Computacional}}
+		
+		\vspace{6cm}
+		
+		\large
+		Aluno:
+		
+		\textbf{José Pedro de Santana Neto - 201505394}\\
+		%\textbf{Henrique Alende da Silveira}
+		
+		\vspace{6cm}
+		
+		
+		\large
+		Professor:
+		%
+		\textbf{Andrey Ricardo da Silva, PhD.}
+		
+		
+		\vspace{3cm}
+		\vfill
+		
+		\today 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+  \end{minipage}
+\end{minipage}
+\end{figure}	
+	
+\end{capa}
+
+\restoregeometry
+
+
+
+
+
+
+
+
+}

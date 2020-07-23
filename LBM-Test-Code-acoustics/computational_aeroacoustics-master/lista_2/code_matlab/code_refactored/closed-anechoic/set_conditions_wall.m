@@ -1,0 +1,21 @@
+%% set_conditions_wall: function to set the conditions wall in each cell in lattice 
+function lattice = set_conditions_wall(lattice, conditions_wall)
+	vec1 = conditions_wall{1};
+	vec2 = conditions_wall{2};
+	vec3 = conditions_wall{3};
+	vec4 = conditions_wall{4};
+	vec5 = conditions_wall{5};
+	vec6 = conditions_wall{6};
+	vec7 = conditions_wall{7};
+	vec8 = conditions_wall{8};
+	f=lattice{1};
+    G=f;
+    f(vec1)=G(vec3);
+    f(vec3)=G(vec1);
+    f(vec2)=G(vec4);
+    f(vec4)=G(vec2);
+    f(vec5)=G(vec7);
+    f(vec7)=G(vec5);
+    f(vec6)=G(vec8);
+    f(vec8)=G(vec6);
+    lattice{1} = f;

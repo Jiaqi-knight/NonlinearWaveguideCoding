@@ -1,0 +1,15 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.2 }
+
+\bibitem[Lockard 2000]{lockard}
+\abntrefinfo{Lockard}{LOCKARD}{2000}
+{LOCKARD, D.~P. An efficient, two-dimensional implementation of the ffowcs
+  williams and hawkings equation.
+\emph{Journal of Sound and Vibration}, Elsevier, v.~229, n.~4, p. 897--911,
+  2000.}
+
+\end{thebibliography}

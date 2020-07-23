@@ -1,0 +1,1767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<history>
+<session>
+<command time_stamp="150b5a4fb66">%-- 29-10-2015 20:08:20 --%</command>
+<command execution_time="15">cd ..</command>
+<command error="true" execution_time="476">cdc ..</command>
+<command execution_time="14" repeat="3">cd ..</command>
+</session>
+<session>
+<command time_stamp="150c91b4b03">%-- 02-11-2015 14:50:21 --%</command>
+<command execution_time="16">cd code_matlab/</command>
+<command execution_time="14">cd code_refactored/</command>
+<command execution_time="42573" repeat="2">main_lbgk</command>
+<command batch="1">figure(3);</command>
+<command batch="1" execution_time="81">plot(frequencies, abs(fft(pressure_final_tube)));</command>
+<command execution_time="72">plot(frequencies, abs(fft(pressure_final_tube)));</command>
+<command batch="2">figure(3);</command>
+<command batch="2">plot(frequencies, abs(fft(pressure_final_tube)));</command>
+<command batch="2" execution_time="89">axis([1 4000 0 0.2]);</command>
+<command batch="3">figure(3);</command>
+<command batch="3">semilogy(frequencies, abs(fft(pressure_final_tube)));</command>
+<command batch="3" execution_time="105">axis([1 4000 0 0.2]);</command>
+<command execution_time="75748" repeat="2">main_lbgk</command>
+<command execution_time="9">cd closed-opened/</command>
+<command batch="4" execution_time="12289" repeat="4">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150c946b085">%-- 02-11-2015 15:37:45 --%</command>
+<command execution_time="14">cd code_matlab/</command>
+<command execution_time="12">cd code_refactored/</command>
+<command execution_time="13">cd closed-opened/</command>
+<command batch="5">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150c948c43e">%-- 02-11-2015 15:40:01 --%</command>
+<command execution_time="13">cd code_matlab/</command>
+<command execution_time="12">cd code_refactored/</command>
+<command execution_time="14">cd closed-opened/</command>
+<command execution_time="92757" repeat="2">main_lbgk</command>
+<command execution_time="11">cd ..</command>
+<command execution_time="12">cd closed-closed/</command>
+<command execution_time="86667" repeat="3">main_lbgk</command>
+<command execution_time="12">cd ..</command>
+<command execution_time="9">cd closed-anechoic/</command>
+<command error="true" execution_time="7757" repeat="4">main_lbgk</command>
+<command execution_time="8">cd ..</command>
+<command execution_time="170">ls</command>
+<command execution_time="8">cd muffler/</command>
+<command execution_time="12">ls</command>
+<command execution_time="42190" repeat="11">main_lbgk</command>
+<command batch="6">figure(1);</command>
+<command batch="6">plot(pressure_final_tube);</command>
+<command batch="6">hold on;</command>
+<command batch="6">plot(particule_velocity_final_tube, 'r');</command>
+<command batch="6">ylabel('Magnitude','FontSize',20);</command>
+<command batch="6">xlabel('Tempo em Lattice','FontSize',20);</command>
+<command batch="6">title('Pressão e Velocidade de Partícula','FontSize',20);</command>
+<command batch="6" execution_time="142">legend('Pressão', 'Velocidade de Partícula');</command>
+<command batch="6" execution_time="142">legend('Pressão', 'Velocidade de Partícula');</command>
+<command error="true" execution_time="18030" repeat="17">main_lbgk</command>
+<command error="true" execution_time="118" repeat="2">delta_t</command>
+<command error="true" execution_time="23698" repeat="68">main_lbgk</command>
+<command execution_time="1396">help flip</command>
+<command execution_time="224">help fliplr</command>
+<command execution_time="43180" repeat="2">main_lbgk</command>
+<command execution_time="162">help fliplr</command>
+<command execution_time="44179" repeat="2">main_lbgk</command>
+<command execution_time="10">cd ..</command>
+<command execution_time="8">cd closed-closed/</command>
+<command error="true" execution_time="8295">main_lbgk</command>
+<command error="true" execution_time="391" repeat="2">frequencies = linspace(0, 1/lattice_time_step, length(frequency_pressure_final_tube))</command>
+<command execution_time="84251">main_lbgk</command>
+<command execution_time="12">1/lattice_time_step</command>
+<command execution_time="13">cd ..</command>
+<command execution_time="8">cd muffler/</command>
+<command execution_time="20">ls</command>
+<command batch="7" execution_time="3779" repeat="4">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150cedd3e7c">%-- 03-11-2015 17:40:17 --%</command>
+<command execution_time="16">cd code_matlab/</command>
+<command execution_time="13">cd code_refactored/</command>
+<command execution_time="10">cd muffler/</command>
+<command batch="8">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150cedecab7">%-- 03-11-2015 17:41:59 --%</command>
+<command execution_time="28">cd code_matlab/</command>
+<command execution_time="21">cd code_refactored/</command>
+<command execution_time="13">cd muffler/</command>
+<command execution_time="46765" repeat="9">main_lbgk</command>
+<command execution_time="17">cd ..</command>
+<command execution_time="57">ls</command>
+<command execution_time="9">cd ..</command>
+<command execution_time="10">cd code_refactored/</command>
+<command execution_time="11">cd closed-closed/</command>
+<command execution_time="15">ls</command>
+<command error="true" execution_time="8747" repeat="3">main_lbgk</command>
+<command execution_time="11">cd ..</command>
+<command execution_time="14">cd muffler/</command>
+<command execution_time="12248" repeat="14">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150cf1ab189">%-- 03-11-2015 18:47:25 --%</command>
+<command execution_time="17">cd code_matlab/</command>
+<command execution_time="13">cd code_refactored/</command>
+<command execution_time="14">cd muffler/</command>
+<command execution_time="12457" repeat="4">main_lbgk</command>
+<command execution_time="14">cd ..</command>
+<command execution_time="15">cd closed-closed/</command>
+<command error="true" execution_time="94273" repeat="3">main_lbgk</command>
+<command execution_time="12">cd ..</command>
+<command execution_time="10">cd muffler/</command>
+<command error="true" execution_time="4358" repeat="8">main_lbgk</command>
+<command execution_time="12">cd ..</command>
+<command execution_time="13">cd closed-closed/</command>
+<command error="true" execution_time="22476" repeat="7">main_lbgk</command>
+<command batch="9">closed_closed_not_refactored</command>
+<command batch="9">closed_closed_not_refactored</command>
+</session>
+<session>
+<command time_stamp="150cf3705e2">%-- 03-11-2015 19:18:21 --%</command>
+<command execution_time="17">cd code_matlab/</command>
+<command execution_time="14">cd code_refactored/</command>
+<command execution_time="13">cd closed-closed/</command>
+<command error="true" execution_time="268">main_lbgk</command>
+<command execution_time="8888" repeat="13">closed_closed_not_refactored</command>
+<command execution_time="731">help chirp</command>
+<command error="true" execution_time="4027">closed_closed_not_refactored</command>
+<command execution_time="12">cd ..</command>
+<command execution_time="12">cd closed-anechoic/</command>
+<command error="true" execution_time="34590">main_lbgk</command>
+<command execution_time="11">cd ..</command>
+<command execution_time="12">cd closed-closed/</command>
+<command batch="10" execution_time="86" repeat="2">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150cf56f0bd">%-- 03-11-2015 19:53:13 --%</command>
+<command batch="11">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150cf592b5d">%-- 03-11-2015 19:55:39 --%</command>
+<command execution_time="15">cd code_refactored/</command>
+<command execution_time="15">cd closed-closed/</command>
+<command execution_time="9115" repeat="11">main_lbgk</command>
+<command execution_time="13">cd ..</command>
+<command execution_time="12">cd muffler/</command>
+<command error="true" execution_time="3821" repeat="5">main_lbgk</command>
+<command execution_time="15">cd ..</command>
+<command execution_time="13">cd closed-closed/</command>
+<command error="true" execution_time="342" repeat="20">main_lbgk</command>
+<command execution_time="61" repeat="2">lattice{2}</command>
+<command error="true" execution_time="339" repeat="2">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150d00fda3b">%-- 03-11-2015 23:15:11 --%</command>
+<command execution_time="16">cd closed-closed/</command>
+<command batch="12" execution_time="21393" repeat="28">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150d08113da">%-- 04-11-2015 01:18:52 --%</command>
+<command execution_time="17">cd code_matlab/</command>
+<command execution_time="14">cd code_refactored/</command>
+<command execution_time="14">cd closed-closed/</command>
+<command execution_time="12">cd ..</command>
+<command execution_time="21">cd muffler/</command>
+<command batch="13">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150d083c9c9">%-- 04-11-2015 01:21:49 --%</command>
+<command execution_time="18">cd code_matlab/</command>
+<command execution_time="13">cd code_refactored/</command>
+<command execution_time="18">cd muffler/</command>
+<command execution_time="10402" repeat="4">main_lbgk</command>
+<command execution_time="22">wall_points_down</command>
+<command execution_time="15">wall_points_down{2}</command>
+<command execution_time="18" repeat="2">wall_points_up{2}</command>
+<command execution_time="10106" repeat="17">main_lbgk</command>
+<command execution_time="1713">help chirp</command>
+<command batch="14">Fs=1000; % sample rate</command>
+<command batch="14">tf=2; % 2 seconds</command>
+<command batch="14">t=0:1/Fs:tf-1/Fs;</command>
+<command batch="14">f1=100;</command>
+<command batch="14">f2=400; % start @ 100 Hz, go up to 400Hz</command>
+<command batch="14">semi_t=0:1/Fs:(tf/2-1/Fs);</command>
+<command batch="14">sl=2*(f2-f1/2);</command>
+<command batch="14">f1=f1*semi_t+(sl.*semi_t/2);</command>
+<command batch="14">f2=f1(end)+f2*semi_t-sl.*semi_t/2;</command>
+<command batch="14">f=[f1 f2];</command>
+<command batch="14">y=1.33*cos(2*pi*f.*t);</command>
+<command batch="14" execution_time="425">plot(t,y)</command>
+<command execution_time="42" repeat="6">sound(y, 1000)</command>
+<command execution_time="28">plot(t,y)</command>
+<command batch="15">t = 0:1/1e3:2;</command>
+<command batch="15" execution_time="174">y = chirp(t,0,1,250);</command>
+<command execution_time="37" repeat="3">sound(y, 1000)</command>
+<command error="true" execution_time="10701">main_lbgk</command>
+<command execution_time="14">16e3</command>
+<command error="true" execution_time="228">plot(t,y)</command>
+<command error="true" execution_time="143">y = chirp(t,0,1,250);</command>
+<command execution_time="19">t = 0:1/1e3:2;</command>
+<command execution_time="18">y = chirp(t,0,1,250);</command>
+<command execution_time="24">plot(t,y)</command>
+<command execution_time="10453" repeat="3">main_lbgk</command>
+<command execution_time="70">plot(source_sound)</command>
+<command execution_time="13">lattice_time_step</command>
+<command execution_time="23">times_chirp</command>
+<command execution_time="174984" repeat="6">main_lbgk</command>
+<command execution_time="10">dimension_x_voxel</command>
+<command execution_time="13">30/dimension_x_voxel</command>
+<command execution_time="9">dimension_x_voxel = physical_dimension_max_x/number_columns_lattice;</command>
+<command execution_time="17">dimension_x_voxel</command>
+<command execution_time="18">30/dimension_x_voxel</command>
+<command execution_time="11">0.003/dimension_x_voxel</command>
+<command execution_time="17">0.03/dimension_x_voxel</command>
+<command execution_time="15">dimension_x_voxel = 0.0005;</command>
+<command execution_time="18">0.03/dimension_x_voxel</command>
+<command execution_time="14">log10(6)</command>
+<command execution_time="13">log(6)</command>
+<command error="true" execution_time="186781" repeat="4">main_lbgk</command>
+<command batch="16">system_response = 20*log10(sqrt((fft(pressures_output)./fft(pressures_input)).^2));</command>
+<command batch="16">frequencies = linspace(0,1/lattice_time_step,length(system_response));</command>
+<command batch="16">figure(2);</command>
+<command batch="16" execution_time="1115">plot(frequencies, system_response);</command>
+<command batch="17">system_response = 20*log10(sqrt((fft(pressures_output)./fft(pressures_input)).^2));</command>
+<command batch="17">frequencies = linspace(0,1/lattice_time_step,length(system_response));</command>
+<command batch="17">figure(2);</command>
+<command batch="17">plot(frequencies, system_response);</command>
+<command batch="17" execution_time="110">axis([1 10000 -50 20]);</command>
+<command error="true" execution_time="47183" repeat="3">main_lbgk</command>
+<command execution_time="78" repeat="2">plot(source_sound)</command>
+<command execution_time="92403" repeat="2">main_lbgk</command>
+<command batch="18">t = 0:1/1e3:2;</command>
+<command batch="18" execution_time="11">y = chirp(t,0,1,250);</command>
+<command execution_time="245">sound(y, 1000)</command>
+<command execution_time="9">y = chirp(t,0,1,16000);</command>
+<command execution_time="47">sound(y, 1000)</command>
+<command execution_time="13">plot(y)</command>
+<command execution_time="9">y = chirp(t,0,1,8000);</command>
+<command execution_time="44">sound(y, 1000)</command>
+<command execution_time="10">t = 0:1/1e3:5;</command>
+<command execution_time="22">y = chirp(t,0,1,8000);</command>
+<command execution_time="49">sound(y, 1000)</command>
+<command execution_time="13">y = chirp(t,0,1,1000);</command>
+<command execution_time="38">sound(y, 1000)</command>
+<command execution_time="10">y = chirp(t,0,5,1000);</command>
+<command execution_time="43">sound(y, 1000)</command>
+<command execution_time="14">t = 0:1/1e3:5;</command>
+<command execution_time="12">y = chirp(t,0,10,1000);</command>
+<command execution_time="43">sound(y, 1000)</command>
+<command execution_time="12">times_chirp = 0:lattice_time_step:1;</command>
+<command execution_time="51">chirp_source_sound = chirp(times_chirp, 0, 1, 16e3);</command>
+<command error="true" execution_time="57">sound(chirp_source_sound, 1/times_chirp)</command>
+<command error="true" execution_time="570">sound(chirp_source_sound, 1/lattice_time_step)</command>
+<command error="true" execution_time="31">sound(chirp_source_sound, round(1/lattice_time_step))</command>
+<command execution_time="18">1/lattice_time_step</command>
+<command execution_time="91">plot(chirp_source_sound)</command>
+<command execution_time="10">times_chirp(end)</command>
+<command execution_time="11">times_chirp = 0:lattice_time_step:(time_final-1)*lattice_time_step;</command>
+<command execution_time="15">times_chirp(end)</command>
+<command execution_time="119574" repeat="4">main_lbgk</command>
+<command execution_time="9">cd ..</command>
+<command execution_time="9">cd closed-closed/</command>
+<command execution_time="160763" repeat="7">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150d126b085">%-- 04-11-2015 04:19:45 --%</command>
+<command execution_time="14">cd code_matlab/</command>
+<command execution_time="14">cd code_refactored/</command>
+<command execution_time="14">cd closed-closed/</command>
+<command execution_time="128042">main_lbgk</command>
+<command execution_time="15">cd ..</command>
+<command execution_time="15">cd closed-opened/</command>
+<command execution_time="159898">main_lbgk</command>
+<command batch="19">figure(2);</command>
+<command batch="19">plot(frequencies, imag(impedance));</command>
+<command batch="19">ylabel('Impedancia','FontSize',20);</command>
+<command batch="19">xlabel('Frequencia [Hz]','FontSize',20);</command>
+<command batch="19" execution_time="71">title('Parte Imaginaria da Impedancia','FontSize',20);</command>
+<command batch="20">figure(3);</command>
+<command batch="20">plot(frequencies, real(impedance), 'r');</command>
+<command batch="20">ylabel('Impedancia','FontSize',20);</command>
+<command batch="20">xlabel('Frequencia [Hz]','FontSize',20);</command>
+<command batch="20" execution_time="74">title('Parte Real da Impedancia','FontSize',20);</command>
+<command batch="21">figure(2);</command>
+<command batch="21">plot(frequencies, imag(impedance));</command>
+<command batch="21">ylabel('Impedancia','FontSize',20);</command>
+<command batch="21">xlabel('Frequencia [Hz]','FontSize',20);</command>
+<command batch="21">title('Parte Imaginaria da Impedancia','FontSize',20);</command>
+<command batch="21" execution_time="74">axis([0 frequencies(end) -25 25]);</command>
+<command batch="22">figure(3);</command>
+<command batch="22">plot(frequencies, real(impedance), 'r');</command>
+<command batch="22">ylabel('Impedancia','FontSize',20);</command>
+<command batch="22">xlabel('Frequencia [Hz]','FontSize',20);</command>
+<command batch="22">title('Parte Real da Impedancia','FontSize',20);</command>
+<command batch="22" execution_time="86">axis([0 frequencies(end) -25 25]);</command>
+<command execution_time="12">cd ..</command>
+<command execution_time="10">cd closed-anechoic/</command>
+<command execution_time="131885">main_lbgk</command>
+<command batch="23">figure(2);</command>
+<command batch="23">plot(frequencies, imag(impedance));</command>
+<command batch="23">ylabel('Impedancia','FontSize',20);</command>
+<command batch="23">xlabel('Frequencia [Hz]','FontSize',20);</command>
+<command batch="23">title('Parte Imaginaria da Impedancia','FontSize',20);</command>
+<command batch="23" execution_time="74">axis([0 frequencies(end) -20 20]);</command>
+<command batch="24">figure(2);</command>
+<command batch="24">plot(frequencies, imag(impedance));</command>
+<command batch="24">ylabel('Impedancia','FontSize',20);</command>
+<command batch="24">xlabel('Frequencia [Hz]','FontSize',20);</command>
+<command batch="24">title('Parte Imaginaria da Impedancia','FontSize',20);</command>
+<command batch="24" execution_time="85">axis([0 frequencies(end) -10 10]);</command>
+<command batch="25">figure(3);</command>
+<command batch="25">plot(frequencies, real(impedance), 'r');</command>
+<command batch="25">ylabel('Impedancia','FontSize',20);</command>
+<command batch="25">xlabel('Frequencia [Hz]','FontSize',20);</command>
+<command batch="25">title('Parte Real da Impedancia','FontSize',20);</command>
+<command batch="25" execution_time="84">axis([0 frequencies(end) -10 10]);</command>
+<command batch="26">figure(3);</command>
+<command batch="26">plot(frequencies, real(impedance), 'r');</command>
+<command batch="26">ylabel('Impedancia','FontSize',20);</command>
+<command batch="26">xlabel('Frequencia [Hz]','FontSize',20);</command>
+<command batch="26">title('Parte Real da Impedancia','FontSize',20);</command>
+<command batch="26" execution_time="52">axis([0 frequencies(end) -20 20]);</command>
+<command execution_time="82">close all</command>
+<command batch="27">figure(2);</command>
+<command batch="27">plot(frequencies, imag(impedance));</command>
+<command batch="27">ylabel('Impedancia','FontSize',20);</command>
+<command batch="27">xlabel('Frequencia [Hz]','FontSize',20);</command>
+<command batch="27">title('Parte Imaginaria da Impedancia','FontSize',20);</command>
+<command batch="27">axis([0 frequencies(end) -20 20]);</command>
+<command batch="27">figure(3);</command>
+<command batch="27">plot(frequencies, real(impedance), 'r');</command>
+<command batch="27">ylabel('Impedancia','FontSize',20);</command>
+<command batch="27">xlabel('Frequencia [Hz]','FontSize',20);</command>
+<command batch="27">title('Parte Real da Impedancia','FontSize',20);</command>
+<command batch="27" execution_time="334">axis([0 frequencies(end) -20 20]);</command>
+<command execution_time="11">cd ..</command>
+<command execution_time="10">cd closed-closed/</command>
+<command execution_time="138263">main_lbgk</command>
+<command execution_time="15">cd ..</command>
+<command execution_time="9">cd closed-opened/</command>
+<command execution_time="142235">main_lbgk</command>
+<command execution_time="11">cd ..</command>
+<command execution_time="12">cd closed-anechoic/</command>
+<command error="true" execution_time="198">main</command>
+<command error="true" execution_time="45785" repeat="2">main_lbgk</command>
+<command execution_time="8">cd ..</command>
+<command execution_time="9">cd muffler/</command>
+<command execution_time="93849">main_lbgk</command>
+<command execution_time="10">t = 0:1/1000:1;</command>
+<command execution_time="10">y = chirp(t, 0, 1, 16e3);</command>
+<command execution_time="961">sound(y, 1000)</command>
+<command execution_time="14">y = chirp(t, 0, 1, 1000);</command>
+<command execution_time="35" repeat="4">sound(y, 1000)</command>
+<command execution_time="8">y = chirp(t, 0, 2, 1000);</command>
+<command execution_time="36">sound(y, 1000)</command>
+<command error="true" execution_time="3166" repeat="9">main_lbgk</command>
+<command execution_time="70" repeat="2">plot(chirp_source_sound)</command>
+<command error="true" execution_time="9665">main_lbgk</command>
+<command execution_time="12">size(times_chirp)</command>
+<command execution_time="13">time_final</command>
+<command error="true" execution_time="209">lattice_frequency = physical_frequency_max*dimension_x_voxel/(physical_sound_velocity/lattice_sound_speed)</command>
+<command execution_time="15">lattice_frequency = 16e3*dimension_x_voxel/(physical_sound_velocity/lattice_sound_speed)</command>
+<command execution_time="44966" repeat="2">main_lbgk</command>
+<command execution_time="18">lattice_frequency = 16e3*dimension_x_voxel/(physical_sound_velocity/lattice_sound_speed)</command>
+<command batch="28" execution_time="106" repeat="29">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150d459a402">%-- 04-11-2015 19:14:16 --%</command>
+<command batch="29">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150d45b2f4a">%-- 04-11-2015 19:15:57 --%</command>
+<command execution_time="24">cd code_matlab/</command>
+<command execution_time="14">cd code_refactored/</command>
+<command execution_time="15">cd muffler/</command>
+<command batch="30" execution_time="50005" repeat="7">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150d4641232">%-- 04-11-2015 19:25:40 --%</command>
+<command error="true" execution_time="162">main_lbgk</command>
+<command execution_time="15">cd code_matlab/</command>
+<command execution_time="16">cd code_refactored/</command>
+<command execution_time="15">cd muffler/</command>
+<command execution_time="9901">main_lbgk</command>
+<command execution_time="90">close all</command>
+<command execution_time="92" repeat="2">plot(abs(Znorm));</command>
+<command error="true" execution_time="338">main_lbgk</command>
+<command execution_time="12" repeat="5">cd ..</command>
+<command execution_time="20">cd muffler/</command>
+<command batch="31">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150d4702c3d">%-- 04-11-2015 19:38:53 --%</command>
+<command error="true" execution_time="23045">main_lbgk</command>
+<command execution_time="111" repeat="2">plot(source_sound)</command>
+<command execution_time="100810">main_lbgk</command>
+<command execution_time="13">dimension_x_voxel = physical_dimension_max_x/number_columns_lattice</command>
+<command error="true" execution_time="281">main_lbgk</command>
+<command execution_time="17">dimension_x_voxel = physical_dimension_max_x/number_columns_lattice</command>
+<command error="true" execution_time="253">main_lbgk</command>
+<command execution_time="15">dimension_x_voxel = physical_dimension_max_x/number_columns_lattice</command>
+<command execution_time="48340" repeat="10">main_lbgk</command>
+<command execution_time="16">plot(chirp_source_sound)</command>
+<command execution_time="73">figure;plot(chirp_source_sound)</command>
+<command execution_time="69">figure;plot(source_sound)</command>
+<command execution_time="10">ta</command>
+<command execution_time="10">ta/2</command>
+<command execution_time="12" repeat="2">frequency_lattice</command>
+<command batch="32" execution_time="294" repeat="3">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150d4a1df47">%-- 04-11-2015 20:33:10 --%</command>
+<command execution_time="85570">main_lbgk</command>
+<command batch="33">figure(2)</command>
+<command batch="33">open CurvaMufflerMareze.fig</command>
+<command batch="33">hold on</command>
+<command batch="33">plot(freq1,Z, 'r');</command>
+<command batch="33">ylabel('Perda de transmiss\E3o [dB]');</command>
+<command batch="33">xlabel('Frequencia [Hz]');</command>
+<command batch="33">%axis([0 10000 -20 20])</command>
+<command batch="33" execution_time="708">hold off</command>
+<command error="true" execution_time="67580" repeat="5">main_lbgk</command>
+<command execution_time="85">figure; plot(source_sound)</command>
+<command execution_time="99386" repeat="4">main_lbgk</command>
+<command execution_time="69">figure; plot(chirp_source_sound)</command>
+<command execution_time="14">frequency_lattice_max</command>
+<command execution_time="9">e = 340*sqrt(3);</command>
+<command execution_time="12">16e3*5e-4/e</command>
+<command execution_time="95459" repeat="10">main_lbgk</command>
+</session>
+<session>
+<command time_stamp="150eca18d44">%-- 09-11-2015 12:23:42 --%</command>
+<command error="true" execution_time="184" repeat="9">lista_3</command>
+<command execution_time="26">size(f)</command>
+<command error="true" execution_time="213" repeat="2">lista_3</command>
+<command execution_time="22">size(f)</command>
+<command execution_time="31072" repeat="4">lista_3</command>
+<command execution_time="82" repeat="2">imagesc(sigma_mat9(:,:,1))</command>
+<command error="true" execution_time="30842">lista_3</command>
+<command execution_time="26">imagesc(sigma_mat9(:,:,1))</command>
+<command execution_time="32090" repeat="3">lista_3</command>
+<command execution_time="20">imagesc(sigma_mat9(:,:,1))</command>
+<command execution_time="32284">lista_3</command>
+<command execution_time="19">imagesc(sigma_mat9(:,:,1))</command>
+<command execution_time="31842">lista_3</command>
+<command execution_time="83">imagesc(sigma_mat9(:,:,1))</command>
+<command error="true" execution_time="4474">lista_3</command>
+<command execution_time="17">imagesc(sigma_mat9(:,:,1))</command>
+<command execution_time="1471">help flip</command>
+<command execution_time="16">a = 1:10;</command>
+<command execution_time="16">a</command>
+<command execution_time="16">a = a';</command>
+<command execution_time="16">fliplr(a)</command>
+<command execution_time="16">a</command>
+<command execution_time="17">flip(a)</command>
+<command error="true" execution_time="31201">lista_3</command>
+<command execution_time="17">imagesc(sigma_mat9(:,:,1))</command>
+<command error="true" execution_time="5688">lista_3</command>
+<command execution_time="18">imagesc(sigma_mat9(:,:,1))</command>
+<command error="true" execution_time="5963">lista_3</command>
+<command execution_time="16">imagesc(sigma_mat9(:,:,1))</command>
+<command error="true" execution_time="3026">lista_3</command>
+<command execution_time="18">imagesc(sigma_mat9(:,:,1))</command>
+<command error="true" execution_time="385" repeat="7">lista_3</command>
+<command execution_time="12">size(sigma_mat9)</command>
+<command execution_time="12">size(Ft)</command>
+<command execution_time="16">size(feq)</command>
+<command execution_time="57362" repeat="23">lista_3</command>
+<command error="true" execution_time="187">[teta, raio] = cart2pol();</command>
+<command execution_time="19">f(251,502,1)</command>
+<command error="true" execution_time="19">f(252,502,1)</command>
+<command execution_time="15">[teta, raio] = cart2pol(251, 502);</command>
+<command execution_time="17">teta</command>
+<command execution_time="17">raio</command>
+<command execution_time="57222">lista_3</command>
+<command execution_time="11">size(f)</command>
+<command execution_time="13">size(f(:,1,1))</command>
+<command execution_time="16">f(:,1,1)</command>
+<command execution_time="20">size(uy)</command>
+<command execution_time="14">size(W)</command>
+<command execution_time="70023" repeat="4">lista_3</command>
+<command execution_time="10">a = [1 2 3 4 5]</command>
+<command execution_time="23">diff(a)</command>
+<command execution_time="13">f(1:5, 1:5,1)</command>
+<command execution_time="14">diff(f(1:5, 1:5,1))</command>
+<command execution_time="15">diff(f(1:5, 1:5,1),1)</command>
+<command execution_time="15">diff(f(1:5, 1:5,1),2)</command>
+<command execution_time="16">f(1:5, 1:5,1)</command>
+<command execution_time="14">size(f(1:5, 1:5,1))</command>
+<command execution_time="14">size(diff(f(1:5, 1:5,1),2))</command>
+<command execution_time="12">size(diff(f(1:5, 1:5,1),1))</command>
+<command execution_time="12">size(diff(f(1:5, 1:5,1),1,1))</command>
+<command execution_time="14">size(diff(f(1:5, 1:5,1),1,2))</command>
+<command batch="34">% parte 1</command>
+<command batch="34">part_1_second_term = zeros(Nr, Mc); % Nr =&gt; y; Mc =&gt; x;</command>
+<command batch="34">part_1_second_term = diff(rho, 1, 1)*cs2;</command>
+<command batch="34" execution_time="17">part_1_second_term(Nr, :) = part_1_second_term(Nr - 1, :);</command>
+<command execution_time="14">size(part_1_second_term)</command>
+<command execution_time="13">15 % 10</command>
+<command error="true" execution_time="16">15 mod 10</command>
+<command execution_time="21">mod(15, 10)</command>
+<command execution_time="14">mod(10000, 10)</command>
+<command batch="35">u_r = uy;</command>
+<command batch="35">derivada_ux_x = diff(ux, 1, 2);</command>
+<command batch="35">derivada_ux_x(:, Mc) = derivada_ux_x(:, Mc - 1);</command>
+<command batch="35">derivada_ur_x = diff(u_r, 1, 2);</command>
+<command batch="35">derivada_ur_x(:, Mc) = derivada_ur_x(:, Mc - 1);</command>
+<command batch="35">derivada_ux_ur_x = derivada_ux_x.*u_r + derivada_ur_x.*ux;</command>
+<command batch="35" execution_time="17">part_2_second_term = rho_l*derivada_ux_ur_x;</command>
+<command execution_time="14">size(part_2_second_term)</command>
+<command execution_time="19">size(part_1_second_term)</command>
+<command batch="36" error="true">part_3_second_term = zeros(Nr, Mc); % Nr =&gt; y; Mc =&gt; x;</command>
+<command batch="36" error="true">derivada_ur_r = diff(u_r, 1, 1);</command>
+<command batch="36" error="true">derivada_ur_r(Nr, :) = derivada_ur_r(Nr - 1, :);</command>
+<command batch="36" error="true">derivada_ur_ur_r = 2*ur.*derivada_ur_r;</command>
+<command batch="36" error="true" execution_time="454">part_3_second_term = rho_0*derivada_ur_ur_r;</command>
+<command batch="37" error="true">derivada_ur_ur_r = 2*u_r.*derivada_ur_r;part_3_second_term = zeros(Nr, Mc); % Nr =&gt; y; Mc =&gt; x;</command>
+<command batch="37" error="true">derivada_ur_r = diff(u_r, 1, 1);</command>
+<command batch="37" error="true">derivada_ur_r(Nr, :) = derivada_ur_r(Nr - 1, :);</command>
+<command batch="37" error="true">derivada_ur_ur_r = 2*u_r.*derivada_ur_r;</command>
+<command batch="37" error="true" execution_time="402">part_3_second_term = rho_0*derivada_ur_ur_r;</command>
+<command batch="38">part_3_second_term = rho_p*derivada_ur_ur_r;part_3_second_term = zeros(Nr, Mc); % Nr =&gt; y; Mc =&gt; x;</command>
+<command batch="38">derivada_ur_r = diff(u_r, 1, 1);</command>
+<command batch="38">derivada_ur_r(Nr, :) = derivada_ur_r(Nr - 1, :);</command>
+<command batch="38">derivada_ur_ur_r = 2*u_r.*derivada_ur_r;</command>
+<command batch="38" execution_time="17">part_3_second_term = rho_l*derivada_ur_ur_r;</command>
+<command execution_time="9">size(part_3_second_term)</command>
+<command batch="39">part_2_second_term = zeros(Nr, Mc); % Nr =&gt; y; Mc =&gt; x;</command>
+<command batch="39">u_r = uy;</command>
+<command batch="39">derivada_ux_x = diff(ux, 1, 2);</command>
+<command batch="39">derivada_ux_x(:, Mc) = derivada_ux_x(:, Mc - 1);</command>
+<command batch="39">derivada_ur_x = diff(u_r, 1, 2);</command>
+<command batch="39">derivada_ur_x(:, Mc) = derivada_ur_x(:, Mc - 1);</command>
+<command batch="39">derivada_ux_ur_x = derivada_ux_x.*u_r + derivada_ur_x.*ux;</command>
+<command batch="39" execution_time="18">part_2_second_term = rho_l*derivada_ux_ur_x;</command>
+<command execution_time="13">size(part_2_second_term)</command>
+<command execution_time="11">C_x(9)</command>
+<command execution_time="11">C_x(2)</command>
+<command execution_time="13">C_x(1)</command>
+<command batch="40">% parte 4</command>
+<command batch="40">part_4_second_term = zeros(Nr, Mc, 9); % Nr =&gt; y; Mc =&gt; x;</command>
+<command batch="40">derivada_ux_r = diff(ux, 1, 1);</command>
+<command batch="40">derivada_ux_r(Nr, :) = derivada_ux_r(Nr - 1, :);</command>
+<command batch="40">for direction = 1:9</command>
+<command batch="40">part_4_second_term(:, :, direction) =  ...</command>
+<command batch="40">rho_l*(derivada_ux_r - derivada_ur_x)*C_x(direction);</command>
+<command batch="40" execution_time="26">end</command>
+<command execution_time="13">size(part_4_second_term)</command>
+<command execution_time="15">a(5,5) = 1</command>
+<command execution_time="16">a(1:5,1:5) = 1</command>
+<command error="true" execution_time="16494" repeat="8">lista_3</command>
+<command execution_time="677">help chirp</command>
+<command execution_time="354033" repeat="2">lista_3</command>
+<command execution_time="10">1.8/20</command>
+<command execution_time="12">(1.8/20)*(1/sqrt(3))</command>
+<command execution_time="8">1 &lt; (1.8/20)*(1/sqrt(3))</command>
+<command execution_time="20" repeat="3">1 &gt; (1.8/20)*(1/sqrt(3))</command>
+<command execution_time="9">(120.3)*(sqrt(3))</command>
+<command execution_time="10">(120.3)*(sqrt(3))/20</command>
+<command execution_time="11">1/(120.3)*(sqrt(3))</command>
+<command execution_time="10">1/(120.3)*(sqrt(3))/20</command>
+<command execution_time="14">Dt</command>
+<command execution_time="15">10*150*sqrt(3)</command>
+<command execution_time="12">(10*150*sqrt(3))/208</command>
+<command execution_time="15">(1.8*(10*150*sqrt(3)))/208</command>
+<command execution_time="9">A = {}</command>
+<command error="true" execution_time="119">emptyA</command>
+<command error="true" execution_time="12">empty(A)</command>
+<command execution_time="34772" repeat="12">lista_3</command>
+<command execution_time="12">36.979938 - 34.597922</command>
+<command error="true" execution_time="638" repeat="15">lista_3</command>
+<command execution_time="10">a = 1:10;</command>
+<command execution_time="11">a</command>
+<command execution_time="11">flip(a)</command>
+<command error="true" execution_time="167642" repeat="15">lista_3</command>
+<command batch="41">total_time = 10*150*sqrt(3);</command>
+<command batch="41">times = 0:total_time - 1;</command>
+<command batch="41">initial_frequency = 0;</command>
+<command batch="41">radius_a = 20;</command>
+<command batch="41">number_wave = 1.8/radius_a;</command>
+<command batch="41">frequency_max_lattice = (number_wave*cs)/2*pi;</command>
+<command batch="41">source_chirp = chirp(times, ...</command>
+<command batch="41" execution_time="234">initial_frequency, times(end), frequency_max_lattice);</command>
+<command execution_time="11">size(source_chirp)</command>
+<command execution_time="347">figure; plot(source_chirp)</command>
+<command execution_time="213280" repeat="7">lista_3</command>
+<command execution_time="12">sum(uy)</command>
+<command execution_time="545">sum(uy,3)</command>
+<command execution_time="103">mean(uy)</command>
+<command execution_time="523">mean(uy,3)</command>
+<command execution_time="20">mean(mean(uy))</command>
+<command execution_time="11">mean(mean(ux))</command>
+<command execution_time="12">mean(mean(ux))/mean(mean(uy))</command>
+<command execution_time="10">ta</command>
+<command execution_time="17">total_time</command>
+<command error="true" execution_time="728151" repeat="2">lista_3</command>
+<command batch="42">fft_pressure = fft(pressure);</command>
+<command batch="42">fft_particle_velocity = fft(particle_velocity);</command>
+<command batch="42">impedance = fft_pressure./fft_particle_velocity;</command>
+<command batch="42">frequencies = 0:length(fft_pressure)-1;</command>
+<command batch="42">numbers_helmholtz = frequencies./cs*radius_a;</command>
+<command batch="42">figure(2);</command>
+<command batch="42">plot(numbers_helmholtz, real(impedance));</command>
+<command batch="42">hold on;</command>
+<command batch="42">plot(numbers_helmholtz, imag(impedance), 'r');</command>
+<command batch="42">ylabel('Impedancia','FontSize',20);</command>
+<command batch="42">xlabel('Numero de Helmholtz','FontSize',20);</command>
+<command batch="42">title('Parte Imaginaria da Impedancia','FontSize',20);</command>
+<command batch="42" execution_time="1619">legend('Real', 'Imaginario');</command>
+<command execution_time="71">figure; plot(pressure)</command>
+<command execution_time="10">total_time</command>
+<command execution_time="13">total_time/2</command>
+<command execution_time="72">figure; plot(particle_velocity)</command>
+<command execution_time="68">figure; plot(fft_pressure)</command>
+<command execution_time="12">size(fft_pressure)</command>
+<command execution_time="11">size(fft_particle_velocity)</command>
+<command execution_time="73">figure; plot(fft_particle_velocity)</command>
+<command execution_time="74">figure; plot(abs(fft_particle_velocity))</command>
+<command execution_time="101">figure; plot(abs(fft_pressure))</command>
+<command execution_time="67">figure; plot(abs(fft(pressure)))</command>
+<command execution_time="72">figure; imagesc(flip(rho-1), [-.000001 .000001])</command>
+<command execution_time="79">figure; plot(pressure)</command>
+<command batch="43">figure(2);</command>
+<command batch="43">plot(numbers_helmholtz, real(impedance));</command>
+<command batch="43">hold on;</command>
+<command batch="43">plot(numbers_helmholtz, imag(impedance), 'r');</command>
+<command batch="43">ylabel('Impedancia','FontSize',20);</command>
+<command batch="43">xlabel('Numero de Helmholtz','FontSize',20);</command>
+<command batch="43">title('Parte Imaginaria da Impedancia','FontSize',20);</command>
+<command batch="43">legend('Real', 'Imaginario');</command>
+<command batch="43" execution_time="196">%axis([0 frequencies(end) -25 25]);</command>
+<command execution_time="64">figure; plot(abs(fft_pressure))</command>
+<command execution_time="83">figure; plot(abs(fft_pressure));axis([0 1.8 0 0.333])</command>
+<command execution_time="70">figure; plot(abs(fft_pressure));axis([0 500 0 0.333])</command>
+<command execution_time="78">figure; plot(abs(fft_pressure));axis([0 50 0 0.333])</command>
+<command execution_time="83">figure; plot(abs(fft_pressure));axis([0 50 0 0.001])</command>
+<command execution_time="95">figure; plot(abs(fft_pressure));axis([0 50 0 0.003])</command>
+<command execution_time="102">figure; plot(abs(fft_pressure));axis([0 100 0 0.003])</command>
+<command execution_time="93">figure; plot(abs(fft_pressure));axis([1 100 0 0.003])</command>
+<command execution_time="95">figure; plot(abs(fft_pressure));axis([3 100 0 0.003])</command>
+<command execution_time="84">figure; plot(abs(fft_pressure));axis([3 300 0 0.003])</command>
+<command execution_time="255">close all</command>
+<command execution_time="65">figure; plot(abs(fft_pressure));axis([3 300 0 0.003])</command>
+<command error="true" execution_time="57">figure; plot(abs(fft_velocities));axis([3 300 0 0.003])</command>
+<command execution_time="65">figure; plot(abs(fft_particle_velocity));axis([3 300 0 0.003])</command>
+<command execution_time="64">figure; plot(abs(fft_particle_velocity));axis([3 300 0 0.009])</command>
+<command execution_time="17">frequency_max_lattice</command>
+<command execution_time="67">figure; imagesc(rho - 1)</command>
+<command execution_time="63">figure; imagesc(flip(rho - 1), [-.000001 .000001])</command>
+<command execution_time="18">frequency_max_lattice</command>
+<command execution_time="75">figure; plot(abs(impedance));axis([3 300 0 0.009])</command>
+<command execution_time="72">figure; plot(abs(impedance));axis([3 300 0 0.1])</command>
+<command execution_time="82" repeat="2">figure; plot(abs(impedance));axis([3 300 0 0.5])</command>
+<command execution_time="14">xlim([0 1.8])</command>
+<command error="true" execution_time="17">figure; plot(abs(impedance)))</command>
+<command execution_time="95">figure; plot(abs(impedance))</command>
+<command execution_time="76">figure; plot(real(impedance));axis([3 300 0 3])</command>
+<command execution_time="81">figure; plot(real(impedance)); hold on; plot(imag(impedance));axis([3 300 0 3])</command>
+<command execution_time="94">figure; plot(real(impedance)); hold on; plot(imag(impedance),'r');axis([3 300 0 3])</command>
+<command error="true" execution_time="407639" repeat="4">lista_3</command>
+<command execution_time="9">2*pi*20*sqrt(3)</command>
+<command execution_time="13">1.8/2*pi*20*sqrt(3)</command>
+<command execution_time="13">1.8/(2*pi*20*sqrt(3))</command>
+<command execution_time="11">frequency_max_lattice</command>
+<command execution_time="9">requency_max_lattice = 1.8/(2*pi*20*sqrt(3));</command>
+<command execution_time="10">1.8/(2*pi*20*sqrt(3))</command>
+<command execution_time="120715" repeat="5">lista_3</command>
+<command error="true" execution_time="67">linspace</command>
+<command batch="44" error="true">fft_pressure = fft(pressure);</command>
+<command batch="44" error="true">fft_particle_velocity = fft(particle_velocity);</command>
+<command batch="44" error="true">impedance = fft_pressure./fft_particle_velocity;</command>
+<command batch="44" error="true">number_helmholtz_max = (2*pi*radius_a)/cs;</command>
+<command batch="44" error="true">numbers_helmholtz = linspace(0, numbers_helmholtz, length(particle_velocity));</command>
+<command batch="44" error="true">figure(2);</command>
+<command batch="44" error="true">plot(numbers_helmholtz, real(impedance)/max(real(impedance)));</command>
+<command batch="44" error="true">hold on;</command>
+<command batch="44" error="true">plot(numbers_helmholtz, imag(impedance)/max(imag(impedance)), 'r');</command>
+<command batch="44" error="true">ylabel('Impedancia','FontSize',20);</command>
+<command batch="44" error="true">xlabel('Numero de Helmholtz','FontSize',20);</command>
+<command batch="44" error="true">title('Impedancia','FontSize',20);</command>
+<command batch="44" error="true">legend('Real', 'Imaginaria');</command>
+<command batch="44" error="true" execution_time="828">axis([0 1.8 -1 1]);</command>
+<command batch="45">fft_pressure = fft(pressure);</command>
+<command batch="45">fft_particle_velocity = fft(particle_velocity);</command>
+<command batch="45">impedance = fft_pressure./fft_particle_velocity;</command>
+<command batch="45">number_helmholtz_max = (2*pi*radius_a)/cs;</command>
+<command batch="45">numbers_helmholtz = linspace(0, number_helmholtz_max, length(particle_velocity));</command>
+<command batch="45">figure(2);</command>
+<command batch="45">plot(numbers_helmholtz, real(impedance)/max(real(impedance)));</command>
+<command batch="45">hold on;</command>
+<command batch="45">plot(numbers_helmholtz, imag(impedance)/max(imag(impedance)), 'r');</command>
+<command batch="45">ylabel('Impedancia','FontSize',20);</command>
+<command batch="45">xlabel('Numero de Helmholtz','FontSize',20);</command>
+<command batch="45">title('Impedancia','FontSize',20);</command>
+<command batch="45">legend('Real', 'Imaginaria');</command>
+<command batch="45" execution_time="171">axis([0 1.8 -1 1]);</command>
+<command batch="46">fft_pressure = fft(pressure);</command>
+<command batch="46">fft_particle_velocity = fft(particle_velocity);</command>
+<command batch="46">impedance = fft_pressure./fft_particle_velocity;</command>
+<command batch="46">number_helmholtz_max = (2*pi*radius_a)/cs;</command>
+<command batch="46">numbers_helmholtz = linspace(0, number_helmholtz_max, length(particle_velocity));</command>
+<command batch="46">figure(2);</command>
+<command batch="46">plot(numbers_helmholtz, real(impedance)/max(real(impedance)));</command>
+<command batch="46">hold on;</command>
+<command batch="46">plot(numbers_helmholtz, imag(impedance)/max(imag(impedance)), 'r');</command>
+<command batch="46">ylabel('Impedancia','FontSize',20);</command>
+<command batch="46">xlabel('Numero de Helmholtz','FontSize',20);</command>
+<command batch="46">title('Impedancia','FontSize',20);</command>
+<command batch="46" execution_time="128">legend('Real', 'Imaginaria');</command>
+<command batch="47" error="true">figure(2);</command>
+<command batch="47" error="true">plot(numbers_helmholtz, real(impedance)/max(real(impedance)));</command>
+<command batch="47" error="true">hold on;</command>
+<command batch="47" error="true">plot(numbers_helmholtz, imag(impedance)/max(real(impedance)), 'r');</command>
+<command batch="47" error="true">ylabel('Impedancia','FontSize',20);</command>
+<command batch="47" error="true">xlabel('Numero de Helmholtz','FontSize',20);</command>
+<command batch="47" error="true">title('Impedancia','FontSize',20);</command>
+<command batch="47" error="true">legend('Real', 'Imaginaria');</command>
+<command batch="47" error="true" execution_time="608">axis([0 end -real(impedance) real(impedance)]);</command>
+<command error="true" execution_time="128618">lista_3</command>
+<command execution_time="60">figure; plot(source_chirp)</command>
+<command execution_time="14">frequency_max_lattice</command>
+<command execution_time="12">number_helmholtz_max</command>
+<command error="true" execution_time="118158">lista_3</command>
+<command batch="48">fft_pressure = fft(pressure);</command>
+<command batch="48">fft_particle_velocity = fft(particle_velocity);</command>
+<command batch="48">impedance = fft_pressure./fft_particle_velocity;</command>
+<command batch="48">number_helmholtz_max = (2*pi*20)/cs;</command>
+<command batch="48">numbers_helmholtz = linspace(0, number_helmholtz_max, length(particle_velocity));</command>
+<command batch="48">figure(2);</command>
+<command batch="48">plot(numbers_helmholtz, real(impedance)/max(real(impedance)));</command>
+<command batch="48">hold on;</command>
+<command batch="48">plot(numbers_helmholtz, imag(impedance)/max(real(impedance)), 'r');</command>
+<command batch="48">ylabel('Impedancia','FontSize',20);</command>
+<command batch="48">xlabel('Numero de Helmholtz','FontSize',20);</command>
+<command batch="48">title('Impedancia','FontSize',20);</command>
+<command batch="48" execution_time="464">legend('Real', 'Imaginaria');</command>
+<command execution_time="2335797" repeat="3">lista_3</command>
+<command execution_time="8">2335.429809/60</command>
+<command error="true" execution_time="262299" repeat="4">lista_3</command>
+<command error="true" execution_time="61">axis([0 15 -real(impedance) real(impedance)]);</command>
+<command execution_time="276152" repeat="2">lista_3</command>
+<command execution_time="9">275.949076/60</command>
+<command execution_time="245929">lista_3</command>
+<command batch="49">figure(2);</command>
+<command batch="49">max_normalization = max([max(real(impedance)) max(imag(impedance))])</command>
+<command batch="49">plot(numbers_helmholtz, real(impedance)/max_normalization);</command>
+<command batch="49">hold on;</command>
+<command batch="49">plot(numbers_helmholtz, imag(impedance)/max_normalization, 'r');</command>
+<command batch="49">ylabel('Impedancia','FontSize',20);</command>
+<command batch="49">xlabel('Numero de Helmholtz','FontSize',20);</command>
+<command batch="49">title('Impedancia do Sistema','FontSize',20);</command>
+<command batch="49">legend('Real', 'Imaginaria');</command>
+<command batch="49" execution_time="414">axis([0 15 -1.2 1.2]);</command>
+<command execution_time="12">max_normalization = max([max(abs(real(impedance))) max(abs(real(impedance)))])</command>
+<command batch="50">figure(2);</command>
+<command batch="50">max_normalization = max([max(abs(real(impedance))) max(abs(real(impedance)))])</command>
+<command batch="50">plot(numbers_helmholtz, real(impedance)/max_normalization);</command>
+<command batch="50">hold on;</command>
+<command batch="50">plot(numbers_helmholtz, imag(impedance)/max_normalization, 'r');</command>
+<command batch="50">ylabel('Impedancia','FontSize',20);</command>
+<command batch="50">xlabel('Numero de Helmholtz','FontSize',20);</command>
+<command batch="50">title('Impedancia do Sistema','FontSize',20);</command>
+<command batch="50">legend('Real', 'Imaginaria');</command>
+<command batch="50" execution_time="173">axis([0 15 -1.3 1.3]);</command>
+<command execution_time="11">funcao</command>
+<command execution_time="11">matrix = zeros(10,10);</command>
+<command execution_time="13">matrix = matrix + 1;</command>
+<command execution_time="58" repeat="2">imagesc(matrix)</command>
+<command execution_time="9">hold on</command>
+<command execution_time="54">grid on</command>
+<command execution_time="10">a = [1:10];</command>
+<command execution_time="10">plot(a)</command>
+<command execution_time="17">close all</command>
+<command error="true" execution_time="373" repeat="20">teste_funcao</command>
+<command execution_time="22" repeat="2">size(a)</command>
+<command batch="51" execution_time="24" repeat="5">teste_funcao</command>
+</session>
+<session>
+<command>%-- Unknown Date --%</command>
+<command execution_time="367" repeat="19">teste_funcao</command>
+<command execution_time="10">1&lt;2</command>
+<command execution_time="10">1&lt;=2</command>
+<command execution_time="14">1&gt;=2</command>
+<command execution_time="375" repeat="2">teste_funcao</command>
+<command execution_time="18">text(0.5,0.5,'hallo','color',[0.7 0 0.7])</command>
+<command execution_time="11">text</command>
+<command execution_time="8">'some string&lt;br/&gt;'</command>
+<command execution_time="19">X = '&lt;a href = "http://www.mathworks.com"&gt;MathWorks Web Site&lt;/a&gt;';</command>
+<command execution_time="14">disp(X)</command>
+<command execution_time="371" repeat="15">teste_funcao</command>
+<command execution_time="9">floor(4.56)</command>
+<command execution_time="14">round(1.2)</command>
+<command execution_time="9">round(1.5)</command>
+<command execution_time="10">ceil(1.5)</command>
+<command execution_time="15">ceil(1.2)</command>
+<command execution_time="13">ceil(1)</command>
+<command execution_time="12">ceil(1.00001)</command>
+<command execution_time="12">ceil(0.0009)</command>
+<command execution_time="374" repeat="3">teste_funcao</command>
+<command execution_time="15">vecx</command>
+<command execution_time="365" repeat="3">teste_funcao</command>
+<command execution_time="629">help pdist</command>
+<command batch="51">X = [0,0;2,1];</command>
+<command batch="51" execution_time="474">d = pdist(X,'euclidean')</command>
+<command execution_time="13">d = pdist([0 0; 2 1; 0 0; 1 1], 'euclidean')</command>
+<command execution_time="13">d = pdist([0 0; 1 0; 0 1], 'euclidean')</command>
+<command execution_time="15">d = pdist([0 0; 1 0; 1 0], 'euclidean')</command>
+<command execution_time="14">d = pdist([0 0], 'euclidean')</command>
+<command execution_time="10">d = pdist([0 1], 'euclidean')</command>
+<command error="true" execution_time="59">d = pdist([0 0], [0 1], 'euclidean')</command>
+<command execution_time="13">d = pdist([0 0; 1 0; 1 0], 'euclidean')</command>
+<command execution_time="13">d = pdist([0 0; 1 0; 1 0; 1 0], 'euclidean')</command>
+<command execution_time="15">d = pdist([0 0; 1 0], 'euclidean')</command>
+<command execution_time="14">d = pdist([0 0; 1 0; 1 0], 'euclidean')</command>
+<command execution_time="13">d = pdist([0 0; 1 0; 1 0; 1 0], 'euclidean')</command>
+<command execution_time="121">help pdist</command>
+<command execution_time="22" repeat="5">d = pdist2([0 0], [1 1], 'euclidean')</command>
+<command execution_time="11">d = pdist2([0 0], [1 0], 'euclidean')</command>
+<command execution_time="16">d = pdist2([0 0], [0 1], 'euclidean')</command>
+<command execution_time="17" repeat="2">d = pdist2([0 0 1], [0 1 1], 'euclidean')</command>
+<command execution_time="14">d = pdist2([0 0 1.2], [0 1 1], 'euclidean')</command>
+<command execution_time="203">help pdist2</command>
+<command execution_time="12">a = [1:10];</command>
+<command execution_time="17">b = a*2;</command>
+<command execution_time="15">d = pdist2(a, b, 'euclidean')</command>
+<command execution_time="100">help pdist</command>
+<command execution_time="15">abs(-2)</command>
+<command execution_time="23">a</command>
+<command execution_time="17">find(a==4)</command>
+<command execution_time="12">a = [0:2:8]</command>
+<command execution_time="11">find(a==4)</command>
+<command execution_time="14">a = [-5:5]</command>
+<command execution_time="15">a(a&gt;0)</command>
+<command execution_time="12">a(a&lt;0)</command>
+<command execution_time="11">a(a&lt;=0)</command>
+<command error="true" execution_time="173" repeat="5">teste_funcao</command>
+<command error="true" execution_time="109">p1_x</command>
+<command execution_time="268" repeat="25">teste_funcao</command>
+<command execution_time="34" repeat="2">vecloc</command>
+<command execution_time="534" repeat="4">teste_funcao</command>
+<command execution_time="276">q</command>
+<command execution_time="12">max(q)</command>
+<command execution_time="1066" repeat="2">teste_funcao</command>
+<command execution_time="13">max(vecy) &gt; Nr</command>
+<command execution_time="920">teste_funcao</command>
+<command execution_time="18">max(vecy) &gt; Nr</command>
+<command error="true" execution_time="250">is_not_points_inside_lattice</command>
+<command execution_time="55" repeat="4">teste_funcao</command>
+<command execution_time="12">max(vecy)</command>
+<command execution_time="52">teste_funcao</command>
+<command execution_time="12">min(vecx) &lt; Mc</command>
+<command execution_time="623" repeat="5">teste_funcao</command>
+<command execution_time="11">max(vecy)</command>
+<command execution_time="16">min(vecy)</command>
+<command execution_time="727">teste_funcao</command>
+<command execution_time="17">max(vecy)</command>
+<command execution_time="19">min(vecy)</command>
+<command error="true" execution_time="74" repeat="6">teste_funcao</command>
+<command execution_time="13">a = zeros(5,5);</command>
+<command execution_time="14">a(5,5) = 1;</command>
+<command execution_time="12">find(a==1)</command>
+<command execution_time="11">a</command>
+<command execution_time="12">a(a==1)</command>
+<command execution_time="14">a(a==23)</command>
+<command execution_time="13">a(25)</command>
+<command error="true" execution_time="16">a(28)</command>
+<command execution_time="17">a(a(a==13))</command>
+<command error="true" execution_time="712" repeat="6">teste_funcao</command>
+<command execution_time="263966" repeat="2">lista_3</command>
+<command execution_time="7">frequency_max_lattice</command>
+<command execution_time="256420">lista_3</command>
+<command execution_time="8">size(impedance)</command>
+<command execution_time="230128" repeat="3">lista_3</command>
+<command error="true" execution_time="2081">gpuDevice</command>
+<command execution_time="20" repeat="14">matlab_teste</command>
+<command execution_time="142">load pressure</command>
+<command execution_time="663">pressure_90</command>
+<command execution_time="848">figure; plot(pressure_90)</command>
+<command execution_time="21">length(pressure_90)</command>
+<command execution_time="15">86948/44100</command>
+<command execution_time="99">figure; plot(pressure_90(length(pressure_90)/2:end))</command>
+<command execution_time="102">mean(pressure_90)</command>
+<command execution_time="28">load velocity</command>
+<command execution_time="104">figure; imagesc(velocity)</command>
+<command execution_time="80">figure; imagesc(velocity, [0.0001 0.03*sqrt(3)])</command>
+<command execution_time="73">figure; imagesc(velocity, [-0.0001 0.03*sqrt(3)])</command>
+<command execution_time="71">figure; imagesc(velocity, [0.00001 0.03*sqrt(3)])</command>
+<command execution_time="76">figure; imagesc(velocity, [0.00001 10*0.03*sqrt(3)])</command>
+<command execution_time="71">figure; imagesc(velocity, [0.00001 0.03])</command>
+<command execution_time="68">figure; imagesc(velocity, [0.00001 0.017])</command>
+<command execution_time="70">figure; imagesc(velocity, [0.00001 0.0001])</command>
+<command error="true" execution_time="611">figure; imagesc(velocity, [0.00001 0.00001])</command>
+<command execution_time="73">figure; imagesc(velocity, [0.00001 0.001])</command>
+<command execution_time="79">figure; imagesc(velocity, [0.00001 0.01])</command>
+<command execution_time="87">figure; imagesc(velocity, [0.00001 0.005])</command>
+<command execution_time="174">close all</command>
+<command error="true" execution_time="388">streamslice(velocity)</command>
+<command error="true" execution_time="479">quiver(velocity)</command>
+<command execution_time="13">size(velocity)</command>
+<command execution_time="12">tam = size(velocity);</command>
+<command error="true" execution_time="284">quiver(tam(1), tam(2),velocity)</command>
+<command execution_time="983">contour(velocity)</command>
+<command execution_time="17">imagesc</command>
+<command execution_time="24">load uy.mat</command>
+<command execution_time="23">load ux.mat</command>
+<command execution_time="75">figure; imagesc(ux);</command>
+<command execution_time="73">figure; imagesc(velocity);</command>
+<command execution_time="66">figure; imagesc(uy);</command>
+<command error="true" execution_time="224">D</command>
+<command error="true" execution_time="115">DAStudi</command>
+<command error="true" execution_time="1589">lista_4</command>
+<command execution_time="12">Dt*48000</command>
+<command execution_time="15">Dt*85000</command>
+<command execution_time="18">Dt*40000</command>
+<command error="true" execution_time="37942">lista_4</command>
+<command execution_time="1336">help cart2pol</command>
+<command execution_time="263">help pol2cart</command>
+<command error="true" execution_time="153">c{1} = a</command>
+<command error="true" execution_time="930" repeat="7">lista_4</command>
+<command execution_time="49">teste</command>
+<command execution_time="14">x = zeros(length(Angle));</command>
+<command execution_time="30">x</command>
+<command execution_time="40" repeat="2">teste</command>
+<command execution_time="19" repeat="2">clc</command>
+<command execution_time="22">teste</command>
+<command execution_time="16">size(x)</command>
+<command execution_time="22">size(y)</command>
+<command execution_time="16">size(Angle)</command>
+<command execution_time="23">clear all</command>
+<command execution_time="23">close all</command>
+<command execution_time="51" repeat="4">teste</command>
+<command error="true" execution_time="1078800">lista_4</command>
+<command execution_time="19">clear all</command>
+<command execution_time="125">close all</command>
+<command execution_time="14">load pressure.mat</command>
+<command execution_time="184">figure; plot(pressure_1)</command>
+<command execution_time="446">figure; abs(fft(plot(pressure_1)))</command>
+<command execution_time="372">figure; plot(abs(fft((pressure_1))))</command>
+<command execution_time="75">figure; plot(pressure_1)</command>
+<command execution_time="19">pressure = pressure_1 - mean(pressure_1);</command>
+<command execution_time="75">figure; plot(pressure)</command>
+<command execution_time="88">figure; plot(abs(fft((pressure_1))))</command>
+<command execution_time="15">freq = 1:length(pressure);</command>
+<command execution_time="15">freq = 0:(length(pressure)-1)/length(pressure);</command>
+<command execution_time="14">freq(end)</command>
+<command execution_time="15">freq = 0:(length(pressure)-1)/length(pressure)</command>
+<command execution_time="14">freq = 0:1:(length(pressure)-1)/length(pressure);</command>
+<command execution_time="14">freq = 0:1:(length(pressure)-1)/length(pressure)</command>
+<command execution_time="251">freq = [0:1:(length(pressure)-1)]/length(pressure)</command>
+<command execution_time="14">freq = [0:1:(length(pressure)-1)]/length(pressure);</command>
+<command execution_time="13">st = freq*40*sqrt(3);</command>
+<command execution_time="71">figure; plot(st, abs(fft((pressure_1))));</command>
+<command execution_time="19">load ux.mat</command>
+<command execution_time="12">st = freq*40/0.0577;</command>
+<command execution_time="86">figure; plot(st, abs(fft((pressure_1))));</command>
+<command execution_time="68">figure; imagesc(ux)</command>
+<command execution_time="16">length(pressure)</command>
+<command error="true" execution_time="15">80*502*sqrt</command>
+<command execution_time="12">80*502*sqrt(3)</command>
+<command execution_time="165">ls</command>
+<command execution_time="21">load ux.mat</command>
+<command execution_time="9">close all</command>
+<command execution_time="56">clear all</command>
+<command execution_time="22">load ux.mat</command>
+<command execution_time="203">figure; imagesc(ux, [0.0001 0.05])</command>
+<command execution_time="79">figure; imagesc(ux, [0.01 0.05])</command>
+<command execution_time="65">figure; imagesc(ux, [0.00001 0.05])</command>
+<command execution_time="10">1.6913e-06* 7.3907e+04</command>
+<command execution_time="13">load pressure.mat</command>
+<command error="true" execution_time="74">figure; plot(pressure)</command>
+<command execution_time="71">figure; plot(pressure_1)</command>
+<command execution_time="11">pressure = pressure_1(22000: end);</command>
+<command execution_time="66">figure; plot(pressure)</command>
+<command execution_time="17">pressure = pressure - mean(pressure);</command>
+<command execution_time="73">figure; plot(pressure)</command>
+<command execution_time="110">figure; plot(abs(fft(pressure)))</command>
+<command execution_time="11">freq=linspace(0,1,length(pressure));</command>
+<command execution_time="11">st=freq*40/(0.1*(1/sqrt(3)));</command>
+<command execution_time="80">figure; plot(st,abs(fft(pressure)))</command>
+<command execution_time="13">freq=linspace(0,1,length(pressure_1));</command>
+<command error="true" execution_time="104">figure; plot(st,abs(fft(pressure_1)))</command>
+<command execution_time="21">st=freq*40/(0.1*(1/sqrt(3)));</command>
+<command execution_time="95">figure; plot(st,abs(fft(pressure_1)))</command>
+<command execution_time="84">figure; plot(pressure_1)</command>
+<command execution_time="17">pressure = pressure_1(30000: end);</command>
+<command error="true" execution_time="91">figure; plot(st,abs(fft(pressure)))</command>
+<command execution_time="21">st=freq*40/(0.1*(1/sqrt(3)));</command>
+<command execution_time="27">freq=linspace(0,1,length(pressure_1));</command>
+<command execution_time="22">st=freq*40/(0.1*(1/sqrt(3)));</command>
+<command error="true" execution_time="98">figure; plot(st,abs(fft(pressure)))</command>
+<command execution_time="19">freq=linspace(0,1,length(pressure_1));</command>
+<command execution_time="17">freq=linspace(0,1,length(pressure));</command>
+<command execution_time="16">st=freq*40/(0.1*(1/sqrt(3)));</command>
+<command execution_time="121">figure; plot(st,abs(fft(pressure)))</command>
+<command execution_time="44" repeat="2">axis([0.02 2 0 4])</command>
+<command execution_time="120">figure; plot(st,abs(fft(pressure)))</command>
+<command execution_time="25">axis([0.02 2 0 4])</command>
+<command execution_time="17">pressure = pressure_1(40000: end);</command>
+<command execution_time="22">freq=linspace(0,1,length(pressure));</command>
+<command execution_time="25">st=freq*40/(0.1*(1/sqrt(3)));</command>
+<command execution_time="106">figure; plot(st,abs(fft(pressure)))</command>
+<command execution_time="22">axis([0.02 2 0 4])</command>
+<command execution_time="15">pressure = pressure_1(50000: end);</command>
+<command execution_time="19">freq=linspace(0,1,length(pressure));</command>
+<command execution_time="24">st=freq*40/(0.1*(1/sqrt(3)));</command>
+<command execution_time="113">figure; plot(st,abs(fft(pressure)))</command>
+<command execution_time="23">axis([0.02 2 0 4])</command>
+<command execution_time="105">figure; plot(pressure_1)</command>
+<command execution_time="16">pressure = pressure_1(14500: end);</command>
+<command execution_time="23">freq=linspace(0,1,length(pressure));</command>
+<command execution_time="20">st=freq*40/(0.1*(1/sqrt(3)));</command>
+<command execution_time="187">figure; plot(st,abs(fft(pressure)))</command>
+<command execution_time="27">axis([0.02 2 0 4])</command>
+<command execution_time="15">axis([0.02 2 0 4.5])</command>
+<command execution_time="18">axis([0.02 2 0 5])</command>
+<command execution_time="17">ls</command>
+<command execution_time="90">figure;</command>
+<command execution_time="141">subplot(3, 1, 1);</command>
+<command execution_time="14">imagesc(ux)</command>
+<command execution_time="17">subplot(1, 3, 1);</command>
+<command execution_time="17">imagesc(ux)</command>
+<command execution_time="182">close all</command>
+<command execution_time="67">figure;</command>
+<command execution_time="14">imagesc(ux,[0.0001 0.05])</command>
+<command execution_time="52">axis equal</command>
+<command error="true" execution_time="143">imagesc(ux,[0.1 0.05])</command>
+<command execution_time="21">imagesc(ux,[0.0001 0.05])</command>
+<command execution_time="16">imagesc(ux,[0.01 0.05])</command>
+<command execution_time="15">imagesc(ux,[0.0000000001 0.05])</command>
+<command execution_time="17">imagesc(ux,[0.0001 0.02])</command>
+<command execution_time="19">imagesc(ux,[0.0001 0.06])</command>
+<command execution_time="16">imagesc(ux,[0.0001 0.08])</command>
+<command execution_time="15">imagesc(ux,[0.0001 0.04])</command>
+<command execution_time="14">imagesc(ux,[-0.0001 0.04])</command>
+<command execution_time="22">imagesc(ux,[-0.01 0.04])</command>
+<command execution_time="18">imagesc(ux,[-0.1 0.04])</command>
+<command execution_time="27">imagesc(ux,[-0.01 0.04])</command>
+<command execution_time="15">imagesc(ux,[-0.05 0.05])</command>
+<command execution_time="17">imagesc(ux,[-0.01 0.05])</command>
+<command execution_time="20">axis equal</command>
+<command execution_time="22">load uy</command>
+<command execution_time="412">curl(ux,uy);</command>
+<command execution_time="55">vort=curl(ux,uy);</command>
+<command execution_time="17">imagesc(vort,[-0.01 0.05])</command>
+<command execution_time="15">imagesc(vort,[0.01 0.05])</command>
+<command execution_time="18">imagesc(vort,[-0.01 0.00001])</command>
+<command execution_time="17">imagesc(vort,[-0.01 0.001])</command>
+<command execution_time="20">imagesc(vort,[-0.01 0.005])</command>
+<command execution_time="21">axis equal</command>
+<command execution_time="28">load('rho.mat')</command>
+<command execution_time="990">pres=(rho-1)*(1/sqrt(3))</command>
+<command execution_time="12">pres=(rho-1)*(1/sqrt(3));</command>
+<command execution_time="66">figure;imagesc(pres, [-0.001 0.001])</command>
+<command execution_time="78">figure;imagesc(pres, [-0.0001 0.0001])</command>
+<command execution_time="74">figure;imagesc(pres, [-0.01 0.01])</command>
+<command execution_time="74">figure;imagesc(pres, [-0.005 0.005])</command>
+<command execution_time="80">figure;imagesc(pres, [-0.007 0.007])</command>
+<command execution_time="91">figure;imagesc(pres, [-0.003 0.003])</command>
+<command execution_time="79">figure;imagesc(pres, [-0.002 0.002])</command>
+<command execution_time="340">figure;contour(pres, [-0.002 0.002])</command>
+<command execution_time="355">figure;surf(pres, [-0.002 0.002])</command>
+<command batch="52">figure;imagesc(pres, [-0.002 0.002])</command>
+<command batch="52">figure;imagesc(pres, [-0.002 0.002])</command>
+<command batch="52">axis equal</command>
+<command batch="52">figure;imagesc(pres, [-0.002 0.002])</command>
+<command batch="52">axis equal</command>
+<command batch="52">figure;imagesc(pres, [-0.002 0.002])</command>
+<command execution_time="49">load('rho.mat')</command>
+<command execution_time="21">pres=(rho-1)*(1/sqrt(3));</command>
+<command execution_time="637">figure;imagesc(pres, [-0.002 0.002])</command>
+<command execution_time="97">figure;imagesc(pres, [-0.003 0.003])</command>
+<command execution_time="41">axis equal</command>
+<command execution_time="100">figure;imagesc(pres, [-0.002 0.002])</command>
+<command error="true" execution_time="98">loa</command>
+<command execution_time="15">load pressure.mat</command>
+<command execution_time="15">pressure = pressure_1(14500: end);</command>
+<command execution_time="21">freq=linspace(0,1,length(pressure));</command>
+<command error="true" execution_time="90">figure; plot(st,abs(fft(pressure)))</command>
+<command execution_time="299">figure; plot(freq,abs(fft(pressure)))</command>
+<command execution_time="37">axis([0.02 2 0 4])</command>
+<command execution_time="13">axis([0 1 0 4])</command>
+<command execution_time="13">axis([0 0.05 0 4])</command>
+<command execution_time="11">axis([0 0.002 0 4])</command>
+<command execution_time="14" repeat="2">axis([0 0.002 0 4.5])</command>
+<command execution_time="15">axis([0 0.002 0 5])</command>
+<command execution_time="13">size(pressure)</command>
+<command error="true" execution_time="13">find(pressure=4.555)</command>
+<command execution_time="17">find(pressure==4.555)</command>
+<command execution_time="108" repeat="2">figure; plot(abs(fft(pressure)))</command>
+<command execution_time="18">axis([0 150 0 5])</command>
+<command execution_time="300">load struct_pressure.mat</command>
+<command execution_time="11">ps = struct_pressure{1};</command>
+<command execution_time="88" repeat="2">figure; plot(ps);</command>
+<command execution_time="1059">struct_pressure_1</command>
+<command execution_time="14">Angle</command>
+<command execution_time="150">close all</command>
+<command execution_time="13">cd Mach_0.07/</command>
+<command execution_time="27">load ux.mat</command>
+<command execution_time="77">clear all</command>
+<command execution_time="25">load ux.mat</command>
+<command execution_time="205">figure; imagesc(ux, [0.0001 0.07*(sqrt(3))^(-1)]);</command>
+<command execution_time="79">figure; imagesc(ux, [-0.0001 0.07*(sqrt(3))^(-1)]);</command>
+<command execution_time="67">figure; imagesc(ux, [-0.1 0.07*(sqrt(3))^(-1)]);</command>
+<command execution_time="69">figure; imagesc(ux, [-0.01 0.07*(sqrt(3))^(-1)]);</command>
+<command execution_time="33">axis equal;</command>
+<command execution_time="26">load uy;</command>
+<command execution_time="65">figure; imagesc(uy, [-0.01 0.07*(sqrt(3))^(-1)]);</command>
+<command execution_time="80">vorticidade = curl(ux, uy);</command>
+<command execution_time="75">figure; imagesc(vorticidade, [-0.01 0.07*(sqrt(3))^(-1)]);</command>
+<command execution_time="70">figure; imagesc(vorticidade, [-0.001 0.07*(sqrt(3))^(-1)]);</command>
+<command execution_time="68">figure; imagesc(vorticidade, [0.001 0.07*(sqrt(3))^(-1)]);</command>
+<command error="true" execution_time="111">imagesc(vort,[-0.01 0.005])</command>
+<command execution_time="71">figure; imagesc(vorticidade, [-0.01 0.005]);</command>
+<command execution_time="71">figure; imagesc(vorticidade, [-0.01 0.003]);</command>
+<command execution_time="66">figure; imagesc(vorticidade, [-0.001 0.003]);</command>
+<command execution_time="66">figure; imagesc(vorticidade, [-0.001 0.005]);</command>
+<command execution_time="67">figure; imagesc(vorticidade, [-0.001 0.002]);</command>
+<command execution_time="58">axis equal;</command>
+<command execution_time="78">figure; imagesc(vorticidade, [-0.001 0.002]);</command>
+<command execution_time="17">axis equal;</command>
+<command execution_time="16">cd ..</command>
+<command execution_time="10">cd Mach_0.1/</command>
+<command execution_time="10">cd ..</command>
+<command execution_time="12">cd Mach_0.07/</command>
+<command execution_time="13">load pressure.mat</command>
+<command execution_time="96">figure; plot(pressure_1)</command>
+<command execution_time="19" repeat="2">commandhistory</command>
+<command execution_time="18">prefdir</command>
+<command execution_time="12">cd ..</command>
+<command execution_time="11">cd Mach_0.1/</command>
+<command execution_time="1210">open pressao_estabilizada.fig</command>
+<command error="true" execution_time="58">open pressaocontour.fig.fig</command>
+<command execution_time="371">open pressaocontour.fig</command>
+<command execution_time="10">cd ..</command>
+<command execution_time="8">cd Mach_0.07/</command>
+<command execution_time="13">pressure = pressure_1(14500: end);</command>
+<command execution_time="66">figure; plot(pressure)</command>
+<command execution_time="66">figure; plot(pressure_1)</command>
+<command execution_time="76">figure; plot(pressure)</command>
+<command execution_time="13">pressure = pressure_1(13000: end);</command>
+<command execution_time="75">figure; plot(pressure)</command>
+<command execution_time="11">pressure = pressure_1(10000: end);</command>
+<command execution_time="65">figure; plot(pressure)</command>
+<command execution_time="23">pressure = pressure_1(14500: end) - mean(pressure_1(14500: end));</command>
+<command execution_time="88">figure; plot(pressure)</command>
+<command execution_time="12">freq=linspace(0,1,length(pressure));</command>
+<command execution_time="16" repeat="2">st=freq*40/(0.1*(1/sqrt(3)));</command>
+<command execution_time="75">figure; plot(st,abs(fft(pressure)))</command>
+<command execution_time="35">axis([0.02 2 0 5])</command>
+<command execution_time="60">axis([0.02 2 0 4])</command>
+<command execution_time="78">figure; plot(st,abs(fft(pressure)))</command>
+<command execution_time="14">axis([0.02 2 0 4])</command>
+<command execution_time="28">plot(st,abs(fft(pressure)))</command>
+<command execution_time="81">figure; plot(st,abs(fft(pressure)))</command>
+<command execution_time="19">axis([0.02 2 0 4])</command>
+<command execution_time="18">axis([0.02 2 0 1.5])</command>
+<command execution_time="20">load rho</command>
+<command execution_time="22">pres=(rho-1)*(1/sqrt(3));</command>
+<command execution_time="68">figure;imagesc(pres, [-0.002 0.002]);</command>
+<command execution_time="69">figure;imagesc(pres, [-0.001 0.001]);</command>
+<command execution_time="78">figure;imagesc(pres, [-0.0001 0.0001]);</command>
+<command execution_time="79">figure;imagesc(pres, [-0.1 0.1]);</command>
+<command execution_time="78">figure;imagesc(pres, [-0.01 0.01]);</command>
+<command execution_time="72">figure;imagesc(pres, [-0.001 0.001]);</command>
+<command execution_time="80">close all</command>
+<command execution_time="336">open ../Mach_0.1/pressaocontour.fig</command>
+<command execution_time="69">figure;imagesc(pres, [-0.001 0.001]); axis equal;</command>
+<command execution_time="77">figure;imagesc(pres, [-0.002 0.002]); axis equal;</command>
+<command execution_time="1056">struct_pressure_1</command>
+<command execution_time="46">close all</command>
+<command execution_time="724">open fft_pressao</command>
+<command execution_time="356">open fft_pressao.fig</command>
+<command execution_time="10">1.6913e-06* 8.6949e+04</command>
+<command execution_time="10">cd ..</command>
+<command execution_time="10">cd Mach_0.03/</command>
+<command execution_time="156">open pressure</command>
+<command execution_time="94">clear all</command>
+<command execution_time="24">close all</command>
+<command execution_time="120">open pressure.mat</command>
+<command error="true" execution_time="67">figure; plot(ans)</command>
+<command error="true" execution_time="64">figure; plot(an)</command>
+<command error="true" execution_time="67">figure; plot(pressure_1)</command>
+<command execution_time="22">open pressure.mat</command>
+<command error="true" execution_time="72">figure; plot(pressure_1)</command>
+<command error="true" execution_time="13">open pressure.mat p</command>
+<command execution_time="17">open pressure.mat</command>
+<command error="true" execution_time="15">a = open pressure.mat</command>
+<command execution_time="19">a = open('pressure.mat')</command>
+<command execution_time="15">pressure_1 = a.pressure_1;</command>
+<command execution_time="213">figure; plot(pressure_1)</command>
+<command batch="53" execution_time="74" repeat="2">figure; plot(pressure_1, '*-')</command>
+<command execution_time="19">cd lista_4/</command>
+<command execution_time="14">cd Mach_0.03/</command>
+<command execution_time="50">ls</command>
+<command execution_time="132">a=open('pressure.mat') ;</command>
+<command execution_time="25">pressure_1 = a.pressure_1;</command>
+<command execution_time="510">figure; plot(pressure_1)</command>
+<command execution_time="89">figure; plot(pressure_1(14500:end))</command>
+<command execution_time="96">figure; plot(pressure_1(14500:end) - mean(pressure_1(14500:end)))</command>
+<command execution_time="16">freq=linspace(0,1,length(pressure_1));</command>
+<command execution_time="12">st=freq*40/(0.1*(1/sqrt(3)));</command>
+<command error="true" execution_time="57">&gt;figure; plot(st,abs(fft(pressure)))</command>
+<command error="true" execution_time="73">figure; plot(st,abs(fft(pressure)))</command>
+<command execution_time="148">figure; plot(st,abs(fft(pressure_1)))</command>
+<command execution_time="53">axis([0.02 2 0 4])</command>
+<command execution_time="95">figure; plot(st,abs(fft(pressure_1)))</command>
+<command execution_time="12">st=freq*39/(0.1*(1/sqrt(3)));</command>
+<command execution_time="87">figure; plot(st,abs(fft(pressure_1)))</command>
+<command execution_time="19">st=freq*41/(0.1*(1/sqrt(3)));</command>
+<command execution_time="93">figure; plot(st,abs(fft(pressure_1)))</command>
+<command execution_time="23">load('ux.mat')</command>
+<command execution_time="123">imagesc(ux,[0.0001 0.0173])</command>
+<command execution_time="20">imagesc(ux,[0.0001 0.02])</command>
+<command execution_time="14">imagesc(ux,[0.01 0.02])</command>
+<command error="true" execution_time="43">imagesc(ux,[0.01 0.0002])</command>
+<command execution_time="19">imagesc(ux,[0.01 0.1])</command>
+<command execution_time="18">imagesc(ux,[0.01 0.05])</command>
+<command execution_time="22">imagesc(ux,[0.01 0.02])</command>
+<command execution_time="20">imagesc(ux,[0.01 0.03])</command>
+<command execution_time="19">imagesc(ux,[0.01 0.015])</command>
+<command execution_time="19">imagesc(ux,[0.01 0.02])</command>
+<command execution_time="21">imagesc(ux,[0.000001 0.02])</command>
+<command execution_time="18">imagesc(ux,[-0.0001 0.02])</command>
+<command execution_time="18">imagesc(ux,[-0.01 0.02])</command>
+<command execution_time="21">imagesc(ux,[-0.001 0.02])</command>
+<command execution_time="26">imagesc(ux,[-0.05 0.02])</command>
+<command execution_time="20">imagesc(ux,[-0.001 0.02])</command>
+<command execution_time="22">imagesc(ux,[-0.08 0.02])</command>
+<command execution_time="20">imagesc(ux,[-0.01 0.02])</command>
+<command execution_time="15">imagesc(ux,[-0.02 0.02])</command>
+<command execution_time="19">imagesc(ux,[-0.03 0.02])</command>
+<command execution_time="21">imagesc(ux,[-0.008 0.02])</command>
+<command execution_time="31" repeat="3">imagesc(ux,[-0.007 0.02])</command>
+<command execution_time="25">load('uy.mat')</command>
+<command execution_time="92">vort=curl(ux,uy);</command>
+<command execution_time="17">imagesc(vort,[-0.007 0.02])</command>
+<command execution_time="16">imagesc(vort,[-0.01 0.02])</command>
+<command execution_time="18">imagesc(vort,[-0.01 0.002])</command>
+<command execution_time="16">imagesc(vort,[-0.01 0.001])</command>
+<command execution_time="19">imagesc(vort,[-0.01 0.0008])</command>
+<command execution_time="17">imagesc(vort,[-0.001 0.0008])</command>
+<command execution_time="19">imagesc(vort,[-0.0008 0.0008])</command>
+<command execution_time="18">imagesc(vort,[-0.0007 0.0008])</command>
+<command execution_time="26">imagesc(ux,[-0.007 0.02])</command>
+<command execution_time="395">contour(ux,[-0.007 0.02])</command>
+<command execution_time="129">contour(ux)</command>
+<command execution_time="20">re=0.15*(1/sqrt(3))*1</command>
+<command batch="54">Nr = 502;                    % Number of lines   (cells in the y direction)</command>
+<command batch="54">Mc = 502;                    % Number of columns (cells in the x direction)</command>
+<command batch="54">% Block 2</command>
+<command batch="54">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</command>
+<command batch="54">%%% Physical parameters (macro)</command>
+<command batch="54">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</command>
+<command batch="54">c_p = 340;                    % Sound velocity on the fluid [m/s]</command>
+<command batch="54">rho_p = 1.2;                  % physical density [kg/m^3]</command>
+<command batch="54">rho_p = 1;                    % Fluid density  [kg/m^3]</command>
+<command batch="54">Lx = .5;                      % Maximun dimenssion in the x direction [m]</command>
+<command batch="54">Ly = 0.0833;                  % Maximun dimenssion on th y direction  [m]</command>
+<command batch="54">Dx = Lx/Mc                    % Lattice space (pitch)</command>
+<command batch="54">Dt = (1/sqrt(3))*Dx/c_p       % lattice time step</command>
+<command batch="54">% Block 3</command>
+<command batch="54">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</command>
+<command batch="54">%%% Lattice parameters (micro - lattice unities)</command>
+<command batch="54">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</command>
+<command batch="54">omega = 1.93;                                      % Relaxation frequency</command>
+<command batch="54">tau = 1/omega;                                    % Relaxation time</command>
+<command batch="54">rho_l = 1;                                        % avereged fluid density (latice density</command>
+<command batch="54">cs = 1/sqrt(3);                                   % lattice speed of sound</command>
+<command batch="54">cs2 = cs^2;                                       % Squared speed of sound cl^2</command>
+<command batch="54" execution_time="43">visc = cs2*(1/omega-0.5);</command>
+<command execution_time="17">re=0.15*(1/sqrt(3))*1*40/visc</command>
+<command execution_time="15">re=0.03*(1/sqrt(3))*1*40/visc</command>
+<command execution_time="108">close all</command>
+<command execution_time="10">cd ..</command>
+<command execution_time="13">cd Mach_0.1/</command>
+<command error="true" execution_time="246">campo_acustico = (rho - 1)/3;</command>
+<command execution_time="21">load rho</command>
+<command execution_time="20">campo_acustico = (rho - 1)/3;</command>
+<command execution_time="68">imagesc(campo_acustico)</command>
+<command execution_time="66">imagesc(campo_acustico, [-0.0001 0.0001])</command>
+<command execution_time="72" repeat="2">imagesc(campo_acustico, [-0.001 0.001])</command>
+<command error="true" execution_time="219">figure; imagecs(abs(fft2(campo_acustico)));</command>
+<command execution_time="33">size(abs(fft2(campo_acustico)))</command>
+<command execution_time="89">plot(abs(fft2(campo_acustico)))</command>
+<command error="true" execution_time="150">imageshow(abs(fft2(campo_acustico)))</command>
+<command execution_time="935">imshow(mat2gray(abs(fft2(campo_acustico))));</command>
+<command execution_time="124">imshow(mat2gray(abs(fft2(campo_acustico))), [-0.001, 0.001]);</command>
+<command execution_time="73">imshow(mat2gray(abs(fft2(campo_acustico(1:250, 1:250)))), [-0.001, 0.001]);</command>
+<command execution_time="272">figure; imshow(mat2gray(abs(fft2(campo_acustico))), [-0.001, 0.001]);</command>
+<command execution_time="269">figure; imshow(mat2gray(abs(fft2(campo_acustico(1:250, 1:250)))), [-0.0001, 0.0001]);</command>
+<command execution_time="239">figure; imshow(mat2gray(abs(fft2(campo_acustico(1:250, 1:250)))), [-0.01, 0.01]);</command>
+<command execution_time="271">figure; imshow(mat2gray(abs(fft2(campo_acustico(1:250, 1:250)))), [-0.001, 0.001]);</command>
+<command execution_time="243">figure; imshow(mat2gray(abs(fft2(campo_acustico(1:250, 1:250)))), [-0.01, 0.001]);</command>
+<command execution_time="248">figure; imshow(mat2gray(abs(fft2(campo_acustico(1:250, 1:250)))), [-0.005, 0.001]);</command>
+<command execution_time="308">figure; imshow(mat2gray(abs(fft2(campo_acustico(1:250, 1:250)))), [-0.005, 0.005]);</command>
+<command execution_time="332">figure; imshow(mat2gray(abs(fft2(campo_acustico))), [-0.001, 0.001]);</command>
+<command error="true" execution_time="44">open fft_pressure</command>
+<command execution_time="660">open fft_pressure.fig</command>
+<command execution_time="12">freq=(0.08164*0.1*(1/sqrt(3)))/40</command>
+<command execution_time="13">k = 2*pi*freq/(1/sqrt(3))</command>
+<command execution_time="28">fft_2_campo_acustico = abs(fft2(campo_acustico));</command>
+<command execution_time="39">find(fft_2_campo_acustico &lt; k)</command>
+<command execution_time="1965">find(fft_2_campo_acustico &gt; k)</command>
+<command execution_time="17">size(find(fft_2_campo_acustico &gt; k))</command>
+<command execution_time="12">size(find(fft_2_campo_acustico &lt; k))</command>
+<command execution_time="12">size(fft_2_campo_acustico)</command>
+<command execution_time="17">size(fft_2_campo_acustico)*.502</command>
+<command execution_time="784">help hanning</command>
+<command execution_time="158">figure; plot(hanning(1000))</command>
+<command execution_time="16">[r, c]=size(fft_2_campo_acustico)</command>
+<command execution_time="368">w = window2(r, c, @barthannwin);</command>
+<command execution_time="1147">w</command>
+<command execution_time="68">figure;imagesc(w)</command>
+<command execution_time="81">figure; plot(hanning(1000))</command>
+<command execution_time="23">size(find(fft_2_campo_acustico &gt; k))</command>
+<command execution_time="13">size(find(fft_2_campo_acustico &lt; k))</command>
+<command execution_time="610">help fft</command>
+<command execution_time="11">a = [1:100];</command>
+<command execution_time="15">fft(a, length(a), 2)</command>
+<command execution_time="67" repeat="2">fft(a, length(a), 1)</command>
+<command execution_time="14">fft(a, length(a), 2)</command>
+<command execution_time="86" repeat="2">processar_filtro</command>
+<command execution_time="9">k</command>
+<command execution_time="82">processar_filtro</command>
+<command execution_time="12">strouhals</command>
+<command execution_time="95">processar_filtro</command>
+<command execution_time="42">close all</command>
+<command execution_time="395">processar_filtro</command>
+<command execution_time="9">k</command>
+<command execution_time="12">min(k_s)</command>
+<command execution_time="15">k_s(2)</command>
+<command execution_time="10">k_s(1)</command>
+<command execution_time="12">k_s(2)</command>
+<command execution_time="422">processar_filtro</command>
+<command execution_time="12">k</command>
+<command execution_time="285" repeat="5">processar_filtro</command>
+<command execution_time="10">k</command>
+<command error="true" execution_time="171">imagesc(fft_campo_acustico)</command>
+<command execution_time="65">figure;imagesc(campo_acustico)</command>
+<command execution_time="62">figure;imagesc(campo_acustico, [-0.0001 0.0001])</command>
+<command execution_time="377">processar_filtro</command>
+<command execution_time="979">open diretividade.fig</command>
+<command execution_time="436">open fft_pressure.fig</command>
+<command execution_time="298">load struct_pressure.mat</command>
+<command error="true" execution_time="13">struct_pressure{90};</command>
+<command execution_time="407">open fft_pressure.fig</command>
+<command execution_time="18">freq=(0.08164*0.1*(1/sqrt(3)))/40</command>
+<command execution_time="13">k=2*pi*freq*sqrt(3)</command>
+<command execution_time="12">pi*sqrt(3)</command>
+<command execution_time="98">figure;imagesc(campo_acustico, [-0.0001 0.0001])</command>
+<command execution_time="82" repeat="2">figure;imagesc(campo_acustico, [-0.001 0.001])</command>
+<command execution_time="364" repeat="3">processar_filtro</command>
+<command execution_time="129">figure;imagesc(campo_acustico, [-0.001 0.001])</command>
+<command execution_time="290">help hanning</command>
+<command execution_time="18">freq=(0.08164*0.1*(1/sqrt(3)))/40</command>
+<command execution_time="12">1/(freq*sqrt(3))</command>
+<command execution_time="19">4.8996e+03/10</command>
+<command execution_time="16">(4.8996e+03/10)/2</command>
+<command execution_time="15">cd ..</command>
+<command execution_time="13">cd Mach_0.07/</command>
+<command execution_time="8">cd ..</command>
+<command execution_time="9">cd Mach_0.03/</command>
+<command execution_time="11">a = load('pressure.mat');</command>
+<command execution_time="11">cd ..</command>
+<command execution_time="8">cd Mach_0.1/</command>
+<command error="true" execution_time="159">imageshow(abs(fft2(campo_acustico)))</command>
+<command error="true" execution_time="84">w</command>
+<command error="true" execution_time="236">w = window2(r, c, @barthannwin);</command>
+<command execution_time="26">w = window2(501, 501, @barthannwin);</command>
+<command execution_time="79">figure; imagesc(w)</command>
+<command execution_time="643">processar_filtro</command>
+<command execution_time="10">k</command>
+<command execution_time="373">processar_filtro</command>
+<command execution_time="19">k</command>
+<command execution_time="1139">struct_pressure_1</command>
+<command error="true" execution_time="87">figure; imagesc(w)</command>
+<command execution_time="29">w = window2(501, 501, @barthannwin);</command>
+<command execution_time="102">figure; imagesc(w)</command>
+<command execution_time="12" repeat="2">cd ..</command>
+<command execution_time="16">cd case_modes/</command>
+<command execution_time="40033" repeat="3">case_modes</command>
+<command batch="55">% Processando o campo acustico</command>
+<command batch="55">campo_acustico = (rho(1:(100-1), 1:(150-1)) - 1)/3;</command>
+<command batch="55">fft_campo_acustico = fft(campo_acustico, length(campo_acustico), 2);</command>
+<command batch="55" execution_time="85">figure; plot(abs(fft_campo_acustico), '*');</command>
+<command batch="56">figure; plot(abs(fft_campo_acustico), '*');</command>
+<command execution_time="20">cd case_modes/</command>
+<command batch="57" execution_time="253" repeat="14">case_modes</command>
+</session>
+<session>
+<command>%-- Unknown Date --%</command>
+<command error="true" execution_time="193275" repeat="4">case_modes</command>
+<command batch="57">plot(frequencias, abs_fft_campo_acustico_linha_50);</command>
+<command batch="57" execution_time="86">axis([0 0.5 0 1.2]);</command>
+<command execution_time="389916" repeat="2">case_modes</command>
+<command execution_time="64">figure; imagesc(flip(abs(fft_campo_acustico)));</command>
+<command error="true" execution_time="159775" repeat="4">case_modes</command>
+<command execution_time="31">mean(f)</command>
+<command execution_time="26">max(f)</command>
+<command execution_time="558">max(f, 1)</command>
+<command execution_time="555">max(f, 2)</command>
+<command execution_time="540">max(f, 3)</command>
+<command execution_time="25" repeat="2">max(f)</command>
+<command execution_time="35">min(f)</command>
+<command execution_time="28">max(f, [], 1)</command>
+<command execution_time="29">max(f, [], 2)</command>
+<command execution_time="11">max(campo_acustico, [], 2)</command>
+<command execution_time="14">max(campo_acustico, [], 1)</command>
+<command execution_time="13">max(campo_acustico, [], 2)</command>
+<command execution_time="11">[max(campo_acustico, [], 2); max(campo_acustico, [], 2)]</command>
+<command execution_time="13">size([max(campo_acustico, [], 2); max(campo_acustico, [], 2)])</command>
+<command execution_time="13">size([max(campo_acustico, [], 2)])</command>
+<command execution_time="11">size([max(campo_acustico, [], 2) max(campo_acustico, [], 2)])</command>
+<command error="true" execution_time="16">a(:, 1:3) = max(campo_acustico, [], 2);</command>
+<command error="true" execution_time="15">a(1:3, :) = max(campo_acustico, [], 2);</command>
+<command error="true" execution_time="47182">case_modes</command>
+<command execution_time="11">a(1:5) = 1</command>
+<command execution_time="10">a(6:10) = 2;</command>
+<command execution_time="10">a</command>
+<command execution_time="19">a(find(a==max(a))) = 999</command>
+<command execution_time="9">a(find(a~=max(a))) = 0</command>
+<command execution_time="2429957" repeat="4">case_modes</command>
+<command batch="58">total_time = 20*Mc*sqrt(3);</command>
+<command batch="58">%% Construindo chirp</command>
+<command batch="58">times = 0 : total_time - 1;</command>
+<command batch="58">initial_frequency = 0;</command>
+<command batch="58">%frequency_max_lattice = 1.8/(2*pi*20*sqrt(3));</command>
+<command batch="58">frequency_max_lattice = 0.8;</command>
+<command batch="58">source_chirp = chirp(times, ...</command>
+<command batch="58" execution_time="190">initial_frequency, times(end), frequency_max_lattice);</command>
+<command execution_time="67">figure; plot(source_chirp)</command>
+<command execution_time="78">figure; plot(abs(fft(source_chirp)))</command>
+<command batch="59" execution_time="438" repeat="2">figure; stem(abs(fft(source_chirp)))</command>
+<command execution_time="18">cd case_modes/</command>
+<command execution_time="31412" repeat="2">case_modes</command>
+<command batch="60">total_time = 10*Mc*sqrt(3);</command>
+<command batch="60">%% Construindo chirp</command>
+<command batch="60">times = 0 : total_time - 1;</command>
+<command batch="60">initial_frequency = 0;</command>
+<command batch="60">%frequency_max_lattice = 1.8/(2*pi*20*sqrt(3));</command>
+<command batch="60">frequency_max_lattice = 0.8;</command>
+<command batch="60">source_chirp = chirp(times, ...</command>
+<command batch="60" execution_time="16">initial_frequency, times(end)*2, frequency_max_lattice);</command>
+<command execution_time="89">figure; plot(source_chirp)</command>
+<command execution_time="43" repeat="4">sound(source_chirp)</command>
+<command execution_time="43">sound(source_chirp, 22100)</command>
+<command execution_time="42" repeat="3">sound(source_chirp, 22100/10)</command>
+<command execution_time="125173" repeat="9">case_modes</command>
+<command batch="61">total_time = round(20*Mc*sqrt(3));</command>
+<command batch="61">%% Construindo chirp</command>
+<command batch="61">times = 0 : (total_time/5) - 1;</command>
+<command batch="61">initial_frequency = 0;</command>
+<command batch="61">%frequency_max_lattice = 1.8/(2*pi*20*sqrt(3));</command>
+<command batch="61">frequency_max_lattice = 0.4;</command>
+<command batch="61">source_chirp = chirp(times, ...</command>
+<command batch="61" execution_time="14">frequency_max_lattice, times(end)*2, frequency_max_lattice);</command>
+<command execution_time="69">figure; plot(source_chirp)</command>
+<command error="true" execution_time="14">figure; plot(abs(fftsource_chirp)))</command>
+<command error="true" execution_time="66">figure; plot(abs(fftsource_chirp))</command>
+<command execution_time="70">figure; plot(abs(fft(source_chirp)))</command>
+<command error="true" execution_time="7538" repeat="6">case_modes</command>
+<command execution_time="26">close all</command>
+<command error="true" execution_time="7171" repeat="4">case_modes</command>
+<command execution_time="21">close all</command>
+<command execution_time="60029" repeat="2">case_modes</command>
+<command execution_time="10">0.1*22100</command>
+<command execution_time="60477" repeat="2">case_modes</command>
+<command execution_time="14">0.001*22100</command>
+<command execution_time="60942" repeat="2">case_modes</command>
+<command execution_time="9">0.1*22050</command>
+<command execution_time="94602" repeat="3">case_modes</command>
+<command execution_time="10">frequencias(1)</command>
+<command execution_time="20" repeat="2">frequencias(2)</command>
+<command execution_time="155383">case_modes</command>
+<command batch="62">figure(2); stem(frequencias, fft_pressure);</command>
+<command execution_time="21">cd case_modes/</command>
+<command execution_time="176895" repeat="2">case_modes</command>
+<command batch="63">close all</command>
+<command execution_time="23">cd case_modes/</command>
+<command batch="64" execution_time="178077" repeat="2">case_modes</command>
+<command execution_time="19">cd case_modes/</command>
+<command execution_time="179972">case_modes</command>
+<command execution_time="95">figure(2); plot(frequencias, fft_pressure, '&gt;');</command>
+<command execution_time="21">cd case_modes/</command>
+<command execution_time="179823">case_modes</command>
+<command execution_time="21">0.05*22050</command>
+<command execution_time="1634170">case_modes</command>
+<command execution_time="13">1/(sqrt(3)*300)</command>
+<command execution_time="10">1/(sqrt(3)*200)</command>
+<command execution_time="12">max(pressure)</command>
+<command execution_time="13">[i c]= max(pressure)</command>
+<command execution_time="17">size(pressure)</command>
+<command execution_time="17">Dt*261540</command>
+<command execution_time="15">frequencias(c)</command>
+<command execution_time="86">figure; plot(pressure)</command>
+<command execution_time="17">[i c]= max(fft_pressure)</command>
+<command execution_time="17">frequencias(26)</command>
+<command execution_time="15">10e-3</command>
+<command execution_time="164056" repeat="4">case_modes</command>
+<command execution_time="76">close all</command>
+<command batch="65">fft_pressure = abs(fft(pressure));</command>
+<command batch="65">frequencias = linspace(0, 1, length(fft_pressure));</command>
+<command batch="65">figure(2); plot(frequencias, fft_pressure);</command>
+<command batch="65" execution_time="87">axis([0.001 0.05 0 1]);</command>
+<command execution_time="550917" repeat="4">case_modes</command>
+<command batch="66">% Processando pressao</command>
+<command batch="66">fft_pressure = abs(fft(pressure_1));</command>
+<command batch="66">frequencias = linspace(0, 1, length(fft_pressure));</command>
+<command batch="66">fft_pressure = fft_pressure/max(fft_pressure);</command>
+<command batch="66">figure; plot(frequencias, fft_pressure);</command>
+<command batch="66" execution_time="99">axis([0.001 0.05 0 1.1]);</command>
+<command batch="67">% Processando pressao</command>
+<command batch="67">fft_pressure = abs(fft(pressure_2));</command>
+<command batch="67">frequencias = linspace(0, 1, length(fft_pressure));</command>
+<command batch="67">fft_pressure = fft_pressure/max(fft_pressure);</command>
+<command batch="67">figure; plot(frequencias, fft_pressure);</command>
+<command batch="67" execution_time="94">axis([0.001 0.05 0 1.1]);</command>
+<command execution_time="16">1/(sqrt(3)*0.003913)</command>
+<command execution_time="90">close all</command>
+<command batch="68">% Processando pressao</command>
+<command batch="68">fft_pressure = abs(fft(pressure));</command>
+<command batch="68">frequencias = linspace(0, 1, length(fft_pressure));</command>
+<command batch="68">fft_pressure = fft_pressure/max(fft_pressure);</command>
+<command batch="68">figure; plot(frequencias, fft_pressure);</command>
+<command batch="68" execution_time="83">axis([0.001 0.05 0 1.1]);</command>
+<command batch="69">% Processando pressao</command>
+<command batch="69">fft_pressure = abs(fft(pressure_1));</command>
+<command batch="69">frequencias = linspace(0, 1, length(fft_pressure));</command>
+<command batch="69">fft_pressure = fft_pressure/max(fft_pressure);</command>
+<command batch="69">figure; plot(frequencias, fft_pressure);</command>
+<command batch="69" execution_time="88">axis([0.001 0.05 0 1.1]);</command>
+<command execution_time="17">1/(sqrt(3)*0.005939)</command>
+<command batch="70">% filtrando o primeiro modo</command>
+<command batch="70">primeiro_modo = 0.003913;</command>
+<command batch="70">times = 0 : (total_time/4) - 1;</command>
+<command batch="70">source_chirp_primeiro_modo = chirp(times, ...</command>
+<command batch="70">primeiro_modo, times(end)*2, primeiro_modo);</command>
+<command batch="70" execution_time="78">figure; plot(abs(fft(source_chirp_primeiro_modo)));</command>
+<command batch="71" error="true">% filtrando o primeiro modo</command>
+<command batch="71" error="true">primeiro_modo = 0.003913;</command>
+<command batch="71" error="true">times = 0 : (fft_pressure) - 1;</command>
+<command batch="71" error="true">source_chirp_primeiro_modo = chirp(times, ...</command>
+<command batch="71" error="true">primeiro_modo, times(end)*2, primeiro_modo);</command>
+<command batch="71" error="true" execution_time="419">figure; plot(frequencias,abs(fft(source_chirp_primeiro_modo)));</command>
+<command batch="72">% filtrando o primeiro modo</command>
+<command batch="72">primeiro_modo = 0.003913;</command>
+<command batch="72">times = 0 : length(fft_pressure) - 1;</command>
+<command batch="72">source_chirp_primeiro_modo = chirp(times, ...</command>
+<command batch="72">primeiro_modo, times(end)*2, primeiro_modo);</command>
+<command batch="72" execution_time="79">figure; plot(frequencias,abs(fft(source_chirp_primeiro_modo)));</command>
+<command execution_time="69">figure; imagesc(campo_acustico)</command>
+<command execution_time="16">size(source_chirp_primeiro_modo)</command>
+<command execution_time="496">source_chirp_primeiro_modo</command>
+<command execution_time="509">help conv2</command>
+<command error="true" execution_time="17">A = conv2(source_chirp_primeiro_modo,source_chirp_primeiro_modo,campo_acustico);</command>
+<command execution_time="13">source_chirp_primeiro_modo = source_chirp_primeiro_modo(1:200);</command>
+<command execution_time="657">A = conv2(source_chirp_primeiro_modo,source_chirp_primeiro_modo,campo_acustico);</command>
+<command execution_time="70">figure; imagesc(A)</command>
+<command execution_time="70">figure; imagesc(campo_acustico)</command>
+<command execution_time="19">A = conv2(source_chirp_primeiro_modo,source_chirp_primeiro_modo',campo_acustico);</command>
+<command execution_time="80">figure; imagesc(A)</command>
+<command batch="73">source_chirp_primeiro_modo = chirp(times, ...</command>
+<command batch="73" execution_time="29">primeiro_modo, times(end)*2, primeiro_modo);</command>
+<command execution_time="12">source_chirp_primeiro_modo_1 = source_chirp_primeiro_modo(1:500);</command>
+<command error="true" execution_time="27">A = conv2(source_chirp_primeiro_modo,source_chirp_primeiro_modo',campo_acustico);</command>
+<command execution_time="15">source_chirp_primeiro_modo_1 = source_chirp_primeiro_modo(1:300);</command>
+<command execution_time="13">source_chirp_primeiro_modo_1 = source_chirp_primeiro_modo(1:500);</command>
+<command execution_time="66">A = conv2(source_chirp_primeiro_modo_1,source_chirp_primeiro_modo_1',campo_acustico);</command>
+<command execution_time="82">figure; imagesc(A)</command>
+<command execution_time="14">source_chirp_primeiro_modo_1 = source_chirp_primeiro_modo(1:1000);</command>
+<command execution_time="334">A = conv2(source_chirp_primeiro_modo_1,source_chirp_primeiro_modo_1',campo_acustico);</command>
+<command execution_time="102">figure; imagesc(A)</command>
+<command execution_time="21">source_chirp_primeiro_modo_1 = source_chirp_primeiro_modo(1:10000);</command>
+<command execution_time="22098">A = conv2(source_chirp_primeiro_modo_1,source_chirp_primeiro_modo_1',campo_acustico);</command>
+<command execution_time="419">figure; imagesc(A)</command>
+<command execution_time="65">close all</command>
+<command execution_time="11">a = []</command>
+<command execution_time="13">a(1,2) = 9</command>
+<command batch="74" error="true">% filtrando o primeiro modo</command>
+<command batch="74" error="true">primeiro_modo = 0.003913;</command>
+<command batch="74" error="true">times = 0 : length(fft_pressure) - 1;</command>
+<command batch="74" error="true">source_chirp_primeiro_modo = chirp(times, ...</command>
+<command batch="74" error="true">primeiro_modo, times(end)*2, primeiro_modo);</command>
+<command batch="74" error="true">%figure; plot(frequencias,abs(fft(source_chirp_primeiro_modo)));</command>
+<command batch="74" error="true">source_chirp_primeiro_modo = source_chirp_primeiro_modo(1:500);</command>
+<command batch="74" error="true">[row, column] = size(fft_campo_acustico);</command>
+<command batch="74" error="true">campo_acustico_filtrado = [];</command>
+<command batch="74" error="true">for altura = 1:row</command>
+<command batch="74" error="true">campo_acustico_filtrado(altura, :) = conv(campo_acustico(altura, :) ...</command>
+<command batch="74" error="true">, source_chirp_primeiro_modo);</command>
+<command batch="74" error="true">end</command>
+<command batch="74" error="true" execution_time="847">figure; imagesc(campo_acustico_filtrado);</command>
+<command batch="75" error="true">% Processando pressao</command>
+<command batch="75" error="true">fft_pressure = abs(fft(pressure));</command>
+<command batch="75" error="true">frequencias = linspace(0, 1, length(fft_pressure));</command>
+<command batch="75" error="true">fft_pressure = fft_pressure/max(fft_pressure);</command>
+<command batch="75" error="true">figure; plot(frequencias, fft_pressure);</command>
+<command batch="75" error="true">axis([0.001 0.05 0 1.1]);</command>
+<command batch="75" error="true">% filtrando o primeiro modo</command>
+<command batch="75" error="true">primeiro_modo = 0.003913;</command>
+<command batch="75" error="true">times = 0 : length(fft_pressure) - 1;</command>
+<command batch="75" error="true">source_chirp_primeiro_modo = chirp(times, ...</command>
+<command batch="75" error="true">primeiro_modo, times(end)*2, primeiro_modo);</command>
+<command batch="75" error="true">%figure; plot(frequencias,abs(fft(source_chirp_primeiro_modo)));</command>
+<command batch="75" error="true">source_chirp_primeiro_modo = source_chirp_primeiro_modo(1:500);</command>
+<command batch="75" error="true">[row, column] = size(fft_campo_acustico);</command>
+<command batch="75" error="true">campo_acustico_filtrado = [];</command>
+<command batch="75" error="true">for altura = 1:row</command>
+<command batch="75" error="true">campo_acustico_filtrado(altura, :) = conv(campo_acustico(altura, :) ...</command>
+<command batch="75" error="true">, source_chirp_primeiro_modo);</command>
+<command batch="75" error="true">end</command>
+<command batch="75" error="true" execution_time="1221">figure; imagesc(campo_acustico_filtrado);</command>
+<command batch="76">% Processando pressao</command>
+<command batch="76">fft_pressure = abs(fft(pressure));</command>
+<command batch="76">frequencias = linspace(0, 1, length(fft_pressure));</command>
+<command batch="76">fft_pressure = fft_pressure/max(fft_pressure);</command>
+<command batch="76">figure; plot(frequencias, fft_pressure);</command>
+<command batch="76">axis([0.001 0.05 0 1.1]);</command>
+<command batch="76">% filtrando o primeiro modo</command>
+<command batch="76">primeiro_modo = 0.003913;</command>
+<command batch="76">times = 0 : length(fft_pressure) - 1;</command>
+<command batch="76">source_chirp_primeiro_modo = chirp(times, ...</command>
+<command batch="76">primeiro_modo, times(end)*2, primeiro_modo);</command>
+<command batch="76">%figure; plot(frequencias,abs(fft(source_chirp_primeiro_modo)));</command>
+<command batch="76">source_chirp_primeiro_modo = source_chirp_primeiro_modo(1:500);</command>
+<command batch="76">[row, column] = size(campo_acustico);</command>
+<command batch="76">campo_acustico_filtrado = [];</command>
+<command batch="76">for altura = 1:row</command>
+<command batch="76">campo_acustico_filtrado(altura, :) = conv(campo_acustico(altura, :) ...</command>
+<command batch="76">, source_chirp_primeiro_modo);</command>
+<command batch="76">end</command>
+<command batch="76" execution_time="431">figure; imagesc(campo_acustico_filtrado);</command>
+<command execution_time="67">figure; imagesc(campo_acustico);</command>
+<command execution_time="73">figure; imagesc(campo_acustico_filtrado(size(campo_acustico)));</command>
+<command execution_time="76">figure; imagesc(campo_acustico_filtrado(1:row, 1:column));</command>
+<command batch="77">% Processando pressao</command>
+<command batch="77">fft_pressure = abs(fft(pressure));</command>
+<command batch="77">frequencias = linspace(0, 1, length(fft_pressure));</command>
+<command batch="77">fft_pressure = fft_pressure/max(fft_pressure);</command>
+<command batch="77">figure; plot(frequencias, fft_pressure);</command>
+<command batch="77">axis([0.001 0.05 0 1.1]);</command>
+<command batch="77">% filtrando o primeiro modo</command>
+<command batch="77">primeiro_modo = 0.005939;</command>
+<command batch="77">times = 0 : length(fft_pressure) - 1;</command>
+<command batch="77">source_chirp_primeiro_modo = chirp(times, ...</command>
+<command batch="77">primeiro_modo, times(end)*2, primeiro_modo);</command>
+<command batch="77">%figure; plot(frequencias,abs(fft(source_chirp_primeiro_modo)));</command>
+<command batch="77">source_chirp_primeiro_modo = source_chirp_primeiro_modo(1:500);</command>
+<command batch="77">[row, column] = size(campo_acustico);</command>
+<command batch="77">campo_acustico_filtrado = [];</command>
+<command batch="77">for altura = 1:row</command>
+<command batch="77">campo_acustico_filtrado(altura, :) = conv(campo_acustico(altura, :) ...</command>
+<command batch="77">, source_chirp_primeiro_modo);</command>
+<command batch="77">end</command>
+<command batch="77" execution_time="351">figure; imagesc(campo_acustico_filtrado);</command>
+<command batch="78">% Processando pressao</command>
+<command batch="78">fft_pressure = abs(fft(pressure));</command>
+<command batch="78">frequencias = linspace(0, 1, length(fft_pressure));</command>
+<command batch="78">fft_pressure = fft_pressure/max(fft_pressure);</command>
+<command batch="78">figure; plot(frequencias, fft_pressure);</command>
+<command batch="78">axis([0.001 0.05 0 1.1]);</command>
+<command batch="78">% filtrando o primeiro modo</command>
+<command batch="78">primeiro_modo = 0.005939;</command>
+<command batch="78">times = 0 : length(fft_pressure) - 1;</command>
+<command batch="78">source_chirp_primeiro_modo = chirp(times, ...</command>
+<command batch="78">primeiro_modo, times(end)*2, primeiro_modo);</command>
+<command batch="78">%figure; plot(frequencias,abs(fft(source_chirp_primeiro_modo)));</command>
+<command batch="78">source_chirp_primeiro_modo = source_chirp_primeiro_modo(1:500);</command>
+<command batch="78">[row, column] = size(campo_acustico);</command>
+<command batch="78">campo_acustico_filtrado = [];</command>
+<command batch="78">for altura = 1:row</command>
+<command batch="78">campo_acustico_filtrado(altura, :) = conv(campo_acustico(altura, :) ...</command>
+<command batch="78">, source_chirp_primeiro_modo);</command>
+<command batch="78">end</command>
+<command batch="78" execution_time="344">figure; imagesc(campo_acustico_filtrado(1:row, 1:column));</command>
+<command batch="79">% Processando pressao</command>
+<command batch="79">fft_pressure = abs(fft(pressure));</command>
+<command batch="79">frequencias = linspace(0, 1, length(fft_pressure));</command>
+<command batch="79">fft_pressure = fft_pressure/max(fft_pressure);</command>
+<command batch="79">figure; plot(frequencias, fft_pressure);</command>
+<command batch="79">axis([0.001 0.05 0 1.1]);</command>
+<command batch="79">% filtrando o primeiro modo</command>
+<command batch="79">primeiro_modo = 0.005939;</command>
+<command batch="79">times = 0 : length(fft_pressure) - 1;</command>
+<command batch="79">source_chirp_primeiro_modo = chirp(times, ...</command>
+<command batch="79">primeiro_modo, times(end)*2, primeiro_modo);</command>
+<command batch="79">%figure; plot(frequencias,abs(fft(source_chirp_primeiro_modo)));</command>
+<command batch="79">source_chirp_primeiro_modo = source_chirp_primeiro_modo(1:500);</command>
+<command batch="79">campo_acustico_filtrado = conv2(source_chirp_primeiro_modo, source_chirp_primeiro_modo, campo_acustico);</command>
+<command batch="79">%[row, column] = size(campo_acustico);</command>
+<command batch="79">%campo_acustico_filtrado = [];</command>
+<command batch="79">%for altura = 1:row</command>
+<command batch="79">%    campo_acustico_filtrado(altura, :) = conv(campo_acustico(altura, :) ...</command>
+<command batch="79">%        , source_chirp_primeiro_modo);</command>
+<command batch="79">%end</command>
+<command batch="79" execution_time="404">figure; imagesc(campo_acustico_filtrado(1:row, 1:column));</command>
+<command batch="80">% Processando pressao</command>
+<command batch="80">fft_pressure = abs(fft(pressure));</command>
+<command batch="80">frequencias = linspace(0, 1, length(fft_pressure));</command>
+<command batch="80">fft_pressure = fft_pressure/max(fft_pressure);</command>
+<command batch="80">figure; plot(frequencias, fft_pressure);</command>
+<command batch="80">axis([0.001 0.05 0 1.1]);</command>
+<command batch="80">% filtrando o primeiro modo</command>
+<command batch="80">primeiro_modo = 0.003913;</command>
+<command batch="80">%primeiro_modo = 0.005939;</command>
+<command batch="80">times = 0 : length(fft_pressure) - 1;</command>
+<command batch="80">source_chirp_primeiro_modo = chirp(times, ...</command>
+<command batch="80">primeiro_modo, times(end)*2, primeiro_modo);</command>
+<command batch="80">%figure; plot(frequencias,abs(fft(source_chirp_primeiro_modo)));</command>
+<command batch="80">source_chirp_primeiro_modo = source_chirp_primeiro_modo(1:500);</command>
+<command batch="80">campo_acustico_filtrado = conv2(source_chirp_primeiro_modo, source_chirp_primeiro_modo, campo_acustico);</command>
+<command batch="80">%[row, column] = size(campo_acustico);</command>
+<command batch="80">%campo_acustico_filtrado = [];</command>
+<command batch="80">%for altura = 1:row</command>
+<command batch="80">%    campo_acustico_filtrado(altura, :) = conv(campo_acustico(altura, :) ...</command>
+<command batch="80">%        , source_chirp_primeiro_modo);</command>
+<command batch="80">%end</command>
+<command batch="80" execution_time="407">figure; imagesc(campo_acustico_filtrado(1:row, 1:column));</command>
+<command batch="81">% Processando pressao</command>
+<command batch="81">fft_pressure = abs(fft(pressure));</command>
+<command batch="81">frequencias = linspace(0, 1, length(fft_pressure));</command>
+<command batch="81">fft_pressure = fft_pressure/max(fft_pressure);</command>
+<command batch="81">figure; plot(frequencias, fft_pressure);</command>
+<command batch="81">axis([0.001 0.05 0 1.1]);</command>
+<command batch="81">% filtrando o primeiro modo</command>
+<command batch="81">primeiro_modo = 0.003913;</command>
+<command batch="81">%primeiro_modo = 0.005939;</command>
+<command batch="81">times = 0 : length(fft_pressure) - 1;</command>
+<command batch="81">source_chirp_primeiro_modo = chirp(times, ...</command>
+<command batch="81">primeiro_modo, times(end)*2, primeiro_modo);</command>
+<command batch="81">%figure; plot(frequencias,abs(fft(source_chirp_primeiro_modo)));</command>
+<command batch="81">source_chirp_primeiro_modo = source_chirp_primeiro_modo(1:500);</command>
+<command batch="81">campo_acustico = campo_acustico/max(campo_acustico);</command>
+<command batch="81">campo_acustico_filtrado = conv2(source_chirp_primeiro_modo, source_chirp_primeiro_modo, campo_acustico);</command>
+<command batch="81">%[row, column] = size(campo_acustico);</command>
+<command batch="81">%campo_acustico_filtrado = [];</command>
+<command batch="81">%for altura = 1:row</command>
+<command batch="81">%    campo_acustico_filtrado(altura, :) = conv(campo_acustico(altura, :) ...</command>
+<command batch="81">%        , source_chirp_primeiro_modo);</command>
+<command batch="81">%end</command>
+<command batch="81" execution_time="1058">figure; imagesc(campo_acustico_filtrado(1:row, 1:column));</command>
+<command batch="82">% Processando pressao</command>
+<command batch="82">fft_pressure = abs(fft(pressure));</command>
+<command batch="82">frequencias = linspace(0, 1, length(fft_pressure));</command>
+<command batch="82">fft_pressure = fft_pressure/max(fft_pressure);</command>
+<command batch="82">figure; plot(frequencias, fft_pressure);</command>
+<command batch="82">axis([0.001 0.05 0 1.1]);</command>
+<command batch="82">% filtrando o primeiro modo</command>
+<command batch="82">%primeiro_modo = 0.003913;</command>
+<command batch="82">primeiro_modo = 0.005939;</command>
+<command batch="82">times = 0 : length(fft_pressure) - 1;</command>
+<command batch="82">source_chirp_primeiro_modo = chirp(times, ...</command>
+<command batch="82">primeiro_modo, times(end)*2, primeiro_modo);</command>
+<command batch="82">%figure; plot(frequencias,abs(fft(source_chirp_primeiro_modo)));</command>
+<command batch="82">source_chirp_primeiro_modo = source_chirp_primeiro_modo(1:500);</command>
+<command batch="82">campo_acustico = campo_acustico/max(campo_acustico);</command>
+<command batch="82">campo_acustico_filtrado = conv2(source_chirp_primeiro_modo, source_chirp_primeiro_modo, campo_acustico);</command>
+<command batch="82">%[row, column] = size(campo_acustico);</command>
+<command batch="82">%campo_acustico_filtrado = [];</command>
+<command batch="82">%for altura = 1:row</command>
+<command batch="82">%    campo_acustico_filtrado(altura, :) = conv(campo_acustico(altura, :) ...</command>
+<command batch="82">%        , source_chirp_primeiro_modo);</command>
+<command batch="82">%end</command>
+<command batch="82" execution_time="380">figure; imagesc(campo_acustico_filtrado(1:row, 1:column));</command>
+</session>
+</history>
