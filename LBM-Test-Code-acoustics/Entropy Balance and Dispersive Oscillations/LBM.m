@@ -31,7 +31,8 @@ time = 1; %Start Time
 rho = LBMInitialise(nx); %Densities at each lattice site are intialised as
 %the standard shock tube problem
 u = 0; %Velocities at each lattice site are initialised as zero
-populations = LBMQuasiEquilibria(rho,u,methodChoice,nx); %Left moving,
+T=1/3; %初始温度
+[populations,T] = LBMQuasiEquilibria(rho,u,methodChoice,nx,T); %Left moving,
 %central and right moving populations at each lattice site respectively are
 %initialised as the quasiequilibria
 relativeFiltering = zeros(1,251);
@@ -43,12 +44,13 @@ mov = 0;
 end
 while time <= timeMax
 populations = LBMPropagate(populations,nx); %Propagate the populations
-k=2*pi/50;
-populations(2,nx/2)=populations(2,nx/2)+0.1*(cos(k*time));
+% k=2*pi/50;
+% populations(2,nx/2)=populations(2,nx/2)+0.1*(cos(k*time));
 %keyboard
 [rho, u] = LBMLatticeParameters(populations); %Density and velocity are
+max(abs(u))
 %calculated using the populations
-popequilibriums = LBMQuasiEquilibria(rho,u,methodChoice,nx); %New
+[popequilibriums,T] = LBMQuasiEquilibria(rho,u,methodChoice,nx,T); %New
 % quasiequilibria are found using new density and velocity values
 [alpha , convergence] = LBMEntropicParameter(populations, ...
 popequilibriums,methodChoice,nx,ELBMEpsilon,Norm);
@@ -69,7 +71,7 @@ if(MOV == 1) % If movie parameter is enabled record a frame
 unlimitedSites = setdiff(1:nx,limiterSites);
 plot(unlimitedSites,rho(unlimitedSites),'.',limiterSites, ...
 rho(limiterSites),'r*');
-axis([0 nx 0.3 1.3])
+axis([0 nx -0.5 3.5])
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             mov(:,time) = getframe;
 end
 time = time + 1; %Increment time

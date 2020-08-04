@@ -10,7 +10,7 @@ clear
 
 
 NX = 1000;  % Number of x lattice sites
-omega = 2;    % Relaxation frequency
+omega = 1;    % Relaxation frequency
    
 % Discrete velocities for D1Q3
 D=1;Q=3;
@@ -23,7 +23,7 @@ u = zeros(NX, 1);
 
 % rho_l = 0.01;   % initial disturbance
 % f(N/2,3) = rho_l;
-f(NX/2,1)=0.01
+% f(NX/2,1)=0.01
 
 k=2*pi/50;
 
@@ -38,7 +38,7 @@ for t = 1 : 1000
     [rho,u] = Macroscopic(f,scheme(:,1));
     %u=u+0.001; %模拟均匀流条件；%需要小于0.8
 
-%     rho(NX/2)=1+0.01*(cos(k*t));
+    rho(NX/2)=1+0.01*(cos(k*t));
     % Compute collision
     [f] = Collide(rho,scheme(:,2),scheme(:,1),u,f,omega);
     plot(rho);     

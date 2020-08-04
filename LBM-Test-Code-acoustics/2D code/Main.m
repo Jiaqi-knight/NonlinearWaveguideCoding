@@ -16,8 +16,8 @@ c_scale = [0 1];        % Velocity scale for plotting
 T = 100;        % Number of time steps
 
 % Lattice dimensions
-N = 50;  % Number of x lattice sites
-M = 10;  % Number of y lattice sites
+N = 100;  % Number of x lattice sites
+M = 100;  % Number of y lattice sites
 
 % Lattice site coordinates dx = 1
 xl = 1:1:N; yl = 1:1:M;

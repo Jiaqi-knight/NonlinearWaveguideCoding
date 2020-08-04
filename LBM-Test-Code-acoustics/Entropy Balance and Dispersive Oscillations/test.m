@@ -22,10 +22,10 @@ close all
 % The accuracy of the root finding for ELBM can be controlled with
 % EPSIL in all cases the root found will result in entropy production.
 % Convergence is partly based on | | feq − f|| , the choice of the norm is
-% controlled with
+% controlled with          
 % NORM:
 % 0 − L1 norm
 % 1 − Entropic Norm;
-V=0.5;%beta=1 %粘性
-LBM(1,V,1000,20000,1,0.0000001,0,1)
+V=0.138;%beta=1 %粘性
+LBM(2,V,1000,20000,1,0.0000001,0,1)
 

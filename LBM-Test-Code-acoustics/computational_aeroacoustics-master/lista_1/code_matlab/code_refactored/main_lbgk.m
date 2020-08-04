@@ -96,8 +96,8 @@ for ta = 1 : 150*sqrt(3)
     lattice = collide_lattice(lattice, frequency_relaxation);
     
 % Ploting the results in real time   
-%surf(density_total - 1), view(2), shading flat, axis equal, caxis([-.00001 .00001])
-%grid off
-%pause(.00001)
+surf(density_total - 1), view(2), shading flat, axis equal, caxis([-.00001 .00001])
+grid off
+pause(.00001)
 ta
 end %  End main time Evolution Loop

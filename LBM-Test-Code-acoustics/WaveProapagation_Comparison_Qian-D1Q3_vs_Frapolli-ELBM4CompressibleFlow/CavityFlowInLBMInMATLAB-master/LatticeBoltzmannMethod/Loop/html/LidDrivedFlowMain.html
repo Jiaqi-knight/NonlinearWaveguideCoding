@@ -1,0 +1,524 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>LidDrivedFlowMain</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-03-28"><meta name="DC.source" content="LidDrivedFlowMain.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">Programming Initialization</a></li><li><a href="#3">Global Varibles</a></li><li><a href="#4">Local Varibles</a></li><li><a href="#5">Initial the flow field</a></li><li><a href="#6">main loop to update flow field</a></li><li><a href="#7">Outputs</a></li><li><a href="#8">Computing Report</a></li></ul></div><pre class="codeinput"><span class="comment">%-----------------------------------------------------------------------------------------------</span>
+<span class="comment">%%%% 2d Cavity Lid-driven Flow simulation MATLAB Code (for-loop implement version)</span>
+<span class="comment">%%%% Author: Yang Yang</span>
+<span class="comment">%%%% Date : Tue Apr 7 2015</span>
+<span class="comment">%%%%</span>
+<span class="comment">%%%% Background:</span>
+<span class="comment">%%%% This code is part of Yang Yang's B.Eng. Thesis works,</span>
+<span class="comment">%%%% As a verify of Yang Yang's Algorithms and Codes' correctness.</span>
+<span class="comment">%%%%</span>
+<span class="comment">%%%% Copyright:</span>
+<span class="comment">%%%% You can copy and use this code for any purpose, but you must declare</span>
+<span class="comment">%%%% that the original version of this code was written by Yang Yang</span>
+<span class="comment">%%%%</span>
+<span class="comment">%%%% Disclaimer of Warranty:</span>
+<span class="comment">%%%% Maybe, there are many mistakes in this code, both in fundamental theory and programming,</span>
+<span class="comment">%%%% because of the limitation of my own knowledge and strength.</span>
+<span class="comment">%%%% As a result: THESE DOCUMENTS AND CODES ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.</span>
+<span class="comment">%%%% I MAKE NO WARRANTIES, EXPRESS OR IMPLIED, THAT THEY ARE FREE OF ERROR.</span>
+<span class="comment">%------------------------------------------------------------------------------------------------</span>
+</pre><h2 id="2">Programming Initialization</h2><pre class="codeinput">close <span class="string">all</span>; clear <span class="string">all</span>; clc; tic;
+feature <span class="string">accel</span> <span class="string">on</span>;                 <span class="comment">% Acceleration on</span>
+feature <span class="string">jit</span> <span class="string">on</span>;                   <span class="comment">% Just in time on</span>
+fprintf(<span class="string">'Programming LidDrivedFlowMain Running ... \n'</span>);
+</pre><pre class="codeoutput">Programming LidDrivedFlowMain Running ... 
+</pre><h2 id="3">Global Varibles</h2><pre class="codeinput"><span class="keyword">global</span> Q Lx Ly Nx Ny U ev omega delta_x delta_y <span class="keyword">...</span>
+       delta_t rho_0 c Re mu tau_f Dimension
+<span class="comment">% Model's parameters</span>
+Dimension = 2;                    <span class="comment">% Problem's Dimension</span>
+Q = 9;                            <span class="comment">% Qian 9 D2Q9 Velocity model</span>
+Lx = 1.;                          <span class="comment">% Length in x direction</span>
+Ly = 1.;                          <span class="comment">% Length in y direction</span>
+Nx = 256;                         <span class="comment">% grid numbers in x direction (must equal to that in y)</span>
+Ny = 256;                         <span class="comment">% grid numbers in y direction</span>
+U = 0.1;                          <span class="comment">% velocity of lid</span>
+rho_0 = 1.;                       <span class="comment">% reference density</span>
+Re = 200 ;                        <span class="comment">% Reynold number</span>
+
+<span class="comment">% Discrete velocity :</span>
+ev = [0  1  0 -1  0  1 -1 -1  1
+     0  0  1  0 -1  1  1 -1 -1 ];
+<span class="comment">% weight in equilibrium distribution function :</span>
+omega= [4./9. 1./9. 1./9. 1./9. 1./9. <span class="keyword">...</span>
+         1./36. 1./36. 1./36. 1./36.];
+
+<span class="comment">% Parameters expressions</span>
+delta_x = Lx/Nx ;                             <span class="comment">% space step interval</span>
+delta_y = delta_x ;                           <span class="comment">% grid step length in each direction must equal</span>
+c = 1 ;                                       <span class="comment">% speed of lattice sound    (must equal to 1)</span>
+delta_t = delta_x / c ;                       <span class="comment">% time step interval</span>
+mu = U * Lx / Re ;                            <span class="comment">% Dynamic viscosity</span>
+tau_f = 3. * mu / (c^2. * delta_t) + 1./2. ;  <span class="comment">% Relaxaition time</span>
+</pre><h2 id="4">Local Varibles</h2><p>Macroscopic</p><pre class="codeinput">rho = zeros(Nx+1,Ny+1);                       <span class="comment">% macro density</span>
+u = zeros(Nx+1,Ny+1,2);                       <span class="comment">% macro velocity</span>
+u_temp = u;                                   <span class="comment">% macro temporary velocity</span>
+<span class="comment">% Mesoscopic</span>
+f = zeros(Nx+1,Ny+1,Q);                       <span class="comment">% distribution function</span>
+f_temp = f;                                   <span class="comment">% temporary distribution function</span>
+feq = zeros(Q,1);                             <span class="comment">% equilibrium distribution function</span>
+feq_w = feq;
+feq_f = feq;
+<span class="comment">% Residual in compution (Breaking criteria) Control</span>
+CheckResidualInterval = 10;                   <span class="comment">% check interval</span>
+residual = 1e-5;                              <span class="comment">% breaking criteria</span>
+tmax = 1e7;                                   <span class="comment">% max time step</span>
+epsilon = 0;
+ht = figure(<span class="string">'name'</span>,<span class="string">'Erro VS Time'</span>);           <span class="comment">% Relative Error time plot</span>
+set(ht,<span class="string">'Color'</span>,[1 1 1],<span class="string">'menubar'</span>,<span class="string">'none'</span>)
+<span class="comment">% Outputs control</span>
+OutputsInterval = 50;
+files_name = <span class="string">'LidDrivedFlow'</span>;
+<span class="comment">% Plot control</span>
+PlotInterval = 10;
+plot_name1 = <span class="string">'Velocity Field'</span>;
+plot_name2 = <span class="string">'Pressure Field'</span>;
+h = zeros(1,2);
+h(1) = figure(<span class="string">'name'</span>,plot_name1);
+h(2) = figure(<span class="string">'name'</span>,plot_name2);
+set(h(1),<span class="string">'Color'</span>,[1,1,1],<span class="string">'menubar'</span>,<span class="string">'none'</span>);
+set(h(2),<span class="string">'Color'</span>,[1,1,1],<span class="string">'menubar'</span>,<span class="string">'none'</span>);
+<span class="comment">% Programming log</span>
+file_log = <span class="string">'LidDrivedFlow'</span>;
+</pre><img vspace="5" hspace="5" src="LidDrivedFlowMain_01.png" alt=""> <img vspace="5" hspace="5" src="LidDrivedFlowMain_02.png" alt=""> <img vspace="5" hspace="5" src="LidDrivedFlowMain_03.png" alt=""> <h2 id="5">Initial the flow field</h2><pre class="codeinput">[rho,u,f] = initialfield(rho,u);
+f_temp = f;
+</pre><h2 id="6">main loop to update flow field</h2><pre class="codeinput">ip = zeros(1,1);
+jp = zeros(1,1);
+<span class="keyword">for</span> t=1:tmax
+   <span class="comment">% evolution Lattice Boltzmann Equation</span>
+   <span class="keyword">for</span> i = 2:Nx
+       <span class="keyword">for</span> j = 2:Ny
+           <span class="keyword">for</span> k = 1:Q
+             ip = i - ev(1,k);
+             jp = j - ev(2,k);
+             feq = f_eq(rho(ip,jp), u(ip,jp,:));                          <span class="comment">% compute f_equilibrium</span>
+             f_temp(i,j,k) = f(ip,jp,k) + (feq(k)-f(ip,jp,k))/tau_f ;     <span class="comment">% Evolution equation</span>
+           <span class="keyword">end</span>
+       <span class="keyword">end</span>
+    <span class="keyword">end</span>
+   <span class="comment">% compute macroscopic field variables</span>
+    u_temp = u;
+    u(2:Nx,2:Ny,:) = 0;
+    rho(2:Nx,2:Ny) = 0;
+    f = f_temp;
+    <span class="keyword">for</span> i = 2:Nx
+        <span class="keyword">for</span> j = 2:Ny
+              <span class="keyword">for</span> k = 1:Q
+                   rho(i,j) = rho(i,j) + f(i,j,k);                <span class="comment">% rho = Sigma f_alpha</span>
+
+                   u(i,j,1) = u(i,j,1) + f(i,j,k).*ev(1,k);
+                   u(i,j,2) = u(i,j,2) + f(i,j,k).*ev(2,k);       <span class="comment">% rho*u = Sigma e_alpha*f_alpha</span>
+              <span class="keyword">end</span>
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+
+    <span class="keyword">for</span> i = 2:Nx
+        <span class="keyword">for</span> j = 2:Ny
+             u(i,j,:) =  u(i,j,:) / rho(i,j);                     <span class="comment">% u = rho*u / rho</span>
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+
+   <span class="comment">% BCs</span>
+    <span class="comment">% left</span>
+    <span class="keyword">for</span> j = 2:Ny
+       rho(1,j) = rho(2,j);                                       <span class="comment">% Using neighbor point's density</span>
+       u(1,j,:) = 0;
+       feq_w = f_eq(rho(1,j), u(1,j,:));                          <span class="comment">% here u(1,j,:) = 0  all the time</span>
+       feq_f = f_eq(rho(2,j), u(2,j,:));
+       <span class="keyword">for</span> m = 1:Q
+          f(1,j,m) = feq_w(m) + (f(2,j,m) - feq_f(m));
+       <span class="keyword">end</span>
+    <span class="comment">% right</span>
+       rho(Nx+1,j) = rho(Nx,j);
+       u(Nx+1,j,:) = 0;
+       feq_w = f_eq(rho(Nx+1,j), u(Nx+1,j,:));
+       feq_f = f_eq(rho(Nx,j), u(Nx,j,:));
+       <span class="keyword">for</span> m = 1:Q
+           f(Nx+1,j,m) = feq_w(m) + (f(Nx,j,m) - feq_f(m));
+       <span class="keyword">end</span>
+    <span class="keyword">end</span>
+    <span class="comment">% top</span>
+    <span class="keyword">for</span> i = 1:Nx+1
+       rho(i,Ny+1) = rho(i,Ny);
+       u(i,Ny+1,1) = U;                                             <span class="comment">% lid velocity</span>
+       u(i,Ny+1,2) = 0;
+       feq_w = f_eq(rho(i,Ny+1), u(i,Ny+1,:));
+       feq_f = f_eq(rho(i,Ny), u(i,Ny,:));
+       <span class="keyword">for</span> m = 1:Q
+           f(i,Ny+1,m) = feq_w(m) + (f(i,Ny,m) - feq_f(m));
+       <span class="keyword">end</span>
+    <span class="comment">%bottom</span>
+       rho(i,1) = rho(i,2);
+       u(i,1,:) = 0;
+       feq_w = f_eq(rho(i,1), u(i,1,:));
+       feq_f = f_eq(rho(i,2), u(i,2,:));
+       <span class="keyword">for</span> m = 1:Q
+          f(i,1,m) = feq_w(m) + (f(i,2,m) - feq_f(m));
+       <span class="keyword">end</span>
+    <span class="keyword">end</span>
+
+   <span class="comment">% erro</span>
+   <span class="keyword">if</span>( mod(t,CheckResidualInterval) == 0 )
+     epsilon = RelativeErro(u, u_temp);  <span class="comment">% call function to compute Relative error</span>
+     fprintf(<span class="string">'Time Step = %d; Velocity field integral Relative Error =  %.10E \n'</span>, t,epsilon);
+     figure(ht)
+     loglog(t,epsilon,<span class="string">'b*'</span>);
+     xlabel(<span class="string">'Time step'</span>);
+     ylabel(<span class="string">'Relative Error'</span>);
+     hold <span class="string">on</span>;
+     grid <span class="string">on</span>;
+     drawnow;
+     <span class="keyword">if</span> (epsilon &lt; residual &amp;&amp; t&gt;(5000))
+         <span class="keyword">break</span>;
+     <span class="keyword">end</span>
+   <span class="keyword">end</span>
+
+   <span class="comment">% plot</span>
+   <span class="keyword">if</span>( mod(t,PlotInterval) ==0 )
+       plotfunction(h, rho, u, t);
+   <span class="keyword">end</span>
+
+   <span class="comment">% outputs</span>
+   <span class="keyword">if</span>( mod(t,OutputsInterval) ==0 )
+       file_name = FieldOutputs(rho, u, t, files_name);
+       fprintf(<span class="string">'Time Step = %d; data saved as: %s \n'</span>, t,file_name);
+   <span class="keyword">end</span>
+
+
+<span class="keyword">end</span>
+
+figure(ht);
+hold <span class="string">off</span>;          <span class="comment">% hold off figure handle ht</span>
+</pre><pre class="codeoutput">Time Step = 10; Velocity field integral Relative Error =  2.7473902269E-02 
+Time Step = 20; Velocity field integral Relative Error =  1.5259469308E-02 
+Time Step = 30; Velocity field integral Relative Error =  1.0792774334E-02 
+Time Step = 40; Velocity field integral Relative Error =  8.4588126239E-03 
+Time Step = 50; Velocity field integral Relative Error =  7.0207479293E-03 
+
+Time Step = 21550; data saved as: LidDrivedFlow_21550.dat 
+Time Step = 21560; Velocity field integral Relative Error =  2.4111096792E-05 
+Time Step = 21570; Velocity field integral Relative Error =  2.2186345668E-05 
+Time Step = 21580; Velocity field integral Relative Error =  2.0218467686E-05 
+Time Step = 21590; Velocity field integral Relative Error =  1.8236586539E-05 
+Time Step = 21600; Velocity field integral Relative Error =  1.6279292073E-05 
+Time Step = 21600; data saved as: LidDrivedFlow_21600.dat 
+Time Step = 21610; Velocity field integral Relative Error =  1.4399929052E-05 
+Time Step = 21620; Velocity field integral Relative Error =  1.2674583086E-05 
+Time Step = 21630; Velocity field integral Relative Error =  1.1211625492E-05 
+Time Step = 21640; Velocity field integral Relative Error =  1.0154456568E-05 
+Time Step = 21650; Velocity field integral Relative Error =  9.6553294648E-06 
+</pre><img vspace="5" hspace="5" src="LidDrivedFlowMain_04.png" alt=""> <img vspace="5" hspace="5" src="LidDrivedFlowMain_05.png" alt=""> <img vspace="5" hspace="5" src="LidDrivedFlowMain_06.png" alt=""> <h2 id="7">Outputs</h2><pre class="codeinput">file_name = FieldOutputs(rho, u, t, files_name);
+fprintf(<span class="string">'Time Step = %d; data saved as: %s \n'</span>, t,file_name);
+</pre><pre class="codeoutput">Time Step = 21650; data saved as: LidDrivedFlow_21650.dat 
+</pre><h2 id="8">Computing Report</h2><p>compute running time</p><pre class="codeinput">time_used = toc;
+time_hour = floor(time_used / 3600);
+time_minute = floor((time_used - time_hour*3600) / 60);
+time_second = time_used - time_hour*3600 - time_minute*60;
+<span class="comment">% output log file</span>
+fp = fopen([file_log,<span class="string">'.log'</span>],<span class="string">'w'</span>);            <span class="comment">% log of computing</span>
+fprintf(fp,<span class="string">'Programming name: %s \n'</span>,files_name);
+fprintf(fp,<span class="string">'Time step: %d, Final relative Error: %.10f \n'</span>,t,epsilon);
+fprintf(fp,<span class="string">'Using time :   %d hour,   %d minute,   %f second \n'</span>,time_hour,time_minute,time_second);
+fclose(fp);
+<span class="comment">% print log</span>
+fprintf(<span class="string">'Time step: %d, Final relative Error: %.10f \n'</span>,t,epsilon);
+fprintf(<span class="string">'Using time :   %d hour,   %d minute,   %f second \n'</span>,time_hour,time_minute,time_second);
+fprintf(<span class="string">'Programming LidDrivedFlowMain paused! Press Any key to exit ... \n'</span>);
+pause;
+</pre><pre class="codeoutput">Time step: 21650, Final relative Error: 0.0000096553 
+Using time :   51 hour,   9 minute,   44.399239 second 
+Programming LidDrivedFlowMain paused! Press Any key to exit ... 
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+%%%% 2d Cavity Lid-driven Flow simulation MATLAB Code (for-loop implement version)
+%%%% Author: Yang Yang
+%%%% Date : Tue Apr 7 2015
+%%%%
+%%%% Background:
+%%%% This code is part of Yang Yang's B.Eng. Thesis works,
+%%%% As a verify of Yang Yang's Algorithms and Codes' correctness.
+%%%%
+%%%% Copyright:
+%%%% You can copy and use this code for any purpose, but you must declare 
+%%%% that the original version of this code was written by Yang Yang
+%%%%
+%%%% Disclaimer of Warranty:  
+%%%% Maybe, there are many mistakes in this code, both in fundamental theory and programming,  
+%%%% because of the limitation of my own knowledge and strength. 
+%%%% As a result: THESE DOCUMENTS AND CODES ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.
+%%%% I MAKE NO WARRANTIES, EXPRESS OR IMPLIED, THAT THEY ARE FREE OF ERROR. 
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+
+%% Programming Initialization
+close all; clear all; clc; tic; 
+feature accel on;                 % Acceleration on
+feature jit on;                   % Just in time on
+fprintf('Programming LidDrivedFlowMain Running ... \n');
+%% Global Varibles
+global Q Lx Ly Nx Ny U ev omega delta_x delta_y ...
+       delta_t rho_0 c Re mu tau_f Dimension
+% Model's parameters
+Dimension = 2;                    % Problem's Dimension
+Q = 9;                            % Qian 9 D2Q9 Velocity model 
+Lx = 1.;                          % Length in x direction
+Ly = 1.;                          % Length in y direction
+Nx = 256;                         % grid numbers in x direction (must equal to that in y)
+Ny = 256;                         % grid numbers in y direction
+U = 0.1;                          % velocity of lid
+rho_0 = 1.;                       % reference density
+Re = 200 ;                        % Reynold number
+
+% Discrete velocity :
+ev = [0  1  0 -1  0  1 -1 -1  1
+     0  0  1  0 -1  1  1 -1 -1 ];   
+% weight in equilibrium distribution function :
+omega= [4./9. 1./9. 1./9. 1./9. 1./9. ...
+         1./36. 1./36. 1./36. 1./36.];  
+     
+% Parameters expressions
+delta_x = Lx/Nx ;                             % space step interval
+delta_y = delta_x ;                           % grid step length in each direction must equal  
+c = 1 ;                                       % speed of lattice sound    (must equal to 1)
+delta_t = delta_x / c ;                       % time step interval
+mu = U * Lx / Re ;                            % Dynamic viscosity
+tau_f = 3. * mu / (c^2. * delta_t) + 1./2. ;  % Relaxaition time
+
+%% Local Varibles     
+% Macroscopic 
+rho = zeros(Nx+1,Ny+1);                       % macro density
+u = zeros(Nx+1,Ny+1,2);                       % macro velocity
+u_temp = u;                                   % macro temporary velocity
+% Mesoscopic
+f = zeros(Nx+1,Ny+1,Q);                       % distribution function
+f_temp = f;                                   % temporary distribution function
+feq = zeros(Q,1);                             % equilibrium distribution function
+feq_w = feq;
+feq_f = feq;
+% Residual in compution (Breaking criteria) Control
+CheckResidualInterval = 10;                   % check interval
+residual = 1e-5;                              % breaking criteria   
+tmax = 1e7;                                   % max time step 
+epsilon = 0;
+ht = figure('name','Erro VS Time');           % Relative Error time plot
+set(ht,'Color',[1 1 1],'menubar','none')
+% Outputs control
+OutputsInterval = 50;
+files_name = 'LidDrivedFlow';
+% Plot control
+PlotInterval = 10;
+plot_name1 = 'Velocity Field'; 
+plot_name2 = 'Pressure Field';
+h = zeros(1,2);
+h(1) = figure('name',plot_name1);
+h(2) = figure('name',plot_name2);
+set(h(1),'Color',[1,1,1],'menubar','none');
+set(h(2),'Color',[1,1,1],'menubar','none');
+% Programming log
+file_log = 'LidDrivedFlow';
+
+%% Initial the flow field
+[rho,u,f] = initialfield(rho,u);
+f_temp = f;
+%%  main loop to update flow field
+ip = zeros(1,1);
+jp = zeros(1,1);
+for t=1:tmax
+   % evolution Lattice Boltzmann Equation
+   for i = 2:Nx
+       for j = 2:Ny
+           for k = 1:Q
+             ip = i - ev(1,k);
+             jp = j - ev(2,k);
+             feq = f_eq(rho(ip,jp), u(ip,jp,:));                          % compute f_equilibrium 
+             f_temp(i,j,k) = f(ip,jp,k) + (feq(k)-f(ip,jp,k))/tau_f ;     % Evolution equation
+           end
+       end
+    end
+   % compute macroscopic field variables 
+    u_temp = u;
+    u(2:Nx,2:Ny,:) = 0;
+    rho(2:Nx,2:Ny) = 0;
+    f = f_temp;
+    for i = 2:Nx
+        for j = 2:Ny
+              for k = 1:Q
+                   rho(i,j) = rho(i,j) + f(i,j,k);                % rho = Sigma f_alpha 
+                                                   
+                   u(i,j,1) = u(i,j,1) + f(i,j,k).*ev(1,k);  
+                   u(i,j,2) = u(i,j,2) + f(i,j,k).*ev(2,k);       % rho*u = Sigma e_alpha*f_alpha 
+              end
+        end
+    end
+     
+    for i = 2:Nx
+        for j = 2:Ny
+             u(i,j,:) =  u(i,j,:) / rho(i,j);                     % u = rho*u / rho
+        end
+    end
+
+   % BCs
+    % left 
+    for j = 2:Ny
+       rho(1,j) = rho(2,j);                                       % Using neighbor point's density
+       u(1,j,:) = 0;                                
+       feq_w = f_eq(rho(1,j), u(1,j,:));                          % here u(1,j,:) = 0  all the time
+       feq_f = f_eq(rho(2,j), u(2,j,:));
+       for m = 1:Q
+          f(1,j,m) = feq_w(m) + (f(2,j,m) - feq_f(m));
+       end
+    % right
+       rho(Nx+1,j) = rho(Nx,j);
+       u(Nx+1,j,:) = 0;
+       feq_w = f_eq(rho(Nx+1,j), u(Nx+1,j,:));
+       feq_f = f_eq(rho(Nx,j), u(Nx,j,:));
+       for m = 1:Q
+           f(Nx+1,j,m) = feq_w(m) + (f(Nx,j,m) - feq_f(m));
+       end
+    end
+    % top
+    for i = 1:Nx+1
+       rho(i,Ny+1) = rho(i,Ny);
+       u(i,Ny+1,1) = U;                                             % lid velocity
+       u(i,Ny+1,2) = 0;
+       feq_w = f_eq(rho(i,Ny+1), u(i,Ny+1,:));
+       feq_f = f_eq(rho(i,Ny), u(i,Ny,:));
+       for m = 1:Q
+           f(i,Ny+1,m) = feq_w(m) + (f(i,Ny,m) - feq_f(m));
+       end
+    %bottom
+       rho(i,1) = rho(i,2);
+       u(i,1,:) = 0;
+       feq_w = f_eq(rho(i,1), u(i,1,:));
+       feq_f = f_eq(rho(i,2), u(i,2,:));
+       for m = 1:Q
+          f(i,1,m) = feq_w(m) + (f(i,2,m) - feq_f(m));
+       end
+    end
+     
+   % erro
+   if( mod(t,CheckResidualInterval) == 0 )
+     epsilon = RelativeErro(u, u_temp);  % call function to compute Relative error
+     fprintf('Time Step = %d; Velocity field integral Relative Error =  %.10E \n', t,epsilon);
+     figure(ht)
+     loglog(t,epsilon,'b*');
+     xlabel('Time step');
+     ylabel('Relative Error');
+     hold on;
+     grid on;
+     drawnow;
+     if (epsilon < residual && t>(5000))
+         break;
+     end
+   end
+   
+   % plot
+   if( mod(t,PlotInterval) ==0 )
+       plotfunction(h, rho, u, t);
+   end
+   
+   % outputs
+   if( mod(t,OutputsInterval) ==0 )
+       file_name = FieldOutputs(rho, u, t, files_name);
+       fprintf('Time Step = %d; data saved as: %s \n', t,file_name);
+   end
+      
+  
+end
+
+figure(ht);
+hold off;          % hold off figure handle ht
+
+
+%% Outputs
+file_name = FieldOutputs(rho, u, t, files_name);
+fprintf('Time Step = %d; data saved as: %s \n', t,file_name);
+
+
+%% Computing Report
+% compute running time
+time_used = toc;
+time_hour = floor(time_used / 3600);
+time_minute = floor((time_used - time_hour*3600) / 60);
+time_second = time_used - time_hour*3600 - time_minute*60;
+% output log file
+fp = fopen([file_log,'.log'],'w');            % log of computing
+fprintf(fp,'Programming name: %s \n',files_name);
+fprintf(fp,'Time step: %d, Final relative Error: %.10f \n',t,epsilon);
+fprintf(fp,'Using time :   %d hour,   %d minute,   %f second \n',time_hour,time_minute,time_second);
+fclose(fp);
+% print log
+fprintf('Time step: %d, Final relative Error: %.10f \n',t,epsilon);
+fprintf('Using time :   %d hour,   %d minute,   %f second \n',time_hour,time_minute,time_second);
+fprintf('Programming LidDrivedFlowMain paused! Press Any key to exit ... \n');
+pause;
+
+##### SOURCE END #####
+--></body></html>

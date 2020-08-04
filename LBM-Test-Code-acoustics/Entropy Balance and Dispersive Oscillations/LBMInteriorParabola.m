@@ -10,3 +10,7 @@ for j = 1:length(alpha)
 intPab(j) = max(roots([0.5.*SDash2AlphaZero(j) SDashAlphaZero(j) ...
 SAlphaZero(j) - STarget(j)])) + alpha(j);
 end
+if(~isreal(intPab))
+   keyboard
+   intPab=real(intPab);
+end
