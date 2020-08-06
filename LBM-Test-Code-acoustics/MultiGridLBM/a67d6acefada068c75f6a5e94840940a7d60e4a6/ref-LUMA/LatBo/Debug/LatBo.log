@@ -1,0 +1,11 @@
+﻿  stdafx.cpp
+  init_grids.cpp
+  ops_boundary.cpp
+  ops_io.cpp
+  main_lbm.cpp
+  init_globalvars.cpp
+  ops_generic.cpp
+  ops_lbm.cpp
+  ops_mapping.cpp
+  正在生成代码...
+  LatBo.vcxproj -> C:\Users\Jiaqi-knight\Desktop\LUMA\Debug\LatBo.exe
