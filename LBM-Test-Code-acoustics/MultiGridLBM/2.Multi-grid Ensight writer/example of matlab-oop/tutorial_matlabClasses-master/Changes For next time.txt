@@ -1,0 +1,186 @@
+Changes For next time.txt
+
+Ideas for next time I give this training,
+1. drop the video game references (keep the examples very simple, and dont have the exercises where they have to come up with a creative example of a class on their own)
+2. have people write a static class with me. Starting with classdef, then adding methods and properties. 
+- This helps people process the new information more timely. 
+- Then start a new class to type out non-static classes (constructors)
+3. jump straight to static class with properties template ?
+
+
+
+## First example (type in real time)
+
+classdef myclass
+    
+    methods (Static)
+        function x = double(num)
+           x = num*2;
+        end
+        function x = add(num1,num2)
+            x = num1 + num2;
+        end
+    end
+
+end
+
+## second example
+
+classdef myclass
+    
+    properties (Constant)
+        A =5;
+    end
+    methods (Static)
+        function x = double(num)
+           x = num*2;
+        end
+        function x = add(num1,num2)
+            x = num1 + num2;
+        end
+        function x = increment(num)
+            x = num + myclass.A;
+        end
+    end
+    
+end
+
+## 2.5 example
+
+classdef myclass
+    
+    properties (Constant)
+        A =5;
+    end
+    methods (Static)
+        function x = double(num)
+           x = num*2;
+        end
+        function x = add(num1,num2)
+            x = num1 + num2;
+        end
+        function x = increment(num)
+            x = num + myclass.A;
+        end
+        function x = power(num,exponent)
+            x = num;
+            for i = 2:exponent
+                x = myclass.multiply(x,num);
+            end
+        end
+    end
+    methods (Static, Access = private)
+        function x = multiply(num1,num2)
+           x = num1*num2;
+        end
+    end
+end
+
+## third example
+
+classdef myDynamicClass
+    
+    properties 
+        A;
+        B;
+        C;
+    end
+    
+    methods 
+        function object = myDynamicClass(A,B,C)
+            object.A = A;
+            object.B = B;
+            object.C = C;
+        end
+    end
+end
+
+## fourth example
+
+classdef myDynamicClass
+    
+    properties 
+        A;
+        B;
+        C;
+    end
+    
+    methods 
+        function object = myDynamicClass(A,B,C)
+            object.A = A;
+            object.B = B;
+            object.C = C;
+        end
+        function object = doubleA(object)
+           object.A = object.A*2;
+        end
+        function object = addB(object,num)
+            object.B = object.B + num;
+        end
+    end
+end
+
+## fifth example
+
+classdef myDynamicClass
+    
+    properties 
+        A;
+        B;
+        C;
+    end
+
+    properties (dependent)
+    	sum;
+    end
+    
+    methods 
+        function object = myDynamicClass(A,B,C)
+            object.A = A;
+            object.B = B;
+            object.C = C;
+        end
+        function object = doubleA(object)
+           object.A = object.A*2;
+        end
+        function obj = addB(object,num)
+            object.B = object.B + num;
+        end
+        function x = get.sum(object)
+        	x = object.A+object.B+object.C;
+        end
+    end
+end
+
+## sixth example
+
+classdef myDynamicClass < handle
+    
+    properties 
+        A;
+        B;
+        C;
+    end
+
+    properties (Dependent)
+    	sum;
+    end
+    
+    methods 
+        function object = myDynamicClass(A,B,C)
+            object.A = A;
+            object.B = B;
+            object.C = C;
+        end
+        function doubleA(object)
+           object.A = object.A*2;
+        end
+        function addB(object,num)
+            object.B = object.B + num;
+        end
+        function x = get.sum(object)
+        	x = object.A+object.B+object.C;
+        end
+    end
+end
+

@@ -1,0 +1,10 @@
+locally embedded grid renement technique:
+Collide on level 0 grid：LBM_collide(false);
+Create lower level grid from Explode level 0 grid:LBM_explode(reg);
+Collide on lower level grid: subGrid[reg].LBM_collide(true);
+time 1:Stream on  lower level grid: subGrid[reg].LBM_stream;
+time 1:Macroscopic on  lower level grid:LBM_macro();
+time 2:Stream on  lower level grid: subGrid[reg].LBM_stream();
+time 2:Macroscopic on  lower level grid:LBM_macro();
+Stream on level 0 grid: Grids.LBM_stream();
+Re-combine the  lower level grid of 'f':LBM_coalesce(reg);

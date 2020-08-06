@@ -1,0 +1,743 @@
+8d2535be52a19c0c4ba975ba0d8068a16f190e23 Updated release notes for next release.
+d5b6820ab43e6ff5ee9258db5536cde9cf680e13 Merge branch 'master' into prerelease
+913ef6770234ff9262bae75879d43c72529dc73d Merged in fix_mpi_rank_check (pull request #18)
+ac1f244a3c80771068e7ce45bb961c9381b894ed MpiManager.cpp: Correct calculation of total_cores in consistency check
+5ccc046276fc080e25c0cd8104ec92f3ad3f9dbd Updated release notes
+1be6c7381969ab74aae1e1c54c4c7dff4d29389b Merge remote-tracking branch 'origin/prerelease'
+060afb7a15f1eeb4d4c3a6fa4bc685661a9ca6d1 Merged in check_mpi_rank (pull request #17)
+32a5a7f39155f35ef1f12f2124f0925ea3abfd49 Report a fatal error if the MPI rank differs from the core toplogy
+afbc323fa461a994b811ed06ca6d6c91754a4437 Merged in git_ignore_obj_and_lapack_dir_var (pull request #16)
+2a19bdc6ce5bc4022c512f3cd21d2d5f07861e09 .gitignore: Add obj directory
+9b6c1a7625c3423031917d699e967654f211b163 makefile: Look for libs in LAPACK_DIR
+231b3f9d1002f5ca525f56dc3c20344a8b62e812 Merge branch 'prerelease'
+4700a6d7d256a7b94a203c01c6c653408d4ac8e0 Updated release notes for hotfix.
+4e8cafed1e91cef065a9ec160796babc8c97ff58 Merge branch 'public_issue_10' into prerelease
+18fffa0e39eae1712ecb6b8e879b88c9f2fe206f Prelim fix for public issue 10.
+f07d0234762d531f1f2843860e9b24426817cef7 Merge branch 'prerelease'
+c0b6e73a47b3a834967e03dc7bf150c98ffa9f98 Updated copyright and release notes; can be tested on Ultron.
+9a5b7e9cd2cc4d16ed2360d4d45e6f8fe41e63b5 Merge remote-tracking branch 'origin/issue9_partial' into prerelease
+ed054957d46850540e32d158d3f3956f025ff7fb Added check to see if sturctural sim flings body out of domain.
+3ce05a548f31eafe5840753da793553c760f89f3 Configured FSI2 test
+27f47fe4308b067b1d9ccd59d83ea59b2dfaf2c3 Merge branch 'issue9' into prerelease
+f5e9236731b91f60240092901df000de84d38709 Added check to see if sturctural sim flings body out of domain.
+efbe47418b5683a709931c61b96033e1250a4e2d Finish implementing an alternative to LAPACK linear solver.
+fa357b74dab7b076c46ab5bc87f5bcc7e43eb29e Still needs fixing.
+85cfc7706beb14e23271418f5a1de5798359e1e2 Partial fix for issue #9. Just have to work out the problem with the linear solver.
+a7ff02136627f4158f25cb50ff7b890d30f689fa Followed suggestions in Issue #8 for improving organisation of files.
+3288fd736407846100712b90804d7fb26b5d1162 Merge branch 'prerelease'
+7eed378f4dcc309843d33b4fb9aabe108486f674 Updated release notes ready for release.
+2510e37cbe69e46a1be8bd1eaf8c81c880fc0738 Fix for Issue #4 -- out of range exception when using a single process in a given direction and sub-grids.
+6d56e1c940fa237b42f9dd15cbc58f8e8841b125 Merge branch 'master' into prerelease
+89602659a820327ac95c781fad46bb7c19ea0861 Completed fix.
+2f8116ad61e7ad135ab9f8220cfa5fda40c79e23 Merge branch 'prerelease'
+a76864c17619b816851e17dcfc9af2996ab8819e Merge branch 'master_public' into prerelease
+5b6315b7aa20959b926c7b4646abc0fdbf564712 Fix for issue #3.
+6a81ebe2825767c00d57286c523f6a647134a124 Merge branch 'master' into master_public
+b4a4ec34bd1ff37425ed1ca7fb94a86fe0aceca4 Merge branch 'prerelease' into master_public
+0d0b0e069590dd878edc5d65d8732b78e24e7143 Merge branch 'prerelease'
+2c0a2f9b53782d1ff4355c9cea33df2a959cedf8 Updated documentation for 1.7.5 release.
+6de8587fc41ed8ded597835118035872ad7935b9 Fixed an issue with too many "#include" directives preventing compilation. Issue #2 on the public tracker.
+9a1a8da6d14cbc4956e09841b87e79abcf19083a Merge branch 'prerelease'
+65b849c43d33a812cc792ee1695cc728328149a9 Missed a version number.
+7b7185ee50c5e5a2b80266e19f357f7e2b8b154b Updated version number for hot-fix release.
+506ce5e5f7938f9cbe0c318f68e7c5034f3076c1 Fix for momentum exchange public issue #1.
+7630a2e59d3aa1130460ec9e7f975896f08a90a3 Added markdown suffix on README for online dashboards to auto-detect
+15f2319a67ebb8e3ff577bdd0f93890c3c0e8d0b Updated version number in definitions
+3f0a2228dba545209710b947928679946a6481c1 Generalised makefile
+6484d421905016f9dc7c0765640e45caf723def4 Merge branch 'prerelease'
+9cb5129ce133f3a290dc7e3dc80437aa5d88f910 Removed superfluous forward declarations
+11c4cdf71cb23d73820710ed8780b39c4ddd0995 Merge branch 'master' of https://github.com/aharwood2/LUMA
+2601bb48262613266dad3e5cab9a324341bc6d15 Revert "Changed internal readme so we only document things once."
+3454a5187b6f90c34206788eff7dc214e95c219a Merged in Issue173 (pull request #15)
+956797977b38b3198b0a799e24ce26c20ec25eed Made sure readme aligns with the wiki -- the project is now open source and so public-facing repo should take priority.
+3555549b421c8233392870f48d905b48e51d5c52 Changed internal readme so we only document things once.
+e8e89fea9240f9ebdf0fa4e60f204d431d7d98a1 Moved element routines into element class
+6aaa52dda45c2292af814b9ed55e9260f45b606e Updated makefile to enable OMP directives
+7e02e2213cb9a815b51d65a2b4cc06df5a3c3214 Updated releae notes
+240f13af027f033bc63340d27bcd1d6a630ac299 Fix for Issue 172
+ac1a1d2d9eb4d922dbbe056c741c9b6eb2cbccf8 Update README.md
+2c1b9653b58823602850865ee86cdb241af8d9db Wiped internal Readme
+25312fb168d13b609a379f7e39234adff9ab968a Updated release notes.
+d07b9f235e8ad3ab33834798990a6e81299e6d8e Fix for the problem with sub-grid sizes being non-zero in 3D.
+a26944e23f9d1c153a82fe3aecd3b9cb18521e8b Merged in Issue171 (pull request #14)
+a86cc439735cb2af82acb40baa37628df2ecc55d Fix for Issue171 - works where not all ranks have access to all grids
+eece21cd993dae74a51eca91d3b8a95b45eb6d6a Fixed various class naming conventions
+afca5bcd5ed1ad7e38d1d388960c11335612508f Fix for Issue #170, added debug logging function.
+b0c38a203a5b1fd4878c91aecad722df785f3780 Merge branch 'Issue166' into prerelease
+664eb631af444fc0bcd2d9d8549e85bdfb6c41d6 Fix for issue #166
+9738a5837c87495d10abf7471aee6624d80513aa Investigation into Issue #166
+5d7a4218637ee1091333c317c51c0026f142f626 Added contributor notice
+7b063832b801584ab2eb3ee375bfae48eeaa24b9 Added License information and new boilerplate header for SoftwareX
+fe51d1ed68a0852728e79e50480fb1d087b27a48 Updated Doxyfile
+7875ec2eb497baae8ece1737c56e2d4f4180febe Updated release notes
+5a83cab3788d0248c7f615167b1874455cb63fde Merge remote-tracking branch 'origin/Issue151' into prerelease
+c427d6890c1585c115a200de18f6b3acf0b415e9 Merge remote-tracking branch 'origin/Issue167' into prerelease
+ccbca1c7bad954151f5192839d503f49bcddf02b Sorted out regularised BC problems
+4de3a59b73f054c3ab3126c9ad37d1191f0b37f2 Moved regularised BCs to after stream step
+b1f4180155e48cfc4e62ce08cb32d06a80180d4d Sorted problem with buried links at corners and edges
+fb0c75bc2955fe5fb420b0516c66d7f6138f37ea Fix for Issue 167
+290f1f99388435d3fc049003c9b68351e9ccc664 Changed error message for mismatch to general log
+313dd58bda43691932b6b3444bfa00012144e216 Fixed a compile warning
+671b8a146de4a5e96556c0086f65c332474b8d52 Updated documentation and marked as RC
+3db6bc35ac0861a78a3d3cc4d54defe407b98854 Merged in AdrianHarwood/fix-for-issue-165-1510663536867 (pull request #11)
+ff84bfaf5138cd6b578fbc417f056334804b61ec Fix for Issue #165
+04821db61d8f4ec39f761595838fb212a6049ea5 Merge branch 'Restart_with_different_dt' into prerelease
+f75f126bd64d445126711ff63ce69c0d275d41f2 Fix the python script so it writes the data in the correct format
+570917f6d1488846cf2ef737470dc82fdc0ba569 Merged in Issue160 (pull request #9)
+6215969066d9836d3fe25e14a96251d5077fb046 Small changes in formatting as per coding standards
+0f9eca5f80ed0a906d90484cbf2783c8d6dc2666 Merge branch 'prerelease' of https://bitbucket.org/mace_lbm/luma into prerelease
+de679fda35d90e6a14d7e93006a522697bfcb4dc Merge remote-tracking branch 'origin/Issue162' into prerelease
+13b00df9be3eb8082b6dfb313d54d0fe87a23edc Merged in Issue162 (pull request #8)
+98f200a28f4b443154d5389ccf56c7b16095018d Merged in Issue162 (pull request #8)
+674b8e02a4f498ac0f3c05343807c760eb935f10 Updated logging formats in main
+4c4b1648bd602324505eb3acfdf84c4debc247e5 Merge branch 'prerelease' of https://bitbucket.org/mace_lbm/luma into prerelease
+7a858fe1caf335c3bbc16b1ca3d87e71852c2fe4 Remove temporary file
+bb5811507485c3274c904d2d9887a91df436aab0 change in_level and in_regnum to double so they match with the format in which the python script writes them
+1a6871e5b5590f9eacff429e8630c50a32a37ec0 Added a python script to convert between old and new restart file format.
+0e416bc0d7fd6d929bdd7a5161e139362970fa15 Added method for out of domain and put it in check for support
+d35c7ac0cc486f50aba679bc7605b1f0d21ef800 Changed naming convention for write out frequency and fixed t use
+449306928dfc020d84f1183ca60edb64a70e6e83 Reset periodic boundary specification and changed comment in definitions
+58402c534fc0f9da52f06fceb167bb66e729201d Merged in Issue161 (pull request #7)
+a994fdbdbe4e840c131d97ee1d72f000e6ccdd6e Added in log file write out for tip positions
+314ec4e3ea19cf92bf18364062d39b8e27af2900 Fixed issue with writing out forces for flexible bodies
+394a989e3cdad9c3e1d2e7d121502a30906dee41 Some improvements to subiteration loop
+51d25c7b4380ba67472707b8cf76a6ae9a5ed2bd Sorted out different sample rates for various writers
+ae1efc8c1bb5e2b2ab6518fa2cac26aa0ff14d2d Fixed problem with periodic boundaries
+80d374e84f12c80220dc16ae3b92ef575c969ea0 Add additional comments
+cebd4ad0be8578a7dfafc77ed53b58d2c45ba19b The density does not need to be changed because it does not deppend on dt
+2e358b639bb5ee65e9319a65768d10587d0a9911 Implemented method from N. Thuerey thesis. It works!
+ad89b1ba3ffc634c9c43bdc4c1f00d9139e0999a Merge branch 'Issue157' into prerelease
+47199228610dc002109a8367c3b7cf6c7d422ca8 Fix for Issue #157 with not be able to have 1 core in a given direction.
+8bce22584e59caa849b146a336d9a2f97e09eb1e Merged in Issue149 (pull request #6)
+5988c5701493bcfdcf74f94baaad0acd8b5d0d37 Write distribution functions in dimensionless units in the restart file and convert them to LBM units when you read them from the restarting file.
+f5e46dc781bcc50546f7479477142f0aab5fab53 Fix for Issue #155
+e936283336297415c3359728a91669af670603b9 Solved bug in the Debug_cloud option. Needs to be solved in the master branch too.
+a05bb1698e74a4f2c3cfc85109fcef6c8d042d11 Only the distribution functions are written in the restart file. When the restart file is read in the macroscopic quantities are calculated from the read distribution functions. The velocity and density values are not exactly the same as the ones at the end of the simulation that wrote the restart file; they are very close though. I don't think the discrepancies between the two are relevant.
+84fd6b8939ae38d0a103fc13480498c5637cf1c8 Changed CSF compilation instruction -- pre-release.
+52df95e2f780461de207e8a6b6c591d99ae966a9 Fixed problem with else if's and if's in isWithinDomainWall
+068461134d405be94b9e791067c64739052cf439 Preparation for 1.6.1 release.
+0bdae2ecbcdb64dfb0d64ec59def78cbec9dcca6 Merged in Issue147 (pull request #4)
+a60321fa93f559a674ac2103f8eda833cf0f31ce Tested the filament array builder
+9e434f3dca2d6dc551aa95f24bda19a3c9381519 Added in filament array builder in geometry.config
+6f0e7d0db97880340f21019a87e648f2166140b5 Improved BC description in defs file
+facfac2256a0fd8e0dab0517894132ee49a02290 Fix to Issue #146
+7141d652dfac23cf8d9ee70c9ccebacb1f5f818d Fixes for documentation -- won't be in release.
+10e98495542ca958a70eae36831a2a7d25966604 Release 1.6
+cb7120115cfb5d2225963d3d4d8e46fabc1b0de7 Tweaked correction to make more sense
+b176da727c346b8bf318eaabf52c1973566eb039 Quick compile error fix for pressure BC
+da4b4a809a8d5a5bfdc78bbe30b46ceaa35c4f82 Applied fix for Issue #145 and updated documentation.
+ecb8057685354f8eee7a092cb899d897518dd485 Merged in pullrequest (pull request #3)
+cf864cf9afd43ea1a3cbd4726eb036ae5e7475cf Fixed problem without velocity profile at pressure outlet (serial)
+b668d76d2399e787d43331bbc6f0e718aa862ad4 Fixed issue with MPI hanging in IBM-FEM move bodies
+e9e9679f6fdfe6c70400f55e739f6c7c2ffea861 Fixed issue with HDF5 parallel write and updated release notes with today's work.
+f4af70fb096635516b38c8895bd00d78825036f3 Reworked L0 position vector creation into MPIM
+55c76664f41786a244099492e1e3c515483e2429 Addressed issue with block reporting leaving small gaps between ranks.
+53bdc428f1ef85a6018fe968e8383318dcd14089 Corrected sub grid depth call location in main routine.
+f65a3fddfddffccebf92c293ebb8cb146f82c67b Restored channel flow definitions -- second attempt!
+e84ca5dbefc0d6d00df5a1cbf0f1c6604b1cd2e2 Restored channel flow definitions
+e2fdbdc120883f9c919e5865af55b67fefdea9d2 Corrected alignment
+13313fde66b95ed28189c7187da3bcbe477c5b88 Merge remote-tracking branch 'origin/pullrequest' into prerelease
+2b9263683f3d5e6508c4a853789aa8f40c582697 Fix for Issue #144
+4ad5e2ba6237743dc3028e153cf502f05e8987b8 Changed fix in previous commit to save memory
+6443cde56ab71fdf84c36bc3b0af39e6b20d40af Partial fix to Issue #144 and updated parabolic profile so it works with force equilibrium too.
+3e9e4eae603a0a6bdf1385c5f6560fbaafd4d584 Fixed problem in serial epsilon calculation with subgrids
+36f2b4c3b090c8b4bacc1be18d52fc17f9b43b91 Fixed a compile time error with momentum exchange debugging options.
+b9393c8d3d2bce85643dacb26869fdca9df346b7 Fixed parallel rigid IBM
+c7ac5047a4ed4318737e4015237cf0040c1c711b Fixed inlet BC setup and parabolic profile
+5e0587c8c0e0728535c2fb64d88f3409a8b76258 Reworked profile initialisation and added consistency to ramping functions.
+5d31f1b79647f6afd7dba75dbd0bf0d8d7a00cbe Merged in pullRequest (pull request #2)
+d00a6d6694d6a533fb04f1dd294bc8fa5ee67c59 Fixed LAPACK, inlet BC and body shifting
+7b968381de65aa96c4ca68bbdf4b5cdd472a0866 Updated copyright
+375f32baad2a58a213297ce18c5c8faf4e51a2c1 Fixed a compiler error from GCC -- don't know why it won't accept including stdafx as a remedy.
+1f3935a1e9e0e91cd8bc186c36925510edb2f368 Bug fixes for multi-region and reorganised rankGrids into MpiManager.
+f654900a3710dc4cfe058c404a30e2e1bf45af27 Moved output frequencies to the same area in the file.
+0d81052c581b22aaf72fc6e4371720ecabf30195 Updated definitions for consistency
+1901616b55b64707c4f931fad0bcdb6211e2239c Reworked pressure BC -- regularised must be turned on for it to work. Need to add a handler for this. Not tested.
+590ebcb6ef8529b1003e45c3b3a243a573243a53 Updated gitignore
+a9c917b9292b0b8b9b0f0cb1777fda30fc50ef20 Added gitignore for Windows
+24ee3aadd425804f9bb1c423463b64872838da83 Added build folder and makefile
+e25a99b619572c46d65e5ba5d11bc5c9bb7cc564 Fixed warnings after merge
+109e97d8656a48bfa8c8aac1de1c6adeb7bb44d3 Tried to work in some memory savings with pre-processor directives and fixed a few merge inconsistencies.
+a0af7def3b008bd431651a815e0a0d621a009743 Merge remote-tracking branch 'origin/MPI_IBM' into prerelease
+4193dc9a71287868b6329559c2fd61f31caf263c Updated release notes for Issue #55 fix.
+6c62648cc39f5911253cf9ca54db770c171e5ca6 Fixed bug in grid manager initialisation for parallel builds.
+4808838cb7a7fecb06299336fb8c10819f4e94eb Fixed some bugs associated with multi-region. Fixed in serial. Awaiting fix in parallel builds.
+7b24a691543e43d0593f1e6db9b784a0adaca94d Improved definitions file layout slightly
+3b293a9ddc1eea0eb5e0e777b7668ea8f3784039 Updated header
+8dc583a24023787b6273a927d20ba5858ccee24e Renamed merge tool folder to match wiki
+abbeedda51eacf6e1a75c0c9552520601836e129 Updated Inlet profile generator
+b032b800bf979b3b879df1e3892d9f19cd681483 Fixed bug in universal serial epsilon calculation
+45ac851861a93c81349b3a82d562e2b51b7aa6ab Fixed bug in assigning owning rank to body
+308757981cdadd19f6ccbf898188ffef358e7ce5 Setup for flat plate case
+f1b91d930d6f8b710f04ef25bab60b51618e9e0b Improvements to universal epsilon calculation
+ffc1ff8c72361e2445e7d6eed0c0ce602349a14a Fixed bug with assigning owning ranks to bodies
+dcc94e169895ebe9d2bafa3c26477749db1c615a Updated documentation for MPI-IBM-FSI
+4a638e23c84953c07ffec4e09cee1bf093fc9abb Update to merge tool early exit condition
+5c38c614e12c9f574932f6d35e0c71b0fe176373 Serial and parallel FSI now working
+21d16791bc26d68f6865d262f6d3b83b2400132f Added in residual checker parallel capability
+2e770f55f208a0559b31cbca85b28377638f53b9 Improved BC representation
+33a1d928233c0a59bca9d4da3c63f5ad50a4c107 Added in tip position write out
+a53dd7fbd7173382fc32ab769f7bd9ed41245eaf Fixed bug in FSI coupling
+f4f2065e35e69b7ec4f97b05ff5cb78c9626154a Fixed FEM bug - serial FSI now working
+8d612a23ff85cdd62193c815f4c4481a13441665 Added Reynolds ramp
+6475606b1680d87ee84b511f6b8484aaf34352a5 Added in sub-iterations for IBM-FEM
+591b1130c426593ae9938ff1da9680e83f9e495d As requested updated geometry.config
+7b2016373172eee03d973db32548fd0cde563676 Fixed bug in Slip and updated merge tool
+b464c0cde26003a326ef931e131f75d2013e718d Fixed bug in support calculation
+2f49a00511099ad0a81871ca5eb96dcf385317db Improved BC setup and added specular reflection BC.
+375a436dd993eb911dd4f97e521bc810adadf8ab Modified support calculation for updating after FEM
+37c4ffd647c94e7672616ea1f303fa5241f67eec Solid site optimisation and cube creator added.
+5cdb2a6cc90e11b49cfd8caba1fce608c093f903 Improved profile generator. Tested embedding sub-grid BCs.
+2253970075738bfc6ee51243fcfc4b9514d2c6c8 Setup for 3D flat plate case
+7cefcfd9b43d655b648711aa5a393caf913b9666 Changed 3D epsilon scaling
+51118cda3e639a9ac170572b2f8109732fe007a0 Made ds calculation work for general shapes
+17130395e3c325d154a9410728db12f015ea0259 Added in plate builder
+508868dfb1baa33aa9358fce0934e57c575cd53e MPI reporting mode added and objects can now cross grid TLs
+30e219a995d17b04fd34a7aedb314031c2d7f20f Sorted out point cloud reader for IBM in parallel
+a7dca635c25114034eecbbaa63989b8be99fe046 Added in under-relaxation for IBM velocity
+a281c5374cd14352f5d52a6860f940d5951be843 Fixed Issue #140
+0b7f0319051278a4d03c2e3731a7043f12374300 Workable mesh for Ahmed case
+5f9b363569ffc2839a120deb7d7f4329b4a2bc7b Added in ds calculation and spread to appropriate ranks
+f183e4a7fc3c54329e0e0aafa81f05ffe574a6c5 Added in universal epsilon calculation in parallel
+5c5e34b1c830d552907138a9fa3bdb26ac9c041e Added in serial universal epsilon calculation
+2ac21691eeb06697380f43bd5b07cec1f05eea67 Added vector to determine if on level which requires FEM
+c8360a406edfcf0c09bbae80d191475268114e63 Finished restructure
+6cd07995586f1f650a368feb1c157d24d1e64cbe Added KBC to optimised and tidied up some comments.
+8af3de3ef5fb45cbd04a67ad0104c844998e922d Finished initialisation restructure
+413de984740846ba5fbb41baa4568453f47373e2 Reworked building of helper classes for MPI-IBM
+e9120c0d0d4daa828e74b16193c6e5a4fd72711f Finished constructor restructure
+2f45c331371a96778b846770add7571c996dd821 Started slight restructure to make MPI-IBM more modular
+54aa3f5f2e1415e4d68e9cd747ee174f2fb7093a Fixed IBM point cloud bug introduced in historic merge
+ede9957ece429b631d95c54f6875b6a48a14c370 Changed naming for helper classes for IBM-MPI
+ec8db407abd99c43b10932245464d7013702aca1 Added routine for getting rank from position
+5daa4c91477c99f1bf0480540a9532afbf05c510 Added in routine so all ranks know all positional limits
+2fd93e5c84c5c432519ebe73a1c89a8a01712591 Added in IBM marker update from FEM (serial only)
+8733b8742f69efe80fdf7a4f53d6400ffcdb7ddf Added in better load vector calculation for FEM
+38086cf21a6667da3d3f02d7e2afdc5c0f2d1547 Added in FEM force calculation (serial and parallel)
+ebc3cb1c5e74f7bf8e2a69aa73c00d306edc7c24 Added in rest of matrix constructors and FEM node update
+96f9e3fa7ffdc56f7d2d75605bbb8b7613aa3352 Added in construction of mass matrix
+d40c163e56dc4e77548718dd1c127f819838fdba Written Newton-Raphson iteration routine for FEM
+4f87df7558efadb8b0b6dbd0630956c9b1171a1d Written main outer routine for FEM
+b1e8452c729970157ccb6ad82e079ef7832911de Merge branch 'MPI_IBM' of https://bitbucket.org/mace_lbm/luma into MPI_IBM
+266d96bdc3a7b14f3aa2718a5d70750e23952977 Added LAPACK library and removed some legacy methods
+f97cda8e36c655fe6bd43e51f24277fccce61f67 Added LAPACK library and removed some legacy methods
+0008bf9db6b42b394b094bb4d6e73bd0b69bb307 Added in mapping from IBM to FEM nodes
+18db4f2769ff8dc3edc080a323b590fc981e5d77 Setup FEM class and implemented constructors
+d7e27f6ee09b2405dea7d32a0dcc5bb013b84a99 Added in automatic body shifter when using walls
+13ca4fbb4d42b6629257a2822ea2cf770fbd06a6 Fixed bug with catching non-blocking send requests
+d8e3bf33f6be31fb97917cd780ee3e36a6a87449 Fixed rounding error bug in LatType assignment
+a84c0648a0b32cba2322b2a08e23820a60d33cfa Sorted force calculation so it uses momentum
+1758e5ae01b11aad11ea1f61f87474e86c2f908e Added in pressure outlet BC and inlet ramp BC
+1e42afc8a36c3cb9118ec5c002ad4c2344ba7f1c Fixed force write out and added in automatic body adjustment for half BB
+f689087fc915a4f15621a03dffdd1779fa7bfa2b Added in force write out for IBM bodies
+c3aadd862780c69e2136c0c6dac9d7f669b28286 Added in parabolic inlet and extrapolated outlet
+f2b9b3a2113f11f215dc7cdd2a87ef1d1afefebb Fixed makefile for mergeTool
+692fccb407f5f3b7b7048e4d59cfe38ca89bb920 Added IBM routine into main LBM kernel
+03199e6fa809559d1ebc00eab458f9f588329faa Chaged setup for testing MPI-IBM
+b7428fdf7ae505638d5ef8c6b03dc817fed6939d Added force spread operation for both serial and parallel
+aad99bec9a3900950a81e3aa37b6736fc3f1ab06 Sorted out grid forcing and reset
+fa8225b7709a31d60ce9b66eab243bea931a0cdc Sorted all MPI-IBM comms so it works with sub-grids
+85a24326dec75ece59293ba9ed0c130b7b2c1a5f Added in force calculation
+37c367fb97c529425575ac12293d758a7188e49e Bug fix in epsilon scatter - too many non-blocking sends
+3540f8d45c97758c3a4ecabecd097406a6eb88ff Restructured interpolation communication
+1af4201d9fcede60a494a8be915fd72e479b9919 Restructured support comm setup
+c96428a586b3e60d9e02df2ef61ef5f8e1e24286 Some bug fixes - epsilon calculation working in parallel
+ed4f40653511f8dcc803d7b98bee9accfa3329ea Restructured epsilon calculation - not working in parallel
+a4584f15ab1790230cd73701710e31f6fcc2ec05 Restructured epsilon comm setup
+b3767272e3e7e2b39dcc81f5c9bf79b8acb0eef6 Added initial probe write out and also fixed bug with forcing where vector wasn't reset.
+c36efcaaf8b7933395ad5b8906dfc640c97782f0 Started re-structure so MPI-IBM comms is in MPI_Manager class
+3fbc74ba3337b572add56835f1efbfee9df9b34f Added modified definitions from master branch
+f57821b306542058d65bcd916685395b6c9843e2 Interpolation now implemented and working (serial and parallel)
+71d4144885e6f603b1f5a5889ccdc896ebfbd07c Removed Jons defs
+bfcfef503736bb52ad533c8e021d7029f2baadce Started building comm class for support-marker communication
+f96c2b5d97e8e723215d76856d7bc35a59a2d331 Cleaned up IBM debugging routines and started intpolation step
+d906d6b3a13d70a7d29e77ef3d6be1950f7565f0 Merge branch 'master' into MPI_IBM
+1b4217cabdce71ae458d5b5ec2a6fad888114135 Release 1.5.0
+fc024b53e97ca8dc047dfa33a6a2f7f13c257cb4 Fixed bug in SD method that caused an issue for some 3D problems. Fixed undocumented issue with load balance file output.
+02f74348123010d373d2b17c6dca1735783fd86f Merge branch 'prerelease' into JonWorkingCopy
+a2111d9ea3776d121f2a00e6458240b1b808b4c1 Bug fix in post-processor compilation
+ee0e0806b396755b777342717af7950f64c055a3 Added in epsilon calculation (serial and parallel)
+abedf12a22a062629b09b69b93fd01e5464b5959 Added in marker ID sorter for point cloud reader (parallel and serial)
+192818d5514783567c4beb3c5ea20ad471d6250a Fixed IB constructor so that markers on receiver layer are deleted
+18237613de45d89cbeb5d731501730a56b60c42f Merge branch 'prerelease' into JonWorkingCopy
+2310c19cfa172d5e2f387d5fb46082e13d6e3c58 Moved numbers to stdafx
+6f1131b81d52d0f95bb94605fd4749fae879ea2f Merge branch 'prerelease' of https://bitbucket.org/mace_lbm/luma into prerelease
+a3abd216e5e4bfbe025c99f8ce4c10f47a269160 Improved load balancer; fixed heap corruption
+5dca27533366b786ec34238ebdca86d71b78ce6e Merged in SGS_turbulence_model (pull request #1)
+961f0b1190d6ee8661f2bf76df0ad59290d33afa GridObj_ops_lbm_optimised.cpp edited online with Bitbucket
+f1cacde2a3735b6b8aea4b3b160b3201cd87d4a3 Matrix.h edited online with Bitbucket
+d2b070fabd20930bece32c22287b624fd3c1b28b Fixed a bug in Matrix2D class
+0100fafff89e1991a72e24379e816ff7bb64ef59 Updated release notes for issue #46
+503d3dc0aab2b3d4cb5204f1d19646196ffefa10 Merge branch 'master' into JonWorkingCopy
+267070b16426f2645d222ba39e323e319658c77f Fixed bug with restart and added probe check tool and change screen output
+0e1258e61abc087ee963ca6eb9941c08b60b92d2 Fix for issue #136 -- new merge tool version
+eb173875a3f02facc4d2306967dfb3c3c2d48869 Temporary commit with CleanToGrid included
+ed4e267a0f96a1e58ea34f626855c7d91d634f0c Updated release notes
+0bc9c9206739555c6ca0a9174aad8e574e692f4d Removed 2-core error message as no-longer applies.
+5b8b7fec005f6ad06af3d1b5cee60d5386c5eaad Fixed bug in issue #135 fix.
+f13c7a7edbd2c96e2d9197750d432464f4526de2 Partial fix for Issue #135
+e69a6c218426a952efd958ebed9787ff9f2ef561 Updated CPR; removed old deprecated; deleted old boundary file;
+e639df3ba3dda4be5417951ae7f00137d5988b4c Fix for issue #137 and #122
+d1e8d7988ff5bb34cab7367cecf4bfafae9a4cb3 Small bug fix for smart decomposition that caused an MPI hang; MPI manager capable of checking comm buffer size in advance to help debugging.
+2d53b3b17aa795ff82f4e713916caf105c0b11a6 To ensure consistency, get just root to compute blocks sizes.
+a0df143653ccd32dc50a518350938d73eab535ed Improved load balancer -- last time I'm messing with this now.
+232c3417eddddf481bb5e9345d763fe6292fd5a4 New decomposition strategy for testing.
+37810949c2df5825b1b788b63bf0c3523fafa7c1 Small fix to merge tool and setup for Ahmed Body case that works
+6529ace335e5f12b283c4322e8ebfb3a53dc00b7 Fixed bug in smart decomposition that could cause infinite loop.
+9743bde17f4cb2e130c8b7325ffb8f5ca477777d HDF5 untracked bug fix and visualisation of block labels added
+32b4f47cb94516e72b13369932577ec9a7b73207 Smarter domain decomposition added for use with sub-grids -- issue #131
+4fbf10915d28c681246f6338ca73d13319f1a1e6 Added timing predictor; added framework and algorithm description for smart decomposition.
+f6d4f6779d2124549e292f9c14442f8dab5228fa Merge tool now ignores solid sites to save a bit of memory
+2f5915f0502580b407f0291de3321c5ba72b1354 Merge branch 'prerelease'
+493859e66cf19e62f2584941613b28b07e930b96 Updated CS doc
+4b3c118063fe3697966305588fa60f9180331d0b Config for debugging issue #133
+46b1974a83adae98644d3d952e2373062ea60212 Updated RN
+54b4b6f56f6eb4a2ae63cf7e9b1893aabb36e9c8 Optimisation of PCpts reader so it scales as O(n) rather than O(n^2)
+3bb95589aaeb96b6a25104422843222cdb6cca78 Auto sub-grid generation as per issue #123
+4d88083d3c482b5f1b54795383c7b1690c85a24e Fix for Issue #132 plus preparation for Ahmed body with N6
+012bc90d5dbdc29d5eecda11378e84a4fe8ba40b Added override for 2D inclined plate placement
+4ea874aa4c119e082544f609ee40ffba78c33591 Update baseline for 3D development
+98c73e535866a3a444da5396728f28f5a72e95a9 RELEASE 1.4.1
+41e35f4244a20358ce58f4c1b368aecd91165761 Placeholder for BFL restart.
+25247542d62af927a48c206b78cbdf6623ff5ab7 Momentum exchange upgrade to incorporate BFL bodies. Tested in 2D only.
+52df97ae6ac988c054a09147970b6161f00855d1 Updated release notes.
+bab36c12833f730da1a43a1ec65fcf013fd7b8cc Improved line construction algorithm to give more reliable results; tested in 2D against BB and looks good.
+ddf7bca735294c795341d70777b8b7952f55d731 Removed lots of code duplication for body constructors; fixed issues with BFL debugging output
+f46d6b61273516819eec3d8283671af39918b5d0 Added surface closure method in an attempt to remove artefacts
+4e7677747a9e16dddd74b62ad7e1ed60bfa99798 Changed scaling of objects to be closer to grid edges; macro update on BFL enabled; 2D BFL seems to work well w/ and w/o MPI although is about 30% slower than BB on the case tested.
+033b9f06a6ade861044fcdba2d4a57bc84349cef Introduction of BFL into optimised kernel; changed intersection algorithm in 2D; various related improvements (VTK writer now part of body class); changed Q store design
+7ab8727ac3332615667f41994e87c3237786eb07 Fix superfluous blank line in probe output
+5ac3cc88101e44d5b1aecc5aadf1b472a93fcbd3 Merge branch 'JonWorkingCopy' into prerelease
+c3b3764f455f6bc41455a2b6415b363bcc715be2 A few improvements in documentation.
+2b15cbe9abdd1d67a9d8a714873b43eb7a20049b MPI-compatible momex_reader added, 60 deg case setup using new geometry config.
+d1f0579594471018a80e7339e4c1e1ffe36e2baa Updated release notes to reflect new alpha development.
+b323b16694ddaf0478c40f1b64f64ab02b8f7437 Added momentum exchange debugging options and anew tool to process.
+1acf94bb88cf51ec5a5336397beccdcb4c843d64 RELEASE 1.4
+abd17a39fd5ac71367e5e09aff818715cbf6670d Improved BBB handling and fixed bug with inlet-only, no-flow initialisation not working.
+f3cb4c3706a45a97090ff9fc4f57dacefb7f069a Added geometry structure to remove a large method signature. Fixed typing issues when using "floor". Will address BBB issue before pushing a new release.
+af1b07f2f330c2b80a5313c0e93f844072b9bcc0 Added geometry.config file to input_prefab folder
+06f5b8100864c4d9a6b2a5f9c90977d1f2949461 Updated release notes
+27b532812f013c506ca128cddd19daea134f8151 Finished testing after merge - body builder works as expected
+e443ef5fd1d4edfa120c0bf707c64e8860e46910 Removed merge aux files
+060b567bcb6ad0827212cf512861eb4b8321766c Merge branch 'MPI_IBM' into prerelease
+7879aa5cf97084b0fc39f9bb644792c16d96b5bf Tested difference configurations - body builder works as expected
+99b13fe6e1588dc0b1b505353db94bc197a97150 Added in VTK write out for BFL bodies
+44bf0ce76c726778acf3dac57d05e6472fab12e9 Some minor bug fixes and clean up in body building
+b72b5779b92d861034b985b28158991b9b27baa4 Couple of redundant definitions removed
+42ae390b5f45351eac821a53e4163c0362beb109 Patched yesterday's probe fix so it works properly -- sorry!
+14641dbeb20082c85b173c9394995c7ea819baf2 Included full header after moving implementation of PC reader into template method -- for some reason lets you compile on MSVC.
+25276b87b07fcb5edaff716ca0acbfc5b898e8cb Merge branch 'prerelease' into JonWorkingCopy
+3f01430236fe72aaa86967ada701705892147fa0 Fix for Issue #125 -- probe output. Also included coding standards document.
+63a0deedb52406946342c479b6ef0dfcc7b34ca5 Merge branch 'prerelease' into SGS_turbulence_model
+6e5e6d3af3b7fa5b394d180dd0b6a1daa778bfd9 Updated release notes
+e9b4c60579170fd526e01a99fc7f07e9c07f2af5 Merge branch 'InitialVelocityFromFile' into prerelease
+05ccebc7e5f2aeb1d1069858f7394cae3ea60d43 Set up test case
+94addd542ba738f9eb70867c01e128f864ebf092 Implement parallel version
+32ee7243d3c35e06d28f6d2473ec7df252dfac41 Added in square/cuboid builder
+14f6d9685be73f6d068684f356cb4235e5d42610 Custom paraview filters to create velocity and vorticity.
+b5595e5848a7562b7e9d99dfa5da467d1121167c Solved some bugs
+0058fd26f20b52a2c9e3b7be6c6e61dae39cdba6 Improved config read in and 3D sphere builder
+eb994970521c96b169163d7d969f0c38bf9c471d Load initial velocity from file implemented
+b89bf09c08a84f509611b9c0b746e27d0d221652 Added in circle/sphere builder
+1470c70c328a2553dff6ad32e575d4722d7a49a6 Cleaned up class body class structure a bit
+d063c9b653695f56f6319064ea4b7c0a8e5014a2 Cleaned code
+e4b2ab2fa2f1284e94d3b598a149d94f46da25bf GridObj::LBM_initVelocity() reads the initial velocity data file and checks it has as many cells as the current grid
+7a3cf3237bdf38bb35c23b154fe0703fcb898cd6 Fix for issue #121
+e95842e329c1cad094ee49071322dca525c717b6 Documentation moved out of source code and Body class neatened up with initialiser lists.
+5b4be08de92e656e8d4a75545e5ccfba2f643c5c Added in filament setup in geometry config method
+c695192c628e891ab4a9ddc5bac30da7c3db1b3f Arrange simple test case
+c619236b526570512a2c4a84dee0246ea8f12e52 Added in geometry config file for setting up bodies
+62873199eb6b157fa3a33d3adf8a462149c16521 Added the method readVelocityFromFile(..) to  GridUtils. It reads the coordinates and velocity components from a file and stores them in vectors. Changed LBM_init_getInletProfile to call this method instead of having the code of the method implemented directly into LBM_init_getInletProfile().
+680d0374e8c9862333e54d274718b09f3a4d758b Started marker ID assigning and deleted RL points for IB bodies
+f3e6ed24efac043221b2309f498ef9e6de889c7c Updated release notes
+c8df1dcd22338927c8945cf3189d831234c73533 Merge branch 'DimensionlessUnits' into prerelease
+403971ac72a33df4efc861067beb0fbbb2d32520 Renamed g to gravity
+e40711b6b4cba0c0bb6851e99d941ea072f0309f Solved some bugs
+bfd62e94f757d571113091208880af0d619b4ac8 Coded safeguard in the initGrid function to check and warn the user if the omega calculated with the user inputs is out of range.
+cf6ad7c0497bbac28b56c53c37b49be3d5a44d7a Fix for #119 -- GridObj_ops_io.cpp edited online
+04496ebdecda78b17b2f43baca24879d31a65295 Bug solved
+e8929c955899de7e88fb6c7594ca8470e653151f Added in owningRank member into body class
+98a1059c2ae6c153d7afc41434a8c9f381251a45 All the input parameters are expected in dimensionless units except L_IBB_DELTA_RHO, L_IBB_EI and L_RHO_iN, which are still in LBM units
+98a71fb23935a34de8a44f691b81967ffaf39ff9 Fixed point cloud reader - now working as before
+93ed40b76e7519d77de4b30736bbcfb6386eb6d4 Set gravity, Re (and nu) and dt to dimensionless units. I have to check all the occurences of L_UREF and put the safegard that checks against tau < 0.5 or tau > 2.5 in the initGrid method.
+8e35357993e98724dc41afa5eb9a6431a628df2b Added new unit conversion functions in GridUnits.h
+7268a91dd207e466f6cad398daa82a488386595d Setup definitions file for simple case for testing
+2bfc73c94156417e70c88bfdd2e343d99f90122b Include PCpts header in body class header
+fd6885c2b830f8c4c9be92a36ad4c96244899200 Grid Manager added, Body inheritance improved, smattering of improvements throughout.
+edc08ce19f3b9d54c97d98b66217064f419b9c62 Merge branch 'prerelease' into JonWorkingCopy
+d56d3f1924431a4f724b64fc65708355c4a6181a Fix for issue #117 -- momentum exchange calculation.
+7ed772d49b78d58d5b18dde403f359cf79ee6e69 Updated release notes.
+85d021a21bdcf48d650734527d4c75a3c138575f Fix for Issue #114, rare (but major) bug fix for HDF writer, streamline IBBody-PC constructor, improved initialisation methods, deprecated old boundary functions.
+b886840e19f351d11744176d3fdf1cf5d0546223 Fixed issue #116 and partial fix again for #114. Also improved performance of PC reader.
+0f8cf25cc9c47fcf15e4a857507523806367f867 Split out mapping initialisation to reduce my headache debugging it.
+a8561ba084dcff4ea4994ecd592abab595faae4f Error handler now takes optional rank argument, improved labelling and fixed initialisation.
+dc1a62d05817ef784910a02c1b7cb6d1808cfd13 Better signature for `errorfcn()` to prevent redundant copies
+1099b15d878ffada2ff0fd198892e967873b84c5 Restore Jon's definitions
+443be7a88554bb42b7016f19e71aec9d96ff7210 Merge branch 'prerelease' into JonWorkingCopy
+7fc6d2d929d69d4329b0ca301751c75ef28d5141 Planar decomposition made default and wall-embedding fixed.
+bc4dcadf03b4a878c95ddebae13f8969da95f7a3 One more fix!
+756c9e71d7c79edc6df208301e89e93cff32206f Merge branch 'prerelease' into JonWorkingCopy
+7da56542e2375b9672251d5dcf754766b21f6555 Fixed some post-merge bugs and setup a demo 2D plate case with 3 grids.
+40ee1b730c2164d41183ef43c0b26a4b4bc12a70 Unfinished setup for flat plate v1.4
+4fecc25b883fcc1b51aecdcd8789b5dd265c77ef Merge remote-tracking branch 'origin/IBM_MPI' into prerelease
+6db2ef6ca20a853f73e41bc38d81432d95183e9f Fixed include of MpiManager header and some other warnings
+b641c15f5a7bdf113bf79a3f5ac14e0830fa6243 Change the hard coded 18 in the tau_t calculation by the variables that give this 18.
+a57afeb9d511c51791212593fa72e6ea21af9cc9 Solved some compiling errors
+dfc88c79677800ce29d5ce09fd33a614f0c487ce Smagorinsky turbulence model implemented. Not tried to compile it yet.
+be23864d3dddcc95a89db44fca5d7739a8077618 Inserted the Matrix.h file with Matrix2D.h class so it will be easier to operate with the non equilibrium stress tensor
+057216477ecca2b05ee8ef3199a4c2cee89f2689 Fixed a couple of bugs
+576e2e7a27a08c40e499938b9b5049eaf0b05df6 Merge branch 'IBM_MPI' into prerelease
+044c146ad3e74f88ef836d8c6dfc046a74e9086d Create a GirdObj member for the smagorinsky turbulence model. Put the call of this function inside the mesh loop in LBM_multi_opt( ) (since omega_t depends on the distribution functions of each cell)
+6397419912b10a99236b6c9511ae1c8f3390c7cc Merge branch 'PlanarMpiDecomp' into prerelease
+f8e75fd3c32c361fd45cb71dfa2fbedfe520f732 Updated release notes. Fixed issue #104
+15b99574eb9d228bc3adca1d6d76a68b7128bb1d Groundwork for IBM parallel initialise mostly completed.
+dc52f20164b451148051b21d5cf842327b820a47 Fixes for 3D MPI case
+22efa4a549bd1145df67a574f53e3d2547996566 New enumeration and bug fixes for MPI.
+fdefa853177d7843bfa0e865d67d1da010c5e226 Fixes to PC reader and fixed BFL memory leak.
+b6d7f73a7046a660a4a2294b7efc823dd1e34d99 Big changes to almost everything which rationalise the coordinate systems. Will form part of v1.4. Utilities and documentation updated.
+aeb3444d09e424485d37d6a72f6bd4ed1a8a0ad7 Code cleaned up in tested. Not completely tested for multigrid, though.
+a8ae5ac32643532bd0ad802f755c0463c3443244 Solved bug in planar MPI decomposition implementation.
+ec3694efc074c46ce61ffbaa4e23a8a352739be0 Fixed warnings complaining about asigning different variable types.
+0e09c2522c80173d75c1cb6251c6ea7cdcc0d102 MPI plannar decomposition implemented
+75fa7a1044dfc6f78d5231d0a3736d3681a9b68a changhed L_USE_CUSTOM_SIZES for L_MPI_PLANAR_DECOMPOSITION
+b349a134e1fe07b0f4b67fcf208ece35f89088a6 First go at initialising markers and support across MPI ranks. Some teething issues that need sorting but in principle it is getting there.
+0e422af795727417764612ab24c785d602bb3ce6 RELEASE 1.3.0
+87aa726416ce61202ac60cdcf69626c19fe18c17 Merge branch 'prerelease'
+aca7bcf0ca08c497aa2643bcb5489ca211ae930b Improved merge tool
+fb66e20d101477715524f4033157cba27b84e4cc Improved merge tool -- new version on the way.
+c7b2a4f2da816e9f40cfaa1664bb9bed91c80c18 Various bug fixes and Issue #100 fix.
+77a34b5da3b4432f06e02fa73cecb68d4f4c24a9 Load balancing reporting added for MPI builds.
+9f808643a85fd0ba4e401bc5012bbb2fce108c88 Couple of fixes and BGK Smag added.
+4754aef1f8606c57b2840bbd33346a22f6f4a147 Continued standardisation of pre-processor definitions and constants
+cbd56b4676c1cf8a032e2d07bb83480d988dbb1b Corrected error in sizing guide plus updated merge tool.
+cdcd37554ee3ced729ad25bf609a15ca4309b494 Fixed refinement ratio initialisation which was causing gravity to not work in the new kernel
+8681a2d40ce400783cdcc83958d0123f214cdcb9 Fixed HDF5 issue and removed erroneous DEPRECATED.
+fdbb57405d4831a3d2dcc56affc70ea73f3f488b Edited release notes
+e3df471a1932ce9b3fc37c3741a7279394e44201 Merge branch 'Optimsation' into prerelease
+81dd596059f87b5141d8844f6f287d613bf29409 Momentum exchange reinstated into optimised kernel.
+f676629cb5351f9b99ea950dc68722f4751786de Restart file optimisation
+aaeb66b58d8f9a0282a29006211e4a442282fb5d Standardised macro definitions and bug fixes
+ee07eaad8d957c021359345646531c34688265e0 Small optimisation for single grid case
+a64ad39e606825b00c96bf437d54e36ed513e0ad Bug fix and removed multi-region support
+5641c1a3eec01e3963b22fee180601393ce953fc Moved optimised stuff to another file to make adding MPI easier
+01298e391291fba7759ec230146f9d7cb05277e4 Result of many experiments with optimisation -- seems bottomed out now.
+4926002b46286fed82c10dbe23af66632288d25c Fix for extra reset of forces when using sub-grids
+90dc582fa40ce35ea923d7602073c7a384bd5d4d First pass at introducing the optimisations into LUMA
+18a307614958d9e4bb490ff48ed1dfbb1680c67a Merge branch 'CldFix' into prerelease
+76acca7a9b734a338d258f33efe151cc714f74af Impromptu fix for cloud reader
+63a895d54d3124b017670600f48b0d960315fce5 Added faster Li IBM method and quickly checked
+716fb6f494770e80904a76b630f221863544e796 Added deprecation pre-processor.
+e6fba23900d90d49cdf89ad70a67a287b5482573 README.md edited online with Bitbucket
+7e786e4b6f5e22f96b1acf8e92991b82ce47afb5 Fix for FGAwriter since merge.
+4a6383caf8f5b80bc605b2302f5151421fc2b1fb Tweaks to conventions, updated release notes
+06d1570ff9e4f3a9e8e2c699eb760f7e265e04ae Merge remote-tracking branch 'origin/FGAWriter_Iss65' into prerelease
+46bf160508db92f1d1f2be4f7f5d962fa82940ab Final fix for momentum exchange force calculation plus cylinder filled input.
+8fa09e5893b587c7bc8d592eaf27b091eca8b5a0 Readme added for h5mgm tool. Could add this as a manual page in future.
+db8e595e108c3ff63d6bd09e6267e2b6318d8189 Moved force reset location to start of boundary loop
+5529668afe9632c5fd00b99794f675db607039d4 Fix for force calculation -- to be tested.
+5ca84ccad8745becb20b01e4f28cbba9af66671f Added in makefile for the merge tool (linux specific)
+a457314d504dba795ee03412d46d41284bb58be0 Fixed an issue with the z axis inversion to write the .fga in UE4 coordinate system
+281bbb0d89848749345434e4aa9140ab6879c721 Merge branch 'Iss85_89' into prerelease
+04096fe74a6609d72a516af76841af756dac04cc Quiet option added to the merge tool to avoid printing out errors for missing datasets.
+212984889399a68235ef1e1a1642011b34cc1231 h5mgm can now handle missing datasets
+080209bb26cc27d9ec977e4cf62334129778b4f9 Probe n = 1 fix and update to merge tool
+8ae090b1000dda23369e83e94d8f0b51fb13efbd Rewrite ulat2uphys function in gridUnits.h
+3e697b5c854d9a501bbd1ed604772311448bf699 invert the z axis direction when writing the .fga file, so the axes match with the UE4 convention
+1dff6707c5d4c8c4e2ecbad70f7fdecebd7358db Fix for probe output and reestablishment of D3Q19
+8c464e1f3aff50401451196572f5b481316f15d6 New refinement guide tool + updated docs
+772f575a04ecf559d4da2598301af9147b99f9c5 RELEASE 1.2.0 -- version number updated.
+54f021c9706dd8521f63f56e441b1966bfb6beb1 RELEASE 1.2.0
+55718293f4b0e59cdc24a8b7854e86c70ab74207 Merge branch 'prerelease'
+bb595f255e9a7b0f89d53ef52d81279cbb6d2b27 Added new Sphere input
+5be58845882ccd19face9b7cdc0a4d0312818524 Rebased the reference data in testsuite
+b9f72927c11127c750056c132d00f9960e4e759e Solved bug in ulat2uphys(...) in GridUnits class
+60dd2b66b146cb9af8a3c94a1149f82bb62912e3 Merge branch 'TestSuite' into prerelease
+25195b1172b364d28f893fa2b4622c160c8e8453 Create GridUnits class. GridUnits class converts units. For now it converts m to cm and from velocity in lattice units to velocity in m/s using that the LBM simulation and the real fluid flow have the same Re. Write the coordinates in the .fga file in cm and the velocity in cm/s Set the Virtual Wind Tunnel domain in the definitions.h file
+aab368bf441fe1047d5a2ae5b336608b77e43ae0 Updated testsuite notes document
+e6907c7e75af07ca221845144bfe4bc330cd15d2 Fix for Iss88
+0a4352cf8b4e2d79e62e91cde5a6e28e2a521de3 Solved a bug in GridObj::io_fgaout() and set up preferences.h to simulate the wall mounted cube.
+510cae0f0f9a413ce55295e4ac2a23f2ad4fa645 Modify GridObj::io_fgaOut() to write the time step number for the level 0 mesh on the .fga file name. Call GridObj::io_fgaOut()  from the main routine.
+e8b7d75bb790ed35fce75aea3166ab8f5a52465f Finished implementation of io_fgaout().
+64200cb9663d45ac2c0f01f4a918f09979bb25a9 Body builder fix to prevent shifting outside domain
+07807eeb18e71f1e41a905c7f42d360aca3a390c Reorganised prefab input folder
+ca45e2ffc0f71072340773d595663e2c537c6657 Fixed Issue #87.
+2fbbfea9b2da78a5a9b9dd2f533703fa273762f3 Fixed Uz missing from VTK output in 3D
+98c0acdc36b9d38a3bba94e803a5b01cfdd3b1ce Declared void io_fgaout() method in GridObj.h to write a .fga file with the components of the macroscopic velocity. Started to implement io_fgaout() in GridObj_ops_io.cpp as a copy of void io_textout(std::string output_tag)
+5a9a8bf0f853129d20fe8aaa1780d24e0a06e9d7 Added linux/GCC instructions to README file
+0efd202d08cf278f2b96ea138879a106fc3fc5ea Updated base data as there was a change in io_lite format
+b17c6ece3f272fc95bb03d29a618d071e864f9d0 README.md edited online with Bitbucket
+744d91397f2362743a73d6c60cede5e487180ab9 Better fix -- I'll stop fiddling now.
+892ea7c8041ef3e274e125bcc8e2766aeb584956 Fix to merge tool
+f9dba3a711bf5c876a4bf4d5460f2e16d49ea80f Updated Merge Tool
+130007ed6d013a0c9c554b38b5f5bc261fc1a690 Square lattice site floating point fix
+2b180b6717ed1c008ff00521ccfb9487a70c7c8c Fixed BFL body placement and BFL BC on MPI builds
+2fa703a59f9e267d73ac1c80512adca9fb20350b Bug fixes and BFL builder fixes for case 004
+f8b1d8a53a2569865d5a2d8d780972990ae8d26f Fixed MPI finish error and added BFL output precision
+a772647b34b2d32dcbc348865f91fdfb90639618 Added master log file write out for testsuite
+60ac042f36de6dd615acb6e821b9bec727b1280c Some updates on testsuite script
+e4a757041255dfa8139d9fa194c43e27ac672a3c Added clean option to testsuite script
+8181e25c6e5f6c77911b90e51c683c6437bc934e New test cases added
+c8bd196432ce671db0043a5425b862844a0a2ee1 Merge branch 'MergeTool' into prerelease
+de1ab2e5797ad86ce150d5505508923943cc89eb 2D merge tool, fixes to HDF5 writer in LUMA
+0389682352c5592524887275ab8562ecd0b07893 Changes to ASCII dump to match LUMIS,IBM init fix,new vtk merge tool, tool upgrades
+3064d30da2f5d3824838119eff8a9f9c7d357b7e Added testsuite script and changed directory structure
+59f01b8052f3f0ff128da12e66575c0294692391 Fixed some minor bugs that were blocking testsuite compilation
+5599bc55860d782f25b6f4046488e051e3e73a50 Fixed IBM_DEBUG write out
+e34e64e2054c6c0d72d7996260b24352a684c0db Bug fix for Origin initialise
+f49bccc4692281601c4898de993e893a2f9bfaf5 Fixed duplicate support issue and tidied up IBM support routines.
+9bef6bfe37ce26e9158ca336df6b46849526a18a Changed override for overload to make more simple.
+d6dabe2e91c522f25965fef74a343db58d7b490d Docs update, bug fixes to try resolve IBB reader issue.
+9c67490e37cd3b5b2825eb24b27c0a8d9066224d Some cases added for test suite. Attempts to unify the point cloud reader and body builder stuff again.
+d89c606a4a90bc6a28fc2a797daf3bf823155845 Restored release notes
+503835159f55246f5ce5b94979d3efc81b15ce66 HDF5 merge tool added, updated documentation.
+fae9d0988f375fe16fbef8ae7a837aa59f2c5b9f Removed unnecessary repeatFlag from LBM_multi routine
+ac48e9b355ee21642d6e8d2ff8e046766e35b932 Fixed calling (arguments) of objMan functions
+277d6629148efc9f76443ed8259ea7cee06ffeec Extra polishing and documentation while still in prerelease.
+e9f842516c3c4c5a8dea37b34083ef30bb78c97b Updated release notes
+9b01f913af44d4c662e2ebd5481825920c3749c1 Removed the expensive support node calculation
+a102afbeb0dd3c34967dcd68e3619bde498bdc45 Added analytical expression for inlet profile
+da6f585e18ed0bf2f38645d80e382eb01fae8aff Minor bug fixes after merge
+501409f0a7ae275ee7cc76213f83786082bce31e Merge branch 'Issue3' into prerelease
+f8ba8f69ab3b9ba8e35db1c4bafef0f8c93dea10 Fixed compilation incompatibility between GNU and MSVC. Reworked globals and headers.
+8f289b4ed5ae09fedc9443892295bbc6674b107b Fixed unterminated ifndef
+8426ca72886fb17176e31c0cd389102648348dfb Merge branch 'master' into Issue3
+dc2b466ec7fe8c52f9dac54f84159e6196a19c26 Last bit of doxygen -- leaving IBM stuff until later.
+33270a0d493e77b5791d26b92f4d346d2c05f2da More doxygen updates
+da37894d080e3869a5ef6cdd132ead1671c5fdd8 More doxygen stuff for headers
+dc1f6322272bd4ebf7971a468b71ed51bf7c505d Merge branch 'merge' into Issue73_Doxygen
+17879f6816f752acf23d52919d6a934a7dccb2b3 Changed is_nan() def and added extrapolation
+c33250f50f435c9721f021e1857795a986b9225c Merge branch 'Issue81' into Issue73_Doxygen
+ded14127906860975e76d467f9b42a34040fda4c Grid sizes added, bug fixes to current merge.
+a203ffd893669c23d2a44cd832c7558d9a9a251d Merge branch 'Issue59_Jon' into merge
+ff6cd902e7c073ab3dcf690da4093386a8d05a18 Updated to latest alpha, incorporated force calculator into OM
+45f0780540f9556ffcf174e8b76c3eec2f90920a Initial doxygen framework in place.
+a8f747044a6fffba4ef583457c3fcb515a5089e9 Merge branch 'Issue39' into merge
+d980d23688287e5c36b9e93e7e30c21e9427d423 Completion of TL exclusion enhancement for HDF5
+745a2ca6546cba4da0708a9cf3891cd33dd4e793 Ditched C++ HDF5 API, opened up hdf5 buffered writer to serial code, TL exclusion for serial.
+719ffc8808e173517adbae5869fff215e6eccfcb Commit before merging master into this branch
+9fbc2370421945dd56e169df6776df4aa7c4782c Fix for Issue 79 and added restart functionality
+323dcab98798d31dd793dcbf81494b685564a052 Fix for HDF5 sub-grid in wall and new debugging options
+a0464ba0f73602ce0661a5e7989bb4125101e7c0 Release 1.1.0 -- see /release_notes.luma for details.
+eed0a00212ff4fb8f7ffbbf8767b9db20b4a28be Setup lift and drag writer for testing
+e681ff815348b72cca890924c6712c45d8e4f655 Merge branch 'Issue39' into merge
+4b319b3ac58e216de9cfab65efa23b84a9aa5afc v2 of IBB reader and unification of the cloud readers
+ec4822e15e22079605e5a911bd2ed18bc67cc7b3 Fixed macro define
+5a30804c561b446fba9c82761614a4ced8784597 Merge fixes part 2
+d11832dae1dccbbf4ad9a295ab192b4a27285fb7 Post-merge fixes
+10aa9dcdb645b647f918b2c933d95a3b7e2e4c79 Removed old input file
+6055577415646a4466e37e74aeebfd4b7433e865 Merge branch 'Issue39' into merge
+3ee3a7fb7e7ee22aa6f652d7ee7102b2a7fdf9f2 Introduction of sub-grid communicators and complete PHDF5 implementation
+5e01884b6c196f71e7dec1eab1ed7e53130dffca PHDF5 implementation basic 1D slab writing
+6942325a622cad15c72f4f19d2f71dd01aa9435e Patch for MPI builds
+1d172d03421d10dc5a7777417960efa3ff46ca5f Calculation of BB lift and drag
+3a448c9b4c2e2d0ba1c81646ae8d161824fcba61 Initial version of computing lift and drag.
+e56a8d34f7eb90acd7738e6450b97bf46ae5f73f Test version of PHDF5 in place
+9491a8c1b02f762c62c85982334487d6449625e5 Updated enum declarations for LatTyp and BCflag
+c50111f41fff94ea958837e93982eaba8ba29238 Fix for Issue #72 and prep for parallel IO
+17b7a3413f72ebcb26d33b07362caae9b2506c88 Tweaks to serial HDF5 before moving onto parallel.
+c8b3a636231c706afa4fb4ba1ddb2c1b641d73e1 Typing consistency applied for 64-bit plus IBB file reader
+892bfb39ace729d22b54a39dd3b6f742ffdea8e5 Initial datatyping for 64bit and HDF5 in serial partially working.
+0487089a3f1ba0591df2ec067ce2672f9c195364 Merge branch 'Issue63' into merge
+6d1e62c17f938235719ceb9118ac646a4fdbbc32 Initial test after master merge seems good
+48fbc7b49eacc70d749dbb0c0fc4103f33b31335 Merge branch 'master' into Issue3
+9d043fd68299014b09820a5173a9b337e021b405 Final part of the Issue #63 ticket
+45fab9416681b6d5c4b53aecacf61a9954428dd4 2D KBC implemented
+d08ee9fec7e51f10d81ff818435a291841eeb593 Added D3Q27 in place of D3Q19. Removal of Zou-He, MRT and Uniform Inlet.
+b90c958afa484a5be80c648c6ef0072508ba2357 Merge branch 'Issue53' into Issue3
+23ebd1c7f665a388c9893625a54501d533c34fa1 Merge branch 'Issue45' into Issue53
+b735b5030069636eb7d1a2f156a9eb7e0cd440e2 Merge branch 'master' of https://bitbucket.org/mace_lbm/luma into Issue33
+666866d17eb82284518d9bdab2bc24f8df776bf3 Release 1.0.3 -- see release notes in /version for details
+e3a8e9b7d2b0df406093df3ff330b5b40c164dde Revert "Preparation for next release"
+9d046f989ea5ab32c8a7728b376e16265d3660b9 Preparation for next release
+ef34f4dbfa2e8557db79c43fccfac38f216cf69a Fixes for Issues 62 and 64
+15a5c463bf639a7202ac481e0123ab806b64811e Release 1.0.2 -- see release notes in /version
+75b7b428ddd446424378e8359ec7a22a87bfe246 Release 1.0.1 -- See release_notes.luma in /version/ for details
+ec074ccd13922c26a84e7d81d23fe7ad1ddb6de8 LUMA Version 1.0 -- Headers added
+6bcb95f085d93db3319aae9e5fae1c80931f73d0 Compacted LBM_multi routine - results look good
+33a6fa563603b4c30127ba7847d10b08b12132e7 Initial start to compacting LBM_multi routine
+48a108436894107d56bbffca5102a16b87d0ab97 Fixed issue with blowing up when using 2 subgrids
+6e7e9368aa0e5f20128eba57bd02969e08366971 Fixed gravity scaling across subgrids
+1ab5efaedf17ff4b1eb8792bcf2d32b01e157fe6 Put in correct/our definition of Froude number (Issue52)
+1e93502a55aea1f44e4850c1eabc062d7677a980 Updated lableling convention and embedded grids in inlets. New utility for finding whether a site is outside the domain
+b183f85cf7dfc4a83ca757138e2f123dc67a688d Fix to timing logging so non-existent grids are output as time = 0
+855d380c2c08a9bf1f0a69a63f9d395530523b37 Timings file output and aerofoil wind tunnel config added for TIANHE2 cases
+f30ca255a2d8cfadd691c06aef895855471e7324 Updated to Issue47 latest
+d50d0f22cae439557b5b667f044f58c250d40158 Merge branch 'Issue47' of https://bitbucket.org/mace_lbm/2d-3d-lbm-c-new into Issue33
+52d70455c4a64535c0f422aa7be7419f7509a885 Complete implementation of generalised regularised inlet.
+c4c54f97a9d5478195f8ff192f6a58046fd7d0ff Beginnings of generalised regularised -- currently without corner treatment. Needs debugging. Also changed method naming convention for consistency.
+07ee8e1f17335893887da726efeee09f976347f7 Symmetry BC (specular reflection) added plus Virtual Windtunnel definition.
+69c0082d334f9370aff92255a337793b3ff7935c Performance improvements to BFL in conjunction with #42
+3b5c2db4cb1575ce3dcd96d8ad599b1246619556 Merge branch 'master' of https://bitbucket.org/mace_lbm/2d-3d-lbm-c-new into Issue33
+ec01f43a3895972c90f5073f0d76ee9d9b975b59 Setup case for testing gravity across subgrids
+5b3842e007d0a8292c3ab6bb0117d87933576275 Fixed compiler definition warnings
+ce748d3dc736d2ee97081a7d9a935ea9e9344475 Scaling between fluid and solid in IBM is grid normalised
+f0d80e39a5375e0125ecb2c906339c73541be62d Changed structure of LBM routine - results look good
+38702f2a0a281f5ad602926dd1197142d4b11603 Reverted changes in LBM routine
+7f5336402a27d44514b57c76cb95ba63d6d789d1 Small changes in scaling between grids
+bc81a2ce9dc795fa8f5b7656d42b5143abcd0362 Have added link between IBM and subgrid - will check for bugs
+76876299a4fd93a8f07dfcdf5e945aa6e484e19a Assign grid pointer and check for success
+3f8a82f890fdee41814b5426dfbebd0ebc89e1c9 Added the wall_thickness so no need for SOLID_BLOCK
+c7aabd66a4dd1e9e39f4058522e2995fe0aa0fc6 Setup case (again) for IBM to subgrid
+b83f5f1728326a6b38e5bee2160f5a40ed087e2c Setup case for linking IBM to sub-grid
+7bb8f6ee1746371cb59b2a1ddb62a9e23c8a22a9 Minor changes to match SingleFilament case
+c31b49138f4d4c7a5054d36b623c37244e3f2b12 Fixed issue 51 - was problem in stream and boundary steps
+e9381d4c94ab74275e4d1c1179ca4466f589a067 Merge branch 'master' into Issue3
+31125076d5e09b00041ce289753695c83956c65b Intermediate commit
+3e8fa2f98d73abf1b7fa84cff725c436b254a103 Part 2 of solid BC fix
+7f64f65657c032937851aa878aa28f9080fc46f9 Merge branch 'master' into Issue3
+37f86f1dd3b43ba62ce92b2248e309c4a7a181cb Setup case for debug boundaries
+8b68066ac7265ff0e2ce9a00852aba0c6a44f254 Solid BC fix and tecplot_debug retirement
+92141eefe41903f5162f1962576ebf6a3d70855e MPI tweak to stop failure when using sub-grids
+d3efcf456c377286e11a3b59482239f116083097 Setup to match SingleFilament case in test suite - blowing up
+dc2ad9bc93a8770336530bc75c922a57458a76b0 Merge branch 'master' into Issue3
+72df4abbfe50218e6dfd95a75e04497ee38d8e91 Merge branch 'Issue31+42'
+f6bfe91802a204dec90edfb1330220738dfe5277 Tecplot Lite renamed to IO_Lite
+5a35a4c89a7ea7ae2f39bfa830898b6de56bc7c8 Tweaked the MPI fix
+1d037874b4d0111797e78568d54590d727ac881a Added wait request to MPI implementation to avoid memory leak on message queue
+a8218231ca62f0699dfe01faabc4eec9c6afc542 Fixed memory leaks on the heap -- stack leaks still remain.
+f119ee63635555c5cb6f944bf7c8eb4520df84e9 Sorted out input directory; Fixed point cloud reader for MPI builds, updated exit error code;
+e440ef7e638b0e7c4416b4827381707c07a1b448 Changes to restart to in line with new implementations of MPI; Bug fix for viscosity calculation
+ec57a3fa889cd70dfd3bee849133d90abedb8c05 Current JLR definitions file
+e95c59b9cba8d40ef24cb2ff4def51fc4897361e Added inlet profile tools and changed internal error code to 10000
+848d7b1fc713b69338994d554a174b7301e5effc Better scripts for CSF
+e448ad717296c07d0b2372aabf59898f971a4fdb Tecplot Lite Writer introduced as a temporary measure until parallel IO is enchanced
+4434029430b98c3d6124acd4246b0849ef4fb84c Add capability for reading in solid from file & various tweaks and fixes in other routines
+33d7edb7ce56e24522bd5d6850b3cf3ff820d740 Merge branch 'master' of https://bitbucket.org/mace_lbm/2d-3d-lbm-c-new into Issue3
+66513ef15d8ba4c768e38005c3d01e39e6a862ad Merge branch 'master' of https://bitbucket.org/mace_lbm/2d-3d-lbm-c-new into Issue45
+8313ec3e59a71ba96015d602f7ce9b3918bdc35a Fixed couple of bugs causing an MPI process hang in 3D. Added archer script. Add problem sizing guide to new tools directory.
+5891d06048bafa7df6c4ece264a92b935dafa44b Fixes bug associated with MPI tags which causes crashes on some MPICH implementations
+71df60e16262ce18c6649dab47f1e7c50a73b9ae Multi-platform compile support repaired -- fixed various non-standard-following errors allowed by VC++
+1f70f02425034ceb4bed9c830a715938d36e7b99 Further performance improvements by removing pow() references in kernel routines
+ac0277e302b254de4a52744ab7ccd5a53fe6aed7 Fixed MPI performance bug by re-implementing utilities
+c7199488884a642432152ab81d2c62adf02581b9 Fixed path compatibility with Linux systems
+f91d7fbfc82a42a392fef183776b411333a7ecd0 Deleted extra BFLBode.cpp file, added typing to tecplot debug.
+483d5e60c2feae7fee3249e67ea62fe67466c96e Integrated working copy of NRBC into master so the branch does not diverge too much
+be3d72ff9e9f5abf50c2470a66123985d1a0061b Merge branch 'master' of https://bitbucket.org/mace_lbm/2d-3d-lbm-c-new into Issue33
+2de008440b21a424d52f88f646c1f4a0f8b19842 New label for embedding sub-grids in solid boundaries. Numerous bug fixes.
+dd36fa195bc3b4d686a6e4165ee563daeda8d06f - cube in channel case - fixed bug with vtkwriter : ' -> "
+ee3320d40935157c8867f994764555ac98d1af1a Tweaked definitions file format specifier
+5f4dd8a6524c3fc040527fdb3997917efcf4e47c Fixed bugs associated with multi-grid, many-core BFL. Added placeholder for NRBCs. Tidied up definitions file and added file format spec.
+3272a4823516a69fe911cecef1344b5636b4ab5c MPI support for BFL boundary conditions
+61650f27bf0d997b34f318b7eada38393ff8d201 Added todo for correcting the Froude number calculation
+1d6b6cf1a9682f93cc0a7675b5b1f1b8d024d94a BFL Bug fixes and implementation changes throughout. Groundwork for MPI capability in place. MPI + BFL has not been debugged yet.
+f5dafac01e71badaebe26004568830b88faf0e44 Overloads added for 2D case configuration and solution.  Input data also supplied.
+bb1fe5e5c5b7eb29e557fea4ea6cbdc2c71cdf7a First stage of BFL builder and BC application in 3D
+d24896729e42d2c262c3aa76c1bcd5e6a1f10c30 Changed Froude number back so its always zero even though this is wrong
+11e34abd82c8c2678c7ba609902f055f20c36f97 Case set up for clean channel comparison
+031ce5740cfe60c9741fbd404eaa600d7a9bf277 Fix for Issue #43 as well as some changes to typing to address warnings
+e8b76e8d39885dc289c710b85dadd35e6e3202a5 NRBC seems to work for inlet , I am working with the outlets.
+5ba8145a237fc0549007817ba58ab48ec002c201 Added cstring header - pushed straight to master
+f2a51531a411f65abf7afd5e42468dd727805a72 Adrian and Joe added as contacts for setting up using VS and Eclipse respectively.
+65e5c98dd0b4483a0efdc1c30d700f7c13af78a4 Merge remote-tracking branch 'origin/Issue4+37'
+be6d28bd17f0aa4d14da83e02182a3500c22fc96 Tested with old code again after log check - ready to merge
+3b946ae8b8ead4b37bd896fec947cec5fc17b751 Checked git logs, all changes seem valid - will test before merge
+dfc62638e639dcac40baf97c7356762d26300b68 Initial results show good comparison with old code
+303e9c27903c9e5e58b0bc201f36e6fc489932b0 Intermediate push to save progress - still not there yet
+6fe8e8a8cf8be893de8a25875b44cae6b047be6b Set up case for comparison with old code
+9e11b7410027af064dbc57a29129c8f88b1351db Added output for desired_vel in jacowire
+176d4be95c10d5fbd365f79c84e3d961aa4703d9 Now getting very close to same as old code - both are broken now
+d4fc273aec25fd2b14183942ead19f018651fc9b This is the first version of Non reflective BC -LODI version.
+5a8c8e733b0128e50ba3c5522ff3fe7b431cca36 Set up simple case for comparison with old code
+95f762c5a51ac05b14e8007214b2ce6164ef5071 Patched process synchronisation for multi-grid MPI
+1524937b568ffd58ff12118b1080c591dcb405f8 Fixed rounding and abs bugs in ops_ibm
+eef8abb7b82eaf78d409dabce89a9972e62aee4d Fixed h_plus and inear calculations
+1d48216e686e9467d08de6f5acc27e87c5206923 Patch to fix some outstanding issues. Bugs remain.
+769efc41d86afdd875c3a44659b1f0560ee7a957 Case is set up for comparison with ib-lb code
+735f52d48a4d72b6c13f03d1ca220314c3192814 Bug fix for multi-grid VTK write-out
+f9435b2b1f7a647e545326549c7b8c0aa6fd54d0 New MPI self-synchronising communication protocol for multi-grid problems.
+d04fbc71e5fe2ed8b110999daf543aff5be5e59b Major Update to MPI module and associated classes to allow for multi-grid cross-rank communication. An issue remains with communication hanging on sub-grids when there is no overlap on any edge. Will work a resolution soon.
+3f615db8802e3e25f0b2e4b509b5fcf0a8f6d92b Redesigned MpiManager as a Singleton and hence main routine and constructors changed accordingly.
+9aa3627fa199c9b63d12a1ea716cad9e49e0b157 Missed initialisation routine off last commit.
+9d7ea66e00862726d4005c40d1dd710d54d9387c More changes to initialisers and constructors to build sub-grid compatible with MPI communication.
+d6adeeeae87037be07165640cbffe1887ea6dcef Major implementation changes to grid constructors, intialisers and labellers in preparation for cross-rank multi-grid. Also added functionality for custom grid sizes across all levels and regions. Added initialisation timing functionality.
+d0264167ecea0eb2b3edbdb57ea15fcb4057b078 Added base classes for Bodies and Markers ready for BFL object implementation and created new branch.
+a5300336d65767f553df4f0969227217aec3969d Patch -- initialisation timing repaired and tested on Windows.
+52cbc879503f68fb48deb68a8af6ee342c074763 Patch for logfile issue with MPI after recent merge
+a18efbd92624bf9f37f1df6034a2f4909d7a1b75 Merge branch 'Issue4+37' - bugs still exist
+681f506be99582b580de7cf90f747e82c5d7dbe1 Workaround -- MPI on Linux crashes if logfile not opened correctly.
+7aa993ed865f15cb18ca010a21ac46fa3762add9 Renamed ivector.h to IVector.h (edited online with Bitbucket)
+0260f764bf80e832132808cde9047320db5dd6e9 Resolution to Issue #40.
+d587185738b5f62141c8a00428f7fac5a8222704 Reverted changes from last commit. Also initial setup for validation.
+477e107a3ff74ed0f91e195c8d53a3e95686f96d Intermediate commit so can work on laptop
+4e49928c05f8eff279835b51a70f5ea3c1e5ad98 Fixed memory issues in jacowire - no more invalid pointer
+27c1e920072559b698bcec5209ad6067b3d9b0e3 Add #include <algorithm> to header to prevent errors on VS2015 max and min. Pushed to master.
+a4dca34b377ddf4712d78a465e8d058fc495aca7 Bug fixes for Windows version of directory creation Issue #4
+9013d3073f79798fabfef44f2087fb492d863920 Merge branch 'Issue4+37'
+fd1179d9623d64f35197f682bf68d4b7fa437d10 Edited Windows directory creation implementation to take pointer to wide string as required by CreateDirectory()
+459d2c753f3c83f03a76f3430dc149e1fd38ec93 Using static members the use of global variables has been removed
+a21133c5d8f5b21a70b4bf068352637caa8f3364 Added the date/time stamp to output directory and changed all paths.
+2cad64564bc1739bbbfc02a18e8ff185214b965a Prevents multiple ranks trying to create the output directory now
+8b6416a040c00baea82add3204f66453fcbc0b40 Added capability for creating output directory - needs tested in Windows
+e035fd110e31f52dd01ac0cbede62ebe2165bf2b VTK output for iBody now works on closed surfaces
+30a89a563a2482c54c28f46db58f058e630582d2 Bug fix after merge with inlet options
+dc384b656847c3dde7b34858e4a769adca41e852 Class diagram PNG added
+4e5f4e015de38e6459867923ce3b41c112c95a76 Addressed a bug after merge and updated naming. Floor has been reinstated as the Visual C++ distribution on Windows has not yet implemented std::round. However, std::floor( number + 0.5 ) achieves the same thing.
+ed663f40446b68803c81d6e30c17edbfd9f00c80 Merge branch 'Issue24+22+38'
+491847d4a418b95fe9675080f1c22eb4f21c0a27 Merge branch 'Issue4+37'
+6ed2780090bf44453e38b4699412a4486fe23560 Setup case for flexible filament
+8638a5b3e1d1b5511d3ceec2f60d085792efd047 Inlet profile read in added. -- Changed constructors to store max ranks -- Changed GridObj Class to store input buffer -- Added inlet reader and interpolator -- Tested in 2D with and without MPI
+f49e47f670b261a9f347c3bc6257a72e2bc365b1 Resolution to issue #24 / #22 / #38. -- Probes output added; -- Tecplot writer and mTool utility to reorder; -- Various small improvements to comments and labels; -- Profiled inlet added (Issue #22); -- Performance logging added (Issue #38)
+7d988c392264c9b88be577156b79ccbcff5a96bf Fixed double time-stepping (due to corrector step) in IBM procedure
+c5feb3a724fe368a3c6be78453e8fd11dc3c257d Added vtk output for IB bodies (filaments only) - partial resolve Issue 4
+2cdc23c7e58c4602c285d62432a389d07212e2c7 Changed rounding of inear, jnear and knear in support calculation
+eb2cd698f925ed6fd8fda977e741898aa2857d08 Small bug fixes (and typos) so that it can compile with IBM flag
+bb0492d220080665a520091aefa3c2d28ee31ea4 Small bug fixes (typos) so that it can compile with gravity flag
+3106341c6f9985b788f1d5316ed813034e674fa9 Issue # 38 resolution.
+e1b7e86914b99dde4823c5fc10d709cba4494541 Issue #10: Cleaned up directory structure to make it more amenable to running on Linux clusters. Scripts provided for CSF.
+ae5acaf06931096e961937029dcbb8325b3e0a66 Urgent Fix: -- MPI labels corrected to allow correct packing/unpacking to be called for given direction and tested in 2D. Other changes include: -- Streaming step rewritten to be consistent in serial and parallel versions. -- GridUtils class enhanced to provide methods to query site location in MPI grids. -- Grid constructor modified as required for new functionality. -- Output tags added to text output -- Improved commenting and naming in the boundary routine -- Debug placeholder left for text output
+5ca0560b8925576e3272a91f6de40b3847f6d935 Resolution to Issue30 -- restart facility added; time step specification standardised; improved commenting and checking. \n -- Note that this issue fix has shown an issue in the MPI system. Ticket launched to investigate.
+c69a3a2fb3902b745cd5a82eb29ba785743662a5 Resolution to Issue 29.
+cd408618839a573c5e77545a784877ca01abfb88 Restored resolution to Issue27 after I accidentally reversed it. Sorry Joe!
+563db8f1f669c9c9c94331a02752cbe4f651f3f9 Complete resolution to Issue #28 and standardisation of logfiles in the process (Issue #11).
+b45a72801e958b8f892df7c82075457c54e30e4e Resolution to Issue 28.
+d6f3dbfdd113d20ce0aed55310a6f62166020522 Resolution to Issue 26
+35207124a946a0443533c211efd12825a9fb2e93 Issue #27 - Resolved
+d873ff7e4ccfb74ef8b96106f7c8123cb77b852e Merge remote-tracking branch 'origin/master'
+1be3a0642650f77affa34b18019a007347ba4bd9 Bug Fix: Need to allow fluid sites to stream periodically to inlet and outlet otherwise cannot do periodic domain.
+c854126e0e7e58d49c282678a57beab51ed721c0 README.md edited online with Bitbucket
+36050a7998e6fa5c062927ed8ee7535e43107eda README.md edited online with Bitbucket
+3fee75265a44c8b3e7fa76c73c816efde874a037 README.md edited online with Bitbucket
+77b3c5ea1790063eaa3a5bf94939ebb99f4ca22f Major Bug Fix:   Unscheduled bug fix for half-way bounce-back condition which was adding mass to the system. Other unscheduled changes are: -- Added Utility class and better log file writing and deleted the old generic operations file -- Temporarily fall back to copy exit conditions for stability -- MRT constants can now be edited from the definitions file rather than the source -- Streaming routine completely rewritten to make it easier to add streaming exclusions Sorry for not tracking this on a branch!
+635512d5ce1829402910386bcab0f8b7aa1ce621 Merge branch 'Issue13'
+bb2e53baa0fdd0a1fa284ce25e2cab2599817d66 Merge branch 'Issue17'
+93a09f0daba8324194b15426290ba060e707451f Resolution to Issue 13 plus other bug fixes. Support for EnsightGold removed. Limited support for refinement and IBM.
+922448422a02b6ca29ce0a130624e2eb4fc87307 Resolution to Issue #17. Still some teething problems to sort out with relaxation parameters in 3D but works well in 2D. Changes to other files reflect new Grid property (mrt_omega) which is the array of relaxation times.
+5b2736c2a20155b5f4175f43cf775e373f942752 README.md edited online with Bitbucket
+fc3462b157bf2b4c2a91daf05764932655c45e8b README.md edited online with Bitbucket
+74c12959449844dc4935e6da186588273f929888 Merge branch 'Issue8'
+6e1b8761218e9f74d1af4a3c2641e7fb8b925bf5 Merge branch 'Issue16'
+9ce58b160c866e82b9272e8c0e9da36e4c1db00c Resolution to Issue 8 plus minor upgrades throughout related to boundary conditions and commenting. From now on minor changes not related to a particular issue should not be included.
+0c7325616f20bcfacae6206c6dfe72717c26b69b README.md edited online with Bitbucket
+44daeda3453295ae303c677edbfc67cdfdae17e5 README.md edited online with Bitbucket
+534a452b546fde4139766dfd99d39269946efc18 README.md edited online with Bitbucket
+c1a7ab7035167cfc74a989aa43e349fa4e474ba5 Resolution to Issue 16. Need to check it compiles on Linux before merge.
+9eb2f2c39544d25c693bc0c37a32da5dc219bda2 Fixed minor compilation warning on casting double to unsigned integer by adding explicit cast. Not reported on bug tracker.
+e4e478713b8a3957116f8fe50f63a7c6e5a63f1f Merge branch 'Issue18'
+cc2271191d3329b7f8a609686c4553a0627d38a7 Standardisation of the numbering of lattice directions and updates to boundary conditions as required.
+5a74e25bda5b5cd89525364a98c3e8312b5721fb Moved MATLAB tools to own folder and added relative paths as necessary
+8714c1b50144f36dbd6b35d337a24848698fd374 GCC (g++) compiler support added by removal of non-standard functions. Inline operator definitions added for speed on older compilers. Note: This source code will now compile on Linux systems using GCC with the -std=c++11 flag to ensure c+11 standard is followed. The easiest way to do this is to create a Code::Blocks project and import the source files and enable the c+11 option under compiler options.
+c20aa8b607d9688fd714fd363d72c1ba006c0bc8 Improved commenting and organisation of case assembly code for clarity. Other minor updates to post processing tools.
+4e3be7d6a3e848937f17f1452b743f02e0d22081 Filament-based plates added. Further details: -- JacMovie updated to BodyMovie as can plot the position of any body not just Jacowires -- View updates in nBodyPlot -- Filament-based coupled plates added as IB option -- Uncoupled filament array added as IB option -- Group ID added to IB_body class for grouping bodies for common activities (e.g. position copies) -- Deformable property added to IB_body to allow a body to be deformed without it being flexible (which would require a structural calculation). Deformable, but inflexible bodies can be deformed by external forcing functions or by copying the positions from another body in a group for example. A flexible deformable body will always look to call the Jacowire to compute the deformation. -- Handle error if jacowire fails -- Positional update routine now governs mechanism for deformations based on body properties -- Initial framework for OMP included
+54596c182bbc7fa7d7372f1db8fa11b0c2ad12fe Flexible Filaments Added. Other minor improvements include: -- Body building routines to add a filament (if specified as rigid, this doubles as a plate in 2D) -- Methods for construction and solution of Jacobian Wire (Jacowire) structural mechanics problem -- IO operation for writing out the Jacowire coordinates when other data written -- Jacowire calculation for flexible bodies as well as support recalculation added for moving body -- Gravity direction changed to +x direction to be consistent with Jacowire -- flex_rigid property added to body to specify whether it has flexible or rigid markers -- Flexural rigidity added and better commenting of IB_body properties -- Additional quantities written out to log file
+01e6fb32f926983b028c47df0a75222925bd6092 nBody IBM update: -- Code now allows for multiple IB bodies in the IBM -- Example of both circular and rectangular cylinder in channel configured -- New implementation of uniform point seeding for rectangle and cuboids to make it more robust -- Lspace renamed num_markers for clarity -- Prefab body placement has a custom constructor now -- Old MATLAB_reader replaced with nBodyPlot -- nBodyPlot examples provided in Output folder -- Old text output removed -- Some changes to log file content
+9d8e38fab4b6084b7fb83fa8222ff8b46ef956cc *** FIXED *** IBM. Other updates as follows: -- Log file facility added for main screen prints to allow simulation parameters to be check at runtime. -- Ability to adjust how many timesteps before writing to file to speed up longer simulations. -- Allow initialisation with no flow using a switch. -- Speed up labelling using std::fill instead of loops. -- Added Reynolds number definition for flows with solid blocks. -- Bug fixes in Guo forcing -- Rearranged declarations to save memory -- Tweaked gravity implementation slightly although needs validation still -- Definitions set up an IBM cylinder in a channel at Re = 100.
+25e1b5ac80faa22c12fd2a8491da022ae174cece Improved scaling understanding and non-dimensionalisation of IBM. -- User may now specify a Reynolds number and an input lattice velocity and the lattice viscosity is computed.
+c34558c08206c0aada1a4735db7a543213882e88 Tool to plot the IB body and its support in MATLAB. Input data is verbose IBM output which can be turned on in the definitions file.
+2a3d8da62ec783e54b0caa65e9f1fc53416d9d7e IBM **** NOTE ***** There is still a bug in this somewhere, if having trouble with the code then turn off IBM or checkout an earlier commit. Details as follows: -- Improved commenting -- Fixed bug in Inlet BC -- Fixed some typos -- Improved documentation in preparation for IBM update -- Guo forcing added -- IBM body and marker classes added -- All methods necessary for IBM as well as restructuring of core to allow for predictor-corrector approach
+aada12694c3bbb564d97d8dc1d779b9ac5177029 Auto index flattening and VTK writer. Details: -- "intelligent vector" class added <ivector> which auto flattens arrays to save all the calls to idxmap. -- idxmap removed as superceded by new ivector class -- updates to ivector throughout -- VTK writer added -- indmapref moved to generic operations
+a08c233b75c3b8215a05f429ccc0cf983dd4c6d3 Boundary condition inclusion :: -- Inlet (Zou-He), Outlet (extrapolation) and solid wall (bounceback) boundary conditions added. -- Inlet is considered lef thand wall, outlet right hand wall for now. -- Solid site walls can be on the edge or in the middle -- Ensight writer includes blanking although not proven to work yet -- on to-do list -- Test case changed to flow around a block
+ae06f9011b1c54d4d661642e2288009a801b5035 Removed VS files to clean up repo and make it more readable
+ec1147adba75b95fd0e5b9c0cca5cc70834b5675 Multi-grid Ensight writer implemented so results can be read by Paraview. Changed from binary to ASCII format so easier to debug issues at the potential expense of portability.
+ef4c6567a5e8ecb1a0f6e2703ebe3b01fceb7b89 Improved grid checking, conversion to unsigned integers where necessary, removal of deprecated int2str() in place of to_string().
+4e6200b8e8646d1501ff2112f38ef00d9174ce64 New diagrams, sample text output and project files for VS for new implementation.
+d9ace23b625822f01055a69cd1da67a62c07e0a5 Major Update: GridObj class and modified routines
+cc0504dc6333f07f9869751ec2c7a186ec4c064f Renamed and new headers to standardise
+60eeebe25690664c600806b16b18c224ef68b20f Re-scoping of main operations as member methods of GridObj
+746c342a64b2dc9a6b58d60c0994603e692feaf3 Formatting: Makes velocity directions easier to see
+1bd6a1bc4ffc78ae05946e0ba93fa3eb83b9653d Added EnSight writer feature in binary format to allow viewing in EnSight/Paraview/TecPlot. Thanks to Alex for the sample code.
+4a1841588274162f1145be218314a1c82beb7b18 Cleaned up naming of header files
+ff38f08029ba85ae1f3c0b6c615b8970c9ccaaea Project files changes for the benefit of MSVS users
+805b110e88678179fe255d98d84a380006f80469 Cleaned files unrelated to source code for clarity
+c5ab2ca3b5cd17f21f494ca2b677a9e68176502d stdafx.h and stdafx.cpp load Windows-specific libraries so added directives to allow compilation outside VS and windows
+6555027d826ce24b9665048f06dfe7ddac26aec4 Added additional entry point to allow compilation outside VS
+a67d6acefada068c75f6a5e94840940a7d60e4a6 Initial commit of the LBM module of the new code. Will compile and run in both 2D and 3D for single and one level of refinement. More levels not tested. PDF file included which should help explain the overall flow and the main data structure available globally.
